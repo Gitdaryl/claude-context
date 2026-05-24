@@ -4,10 +4,37 @@
 
 ---
 
+## Antigravity IDE (Claude Code Extension)
+
+**Status:** Active
+**Best for:** coding, debugging, file edits, terminal commands, deploying
+
+### Session-end sync
+- Writes `~/.claude/session-handoff.md` as last action
+- Stop hook auto-pushes to context repo and cleans up draft
+- Hook path: `~/.claude/hooks/session-handoff.sh`
+- Config: `~/.claude/settings.json`
+
+### Installed MCPs
+- GitHub (via gh CLI)
+- Notion
+- Vercel
+
+### Notes
+- GDay rule defined in `~/.claude/CLAUDE.md`
+- Works on any machine with Claude Code + this hook setup
+- To replicate on a new machine: install gh CLI, copy hooks/, update settings.json
+
+---
+
 ## Cowork (Claude Desktop App)
 
-**Status:** Active  
-**Session date tracking:** Yes (files persist in outputs folder)
+**Status:** Active
+**Best for:** documents, research, scheduling, image gen, web fetch, Notion management
+
+### Session-end sync
+- No Stop hook available in Desktop app
+- Claude follows SOP: writes handoff summary then uses GitHub MCP to PUT handoff.md + append sessions.md before ending session
 
 ### Installed Plugins
 - Engineering plugin (architecture, code-review, debug, deploy-checklist, documentation, incident-response, standup, system-design, tech-debt, testing-strategy)
@@ -19,54 +46,71 @@
 - setup-cowork
 - consolidate-memory
 
-### Connected MCPs / Connectors
-- Google Drive (`mcp__0e4cc867...`)
-- Google Calendar (`mcp__594ad403...`)
-- Notion (`mcp__65e5ce1e...`)
-- Vercel (`mcp__cc1c3366...`)
-- AI image/video generation (`mcp__b67fa645...`)
+### Connected MCPs
+- Google Drive
+- Google Calendar
+- Notion
+- Vercel
+- AI image/video generation
 - Claude in Chrome (browser automation)
 - Filesystem (local file access)
+- GitHub
 - Scheduled tasks
 
 ### Notes
 - Memory stored in outputs/memory/MEMORY.md
-- GDay: fetches GitHub context via web_fetch
+- On GDay: fetch handoff.md to catch up on last IDE/VPS session
 
 ---
 
-## Antigravity IDE (Claude Extension)
+## VPS (Claude Code via Terminus)
 
-**Status:** Active  
-**Config file:** `~/.claude/CLAUDE.md`
+**Status:** To be confirmed — Terminus was previously used to connect mobile to a VPS for editing when home Mac was asleep
+**Best for:** mobile editing, running builds, anything that needs a persistent server when away from home
 
-### Installed Tools / MCPs
-<!-- Add as known -->
+### Purpose
+Yeti is frequently away from home. When the Mac is asleep, mobile Claude loses the ability to do real edits. A VPS running Claude Code solves this — always-on, accessible from any device via Terminus (iOS/Android SSH client).
+
+### Session-end sync
+- Same as IDE — install identical Stop hook on VPS
+- Hook path: `~/.claude/hooks/session-handoff.sh`
+- Requires: gh CLI authenticated on VPS
+
+### Setup checklist (when provisioning)
+- [ ] Claude Code CLI installed
+- [ ] gh CLI installed and authenticated
+- [ ] `~/.claude/hooks/session-handoff.sh` copied from this repo
+- [ ] `~/.claude/settings.json` updated with Stop hook
+- [ ] `~/.claude/CLAUDE.md` copied from this repo
 
 ### Notes
-- GDay rule is defined in `~/.claude/CLAUDE.md`
-- Best environment for: coding, debugging, terminal, file edits
+- Terminus is the SSH client used to connect from mobile
+- VPS provider TBC — confirm with Yeti
 
 ---
 
-## Mobile Claude
+## Mobile (Direct Claude App)
 
-**Status:** Active (manual context only)
+**Status:** Active (read-heavy, limited write capability)
+**Best for:** quick lookups, reading handoff.md, short Q&A
 
-### Notes
+### Session-end sync
 - No file tools or MCP connectors
-- GDay: user pastes raw GitHub URL manually or via saved shortcut
-- Best for: quick queries, on-the-go tasks
+- Claude outputs the formatted handoff summary as text
+- Yeti manually triggers push via another environment, or VPS handles it if connected via Terminus
+
+### Notes
+- GDay: paste raw GitHub URLs or use a saved shortcut
+- Primary consumer of handoff.md — catches up on what IDE/VPS did last session
 
 ---
 
 ## Cross-Environment Tasks Log
 
-> Track significant setup work so no environment is left wondering what was done
-
 | Date | Environment | What was done | Done by |
 |------|-------------|---------------|---------|
 | 2026-05-24 | All | GDay SOP established, context repo created | Cowork |
+| 2026-05-24 | IDE | Stop hook built, handoff.md + sessions.md created, universal SOP written | IDE |
 
 ---
 *Last updated: 2026-05-24*
