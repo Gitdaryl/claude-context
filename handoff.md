@@ -1,16 +1,17 @@
-## Session: 2026-05-24 15:30 AEST
-**Environment:** Antigravity IDE
+## Session: 2026-05-24 16:00 AEST
+**Environment:** VPS (DigitalOcean yeti-vps)
 **What was done:**
-- Built cross-environment session sync system
-- Created session-handoff.sh Stop hook
-- Added handoff.md + sessions.md to context repo
-- Updated sop.md with session-end SOP
+- VPS confirmed as DigitalOcean droplet (143.198.171.9, Ubuntu 24.04)
+- Claude Code + gh CLI were already installed and authenticated
+- Session-handoff Stop hook installed
+- CLAUDE.md + settings.json configured
+- VPS is now a full environment in the cross-environment sync system
 
 **What's live / deployed:**
-- Hook active in ~/.claude/settings.json
+- Hook active, VPS ready for mobile sessions
 
 **Next up:**
-- Test the hook fires correctly on next session end
+- Test a real session from mobile Claude app
 
 **Notes for other environments:**
-- Cowork: on GDay, now also fetch handoff.md to see last IDE session
+- IDE + Cowork: VPS is confirmed DO droplet, always-on, hook matches IDE setup exactly
