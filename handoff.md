@@ -1,6 +1,16 @@
-# Handoff
+## Session: 2026-05-24 15:30 AEST
+**Environment:** Antigravity IDE
+**What was done:**
+- Built cross-environment session sync system
+- Created session-handoff.sh Stop hook
+- Added handoff.md + sessions.md to context repo
+- Updated sop.md with session-end SOP
 
-> Latest session summary from the IDE. Updated automatically at session end.
-> Check `sessions.md` for full history.
+**What's live / deployed:**
+- Hook active in ~/.claude/settings.json
 
-*No session recorded yet.*
+**Next up:**
+- Test the hook fires correctly on next session end
+
+**Notes for other environments:**
+- Cowork: on GDay, now also fetch handoff.md to see last IDE session
