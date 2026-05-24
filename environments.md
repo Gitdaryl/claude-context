@@ -65,7 +65,7 @@
 
 ## VPS (Claude Code via Terminus)
 
-**Status:** To be confirmed — Terminus was previously used to connect mobile to a VPS for editing when home Mac was asleep
+**Status:** Active — DigitalOcean droplet, 143.198.171.9, Ubuntu 24.04 LTS, $6/mo
 **Best for:** mobile editing, running builds, anything that needs a persistent server when away from home
 
 ### Purpose
