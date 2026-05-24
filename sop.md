@@ -8,6 +8,7 @@
    - `CLAUDE.md` — who Yeti is, projects, preferences
    - `environments.md` — what tools/MCPs/skills are set up where
    - `sop.md` — this file (confirm you have the latest version)
+   - `handoff.md` — latest session summary from the IDE
 
 2. **Confirm** what was loaded with a brief acknowledgement, e.g.:
    > "GDay! Loaded context: [date of last update]. I'm [environment name]. Ready."
@@ -16,11 +17,42 @@
 
 **Raw GitHub URLs to fetch:**
 ```
-https://raw.githubusercontent.com/YOUR_GITHUB_USERNAME/YOUR_REPO_NAME/main/CLAUDE.md
-https://raw.githubusercontent.com/YOUR_GITHUB_USERNAME/YOUR_REPO_NAME/main/environments.md
-https://raw.githubusercontent.com/YOUR_GITHUB_USERNAME/YOUR_REPO_NAME/main/sop.md
+https://raw.githubusercontent.com/Gitdaryl/claude-context/main/CLAUDE.md
+https://raw.githubusercontent.com/Gitdaryl/claude-context/main/environments.md
+https://raw.githubusercontent.com/Gitdaryl/claude-context/main/sop.md
+https://raw.githubusercontent.com/Gitdaryl/claude-context/main/handoff.md
 ```
-> ⚠️ Replace `YOUR_GITHUB_USERNAME` and `YOUR_REPO_NAME` before deploying.
+
+---
+
+## Session End SOP (Antigravity IDE)
+
+**At the end of any substantive IDE session, Claude must:**
+
+1. Write a session summary to `~/.claude/session-handoff.md` using this format:
+
+```
+## Session: [date AEST]
+**Environment:** Antigravity IDE
+**What was done:**
+- [bullet list of completed work]
+
+**What's live / deployed:**
+- [anything pushed or deployed]
+
+**Next up:**
+- [deferred tasks or next steps]
+
+**Notes for other environments:**
+- [anything Cowork or Mobile should know]
+```
+
+2. A `Stop` hook automatically detects this file and:
+   - Overwrites `handoff.md` in the context repo
+   - Appends the entry to `sessions.md`
+   - Deletes the local draft
+
+**The hook is silent** — no confirmation needed. If the session was trivial (< 3 meaningful actions), skip writing the handoff file.
 
 ---
 
@@ -53,11 +85,13 @@ https://raw.githubusercontent.com/YOUR_GITHUB_USERNAME/YOUR_REPO_NAME/main/sop.m
 - Best for: file creation, research, documents, scheduling, image gen, web fetch
 - Memory lives in: outputs/memory/ folder (see MEMORY.md)
 - Trigger GDay by fetching raw GitHub URLs via web_fetch
+- On GDay: also fetch `handoff.md` to catch up on last IDE session
 
 ### Antigravity IDE Extension (Claude Code)
 - Best for: coding, debugging, code review, file edits, terminal commands
 - GDay rule is in: `~/.claude/CLAUDE.md` (global config)
 - Can read/write project files directly
+- Session-end hook: writes `~/.claude/session-handoff.md`, auto-pushed to GitHub
 
 ### Mobile Claude
 - Best for: quick lookups, on-the-go questions, short tasks
