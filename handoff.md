@@ -1,35 +1,28 @@
-## Session: 2026-05-30 AEST
+## Session: 2026-06-01 (AEST)
 **Environment:** Antigravity IDE
-**What was done:**
 
-- COO audit led to focused Sunny Skies dispatcher overhaul
-- Identified root cause of rotation bug: old routines sorted by `createdTime ascending` so same clips always fired first
-- Built `clip-index.json` in `Sunny-Skies/sunny skies stills/10 sec library/` — 46 clips indexed with mood/subject/category tags, 14 flagged review_needed
-- Saved clip library memory file + MEMORY.md pointer
-- Created 4 new RemoteTrigger routines (all ENABLED):
-  - `trig_014nEu4EaMg2L9M78YhRRgoP` — Quotes 9am ET, sorts by last_posted ASC
-  - `trig_01SPThcf6gzLaqZiWvohqaFh` — Midday 12pm ET, sorts by last_posted ASC
-  - `trig_01GHbiikKb2FimTsCXPVuEPc` — Evening 6pm ET, sorts by last_posted ASC
-  - `trig_011qiFPmvXTmbSoxzDiMUvNN` — Fuel Gauge 9:10am ET, Haiku model, checks all 16 Drive folders, SMS alert when any hits ≤7 days
-- Disabled all 3 old/broken routines (trig_01Lrty15t44wKwZDT3DaKthC, trig_011kXD1oFtWQx3CMJ5GMuDnQ, trig_01NnLEi2N4zTE1RJ2nTUmwPG)
-- Added `api/fuel-alert.js` and `api/internal-alert.js` to Manitou Beach — SMS endpoints for automation
-- Committed, pushed, and deployed MB to Vercel production
-- FUEL_ALERT_TOKEN (`fgss2026xpk7`) and ADMIN_PHONE (`+15172605907`) confirmed live in Vercel env
+**What was done:**
+- Audited Sunny Skies repurpose.io dispatcher — found 2 bugs causing total failure since 2026-05-30
+- Bug 1: All 3 Claude routines had a 1-char typo in connector UUID (`...29e6b` vs `...39e6b`) — fixed via RemoteTrigger API
+- Bug 2: CTA Posted folder ID was `VBlw` (non-existent) instead of `VBlv` — fixed in VPS script
+- Rebuilt the dispatcher as a proper VPS Node.js cron job at `/root/SunnySkies/dispatcher.js`
+- Set up OAuth2 for `admin@yetigroove.com` (GCP project "My First Project", Desktop app client)
+- Isaac added `admin@yetigroove.com` to Sunny Skies Shared Drive as contributor
+- Tested successfully: dispatcher ran and copied a Before After video to the Posted folder
+- Cron live on Yeti VPS: 9am/12pm/6pm ET, logs to `/root/SunnySkies/cron.log`
 
 **What's live / deployed:**
-- manitoubeachmichigan.com/api/fuel-alert — live, used by fuel gauge routine
-- manitoubeachmichigan.com/api/internal-alert — live, general-purpose ops alerts
-- All 4 new dispatcher routines active and will fire from tomorrow morning
+- VPS cron dispatcher LIVE and tested
+- All 7 content types now in rotation including CTA and Dev Education
+- Claude routines should be DISABLED by Daryl at claude.ai/code/routines (pending)
 
 **Next up:**
-- Review 14 flagged clips (Install 1-7, rooftop 1-5, shingles 1) — watch them, update clip-index.json entries
-- Fix filename typos: `flu up 1.mov` → `fly up 1.mov`, `timplapse build.mov` → `timelapse build.mov`
-- Upload local 10 sec library to Google Drive `dyoung@callsunnyskies.com` under `_dispatcher/video-bg-library/` (currently local only)
-- Clean up TEST trigger `trig_01LEkWL8pRFypYuYHnyKQqTU` (disabled but exists)
-- MCP redundancy cleanup: 4 Notion MCPs, 2 Vercel MCPs — prune duplicates
-- Install missing CLIs: stripe, yt-dlp, pnpm, Playwright
+- Confirm Daryl disabled the 3 Claude routines (Quotes/Midday/Evening) to prevent double-posting
+- Monitor cron.log over next few days to confirm all content types firing
+- Add RESEND_API_KEY to `/root/SunnySkies/.env` for failure email alerts (key is in Vercel)
 
 **Notes for other environments:**
-- Dispatcher is now on new routines — old ones are OFF. Do not re-enable them.
-- Fuel gauge SMS token is `fgss2026xpk7` (stored as FUEL_ALERT_TOKEN in Vercel)
-- clip-index.json is local only — needs Google Drive upload before mobile can use it
+- Dispatcher is now VPS-based, not Claude routines — don't recreate or re-enable Claude routines
+- To modify rotation or add content types: edit `/root/SunnySkies/dispatcher.js` on VPS directly
+- Shared Drive ID: `0ACHTmBWg_9bqUk9PVA` — admin@yetigroove.com is now a contributor
+- MCP Drive connector (UUID ...39e6b) is bound to `dyoung@callsunnyskies.com`, NOT admin@yetigroove.com
