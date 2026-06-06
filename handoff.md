@@ -2,31 +2,33 @@
 **Environment:** Antigravity IDE
 
 **What was done:**
-- Stays card UX overhaul: collapsed to 185px default, gradient fade, always-visible bottom bar with Show more + Check Availability buttons
-- GuestCalendar moved full-width outside the content column (was nested in left side of flex row — looked terrible)
-- Per-card photo lightbox working; "📷 X photos" label under main photo clicks to open lightbox
-- Zillow-style map detail panel: clicking a card in map view replaces the right panel with full detail view — photo grid (1 large + 2x2), all property info, inline calendar, "Back to search"
-- Mobile audit: fixed map card using wrong image field (logo vs photos[0]), fixed MapDetailPanel scroll (flex:1 + minHeight:0), bottom action bar wraps on narrow screens
-- Google Calendar tip added to iCal field in both listing form and ManageStay
-- Free tier listings now have Contact Owner → (email or phone) in bottom bar — was a dead end before
-- MapDetailPanel falls back to Call Owner → if no email
-- iCal failure alerting: sync-ical.js now SMS-alerts PLATFORM_ADMIN_PHONE when any feed fails (add this env var in Vercel)
-- Three-POV audit done (owner / guest / admin) — key findings documented in conversation
-- Owner listing form: terms checkbox required before submit (YetiGroove LLC liability disclaimer)
-- Guest inquiry form: plain-language platform disclaimer shown before send button
+- Built lakeaccess.html (`social.yetigroove.com/lakeaccess`) - co-branded Lake Access x Yeti Groove partner page with pre-applied discounted pricing ($100/$130/$200 vs standard $150/$180/$250), strikethrough pricing showing the deal, no coupon code field
+- Cleaned up social.html (`social.yetigroove.com/social`) as the public-facing standard-rate page, removed Lake Access branding
+- Added SMS order alerts to Daryl's phone (5172605907) via Twilio on every order submission
+- Rotated exposed Twilio auth token via secondary token promotion flow, updated both MB and yeti-groove projects
+- Added filming disclaimer copy to both pages
+- Removed inaccurate "30-second" duration promise from copy on both pages
+- Full audit (mobile, comms, customer/Dennis/admin POV) - found and fixed:
+  - No customer confirmation email being sent (now fixed - customer gets warm branded receipt)
+  - Admin email FROM was hardcoded "Lake Access Orders" for all orders (now "Yeti Groove Orders")
+  - Source/page not shown in admin email body or subject (now shows [Lake Access Media] or [Social])
+  - Video card labels cramped on 2-col mobile (now stacks vertically)
+  - social.html meta description still said "Lake Access Media advertiser exclusive" (fixed)
 
 **What's live / deployed:**
-- All changes pushed to main, Vercel auto-deploys
-- manitoubeachmichigan.com/stays reflects all changes
+- `social.yetigroove.com/lakeaccess` - Lake Access partner page, partner pricing, no coupon, co-branded
+- `social.yetigroove.com/social` - Public page, standard pricing, Yeti Groove branded
+- Both pages fire SMS to Daryl + email to Daryl + customer confirmation email on submit
+- Twilio token rotated and live in both MB and yeti-groove projects
 
 **Next up:**
-- Add PLATFORM_ADMIN_PHONE env var in Vercel so iCal failure alerts actually fire
-- Post-beta (after July 4): Stripe payment path needed for paid tier listings — currently stays in "New" status after verification, requires manual Notion promotion
-- Guest messaging thread (deferred v2) — post-inquiry handoff is SMS-only, no in-app continuity
-- Admin dashboard (deferred) — approvals, revenue, active listings view
+- Vercel "Needs Attention" env var audit across MB (17+ flagged) and yeti-groove - deferred from this session
+  - MB flagged: RESEND_API_KEY, NOTION_TOKEN_*, STRIPE_*, FB_PAGE_ACCESS_TOKEN, ANTHROPIC_API_KEY, etc.
+  - TWILIO_AUTH_TOKEN already fixed
+- Google Drive upload folder is shared - consider creating a subfolder per customer to keep media organised as volume grows
+- At ~10+ Lake Access orders consider a simple Notion order tracking DB
 
 **Notes for other environments:**
-- Stays feature is functionally complete for beta: owner signup, verification, manage, iCal sync, guest calendar, inquiry/waitlist, terms all working
-- No money through platform — messaging and legal disclaimers now explicit in both owner and guest flows
-- Date range blocking in ManageStay already worked (2-click calendar) — audit initially flagged it as missing but it was built
-- iCal is optional; Google Calendar is the free option for owners not on Airbnb/VRBO
+- The lakeaccess page URL is the access control - Dennis gives it to his advertisers, no coupon code needed
+- Revision policy: 1 round included, $50/round additional, no exceptions - this is enforced in copy only (no technical gate)
+- Invoice is sent manually on delivery - no automated payment flow yet
