@@ -1,34 +1,24 @@
-## Session: 2026-06-06 AEST
+## Session: 2026-06-08 AEST
 **Environment:** Antigravity IDE
 
 **What was done:**
-- Built lakeaccess.html (`social.yetigroove.com/lakeaccess`) - co-branded Lake Access x Yeti Groove partner page with pre-applied discounted pricing ($100/$130/$200 vs standard $150/$180/$250), strikethrough pricing showing the deal, no coupon code field
-- Cleaned up social.html (`social.yetigroove.com/social`) as the public-facing standard-rate page, removed Lake Access branding
-- Added SMS order alerts to Daryl's phone (5172605907) via Twilio on every order submission
-- Rotated exposed Twilio auth token via secondary token promotion flow, updated both MB and yeti-groove projects
-- Added filming disclaimer copy to both pages
-- Removed inaccurate "30-second" duration promise from copy on both pages
-- Full audit (mobile, comms, customer/Dennis/admin POV) - found and fixed:
-  - No customer confirmation email being sent (now fixed - customer gets warm branded receipt)
-  - Admin email FROM was hardcoded "Lake Access Orders" for all orders (now "Yeti Groove Orders")
-  - Source/page not shown in admin email body or subject (now shows [Lake Access Media] or [Social])
-  - Video card labels cramped on 2-col mobile (now stacks vertically)
-  - social.html meta description still said "Lake Access Media advertiser exclusive" (fixed)
+- Added global pause switch to Sunny Skies VPS dispatcher (tracking.json paused flag, pause.sh + resume.sh scripts)
+- Built standalone Dispatcher Admin UI — dispatcher-admin-six.vercel.app (React+Vite+Tailwind+dnd-kit)
+- All 3 time slots (9am, 12pm, 6pm) fully drag-and-drop configurable — Quotes is no longer hardcoded to 9am
+- Per content type on/off toggles
+- VPS config server running on port 3847 via PM2, boot-persistent (pm2 startup + pm2 save done)
+- Vercel API proxies to VPS config server — no Vercel KV/storage needed
+- VPS dispatcher updated to read remote config, respect disabled types, use schedule-driven slot assignment, fall back to hardcoded defaults if config server unreachable
+- PM2 installed on VPS, ss-config process saved for reboot persistence
 
 **What's live / deployed:**
-- `social.yetigroove.com/lakeaccess` - Lake Access partner page, partner pricing, no coupon, co-branded
-- `social.yetigroove.com/social` - Public page, standard pricing, Yeti Groove branded
-- Both pages fire SMS to Daryl + email to Daryl + customer confirmation email on submit
-- Twilio token rotated and live in both MB and yeti-groove projects
+- dispatcher-admin-six.vercel.app — Sunny Skies control panel
+- VPS config server: 143.198.171.9:3847 (PM2 managed)
+- dispatcher.js on VPS fully updated
 
 **Next up:**
-- Vercel "Needs Attention" env var audit across MB (17+ flagged) and yeti-groove - deferred from this session
-  - MB flagged: RESEND_API_KEY, NOTION_TOKEN_*, STRIPE_*, FB_PAGE_ACCESS_TOKEN, ANTHROPIC_API_KEY, etc.
-  - TWILIO_AUTH_TOKEN already fixed
-- Google Drive upload folder is shared - consider creating a subfolder per customer to keep media organised as volume grows
-- At ~10+ Lake Access orders consider a simple Notion order tracking DB
+- Adding new content type (e.g. Testimonials): needs Google Drive source folder + Posted subfolder, repurpose.io workflow, add to CONTENT_TYPES array in dispatcher.js, add to TYPE_META in admin UI src/lib/typeMeta.js and defaults.js
 
 **Notes for other environments:**
-- The lakeaccess page URL is the access control - Dennis gives it to his advertisers, no coupon code needed
-- Revision policy: 1 round included, $50/round additional, no exceptions - this is enforced in copy only (no technical gate)
-- Invoice is sent manually on delivery - no automated payment flow yet
+- Dispatcher admin URL: dispatcher-admin-six.vercel.app
+- To pause dispatcher remotely: tell Claude "pause Sunny Skies" (runs /root/SunnySkies/pause.sh via VPS MCP)
