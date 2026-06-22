@@ -1,19 +1,21 @@
-## Session: 2026-06-20 (AEST)
+## Session: June 21 2026 ET
 **Environment:** Antigravity IDE
-
 **What was done:**
-- Fixed Manitou Beach bug: event organizer photos were not showing as the OG/link-preview image when event URLs were shared (Facebook, iMessage, Nextdoor).
-- Root cause: MB is a client-rendered SPA; social crawlers don't run JS. The Vercel Edge Middleware (middleware.js) injected OG tags for /business/:slug pages but explicitly SKIPPED /events/:id.
-- Added handleEventOG() to middleware.js (mirrors existing handleBusinessSchema): fetches /api/event-detail, injects event-specific og:image (Vercel Blob photo), og:title, og:description, twitter:* tags, and Event JSON-LD schema server-side. User text HTML-escaped; falls back to default OG on 404/unapproved/no-photo.
-- Confirmed event photos are stored as permanent Vercel Blob URLs (via api/upload-image.js), NOT expiring Notion file URLs, so OG image renders reliably.
+- MB Ladies Club page updated for post-Summerfest 2026 (festival was June 20, day before)
+- Added 58-photo Summerfest 2026 gallery above existing gallery (now labeled 2025)
+- Optimized new photos 41MB -> 17MB (sips 1500px q72), SEO-renamed DSC*.jpg -> devils-lake-summerfest-2026-NN.jpg + descriptive alt text
+- Hero countdown (expired) swapped for "Thank you for an amazing Summerfest 2026" message, CTA now -> #festival-gallery
+- Festival promo section reframed to past-tense recap ("Summerfest 2026 Recap"); removed spent raffle-wheel teaser + festival map
+- Kept sponsors wall + sponsor registration form fully intact (as requested)
+- Caught + unstaged .env.local.tmp (live Anthropic/Beehiiv keys, never committed) and added .env*.tmp to .gitignore
+- Saved new memory SOP: feedback_image_seo_naming (rename+optimize photos to SEO slugs before galleries)
 
 **What's live / deployed:**
-- Committed to main (commit 9b44df6) and deployed to Vercel production via CLI.
-- Verified live: curl as facebookexternalhit on the example event now returns the organizer's Blob photo in og:image (was returning default /images/og-image.jpg before).
+- Pushed to Manitou-Beach main (be0bac7) -> Vercel auto-deploy. Verify /ladies-club on manitoubeachmichigan.com
 
 **Next up:**
-- None required. Fix applies to all future events automatically.
+- Optional: rename 2025 gallery files (summerfest-N.jpg) to SEO slugs for consistency (low priority, already deployed/linked)
+- Club may send official Summerfest content/instructions later - revisit recap copy then
 
 **Notes for other environments:**
-- Facebook/iMessage cache previews aggressively. Already-shared links may show the old image until re-scraped. To force refresh: paste URL into Facebook Sharing Debugger (developers.facebook.com/tools/debug) → "Scrape Again". New shares pick up the photo automatically.
-- Only one file changed: Manitou-Beach/middleware.js.
+- LLLC page is now in "recap" mode, not promo mode. When 2027 promo starts, re-add countdown + raffle wheel (RaffleWheelTeaser component still defined in LadiesClubPage.jsx, just unrendered).
