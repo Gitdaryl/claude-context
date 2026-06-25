@@ -1,22 +1,26 @@
-## Session: June 21 2026 ET
+## Session: 2026-06-24 (ET)
 **Environment:** Antigravity IDE
+
 **What was done:**
-- MB Ladies Club page updated for post-Summerfest 2026 (festival was June 20, day before)
-- Added 58-photo Summerfest 2026 gallery above existing gallery (now labeled 2025); shared lightbox shows "Summerfest YYYY · n / total"
-- Optimized new photos 41MB -> 17MB (sips 1500px q72); SEO-renamed BOTH galleries: devils-lake-summerfest-2026-NN.jpg (58) and devils-lake-summerfest-2025-NN.jpg (22), with descriptive alt text
-- Hero expired countdown -> "Thank you for an amazing Summerfest 2026" + CTA to #festival-gallery
-- Festival section reframed to past-tense recap ("Summerfest 2026 Recap"); removed spent raffle-wheel teaser + festival map
-- Sponsors wall + sponsor registration form left fully intact (as requested)
-- SECURITY: caught .env.local.tmp (live Anthropic/Beehiiv/Stripe/Twilio/etc keys, plaintext, Vercel CLI pull). Never committed; added .env*.tmp to .gitignore
-- Saved memory SOP feedback_image_seo_naming (rename+optimize photos to SEO slugs before galleries)
+- Diagnosed "events disappeared off the events page" on Manitou Beach (MB = manitoubeachmichigan.com, /root/Manitou-Beach on Yeti VPS).
+- Root cause: during a Notion key rotation, the `NOTION_TOKEN_EVENTS` env var in Vercel got **blanked to empty** (variable existed, value gone). The events API sent an empty `Bearer` token → Notion `401` → api/events.js silently caught it and returned `{events:[],recurring:[]}`, so the page looked empty. Events were never lost — Notion still had 128+ events.
+- Confirmed via a temporary gated debug endpoint (`?debug=mbdiag2026`) that returned `tokenPresent:false, notionStatus:401`. Debug endpoint was reverted/removed after.
+- Yeti re-pasted the Events integration secret into Vercel (All Environments). Redeployed → events restored (API returns 128 events + 3 recurring, verified live).
+- Hardened api/events.js + src/pages/HappeningPage.jsx so this can't fail silently again (commit 17f2391):
+  - Pre-flight guard: missing NOTION_TOKEN_EVENTS/DB → fail fast + SMS alert to ADMIN_PHONE.
+  - Notion auth/query failures now return HTTP 503 `{error:'events_unavailable'}` with `Cache-Control: no-store` (never cached, monitorable) instead of silent empty 200.
+  - 30-min SMS alert cooldown to avoid storms.
+  - Frontend shows a clear "can't load events right now / Refresh" state instead of the misleading "quiet week / no events" empty state.
+  - Verified with local `vite build` (BUILD OK) before pushing.
 
 **What's live / deployed:**
-- Manitou-Beach main: be0bac7 (galleries + recap) and be007df (2025 rename) -> Vercel auto-deploy. Verify /ladies-club on manitoubeachmichigan.com
+- Pushed to GitHub Gitdaryl/Manitou-Beach main → Vercel auto-deploy. Commits: redeploy for token (7c19062), diag + revert (d637ce6/a993d2e), hardening (17f2391).
+- Events page is functional again.
 
-**Next up:**
-- Daryl to ROTATE KEYS (priority: Stripe secret + webhook, Twilio auth token, Resend, Anthropic), then update each in Vercel and mark the Notion task Done
-- Reminders set: Command Center task "Rotate exposed API keys" (Status Today/High) + daily cloud routine "Key Rotation Nudge" (trig_012gBquMtxVFbAnyeY9cZfHD) runs 8am ET, drops a 9am ET Google Calendar popup + Notion comment until task marked Done. Disable at claude.ai/code/routines once done.
-- Club may send official Summerfest content/instructions later - revisit recap copy then
+**Next up / open items:**
+- Verify `ADMIN_PHONE` is set in Vercel env — the new SMS alert only fires if it's present (it's NOT in .env.example). If unset, add it so future outages actually page Yeti.
+- Optional: the same silent-empty-on-Notion-failure pattern exists in other NOTION_TOKEN_EVENTS endpoints (event-detail, hero, promotions, ~44 total) and the other token feeds (business, dispatch, pois, page-sponsors). Consider extracting a shared Notion helper that alerts/503s consistently.
+- If other keys were rotated in the same session: NOTION_TOKEN_BUSINESS and NOTION_TOKEN_HERO confirmed working; double-check NOTION_TOKEN_DISPATCH / NOTION_TOKEN_POIS / NOTION_TOKEN_PAGE_SPONSORS.
 
 **Notes for other environments:**
-- LLLC page is now "recap" mode, not promo. For 2027 promo, re-add countdown + raffle wheel (RaffleWheelTeaser still defined in LadiesClubPage.jsx, just unrendered).
+- Key lesson: a rotated/blanked Notion token in Vercel manifests as "data disappeared from the site" with no error. Check the relevant `NOTION_TOKEN_*` env var value first.
