@@ -1,21 +1,21 @@
-## Session: 2026-06-25 ET
+## Session: 2026-06-26 ET
 **Environment:** Antigravity IDE
 
 **What was done:**
-- Diagnosed NAS (UGREEN NASync / UGOS, "YETIGROOVENAS") disconnecting + hourly slowdown. Root cause: Time Machine was backing up ~950 GB hourly to the NAS over Wi-Fi, which choked the link and dropped the NAS entirely mid-use.
-- Discovered the Mac Studio reaches the NAS two ways: LAN port 10.0.0.130 (only over Wi-Fi, jittery 6-80ms) and a DIRECT 10GbE cable at 10.10.10.2 (0.5ms, rock solid). Everything was using the slow Wi-Fi path because the NAS hostname resolves to 10.0.0.130.
-- Confirmed NAS direct-link port already has a correct static IP (10.10.10.2 / 255.255.255.0) in UGOS Control Panel > Network > Network connection. No change needed there.
-- Killed Time Machine: removed the NAS destination via System Settings > General > Time Machine (minus button). Verified: "No destinations configured", AutoBackup=0, Running=0.
-- Re-mounted NAS shares over the fast direct link: personal_folder, Sunny Skies, Production all now mounted from smb://10.10.10.2 (active connection confirmed on en0 10GbE, not Wi-Fi).
+- Diagnosed the Manitou Beach `community-pois` feed outage (SMS alert "Notion query failed", section blank on site).
+- Proved the DB + schema were healthy and readable; isolated the fault to the Notion integration behind `NOTION_TOKEN_POIS` — it had been deleted/revoked (no "Community Pois" bot in the workspace).
+- Walked Yeti through the fix: recreate the integration, connect it to the Community POIs DB, paste token into Vercel `NOTION_TOKEN_POIS`, redeploy.
+- Verified live: `/api/community-pois` now returns 35 POIs + 3 suppressed. Feed restored.
+- Wrote a reusable runbook to the repo: `/root/Manitou-Beach/RUNBOOK-notion-feeds.md` (symptom, diagnose, fix, env-var↔integration↔DB map, duplicate-integration gotcha).
 
 **What's live / deployed:**
-- Time Machine fully disabled (destination removed).
-- NAS file shares running over 10GbE direct cable (10.10.10.2), ~100x lower latency than before.
+- manitoubeachmichigan.com community POIs feed is back up (Vercel redeploy by Yeti).
+- New file committed to repo working tree on VPS: `RUNBOOK-notion-feeds.md` (not yet git-committed/pushed).
 
 **Next up:**
-- Stale root-owned Time Machine SMB mount (/Volumes/.timemachine/...) still lingering — cosmetic only, clears on reboot or via `sudo umount`.
-- Recommend adding the 10.10.10.2 mounts to Login Items so they auto-reconnect after reboot.
-- Optional: when connecting to NAS always use smb://10.10.10.2, never the hostname or 10.0.0.130, to stay on the fast wire.
+- Optional cleanup: one harmless DUPLICATE "Community Pois" integration remains in Notion. Keeper = the one whose Access token matches Vercel `NOTION_TOKEN_POIS`; safe to leave both.
+- Consider committing/pushing `RUNBOOK-notion-feeds.md` to the repo.
+- Optional: verify the other Notion feeds (events, business, hero, dispatch) tokens aren't at similar risk.
 
 **Notes for other environments:**
-- Mac Studio en0 = 10GbE direct cable to NAS (10.10.10.1 <-> 10.10.10.2). en1 = Wi-Fi on home LAN (10.0.0.x, router 10.0.0.1). Use the 10.10.10.2 path for all NAS file access.
+- The blank-feed failure pattern (deleted/disconnected Notion integration → token can't auth) is now documented in the repo runbook. Tell: a feed's API endpoint returning its data array WITHOUT the `suppressed`/companion field = it's in the failure branch, not genuinely empty.
