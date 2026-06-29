@@ -1,21 +1,17 @@
-## Session: 2026-06-26 ET
+## Session: 2026-06-28 ET
 **Environment:** Antigravity IDE
 
 **What was done:**
-- Diagnosed the Manitou Beach `community-pois` feed outage (SMS alert "Notion query failed", section blank on site).
-- Proved the DB + schema were healthy and readable; isolated the fault to the Notion integration behind `NOTION_TOKEN_POIS` — it had been deleted/revoked (no "Community Pois" bot in the workspace).
-- Walked Yeti through the fix: recreate the integration, connect it to the Community POIs DB, paste token into Vercel `NOTION_TOKEN_POIS`, redeploy.
-- Verified live: `/api/community-pois` now returns 35 POIs + 3 suppressed. Feed restored.
-- Wrote a reusable runbook to the repo: `/root/Manitou-Beach/RUNBOOK-notion-feeds.md` (symptom, diagnose, fix, env-var↔integration↔DB map, duplicate-integration gotcha).
+- Added "Skydive Tecumseh 4th of July Drop-In" event (DLYC, July 4th, 8:00 PM) to two places on the Manitou Beach site:
+  1. America 250 page (`src/pages/USA250Page.jsx` → `ACTIVITIES` array) — appears in the July timeline with a 🪂 icon.
+  2. Events DB (Notion "Manitou Beach - Event Submissions") — created a Published, Admin-Added page so it shows on the live events/Happening page immediately.
 
 **What's live / deployed:**
-- manitoubeachmichigan.com community POIs feed is back up (Vercel redeploy by Yeti).
-- New file committed to repo working tree on VPS: `RUNBOOK-notion-feeds.md` (not yet git-committed/pushed).
+- Notion event = live now (events page reads Notion live): https://app.notion.com/p/Skydive-Tecumseh-4th-of-July-Drop-In-38e8c729eb5981789aecc5f01ed77763
+- America 250 page change committed (8745b83) and pushed to `main` → Vercel auto-deploy in progress.
 
 **Next up:**
-- Optional cleanup: one harmless DUPLICATE "Community Pois" integration remains in Notion. Keeper = the one whose Access token matches Vercel `NOTION_TOKEN_POIS`; safe to leave both.
-- Consider committing/pushing `RUNBOOK-notion-feeds.md` to the repo.
-- Optional: verify the other Notion feeds (events, business, hero, dispatch) tokens aren't at similar risk.
+- Confirm Vercel deploy succeeded and the new activity card renders on /america-250.
 
 **Notes for other environments:**
-- The blank-feed failure pattern (deleted/disconnected Notion integration → token can't auth) is now documented in the repo runbook. Tell: a feed's API endpoint returning its data array WITHOUT the `suppressed`/companion field = it's in the failure branch, not genuinely empty.
+- Event details from flyer: July 4th 2026, jump time 8:00 PM, landing in front of Devils Lake Yacht Club, watch from boat/shore, jumpers buzz the lake first, weather permitting. Cost set to Free.
