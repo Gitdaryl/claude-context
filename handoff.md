@@ -1,17 +1,19 @@
-## Session: 2026-06-28 ET
+## Session: 2026-07-02 ET
 **Environment:** Antigravity IDE
 
 **What was done:**
-- Added "Skydive Tecumseh 4th of July Drop-In" event (DLYC, July 4th, 8:00 PM) to two places on the Manitou Beach site:
-  1. America 250 page (`src/pages/USA250Page.jsx` → `ACTIVITIES` array) — appears in the July timeline with a 🪂 icon.
-  2. Events DB (Notion "Manitou Beach - Event Submissions") — created a Published, Admin-Added page so it shows on the live events/Happening page immediately.
+- Diagnosed recurring "can't drag-and-drop files between Finder windows" issue on the 48GB Mac (macOS Tahoe 26.5.1).
+- Root cause: memory/swap thrash, NOT a Finder bug. Firefox had 61 tabs / 67 processes using ~23 GB; Chrome (2.8 GB) and Safari also running. Swap was maxed (~22 GB of 23.5 GB), WindowServer pegged ~40% CPU → dropped drag events. Reboots only held a few hours because Firefox restored all 61 tabs on launch.
+- No third-party input tools (BetterTouchTool/Karabiner/Magnet) involved; three-finger-drag off; no Finder/WindowServer crashes.
+- Killed runaway Firefox tab, relaunched Finder + Dock, quit Safari/Chrome/Firefox, cleared Firefox sessionstore files so the 61 tabs don't auto-restore.
+- Result: free RAM 39% → 70%, swap draining, load 6.5 → 5.3.
 
 **What's live / deployed:**
-- Notion event = live now (events page reads Notion live): https://app.notion.com/p/Skydive-Tecumseh-4th-of-July-Drop-In-38e8c729eb5981789aecc5f01ed77763
-- America 250 page change committed (8745b83) and pushed to `main` → Vercel auto-deploy in progress.
+- Nothing deployed. Local machine cleanup only.
 
 **Next up:**
-- Confirm Vercel deploy succeeded and the new activity card renders on /america-250.
+- Confirm drag-and-drop works reliably going forward (should no longer need frequent reboots).
+- Suggested: install Auto Tab Discard in Firefox, avoid running 3 browsers at once, keep tab count down.
 
 **Notes for other environments:**
-- Event details from flyer: July 4th 2026, jump time 8:00 PM, landing in front of Devils Lake Yacht Club, watch from boat/shore, jumpers buzz the lake first, weather permitting. Cost set to Free.
+- User tends to accumulate 60+ Firefox tabs — this is the recurring cause of the drag-drop / slowness symptom on this Mac. Saved to auto-memory as mac-swap-thrash-dragdrop.
