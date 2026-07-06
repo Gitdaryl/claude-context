@@ -39,6 +39,16 @@
 
 <!-- Add as known -->
 
+## Session Brain (shared memory — ALL platforms)
+
+Every Claude platform (IDE, Cowork, Mobile) shares ONE memory: the Notion database **🧠 Session Brain** under the Yeti Command Center.
+- Open: https://app.notion.com/p/9d5702d67e804d6c9abb5ac650edd233
+- Data source ID: cb17cfa2-7849-45d2-93bd-3aaefe5c66d0
+
+When Yeti asks to recall a past discussion — "did we ever…", "find the session where…", "pull the script we wrote for…", "what did I do on X" — QUERY Session Brain in Notion BEFORE answering. This is the shared memory across every platform.
+
+At session end (3+ meaningful actions): append ONE row to Session Brain via Notion. Fields: Session (short title), Date, Platform (IDE / Cowork / Mobile — whichever you are), Project, Summary, What's Live, Next Up, Tags. Dense and plain.
+
 ## Notes for Claude
 
 - If unsure which environment has a tool, check `environments.md`
