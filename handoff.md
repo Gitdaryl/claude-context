@@ -1,16 +1,18 @@
-## Session: 2026-07-07 ET
+# Session Handoff
+
+## Session: July 10, 2026 ET
 **Environment:** Antigravity IDE
 **What was done:**
-- Assessed a YT transcript about "training Opus/Sonnet to think like Fable"; verdict: mostly valid, and Yeti's ~/.claude/fable-playbook.md already covers his "fable mode" five gates
-- Flagged that the video's "leaked Fable system prompt" quotes don't match the real Claude Code prompt; treat as unverified, though the extracted behaviors are accurate
-- Added rule 11 to fable-playbook.md: "Big model plans, cheap models execute" with a model/effort routing table (Haiku/Sonnet for mechanical + bounded work at low/medium effort, best model for judgment/verification/orchestration at high) and two guard rules (default effort beats max; workers return evidence, not conclusions)
-- Updated the playbook one-liner and the matching summary in ~/.claude/CLAUDE.md to stay in sync
+- Traced where the yetigroove.com/social form submission lands: email to daryl@yetigroove.com (subject "New Order [Social] - <Business>", from orders@yetigroove.com via Resend) + SMS to 517-260-5907. No database; the order is only in that inbox.
+- Verified Vercel prod env vars (RESEND_API_KEY, TWILIO_*) are set, so delivery is working (unlike the May lost-order incident).
+- Shipped the persist-before-notify standard to Gitdaryl/Yeti-Groove (commit 2a5b8e6): [ORDER] JSON payload logging before any delivery attempt, new /api/health endpoint, Twilio SMS made best-effort so it can't fail a delivered order.
 
 **What's live / deployed:**
-- Nothing deployed; local config files only
+- yeti-groove production on Vercel; /api/health returns ok:true with resend+twilio true.
 
 **Next up:**
-- Optionally test the routing table on a real multi-agent task to see the cost difference in practice
+- Yeti to check daryl@yetigroove.com inbox (and spam) for the customer's order email.
+- Known form bugs from Dennis Babjack still open: view-only Drive upload folder; story cards don't map to the 9 video styles.
 
 **Notes for other environments:**
-- The fable-playbook now covers orchestration/routing, not just solo discipline. If Cowork or Mobile use subagents, the same rule applies: big model plans, cheap models execute, escalate effort only on failure or high stakes
+- If an order ever goes missing again: Vercel runtime logs for yeti-groove, search "[ORDER]".
