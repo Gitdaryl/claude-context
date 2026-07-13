@@ -1,18 +1,23 @@
-# Session Handoff
-
-## Session: July 10, 2026 ET
+## Session: July 13, 2026 (evening ET)
 **Environment:** Antigravity IDE
 **What was done:**
-- Traced where the yetigroove.com/social form submission lands: email to daryl@yetigroove.com (subject "New Order [Social] - <Business>", from orders@yetigroove.com via Resend) + SMS to 517-260-5907. No database; the order is only in that inbox.
-- Verified Vercel prod env vars (RESEND_API_KEY, TWILIO_*) are set, so delivery is working (unlike the May lost-order incident).
-- Shipped the persist-before-notify standard to Gitdaryl/Yeti-Groove (commit 2a5b8e6): [ORDER] JSON payload logging before any delivery attempt, new /api/health endpoint, Twilio SMS made best-effort so it can't fail a delivered order.
+- Prepped Yeti's pitch to the Devils & Round Lake Men's Club ($1000/yr, all admin included): demo-first structure, $83/mo math, Facebook objection handling, Ladies Club as live proof
+- Diagnosed why the scan-and-submit crowd photo feature "never worked": code was deployed all along, but no KV database was connected in production (API returned live:false)
+- Yeti created + connected Upstash Redis (upstash-kv-gray-village, Free plan) to the manitou-beach Vercel project; Blob store (manitou-beach-images) already existed
+- Added Men's Club crowd gallery: src/data/galleries.js, api/lib/photo-slugs.js allowlist, middleware.js OG mirror. Commit dcdda2f, pushed, deployed
+- Verified end to end on production: upload → Blob → Redis index → public list, plus 3-flag auto-hide. All working
+- Generated printable QR → ~/Desktop/mens-club-gallery-QR.png → https://manitoubeachmichigan.com/gallery/mens-club
 
 **What's live / deployed:**
-- yeti-groove production on Vercel; /api/health returns ok:true with resend+twilio true.
+- manitoubeachmichigan.com/gallery/mens-club (crowd uploads ON, live:true)
+- Photo uploads now work for ALL crowd galleries (america-250, ladies-club, july-4-2026, mens-club) since the KV connection was the shared blocker
 
 **Next up:**
-- Yeti to check daryl@yetigroove.com inbox (and spam) for the customer's order email.
-- Known form bugs from Dennis Babjack still open: view-only Drive upload folder; story cards don't map to the 9 video styles.
+- Hear how the Men's Club pitch went; follow up with QR + working photo wall if they didn't commit on the spot
+- Housekeeping: a hidden navy test rectangle sits flagged in the mens-club gallery admin (/gallery-admin) — hide/ignore or purge
+- Consider seeding the Ladies Club crowd gallery + printing QRs for their next event now that uploads work
+- Longer term: moderation gate for public QR uploads (currently instant-publish with community flagging only)
 
 **Notes for other environments:**
-- If an order ever goes missing again: Vercel runtime logs for yeti-groove, search "[ORDER]".
+- The photo store env vars are KV_REST_API_URL/TOKEN via Upstash integration; code also accepts UPSTASH_REDIS_REST_* names
+- Vercel Web Analytics is installed on the site; per-path stats (e.g. /ladies-club) available in the dashboard Analytics tab
