@@ -1,17 +1,17 @@
-## Session: July 13, 2026 (night ET, part 6 — heart fix + Shop with a Hero)
+## Session: 2026-07-13 ET (part 3)
 **Environment:** Antigravity IDE
-**What was done (commits 861d963, a897d59, verified live):**
-- Fixed "no heart in enlarged view": the floating Voice Concierge mic button was covering the lightbox heart in the screen corner. Heart now anchors to the photo's own bottom-right corner (rides the image while swiping), verified with headless screenshots on phone + desktop viewports
-- Renamed Shop with a Cop → Shop with a Hero site-wide: 9 text references across MensClubPage (program card, mission text, auction desc, gallery caption), DevilsLakePage, RoundLakePage, discover.js (AI description + map pin). Image file renamed to shop-with-a-hero.jpg. Icon 👮 → 🦸, wording broadened to "law enforcement and first responders" (flag if unwanted)
+**What was done:**
+- Wrote the Never Broken treatment first draft: Documents/Claude Code/Joe-Profit/movie/TREATMENT.md (cold open in the barn, three acts 1949-1971, climax draft day, resolution Joe Profit Day jersey retirement, epilogue cards led by the knee-injury gut punch)
+- Wrote WHY-THIS-STORY.md in the same folder: Joe-facing notes defending the 1949-1971 cut, plus a table routing archival "extras" (old VHS interviews etc.) into the fundraise campaign instead of the film
+- Key line for curving Joe: "Nothing gets left out. It gets put where it wins."
 
 **What's live / deployed:**
-- manitoubeachmichigan.com: photo hearts on thumbnails + on-photo lightbox heart, event sections, flag reasons, AI pre-screen, n8n notifications — the complete crowd photo system
+- Docs only, nothing deployed
 
 **Next up:**
-- Morning-after email + $990 receipt to the Men's Club check signer
-- /mens-club content finesse (2026 calendar dates, officer contacts, membership info)
-- UX debt spotted in screenshots: the floating mic button overlays the photo lightbox on mobile and owns the corner social apps use — consider hiding it while a photo is open
-- Future: retag photo between events in admin, Blob purge delete, hearts on curated Memories photos if wanted
+- Yeti reviews treatment, shares with Joe alongside WHY-THIS-STORY.md
+- Joe interview: real dialogue fragments (barn, kitchen, locker room), Young Authors count, Kuwait claim docs, decision on the 1999 HoF frame device
+- After sign-off: beat sheet, then screenplay, then Seedance shot bible
 
 **Notes for other environments:**
-- Playwright headless (chromium_headless_shell-1223) works on the Mac for visual verification of the live site; script pattern in this session's scratchpad
+- Cowork: treatment doc could be formatted into a nice PDF for Joe there
