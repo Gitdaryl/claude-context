@@ -1,16 +1,21 @@
-## Session: 2026-07-13 ET (part 2 — commit/push)
+## Session: July 13, 2026 (late night ET, part 5 — event sections + heart placement)
 **Environment:** Antigravity IDE
-**What was done:**
-- Committed and pushed the Remotion 4.0.489 upgrades from earlier this session
-- Manitou-Beach: commit 8e32767 (package.json + package-lock.json only), rebased on top of 4 newer remote commits (photo moderation + Men's Club gallery work pushed from another environment), pushed to origin/main
-- Yeti-Signature-Films: stays-broll committed for the first time (cef0f28 — src + package files; out/ renders and node_modules excluded), pushed to origin/main
+**What was done (commit 3edf2ad, verified live):**
+- Event sections in crowd galleries: upload card asks "Which event are these from?" (Tip-Up Festival, Firecracker 7K, July 4th Fireworks, Golf Outing, default Club Life). Wall groups photos into titled/dated sections in calendar order; empty sections don't render; untagged photos land in Club Life
+- Server validates event tags against an allowlist (api/lib/photo-slugs.js GALLERY_EVENTS); forged tags sanitize to '' — verified on prod with a fake tag
+- Hearts moved onto the photos per Yeti's feedback: tappable heart pill bottom-right of every thumbnail (heart without opening the lightbox, Instagram-style), lightbox heart moved to bottom-right
+- Rebased over an automated Remotion 4.0.489 bump that landed on origin mid-build
+- Cleanup done with the notify workflow temporarily paused, so no test SMS/emails this round; two more hidden test photos in gallery-admin
 
 **What's live / deployed:**
-- Both pushes on GitHub main; Vercel will pick up Manitou-Beach on its next deploy
+- manitoubeachmichigan.com /mens-club and /gallery/mens-club: event-sectioned photo wall with on-photo hearts
 
 **Next up:**
-- Manitou-Beach still has uncommitted WIP left intact: agent_configs edits, page edits (MensClub, DevilsLake, RoundLake, USA250, discover.js, seed-community-pois.mjs), shop-with-a-cop -> shop-with-a-hero image rename. Preserved through a stash/rebase cycle.
+- Yeti: refresh /mens-club, try the event dropdown and thumbnail hearts on your phone
+- Morning-after email + $990 receipt to the Men's Club check signer
+- To add a new event later (e.g. a dated 2027 edition): add one line in src/data/galleries.js events[] + mirror key in api/lib/photo-slugs.js GALLERY_EVENTS
+- Future nice-to-haves: move photo between events in gallery-admin; Blob purge delete; flag reasons shown in admin UI
 
 **Notes for other environments:**
-- Remote Manitou-Beach commits (photo moderation, crowd gallery) were fetched and are now the base of local main — whoever made them, local is in sync
-- Remotion pinned exact at 4.0.489 in both repos
+- Event keys live in two places by design (client config + server allowlist); keep in sync
+- Gallery-admin has ~4 hidden test photos (navy squares) that can be ignored or purged
