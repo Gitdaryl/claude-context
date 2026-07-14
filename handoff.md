@@ -1,21 +1,22 @@
-## Session: July 13, 2026 (late night ET, part 5 — event sections + heart placement)
+## Session: 2026-07-13 ET
 **Environment:** Antigravity IDE
-**What was done (commit 3edf2ad, verified live):**
-- Event sections in crowd galleries: upload card asks "Which event are these from?" (Tip-Up Festival, Firecracker 7K, July 4th Fireworks, Golf Outing, default Club Life). Wall groups photos into titled/dated sections in calendar order; empty sections don't render; untagged photos land in Club Life
-- Server validates event tags against an allowlist (api/lib/photo-slugs.js GALLERY_EVENTS); forged tags sanitize to '' — verified on prod with a fake tag
-- Hearts moved onto the photos per Yeti's feedback: tappable heart pill bottom-right of every thumbnail (heart without opening the lightbox, Instagram-style), lightbox heart moved to bottom-right
-- Rebased over an automated Remotion 4.0.489 bump that landed on origin mid-build
-- Cleanup done with the notify workflow temporarily paused, so no test SMS/emails this round; two more hidden test photos in gallery-admin
+**What was done:**
+- Kicked off the Joe Profit movie project ("Never Broken" feature, Seedance production, Joe fundraising)
+- Analyzed the full 52k-word book text (Downloads/Never Broken Audiobook.txt) chapter by chapter via 4 parallel readers
+- Web-researched Joe's verified career facts and post-book accomplishments for epilogue cards
+- Wrote the foundation doc: Documents/Claude Code/Joe-Profit/movie/STORY-ANALYSIS.md
+  - Recommended structure: cold open in the 1965 barn scene, five acts as five "fields" (cotton, football, broken, boardroom, service), ends on the quiet 2015 ordination scene, epilogue title cards
+  - Verified vs unverified fact split for the fundraise (key flag: "largest minority contract" claim is only self-sourced; research says "first," not "largest")
+  - Seedance production notes: 6-age character consistency kit, use Joe's own audiobook narration as VO
 
 **What's live / deployed:**
-- manitoubeachmichigan.com /mens-club and /gallery/mens-club: event-sectioned photo wall with on-photo hearts
+- Nothing deployed; analysis doc only
 
 **Next up:**
-- Yeti: refresh /mens-club, try the event dropdown and thumbnail hearts on your phone
-- Morning-after email + $990 receipt to the Men's Club check signer
-- To add a new event later (e.g. a dated 2027 edition): add one line in src/data/galleries.js events[] + mirror key in api/lib/photo-slugs.js GALLERY_EVENTS
-- Future nice-to-haves: move photo between events in gallery-admin; Blob purge delete; flag reasons shown in admin UI
+- Yeti + Joe pick logline direction (Fields vs Vow)
+- Interview Joe: 2020-2026 activity, Young Authors published-kids count, documentation for Kuwait "largest" claim
+- Then write the treatment (5-8 pages) from STORY-ANALYSIS.md section 4
 
 **Notes for other environments:**
-- Event keys live in two places by design (client config + server allowlist); keep in sync
-- Gallery-admin has ~4 hidden test photos (navy squares) that can be ignored or purged
+- Cowork is well-suited for the treatment writing and the Joe interview question doc
+- No 2023-2026 press on Joe was findable; epilogue "still going" card must come from Joe directly
