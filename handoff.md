@@ -1,22 +1,19 @@
-## Session: 2026-07-13 ET
+## Session: 2026-07-13 ET (continued)
 **Environment:** Antigravity IDE
 **What was done:**
-- Kicked off the Joe Profit movie project ("Never Broken" feature, Seedance production, Joe fundraising)
-- Analyzed the full 52k-word book text (Downloads/Never Broken Audiobook.txt) chapter by chapter via 4 parallel readers
-- Web-researched Joe's verified career facts and post-book accomplishments for epilogue cards
-- Wrote the foundation doc: Documents/Claude Code/Joe-Profit/movie/STORY-ANALYSIS.md
-  - Recommended structure: cold open in the 1965 barn scene, five acts as five "fields" (cotton, football, broken, boardroom, service), ends on the quiet 2015 ordination scene, epilogue title cards
-  - Verified vs unverified fact split for the fundraise (key flag: "largest minority contract" claim is only self-sourced; research says "first," not "largest")
-  - Seedance production notes: 6-age character consistency kit, use Joe's own audiobook narration as VO
+- Story arc decision for the Never Broken movie: Yeti chose the sports arc over the full-life version
+- Film now covers 1949-1971 only: cotton field to draft day, resolving at the Joe Profit Day jersey retirement (the community that jeered him fills the hall)
+- Business/ministry years become epilogue title cards, led by the knee-injury gut-punch card, each card another field he won
+- Updated Documents/Claude Code/Joe-Profit/movie/STORY-ANALYSIS.md: new section 2.5 with the full three-act beat progression; sections 5, 6, 8, 9 revised to match
+- Production win: this cut needs 3 character ages (+optional elder for a 1999 Hall of Fame frame) and 2 period looks instead of 6 and 7, and zero NFL game footage (trademark problem disappears)
 
 **What's live / deployed:**
-- Nothing deployed; analysis doc only
+- Nothing deployed; docs only
 
 **Next up:**
-- Yeti + Joe pick logline direction (Fields vs Vow)
-- Interview Joe: 2020-2026 activity, Young Authors published-kids count, documentation for Kuwait "largest" claim
-- Then write the treatment (5-8 pages) from STORY-ANALYSIS.md section 4
+- Joe to confirm the 1949-1971 arc and the optional 1999 HoF frame device
+- Interview Joe: epilogue "still going" material, Young Authors count, Kuwait "largest vs first" documentation, and what people actually said in the barn / kitchen / locker room (real fragments beat invented dialogue)
+- Then the treatment (5-8 pages) from STORY-ANALYSIS.md section 2.5
 
 **Notes for other environments:**
-- Cowork is well-suited for the treatment writing and the Joe interview question doc
-- No 2023-2026 press on Joe was findable; epilogue "still going" card must come from Joe directly
+- Cowork: good place to draft the Joe interview question sheet and the treatment
