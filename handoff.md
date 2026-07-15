@@ -1,16 +1,20 @@
-## Session: 2026-07-14 ET (Receipts, continued)
+## Session: 2026-07-14 ET (Receipts, working + commercial plan)
 **Environment:** Antigravity IDE
 **What was done:**
-- Phase 2 VERIFIED: Yeti tested ~/debate-copilot/prototype/listen.html with his Deepgram key; live tab transcription works
-- Phase 3 built: ~/debate-copilot/prototype/live.html = full Receipts pipeline in one page (Deepgram STT -> claude-haiku-4-5 claim detection every 12s -> claude-opus-4-8 + web search verification -> DEBUNKED / VERIFIED / ASK THIS cards)
-- Both API keys prompted once in-browser, stored in localStorage only
+- Receipts full pipeline VERIFIED working by Yeti on a live presser (transcription + claim cards)
+- Added speaker diarization (nova-3, colored SPEAKER labels, attributed claims) and multilingual code-switching (10 languages, claims translated to English)
+- Cost lesson: first test burned all $4.39 of console credits in minutes; added wallet guard (25 checks/session, 2 concurrent, queued), downgraded verifier to sonnet, max 2 searches/claim
+- Drafted commercial architecture: ~/debate-copilot/COMMERCIAL.md (one-tap Expo app, backend relay holds keys, global claim cache = margin, Stripe web credits to hit ~10% markup, mic + YT-link sources first)
 
 **What's live / deployed:**
 - Phase 1 demo artifact (private): https://claude.ai/code/artifact/075f6059-1929-4fe8-930a-1d484c7c080b
+- Working local prototype: ~/debate-copilot/prototype/live.html
 
 **Next up:**
-- Yeti: create an Anthropic API key at console.anthropic.com (needs billing; separate from the Claude subscription), then open live.html and LISTEN TO A TAB against a debate video
-- Add "Receipts" as a Project option in the Session Brain Notion database
+- Yeti: add credits at platform.claude.com Plans & Billing before next test
+- Decide COMMERCIAL.md open questions (name/domain, consumer vs pro-tool first, transcript retention)
+- Phase 1 of commercial build: backend relay (moves keys server-side, adds global claim cache)
 
 **Notes for other environments:**
-- Spec: ~/debate-copilot/SPEC.md · demo replay: prototype/dashboard.html · transcript-only: listen.html · full pipeline: live.html
+- Docs: SPEC.md (product) + COMMERCIAL.md (business/mobile) in ~/debate-copilot/
+- Cowork could research: receipts.app domain availability, competitor pricing, App Store external-purchase-link rules current state
