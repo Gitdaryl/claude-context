@@ -1,4 +1,6 @@
 
-### Addendum 2 (same session): sponsor ticker + anchor
-- /mens-club now has a scrolling sponsor ticker strip under the hero (all 48 names, Thank You badge, pause on hover, clicks to #sponsors wall). Commits cc095d0 + this one.
-- Yeti is now a Men's Club member with marketing reins - expect more club marketing asks in future sessions.
+### Addendum 3 (same session): Photo Mod panel + ticker speed
+- New "Photo Mod" tab in /yeti-admin: pick any crowd gallery (Men's Club, Ladies Club, America 250, July 4), flagged photos float first with the flag reason, one-tap Hide/Restore, two-tap permanent Delete (removes KV index + Blob file). Phone-friendly for in-person takedown requests.
+- photos-admin API gained the 'delete' action (was hide/restore only).
+- Mens-club sponsor ticker sped up 160s -> 75s per loop.
+- Commit e3f90ca deployed. Yeti should test the panel once with his real admin login (local verify used mocked API data).
