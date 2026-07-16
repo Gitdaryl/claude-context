@@ -1733,3 +1733,14 @@
 
 **Notes for other environments:**
 - Men's Club sponsor submissions now land in Vercel Blob intake/mens-club-sponsors/ + email admin@yetigroove.com; anyone handling club admin should watch for those emails and follow up within 2 business days (that is what the site promises)
+
+---
+
+## 2026-07-16 12:54 AEST
+
+
+### Addendum (same session): sponsor wall links
+- All 48 sponsor names on /mens-club wall reviewed for web presence; 41 now hyperlink (website first, else the business's own FB page), verified for Michigan location + HTTP 200. Names render lake blue with hover underline.
+- 7 with no findable web presence stay plain text: Batko Family, Mark Scarlato Family, Edison Builders, Lakeside Construction, Lightning Quick Gas N Go, Rock Hard Concrete (Adrian), The Springs BP
+- Pitch angle for Yeti: these 7 (and the FB-only ones) are prime prospects for MB business listings / pages
+- Commit 1209cee deployed
