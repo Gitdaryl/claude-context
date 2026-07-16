@@ -1744,3 +1744,12 @@
 - 7 with no findable web presence stay plain text: Batko Family, Mark Scarlato Family, Edison Builders, Lakeside Construction, Lightning Quick Gas N Go, Rock Hard Concrete (Adrian), The Springs BP
 - Pitch angle for Yeti: these 7 (and the FB-only ones) are prime prospects for MB business listings / pages
 - Commit 1209cee deployed
+
+---
+
+## 2026-07-16 13:02 AEST
+
+
+### Addendum 2 (same session): sponsor ticker + anchor
+- /mens-club now has a scrolling sponsor ticker strip under the hero (all 48 names, Thank You badge, pause on hover, clicks to #sponsors wall). Commits cc095d0 + this one.
+- Yeti is now a Men's Club member with marketing reins - expect more club marketing asks in future sessions.
