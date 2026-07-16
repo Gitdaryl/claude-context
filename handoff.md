@@ -1,17 +1,19 @@
-## Session: July 14, 2026 (ET) - continued
+## Session: 2026-07-15 (evening ET)
 **Environment:** Antigravity IDE
 **What was done:**
-- Follow-ups to the Men's Club Golf Outing 2026 build on /mens-club:
-- Hero club logo enlarged 76px -> 180px in golf mode, readable at hero scale (5cb3318)
-- New CTA under the 2026 Golf Outing Sponsors tiers: "Put Your Business on the Course", anchor-jumps to the Become a Sponsor form (new id become-a-sponsor) (78ef4b4)
-- Both verified with Playwright screenshots before push
+- Picked up HANDOFF-never-broken-site.md from Downloads (built earlier today in claude.ai chat)
+- Moved unzipped site from ~/Downloads/never-broken-site to ~/never-broken-site
+- Git repo initialized, pushed to private repo github.com/Gitdaryl/never-broken-site
+- Deployed to Vercel (project: never-broken-site, scope: yetigroove)
+- Verified live: index + treatment return 200, noindex meta present on both pages, robots.txt blocking all crawlers
 
 **What's live / deployed:**
-- 5cb3318 and 78ef4b4 pushed to main; Vercel auto-deploys manitoubeachmichigan.com/mens-club
+- https://never-broken-site.vercel.app (playbook at /, treatment at /treatment.html) — link-only, not indexed. This is the link to send Joe.
 
 **Next up:**
-- Sponsor form event dropdown pending Yeti confirming with the club: which event is being sponsored (Men's Club general / Tip-Up / Golf Outing / Firecracker 7K), whether dollars are earmarked per event, whether golf sells event-specific inventory (hole signs, cart sponsor, turn station), and how poster tiers (Gold/Silver/Bronze) map to the form amounts ($1,000/$500/$100). Plan: dropdown on shared CommunityDonationForm, per-event tier sets if needed, golf CTA pre-selects Golf Outing
-- Still waiting on: comprehensive sponsor list, clean NTA + Scotty's logos, foursome-registration-form decision
+- Optional: attach playbook.joeprofitneverbroken.com subdomain in Vercel dashboard (Settings → Domains on the never-broken-site project)
+- Send Joe the link
 
 **Notes for other environments:**
-- Poster tier names (Gold/Silver/Bronze) and the on-site sponsor form tiers (Presenting/Gold/Silver/Community Partner) don't currently match; flagged to Yeti, resolve after club confirms
+- claude.ai Vercel connector was failing (empty team list); IDE's Vercel CLI auth worked fine, used that
+- Site is NOT connected to GitHub auto-deploy; redeploys are manual via `vercel` in ~/never-broken-site
