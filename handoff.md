@@ -1,19 +1,15 @@
-## Session: 2026-07-15 (evening ET)
+## Session: 2026-07-15 (evening ET, follow-up)
 **Environment:** Antigravity IDE
 **What was done:**
-- Picked up HANDOFF-never-broken-site.md from Downloads (built earlier today in claude.ai chat)
-- Moved unzipped site from ~/Downloads/never-broken-site to ~/never-broken-site
-- Git repo initialized, pushed to private repo github.com/Gitdaryl/never-broken-site
-- Deployed to Vercel (project: never-broken-site, scope: yetigroove)
-- Verified live: index + treatment return 200, noindex meta present on both pages, robots.txt blocking all crawlers
+- Verified the never-broken-site Vercel project is connected to GitHub (Vercel auto-linked it at project creation)
+- Confirmed auto-deploy works: pushed a test commit to Gitdaryl/never-broken-site main → Vercel auto-built and deployed to production
 
 **What's live / deployed:**
-- https://never-broken-site.vercel.app (playbook at /, treatment at /treatment.html) — link-only, not indexed. This is the link to send Joe.
+- https://never-broken-site.vercel.app (unchanged, still the link for Joe)
 
 **Next up:**
-- Optional: attach playbook.joeprofitneverbroken.com subdomain in Vercel dashboard (Settings → Domains on the never-broken-site project)
+- Optional: attach playbook.joeprofitneverbroken.com subdomain in Vercel dashboard
 - Send Joe the link
 
 **Notes for other environments:**
-- claude.ai Vercel connector was failing (empty team list); IDE's Vercel CLI auth worked fine, used that
-- Site is NOT connected to GitHub auto-deploy; redeploys are manual via `vercel` in ~/never-broken-site
+- Correction to earlier note: GitHub auto-deploy IS wired up. Any session can update the site by pushing to Gitdaryl/never-broken-site main; no Vercel CLI needed.
