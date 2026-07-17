@@ -1,21 +1,23 @@
-## Session: July 17, 2026 (ET), early AM
+## Session: July 17, 2026 (ET), early AM (part 2)
 **Environment:** Antigravity IDE
 **What was done:**
-- Spotted Owl logo chosen: parchment seal with party-hat owl (branding/logo-B1-parchment-seal.png)
-- Integrated it sitewide: full seal as og:image (1024x1024), inner owl-medallion circular crop as nav mark (48px, brass ring) and PNG favicon, apple-touch-icon from full seal
-- Found Vercel GitHub webhook flaky (push did not auto-deploy); deployed via `vercel deploy --prod --yes` instead. Use CLI deploy for this project going forward.
-- Verified live nav renders the owl medallion cleanly via headless screenshot
-- Saved cross-session memory: spotted-owl-event-co project memory (repo, live URL, logo decision, copy voice rules)
+- Yeti provided 16 real party photos (~/Desktop/spotted owl photos). Ran an IP triage: franchise text/props and kid-face shots stay off the public site; safe/croppable shots identified.
+- Hero video: uploaded the flying-keys photo to Higgsfield, generated 2 cinemagraph takes (kling3_0_turbo, declined "IN THE DARK" preset), picked the steadier take, built a seamless 4s crossfade loop with ffmpeg (165KB mp4), wired into hero with poster still + prefers-reduced-motion fallback.
+- Gallery: six real photos with IP-safe crops (owl post wall minus branded candy, castle arch minus shop sign, fireplace letters minus seal plaque, wand crate, owl cubby No. 14, castle mural). Captions updated to honest names (one Wizard Academy world + details).
+- Story section: hand-built wands workshop photo.
+- Verified live with headless screenshots (hero at 1440x900 + gallery via QA copy; anchor screenshots fail due to smooth-scroll, workaround: hide sections above target).
 
 **What's live / deployed:**
-- https://spotted-owl-site.vercel.app with seal logo in nav, favicon, and social share image (main at 0a498dc)
+- https://spotted-owl-site.vercel.app (main at e6a59e9): video hero, full gallery, story photo all live
 
 **Next up:**
-- Yeti: click FormSubmit activation link in admin@yetigroove.com (if not done yet)
-- Real photos for hero/gallery; real Instagram/Etsy footer URLs
-- Consider print/sticker uses of the seal (wax-seal stickers for mailed invitations fit the Signature tier)
-- Later: custom domain, persist-before-notify form upgrade
+- FormSubmit activation click (if still pending)
+- Holiday section photo still placeholder; testimonials still placeholder (need real quotes)
+- Instagram/Etsy footer links still stubs
+- More party photos from other themes (Galactic/Enchanted/Arctic) to diversify gallery later
+- Custom domain when ready
 
 **Notes for other environments:**
-- Logo files live in ~/Projects/spotted-owl-site/branding/ (4 concepts) and images/ (production crops)
-- The full seal is unreadable below ~60px; always use the inner medallion crop for small marks
+- Source photos: ~/Desktop/spotted owl photos/ (originals, NOT in repo). Web crops in repo images/.
+- IP rule enforced on public site: no franchise text/props/faces. Keep it that way.
+- Vercel webhook still flaky: push then `vercel deploy --prod --yes`.
