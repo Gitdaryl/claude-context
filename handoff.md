@@ -1,23 +1,19 @@
-## Session: July 17, 2026 (ET), early AM (part 2)
+## Session: July 17, 2026 (ET), early AM (part 3)
 **Environment:** Antigravity IDE
 **What was done:**
-- Yeti provided 16 real party photos (~/Desktop/spotted owl photos). Ran an IP triage: franchise text/props and kid-face shots stay off the public site; safe/croppable shots identified.
-- Hero video: uploaded the flying-keys photo to Higgsfield, generated 2 cinemagraph takes (kling3_0_turbo, declined "IN THE DARK" preset), picked the steadier take, built a seamless 4s crossfade loop with ffmpeg (165KB mp4), wired into hero with poster still + prefers-reduced-motion fallback.
-- Gallery: six real photos with IP-safe crops (owl post wall minus branded candy, castle arch minus shop sign, fireplace letters minus seal plaque, wand crate, owl cubby No. 14, castle mural). Captions updated to honest names (one Wizard Academy world + details).
-- Story section: hand-built wands workshop photo.
-- Verified live with headless screenshots (hero at 1440x900 + gallery via QA copy; anchor screenshots fail due to smooth-scroll, workaround: hide sections above target).
+- Parallax wands band ("From Our Workshop" quote) between Services and Portfolio; quote moved out of story
+- Story section now has the two makers: tiny "erin mother.jpg" selfie upscaled 414px -> 2K via Higgsfield, placed as story media (swap if full-res original arrives)
+- Mobile QA pass: full-page section screenshots at 390px; found and fixed nav logo wrap (one-line wordmark, tagline hidden, tighter CTA under 520px)
+- Site is mobile-clean and ready to share with the family
 
 **What's live / deployed:**
-- https://spotted-owl-site.vercel.app (main at e6a59e9): video hero, full gallery, story photo all live
+- https://spotted-owl-site.vercel.app (main at 6769b22)
 
 **Next up:**
-- FormSubmit activation click (if still pending)
-- Holiday section photo still placeholder; testimonials still placeholder (need real quotes)
-- Instagram/Etsy footer links still stubs
-- More party photos from other themes (Galactic/Enchanted/Arctic) to diversify gallery later
+- Holiday section photo, real testimonials, Instagram/Etsy links
+- Granddaughter photos stay off the public site unless her parents opt in (3-gen b/w is the candidate if approved)
 - Custom domain when ready
 
 **Notes for other environments:**
-- Source photos: ~/Desktop/spotted owl photos/ (originals, NOT in repo). Web crops in repo images/.
-- IP rule enforced on public site: no franchise text/props/faces. Keep it that way.
-- Vercel webhook still flaky: push then `vercel deploy --prod --yes`.
+- New family photos in ~/Desktop/spotted owl photos: "erin mother.jpg" (makers duo, small), "2 gen.jpg" (grandma+kid Halloween), "dokota gma.jpg", "3 gen 2.jpg"
+- Deploy routine: push, then `vercel deploy --prod --yes`
