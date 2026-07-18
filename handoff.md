@@ -1,17 +1,20 @@
-## Session: 2026-07-18 (ET, lookbook look-test)
+## Session: 2026-07-18 (ET, lookbook shipped)
 **Environment:** Antigravity IDE
 **What was done:**
-- Started the cinematic stills lookbook for Never Broken (Yeti's idea: mock scenes as finished-production stills; only modern-day Joe needs real likeness)
-- Look test via Higgsfield Cinema Studio 2.5, 21:9, 2k (383 credits available, Ultimate plan):
-  - TRACKS COLD OPEN: locked first try. Period truck, headlights, dust, four silhouettes. Poster-grade. stills/test-tracks.png
-  - THE ROOM: took 3 tries. Take A failed (white Marcus, cozy den). Take B right room/Joe, wrong center kid. Take C = keeper base: correct Black Marcus center (arms crossed, phone, guarded), great room texture; foreground mentor figure is wrong and will be replaced/composited once Joe reference photos arrive. stills/test-room-c.png
-- Folders created: ~/never-broken-site/reference/joe/ (Yeti drops modern-day Joe photos here), ~/never-broken-site/stills/
-- Planned 12-shot list following the fortune line: tracks, barn lantern, kitchen, Greyhound, walk-on field, draft day, the knee, deed signing, semicircle, Joe mentoring close, Marcus brings friend, final session
-- Guardrails: no NFL/Falcons marks anywhere, barn stays dread-not-violence, character consistency across frames
+- Generated and deployed the full cinematic lookbook: 11 concept frames (21:9, 2k) placed through the treatment, one leading each session: tracks cold open, the room, Joe mentoring (real likeness via Nano Banana Pro from reference/joe photos: Alpha portrait + ULM teaching shot), greyhound, kitchen, walk-on, barn, draft day, knee, deed signing, final session
+- Tools: Higgsfield Cinema Studio 2.5 for period frames, Nano Banana Pro for identity frames; Joe refs uploaded to Higgsfield (media ids in git history of this file if ever needed)
+- Quality control mattered: THREE frames initially generated with white subjects (Marcus, the kitchen family, the entire draft-day family) and one with wrong-period set dressing; all caught on review and regenerated with explicit casting/period language. Rule: every generated frame gets eyeballed before Joe or any funder sees it
+- Frames captioned "concept frame" for honesty in funder materials; no NFL/team marks anywhere; barn frame is dread-only, nothing graphic
+- Web JPEGs (~2.5MB total) committed; master PNGs + reference photos gitignored
+
+**What's live / deployed:**
+- https://never-broken-site.vercel.app/treatment.html now has: Draft v2 text, Joe's-voice narration, notes, Coach Story widget, and 11 film stills. The full package.
 
 **Next up:**
-- Yeti: drop Joe photos in reference/joe/ and approve the two locked looks
-- Then: run the full 12-shot set, fix room foreground with Joe's likeness, integrate stills into the site (index.html stills-grid has placeholder slots; treatment sessions could take inline frames)
+- Yeti reviews the frames on the live page (swap requests = cheap regens, prompts are in git history)
+- Optional: stills grid on index.html playbook page (placeholder slots exist), DeWitt barrier frame, Marcus-brings-a-friend frame
+- Send Joe the link
 
 **Notes for other environments:**
-- Higgsfield model for this: cinematic_studio_2_5, 21:9, 2k, "prestige drama, 16mm grain" grammar for past scenes, "35mm cool institutional" for present
+- Higgsfield credits after the run: see balance; roughly 15 generations spent this session
+- Regen recipe: cinematic_studio_2_5, 21:9, 2k, "prestige drama, 16mm grain" for past / "35mm cool institutional" for present; ALWAYS specify race of every character explicitly or the model whitewashes scenes
