@@ -1,19 +1,18 @@
-## Session: 2026-07-17 (late night ET, follow-up)
+## Session: 2026-07-17 (late night ET, correction pass)
 **Environment:** Antigravity IDE
 **What was done:**
-- Reworked structure.html Part One per Yeti's note that "twelve stages" was confusing (chart mixed Vogler stage numbers with the six oh-shit dot numbers)
-- New numbered 1-12 stages list in plain 12-year-old language with football/franchise metaphors (home field, recruiter, training camp, next man up); stage 12 visually highlighted
-- Chart labels stripped of Vogler numbers: red dots 1-6 are now the only numbers on the chart, caption explains they are the oh-shit moments, not the stages
-- Added funding frame up top ("Why this page exists"): studios scout like banks grade franchise loans; self-funding = run any play, fundraising = run the formula; IHOP-loan metaphor (bank funded the proven system, not the pancakes)
-- Simplified 6+1 and Social Network paragraphs; new ids st-14, st-15 added (per README rule, existing ids untouched)
+- Per Yeti: the "6+1 rule" (six oh-shit + one oh-my-god) was one teacher's classroom shorthand, not a Hollywood standard, so it no longer appears as doctrine on structure.html
+- Replaced with real, citable craft: Robert McKee's progressive complications (Story) and Blake Snyder's All Is Lost beat (Save the Cat, the beat sheet studio readers actually grade against)
+- Six setbacks reframed as this film's ladder ("no magic number; the law is escalation plus one bottom"), section renamed "The Setbacks and the Bottom", chart legend and labels updated (ALL IS LOST replaces OH MY GOD)
+- Oh-shit/oh-my-god kept only as one line of plain audience-language translation, clearly not presented as a formula
 
 **What's live / deployed:**
 - https://never-broken-site.vercel.app/structure.html (updated)
 
 **Next up:**
 - Send Joe the structure page
-- Confirm by voice which letter notes are actually Joe's vs his buddy's
-- v2 treatment: fold in 5 new dramatized scenes + barn cold-open fragment per README workflow
+- Confirm by voice which of the letter's notes are actually Joe's
+- v2 treatment: 5 new dramatized scenes + barn cold-open fragment per README workflow
 
 **Notes for other environments:**
-- Yeti's framing to reuse with Joe: "if we self-fund, do what we like; if we fundraise, the formula is the playbook"
+- Standard going forward: nothing presented to Joe or funders as "the industry formula" unless it traces to a citable source (Vogler, McKee, Snyder). Classroom heuristics get labeled as such or cut.
