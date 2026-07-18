@@ -1,19 +1,17 @@
-## Session: 2026-07-18 (ET, narration live)
+## Session: 2026-07-18 (ET, lookbook look-test)
 **Environment:** Antigravity IDE
 **What was done:**
-- Generated all 19 narration clips (~29k chars, 32MB): treatment narrated in the "Dr Joseph Profit" voice (voice id 13fpLkxdyC2oV0VgouJ9, Yeti's ElevenLabs voice-design recreation of Joe's voice); structure page narrated by Bill (premade, the teacher voice)
-- Created ElevenLabs conversational agent "Coach Story (Never Broken)" agent_6701kxssqah0ef9vtg44vmhjbm3d, Bill's voice, full craft prompt from agent-prompt.md; widget live bottom-right on both pages
-- Verified live: 14 LISTEN buttons on treatment + 5 on structure, cold open plays (60s), widget renders ("Start a call")
-- ElevenLabs API key stored in ~/never-broken-site/.env.audio (gitignored, chmod 600). Regeneration workflow: edit treatment → python3 scripts/generate_audio.py (only changed sections regenerate) → commit audio/ → push
-- Coach Story is wired to never confirm the narration is really Joe if he asks; deflects to Daryl. Disclosure flag raised with Yeti: before material goes to funders/third parties, the synthetic voice must be disclosed and Joe must sign off
-
-**What's live / deployed:**
-- https://never-broken-site.vercel.app/treatment.html: Draft v2, notes, narration in Joe's voice, Coach Story widget
-- https://never-broken-site.vercel.app/structure.html: education page, narration by Bill, widget
+- Started the cinematic stills lookbook for Never Broken (Yeti's idea: mock scenes as finished-production stills; only modern-day Joe needs real likeness)
+- Look test via Higgsfield Cinema Studio 2.5, 21:9, 2k (383 credits available, Ultimate plan):
+  - TRACKS COLD OPEN: locked first try. Period truck, headlights, dust, four silhouettes. Poster-grade. stills/test-tracks.png
+  - THE ROOM: took 3 tries. Take A failed (white Marcus, cozy den). Take B right room/Joe, wrong center kid. Take C = keeper base: correct Black Marcus center (arms crossed, phone, guarded), great room texture; foreground mentor figure is wrong and will be replaced/composited once Joe reference photos arrive. stills/test-room-c.png
+- Folders created: ~/never-broken-site/reference/joe/ (Yeti drops modern-day Joe photos here), ~/never-broken-site/stills/
+- Planned 12-shot list following the fortune line: tracks, barn lantern, kitchen, Greyhound, walk-on field, draft day, the knee, deed signing, semicircle, Joe mentoring close, Marcus brings friend, final session
+- Guardrails: no NFL/Falcons marks anywhere, barn stays dread-not-violence, character consistency across frames
 
 **Next up:**
-- Yeti sends Joe the treatment link (suggest: "tap LISTEN on any section")
-- Collect Joe's notes; v3 cycle when ready (regenerate only changed audio via the hash cache)
+- Yeti: drop Joe photos in reference/joe/ and approve the two locked looks
+- Then: run the full 12-shot set, fix room foreground with Joe's likeness, integrate stills into the site (index.html stills-grid has placeholder slots; treatment sessions could take inline frames)
 
 **Notes for other environments:**
-- The API key was pasted in chat this session; if that ever bothers Yeti, rotate it at elevenlabs.io and update .env.audio, nothing else references it
+- Higgsfield model for this: cinematic_studio_2_5, 21:9, 2k, "prestige drama, 16mm grain" grammar for past scenes, "35mm cool institutional" for present
