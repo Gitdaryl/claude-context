@@ -1,23 +1,21 @@
-## Session: 2026-07-18 (ET)
+## Session: 2026-07-18 (ET, audio/agent scaffold)
 **Environment:** Antigravity IDE
 **What was done:**
-- Yeti locked the decision framework: strongest formula wins, appeasing Joe is secondary (his unpaid time = his investment; fundability is the payoff)
-- Built and shipped Treatment Draft v2 (git tags v1 and v2 on Gitdaryl/never-broken-site):
-  - Cold open: the tracks, 1965, unresolved fragment (headlights, bottle, hard cut to title); pays off in Session Four; this is the social-hook open Yeti wanted and satisfies the letter's "open with the barn" note without spending the ordeal early
-  - Session Two rebuilt "Principle over Practice": Alcorn walkout (it was principle, not "principal" - the letter garbled it), the bus home, the kitchen confrontation ("we don't even have a fan for you here"), Vietnam draft stakes
-  - New Session Three "The Walk-On": Coach Abe Pierce III, Dixie B. White ("let's see what you got"), the locker-room fights and the deal with White, the cafeteria isolation
-  - Final session: Sunny Point/Bobby DeWitt story (1986 DoD contract, barrier refusal, courtroom, then DeWitt's barbecue invitation and Joe going) told inside the frame as Joe's answer to Marcus, so the IHOP deed stays the sole climax
-  - Inc. 500 x3 + Entrepreneur of the Year added to end cards; sessions renumbered 1-8 (matches structure page band)
-  - All new/changed paragraphs carry gold "revised v2" markers per README workflow
-- ALL scenes sourced from ~/Downloads/"Never Broken Audiobook.txt" (the manuscript); nothing invented
+- Built the full narration + voice-agent layer for never-broken-site, shipped dormant (site looks unchanged until audio is generated):
+  - LISTEN buttons on all 19 sections (14 treatment: overview, cold open, room, sessions 1-8, final, epilogue, throughline; 5 structure: parts one-five)
+  - narrate.js: manifest-driven player; also injects the ElevenLabs convai widget bottom-right when audio/manifest.json has an agentId
+  - scripts/generate_audio.py: extracts section text via the stable data-nb ids, ElevenLabs TTS (default voice Adam, override with ELEVEN_VOICE_ID), hash-cached so only changed sections regenerate on future drafts (~29k chars total for everything)
+  - agent-prompt.md: "Coach Story" Hollywood script-teacher persona carrying the whole education (12 stages mapped to Joe, McKee/Snyder, courtship rule, trophy-case logic, full v2 treatment summary, football/franchise metaphors, plain 12-year-old language). Same paste-in pattern as the Manitou concierge
+- Purpose per Yeti: Joe absorbs by ear (he cried when his website was narrated); this defeats scan-and-judge
 
 **What's live / deployed:**
-- https://never-broken-site.vercel.app/treatment.html (Draft v2)
+- Scaffold live at never-broken-site.vercel.app (buttons hidden while manifest is empty)
+
+**BLOCKED ON: the ElevenLabs API key.** Not on the Mac, not accessible on the VPS (permission-blocked). Yeti needs to paste it into ~/never-broken-site/.env.audio (gitignored; example file .env.audio.example exists). Then next session: run scripts/generate_audio.py, create the Coach Story agent via API (or Yeti pastes agent-prompt.md into the ElevenLabs dashboard and provides the agent id), set agentId in audio/manifest.json, commit + push. One command each.
 
 **Next up:**
-- Send Joe the treatment (v2) + structure page together
-- Joe's notes via the on-page note buttons; then v3 cycle per README (clear v2 markers when v3 ships)
+- Get key → generate 19 MP3s → create agent → flip manifest → deploy
+- Then send Joe both pages
 
 **Notes for other environments:**
-- The manuscript text on disk is the source of truth for scene material; quote sparingly, never invent biography
-- DeWitt is a 1986 business-era story, not football-era (the letter's "military base" reference)
+- ElevenLabs agent id for Manitou concierge is in Manitou-Beach/.env (VITE_ELEVENLABS_AGENT_ID); the API key was never stored locally, it lives in Yeti's ElevenLabs dashboard
