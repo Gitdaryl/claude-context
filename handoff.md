@@ -1,20 +1,18 @@
-# Session Handoff
-
-## Session: July 17, 2026 (ET)
+## Session: 2026-07-17 (night ET)
 **Environment:** Antigravity IDE
 **What was done:**
-- Diagnosed the Never Broken bookmark QR failure: dynamic QR from qr-code-generator.com, account lapsed, qrco.de redirect disabled
-- Found the source account via macOS "Where from" metadata on ~/Downloads/Photos/"joeprofitneverbroken.com QR code.png": app.qr-code-generator.com, download ID 90246622, QR contents https://qrco.de/bgh3HY -> www.joeprofitneverbroken.com
-- Yeti found the account, upgraded to a YEARLY plan (10,000 scans included); verified via curl that qrco.de/bgh3HY now 302-redirects correctly. Printed bookmarks work again
-- Created Google Calendar reminder July 6, 2027 (renewal ~July 17, 2027) so the subscription never silently lapses
+- Reviewed Joe's feedback letter on the treatment (likely ghost-written by a buddy, flagged to Yeti). Gave objective pushback: adopt the dramatize-harder notes and 5 new scenes, adapt barn into a cold-open fragment, keep the Marcus frame (it is Stage 12 of the journey), keep single climax (the IHOP deed), résumé items to end cards, Reagan material out of the drama (campaign/doc layer, one card max)
+- Built structure.html, a Joe-facing Story Structure Brief on the site: SVG Writer's Journey fortune-line (Vogler stages mapped to Joe's beats, 6 "oh shit" dips, 1 "oh my god" nadir, the deed as sole victory, present-day room drawn as the Stage 12 band), 6+1 rule beat cards, movie-history proof table (King Richard, Pursuit of Happyness, 42, Blind Side, Cinderella Man, Coach Carter, Social Network), the courtship rule ("the movie undersold him" = word of mouth), trophy-case end-card placement
+- Joe can leave notes on this page too (st-XX paragraph ids, same notes API)
+- Linked from both navs (playbook + treatment). Verified live, diagram screenshot-checked desktop and column widths
 
 **What's live / deployed:**
-- qrco.de/bgh3HY redirect re-enabled; all printed Never Broken bookmarks functional
+- https://never-broken-site.vercel.app/structure.html
 
 **Next up:**
-- Future print runs: use a static QR or a self-hosted redirect (e.g. yetigroove.com/qr/joe) so print assets never depend on a third-party subscription
-- Keep an eye on the 10,000-scan allowance if distribution scales up
+- Yeti to send Joe the structure page alongside/before v2 treatment discussion
+- Confirm with Joe (voice, ideally) which letter notes are his vs his buddy's before restructuring
+- v2 treatment: fold in the 5 new dramatized scenes (Alcorn, bus home, NLU walk-on visit, locker-room confrontations, Bobby DeWitt) + barn cold-open fragment; follow README version workflow (revised markers, Draft v2 chip)
 
 **Notes for other environments:**
-- The trick that found the account: `mdls -name kMDItemWhereFroms <downloaded file>` shows the download URL. Works for any browser-downloaded file
-- QR account lives under admin@yetigroove.com (calendar event created there)
+- Story decisions reaffirmed: frame stays, one climax, trophies to end cards, no Reagan scenes. The structure page is the persuasion/education artifact for Joe.
