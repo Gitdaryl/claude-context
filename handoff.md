@@ -1,20 +1,15 @@
-## Session: 2026-07-18 (ET, Yeti's frame recreations)
+## Session: 2026-07-18 ET
 **Environment:** Antigravity IDE
 **What was done:**
-- Swapped in four frames Yeti recreated with more Joe references, each verified before deploy:
-  - tracks: corrected to exactly four boys (generator had made five); single working headlight on the truck is an upgrade
-  - barn: long-gun version chosen over two-pistol version (craft call: reads at page scale, barrel diagonal leads into lantern light, lowered muzzle = casual menace). Yeti's rule confirmed: run the stronger image while conceptual, dial back is one push
-  - joe-mentoring: tighter likeness, all-Black room
-  - final-session: foreground listener now clearly Joe (was a wrong generic figure); Joe seated at Marcus's eye level
-- Note: Yeti's file naming was flipped on the barns ("the barn 1.png" = long-gun); always verify visually before swapping
-- All live-verified byte-for-byte; masters in stills/ (gitignored), web JPEGs committed
+- Fixed the manitoubeachmichigan.com homepage events ticker racing. Root cause: the Jul 16 marquee seam fix added `width: max-content` to the shared `.marquee-track` class, so the homepage ticker's fixed 35s animation suddenly spanned the full 4x-repeated content instead of half a viewport, making it fly.
+- Restored the original gentle crawl (~20px/s) by scaling the animation duration to content width in the EventTicker component (HomePage.jsx), keeping the seamless-loop fix intact. Men's club ticker pace untouched.
+- Built, committed (a6a0e70), pushed to main, Vercel production deploy Ready, and verified the live speed headlessly with Playwright (measured exactly 20px/s).
 
 **What's live / deployed:**
-- https://never-broken-site.vercel.app/treatment.html: complete package with all four upgraded frames
+- manitoubeachmichigan.com production: homepage ticker back to original crawl speed.
 
 **Next up:**
-- Package is send-ready. Remaining optional: index.html stills grid, DeWitt frame, Marcus-brings-friend frame
-- Send Joe the link
+- Nothing pending from this session.
 
 **Notes for other environments:**
-- Swap recipe for future frames: file into ~/never-broken-site/stills/, cp to <slot>.png, sips to 1600w jpeg q82 into stills/web/, commit, push
+- The homepage EventTicker now sets its own animation-duration in JS (35s x trackWidth/viewportWidth). If ticker speed ever needs tuning, change the 35 in HomePage.jsx EventTicker, not the .marquee-track CSS.
