@@ -1,18 +1,19 @@
-## Session: July 20, 2026 (ET), part 4
+## Session: July 20, 2026 (ET), part 5
 **Environment:** Antigravity IDE
 **What was done:**
-- Closed both collaboration gaps on long-shutdown-site (commit 6c4024f, live in production):
-  1. Per-note delete tokens: POST mints a secret only the author's browser keeps (localStorage nb-tokens), GET strips it, DELETE requires it. Verified live: foreign/absent token 403s, owner delete works, delete button only renders on your own notes
-  2. Post-persist notify webhook: set NOTIFY_WEBHOOK_URL env var on the Vercel project and every new note POSTs JSON (event, site, para, name, text, ts, url) to it AFTER the blob write succeeds (persist-before-notify standard). Wire to n8n for email/SMS pings; no code change needed to activate
-- Wrote the product spec for the templatable offering: ~/living-draft/SPEC.md ("Living Draft" working name). Producer/writer persona: momentum mechanics (note pings, read receipts, resolve stamps, rev changelogs, greenlight meter of locked stamps, decision log), AI crew inside (script doctor citing Vogler/McKee/Snyder for gap-finding, instant coverage, comp finder, visualize-this-beat image gen with character continuity, table read TTS, pitch pack export), zero-login guests as the moat, roadmap v0 hand-built -> v0.5 productized service (5 paying projects) -> v1 SaaS
+- Ported the hardened notes API from long-shutdown-site to never-broken-site (commit c125298, deployed + promoted to production)
+- Verified live on never-broken: Joe's 5 existing notes preserved; legacy notes have no tokens so nobody can delete them via UI or API (by design); new notes mint owner tokens; wrong/absent token 403s; GET leaks no tokens
+- Both sites now run the identical notes stack: per-note delete tokens + post-persist NOTIFY_WEBHOOK_URL webhook (dormant until env var set)
 
 **What's live / deployed:**
-- https://long-shutdown-site.vercel.app with note ownership + webhook hook in production
+- https://never-broken-site.vercel.app (updated notes API, Joe's notes intact)
+- https://long-shutdown-site.vercel.app (same stack since part 4)
 
 **Next up:**
-- Yeti: provide an n8n webhook URL to activate note email/SMS pings (I add NOTIFY_WEBHOOK_URL to Vercel env and redeploy)
-- If pursuing the product: name/domain check, then the portfolio one-pager
-- never-broken-site still has the old notes API (no tokens, no webhook); port 6c4024f pattern over when touched next
+- Yeti: one n8n webhook URL activates note email/SMS pings on BOTH sites (add NOTIFY_WEBHOOK_URL env var to each Vercel project + redeploy; payloads carry site: never-broken / long-shutdown to route notifications)
+- Everything else in ~/living-draft/SPEC.md (resolve stamps, rev changelog, greenlight meter, AI crew, visualize-this-beat) is SPEC ONLY, not built on either site
+- Product next steps if pursuing: name/domain check, portfolio one-pager
 
 **Notes for other environments:**
-- Product thinking lives in ~/living-draft/SPEC.md; treat it as the source of truth for the offering discussion
+- The canonical hardened api/notes.js + notes.js client pattern now lives identically in both repos (Gitdaryl/never-broken-site, Gitdaryl/long-shutdown-site); copy from either
+- playbook.joeprofitneverbroken.com does NOT resolve (memory was wrong or lapsed); the live URL is never-broken-site.vercel.app
