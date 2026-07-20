@@ -1,19 +1,19 @@
-## Session: 2026-07-18 (ET, playbook placeholders filled)
+## Session: July 20, 2026 (ET)
 **Environment:** Antigravity IDE
 **What was done:**
-- Filled the playbook (index.html) placeholders: Story-section polaroid now holds Joe's real studio portrait (images/joe-profit.png, from his reference collection); stills grid holds six concept frames with slate labels (tracks, barn, walk-on, draft day, deed, the room), cards reshaped to 21:9 two-column
-- Selection kept spoiler-light per the courtship rule; page copy updated ("full frame set runs inside the treatment")
-- Structure sticky note updated for the v2 cold open (was referencing the old room-mirror language)
-- Also this session: swapped in Yeti's regraded joe-mentoring frame (matched hall/tone, reverse-angle pair with week eight); saved memory: Seedream 4.5 renders guns, other models NSFW-flag them
-- Send strategy decided: Joe's entry link is the TREATMENT (experience first); structure page is the follow-up if he pushes back; playbook is the funder front door
-- Coach Story claim wording for Joe/Dave settled: "knows the craft playbook Hollywood grades against + our entire film", not "decades in a knowledge base"
+- Picked up the Cowork handoff for long-shutdown-site (Long Shutdown film treatment site with per-paragraph notes, same pattern as never-broken-site)
+- Found the outputs folder: long-shutdown-site.zip was 0 bytes (corrupt); the real content is in long-shutdown-site-final.zip and the already-unzipped long-shutdown-site/ folder — used that
+- Copied the site to ~/long-shutdown-site, git init, secret scan clean, initial commit pushed to new private repo Gitdaryl/long-shutdown-site (main, commit 591f139)
+- Attempted deploy: Vercel chat connector 403s on project creation (as the handoff warned), and the CLI `vercel --prod` was blocked by this session's permission settings
 
 **What's live / deployed:**
-- All three pages of never-broken-site.vercel.app complete: playbook (with stills + real photo), treatment (full package), structure
+- Nothing yet. Repo is on GitHub; Vercel deploy still pending
 
 **Next up:**
-- Send Joe the treatment link
-- Optional frames later: DeWitt barrier, Marcus brings a friend
+- Yeti runs from terminal: `cd ~/long-shutdown-site && vercel --prod --yes` (CLI is installed, logged in as yetigroove)
+- Then in Vercel dashboard: Storage tab > Create Database > KV > connect to project, then `vercel --prod` again to redeploy (notes API 500s without KV)
+- Verify: add a note on /treatment.html, reload, confirm it persists; have the collaborator add one too
 
 **Notes for other environments:**
-- The site is now the complete pitch object across all three pages; frame swaps remain one-push
+- The named zip in Cowork's outputs is corrupt (0 bytes); -final.zip is the good one. Canonical copy now lives in ~/long-shutdown-site and on GitHub (Gitdaryl/long-shutdown-site, private)
+- Optional later: custom subdomain via `vercel domains add`, or connect the GitHub repo to Vercel for auto-deploy on push
