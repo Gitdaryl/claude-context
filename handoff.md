@@ -1,17 +1,21 @@
-## Session: July 20, 2026 (ET), part 7
+## Session: July 20, 2026 (ET), part 8
 **Environment:** Antigravity IDE
 **What was done:**
-- Built and shipped the Redo Loop on long-shutdown-site (commit cdf4cf1, live in production): "request a redo" verb on every lookbook print/polaroid, /api/redo (persists request first, then submits image-EDIT to Fal nano-banana/edit against the current kept version), /api/redo-callback (Fal queue webhook stores result to blob, marks PROPOSED, fires NOTIFY_WEBHOOK_URL), version-stack UI with v1/v2/v3 tabs, instruction-as-label, PROPOSED stamp with Keep/Toss, kept/tossed history preserved forever
-- FAL_KEY wired into Vercel (production + preview) from Yeti's Desktop file handoff; key files deleted after (FAL-Key.pdf + temp). Key never appeared in chat
-- Live pipeline test: request persisted, Fal correctly refused (account balance is ZERO), failure surfaced honestly on the record; test record cleaned up. THE ONLY BLOCKER IS FAL BALANCE: top up at fal.ai/dashboard/billing and the loop works with zero code changes (edits are pennies each)
+- Built the n8n notify pipeline directly on the Yeti VPS (n8n runs there as a systemd service, n8n.yetigroove.com): new workflow "Draft Sites — Note & Redo Notify" (id DraftNotesNtfy01), imported via n8n CLI and published
+- Workflow: Webhook (POST /webhook/draft-notes) -> Build Notice code node (formats note.created / redo.proposed / redo.failed events) -> Twilio SMS to Yeti's 517 number + Resend email to daryl@yetigroovemedia.com, reusing the existing Twilio and Resend credentials from the MB Photo Flag Notify workflow
+- Set NOTIFY_WEBHOOK_URL=https://n8n.yetigroove.com/webhook/draft-notes on BOTH Vercel projects (long-shutdown-site, never-broken-site) and redeployed+promoted both to production
+
+**Blocked on one 30-second step (permission classifier would not let me restart the n8n service):**
+- The workflow is in n8n's database as active, but the RUNNING n8n instance registers webhooks only on restart or UI toggle. Webhook currently 404s.
+- Yeti fix, either: (a) open n8n.yetigroove.com, open "Draft Sites — Note & Redo Notify", toggle Active OFF then ON; or (b) SSH: systemctl restart n8n
+- Then test: add a margin note on either site -> SMS + email should arrive
 
 **What's live / deployed:**
-- https://long-shutdown-site.vercel.app/lookbook.html with redo buttons live (renders verified via screenshot)
+- Both sites redeployed with webhook env var; the moment the n8n webhook registers, pings are live end-to-end with no further changes
 
 **Next up:**
-1. Yeti tops up Fal balance -> first real redo test ("wears pink" on the selfie frame)
-2. Yeti's n8n webhook URL still needed for note + redo pings (NOTIFY_WEBHOOK_URL on both sites; instructions given: Webhook trigger node, POST, activate, use the PRODUCTION url not test url)
-3. Never-broken has notes hardening but no redo loop (its playbook isn't image-driven; port only if wanted)
+- Yeti: the toggle above, plus Fal balance top-up (fal.ai/dashboard/billing) for the Redo Loop
+- After both: full demo loop = margin note pings phone; redo request -> edited image -> PROPOSED -> Keep/Toss, with pings
 
 **Notes for other environments:**
-- Redo Loop architecture is in ~/living-draft/SPEC.md and implemented in Gitdaryl/long-shutdown-site; it is the product's flagship demo once Fal is funded
+- n8n VPS details: systemd service, basic auth, workflows exportable via n8n CLI; Twilio cred id Wlns5s20LRGlNhMH, Resend cred id LimIIXrVhmkoqge5, Resend verified sender domain manitoubeachmichigan.com
