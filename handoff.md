@@ -1,19 +1,21 @@
 ## Session: July 20, 2026 (ET)
 **Environment:** Antigravity IDE
 **What was done:**
-- Picked up the Cowork handoff for long-shutdown-site (Long Shutdown film treatment site with per-paragraph notes, same pattern as never-broken-site)
-- Found the outputs folder: long-shutdown-site.zip was 0 bytes (corrupt); the real content is in long-shutdown-site-final.zip and the already-unzipped long-shutdown-site/ folder — used that
-- Copied the site to ~/long-shutdown-site, git init, secret scan clean, initial commit pushed to new private repo Gitdaryl/long-shutdown-site (main, commit 591f139)
-- Attempted deploy: Vercel chat connector 403s on project creation (as the handoff warned), and the CLI `vercel --prod` was blocked by this session's permission settings
+- Picked up the Cowork handoff for long-shutdown-site (Long Shutdown film treatment site with per-paragraph notes)
+- The named zip was 0 bytes (corrupt); used the good copy from long-shutdown-site-final.zip / the unzipped folder
+- Site moved to ~/long-shutdown-site, pushed to private repo Gitdaryl/long-shutdown-site
+- Cowork's build used Vercel KV (dashboard-only setup); swapped the notes API to Vercel Blob, porting never-broken-site's proven api/notes.js, so the whole thing could ship from CLI with zero manual steps (commit a7ddb1a)
+- Created blob store long-shutdown-blob, linked it to the project (expect script to drive the CLI prompts), deployed, redeployed to pick up the env var
+- Verified end-to-end with curl: GET/POST/DELETE on /api/notes all work, note persisted across requests, test notes cleaned up
 
 **What's live / deployed:**
-- Nothing yet. Repo is on GitHub; Vercel deploy still pending
+- https://long-shutdown-site.vercel.app (production, noindex + robots blocked, link-only)
+- Treatment at /treatment.html with working per-paragraph notes backed by Vercel Blob
 
 **Next up:**
-- Yeti runs from terminal: `cd ~/long-shutdown-site && vercel --prod --yes` (CLI is installed, logged in as yetigroove)
-- Then in Vercel dashboard: Storage tab > Create Database > KV > connect to project, then `vercel --prod` again to redeploy (notes API 500s without KV)
-- Verify: add a note on /treatment.html, reload, confirm it persists; have the collaborator add one too
+- Nothing required. Optional: custom subdomain (`vercel domains add` or dashboard), connect GitHub repo for auto-deploy on push
+- Optional cleanup: three empty leftover blob stores from CLI prompt fighting (ls-notes, ls-notes-2, long-shutdown-notes) can be deleted in dashboard Storage tab; they're free and harmless
 
 **Notes for other environments:**
-- The named zip in Cowork's outputs is corrupt (0 bytes); -final.zip is the good one. Canonical copy now lives in ~/long-shutdown-site and on GitHub (Gitdaryl/long-shutdown-site, private)
-- Optional later: custom subdomain via `vercel domains add`, or connect the GitHub repo to Vercel for auto-deploy on push
+- IMPORTANT for Cowork: when generating notes-widget sites for CLI deploy, use @vercel/blob (never-broken pattern), NOT @vercel/kv. KV can only be attached via dashboard; Blob works entirely from CLI. This is why never-broken shipped hands-free and this one initially needed manual steps
+- Redeploys are manual: `vercel redeploy https://long-shutdown-site.vercel.app` or `vercel deploy` from ~/long-shutdown-site
