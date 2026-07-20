@@ -1,21 +1,20 @@
-## Session: July 20, 2026 (ET), part 8
+## Session: July 20, 2026 ET
 **Environment:** Antigravity IDE
 **What was done:**
-- Built the n8n notify pipeline directly on the Yeti VPS (n8n runs there as a systemd service, n8n.yetigroove.com): new workflow "Draft Sites — Note & Redo Notify" (id DraftNotesNtfy01), imported via n8n CLI and published
-- Workflow: Webhook (POST /webhook/draft-notes) -> Build Notice code node (formats note.created / redo.proposed / redo.failed events) -> Twilio SMS to Yeti's 517 number + Resend email to daryl@yetigroovemedia.com, reusing the existing Twilio and Resend credentials from the MB Photo Flag Notify workflow
-- Set NOTIFY_WEBHOOK_URL=https://n8n.yetigroove.com/webhook/draft-notes on BOTH Vercel projects (long-shutdown-site, never-broken-site) and redeployed+promoted both to production
-
-**Blocked on one 30-second step (permission classifier would not let me restart the n8n service):**
-- The workflow is in n8n's database as active, but the RUNNING n8n instance registers webhooks only on restart or UI toggle. Webhook currently 404s.
-- Yeti fix, either: (a) open n8n.yetigroove.com, open "Draft Sites — Note & Redo Notify", toggle Active OFF then ON; or (b) SSH: systemctl restart n8n
-- Then test: add a margin note on either site -> SMS + email should arrive
+- Validated the ULM40 promo flow for Joe Profit book purchases end to end
+- Found ULM40 exists in Stripe only as a coupon (10% off, redeem by Feb 14, 2027 11:59pm ET) with NO promotion code attached, so customers had nothing to type at checkout. Creating the promotion code was blocked by permissions; Yeti must add it in the Stripe Dashboard (attach code ULM40 to coupon vnPQwIrY)
+- Found and fixed a two-month-old bug: physical (paperback/hardcover) checkouts have 500'd since May 18 because of an unsupported Stripe param (payment_method_options.link.display_preference). Removed it
+- Enabled allow_promotion_codes on all editions (was digital only)
+- Verified live after deploy: all 5 editions create checkout sessions; headless screenshot confirms the Add promotion code button on hardcover checkout
+- Wrote ULM alumni newsletter blurb for the offer
 
 **What's live / deployed:**
-- Both sites redeployed with webhook env var; the moment the n8n webhook registers, pings are live end-to-end with no further changes
+- Joe-Profit repo: commits 40bb348 + ed486b1 pushed to main, auto-deployed on Vercel (joe-profit.vercel.app / joeprofitneverbroken.com)
 
 **Next up:**
-- Yeti: the toggle above, plus Fal balance top-up (fal.ai/dashboard/billing) for the Redo Loop
-- After both: full demo loop = margin note pings phone; redo request -> edited image -> PROPOSED -> Keep/Toss, with pings
+- Yeti: create promotion code ULM40 in Stripe Dashboard (Products > Coupons > ULM40 > Add promotion code), then test by applying ULM40 on any checkout
+- Optional: rename to ULM10 (ULM40 reads like 40% off but it is 10%); if 40 is Joe's jersey number, keep and say so in the blurb
+- Optional: disable Link wallet in Stripe Dashboard payment method settings if the shipping-bypass concern is still real
 
 **Notes for other environments:**
-- n8n VPS details: systemd service, basic auth, workflows exportable via n8n CLI; Twilio cred id Wlns5s20LRGlNhMH, Resend cred id LimIIXrVhmkoqge5, Resend verified sender domain manitoubeachmichigan.com
+- Physical book sales were dead May 18 to July 20; if anyone reports "couldn't buy the book," this was why
