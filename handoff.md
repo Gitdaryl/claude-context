@@ -1,18 +1,19 @@
-## Session: July 20, 2026 (ET), part 2
+## Session: July 20, 2026 (ET), part 3
 **Environment:** Antigravity IDE
 **What was done:**
-- Restyled long-shutdown-site from dark-corporate blog feel to a working-manuscript aesthetic, per Yeti's "environment shapes the thinking" note (commit 7c07b7c)
-- New look: typed Courier Prime draft on paper floating over a dark desk, Special Elite stamps and labels, WORKING DRAFT rubber stamp, punched holes, paper grain, coffee ring on the cover, numbered sections, nb-XX margin refs like scene numbers, handwritten sticky note, and collaborator notes rendered as red-pen Caveat margin notes
-- One on-theme detail: the U in SHUTDOWN flickers to a 0 for a moment every 17 seconds (a quiet Mandela effect in the page itself; disabled for reduced-motion users)
-- Verified with local Playwright screenshots (desktop, mobile, open note form) before deploying; fixed stamp collisions found in screenshots
-- Deployed and promoted to production; live cover screenshot-verified, notes API still healthy
+- Added "The Look" lookbook page to long-shutdown-site (commit f3e5d8a), extending the working-manuscript world
+- Generated 7 images via Higgsfield (Soul 2.0 for people/UGC/polaroids, Soul Location for environments), ~600 credits balance was plenty: Maren 2am selfie frame (9:16), compressed "J" video call, night data-hall corridor, collider news freeze-frame, and 3 BTS instant-film shots (desk scene setup, lav mic clip, 3:40am parking-lot footage review)
+- Page sections: The Feed (in-world phone frames), Footage She Couldn't Have Shot (with a CSS news lower-third whose date glitches 2030 to 2028, same misprint animation as the title U/0), The Palette (warm vs cold two-temperature argument with swatch card), From the Shoot (polaroid frames with handwritten Caveat labels)
+- Every board item is notes-enabled (lb-01..lb-09); in photo rows the note threads dock as a side column
+- Nav wired: cover page second index card, treatment topbar link
+- Screenshot-verified locally before deploy; deployed via `vercel deploy --yes` + `vercel promote <url> --yes`; all routes 200 in production
 
 **What's live / deployed:**
-- https://long-shutdown-site.vercel.app - new manuscript look in production
+- https://long-shutdown-site.vercel.app/lookbook.html plus the restyled cover and treatment
 
 **Next up:**
-- Yeti floated "work on visuals to spark thoughts" - possible next session: concept frames / mood imagery for the film (note seedream-guns memory does not apply here, but Seedance-class tools are in the treatment's own production plan)
-- Updating prod without --prod (which the permission classifier blocks): `vercel deploy --yes` then `vercel promote <deployment-url> --yes`
+- Possible: more board items (Maren's wall close-up, glitched caption pull), or animate a frame with Seedance for a motion test
+- Character continuity note: Maren rendered as mid-30s Black woman with box braids + rust-orange henley; reuse that descriptor in future prompts (the mic polaroid matched the selfie wardrobe)
 
 **Notes for other environments:**
-- The manuscript styling lives in styles.css on Gitdaryl/long-shutdown-site; reusable as a template for future treatment sites (distinct from never-broken's manila case-file look; each film gets its own diegetic object)
+- Higgsfield model picks for this pattern: soul_2 (UGC realism, polaroid BTS), soul_location (environments); their recommend endpoint suggested wrong models, ignore it for this use case
