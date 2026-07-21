@@ -1,20 +1,21 @@
 ## Session: July 20, 2026 ET
 **Environment:** Antigravity IDE
 **What was done:**
-- Validated the ULM40 promo flow for Joe Profit book purchases end to end
-- Found ULM40 exists in Stripe only as a coupon (10% off, redeem by Feb 14, 2027 11:59pm ET) with NO promotion code attached, so customers had nothing to type at checkout. Creating the promotion code was blocked by permissions; Yeti must add it in the Stripe Dashboard (attach code ULM40 to coupon vnPQwIrY)
-- Found and fixed a two-month-old bug: physical (paperback/hardcover) checkouts have 500'd since May 18 because of an unsupported Stripe param (payment_method_options.link.display_preference). Removed it
-- Enabled allow_promotion_codes on all editions (was digital only)
-- Verified live after deploy: all 5 editions create checkout sessions; headless screenshot confirms the Add promotion code button on hardcover checkout
-- Wrote ULM alumni newsletter blurb for the offer
+- Reorganized `/america-250` on the Manitou Beach site for post-event mode (commit cb390a3, pushed to main)
+- New page order: hero (recap mode) → The Film section → The Gallery → fireworks stats recap → main-events timeline → stay connected
+- Added long-form YouTube film placeholder: paste the watch URL into `USA250_FILM_URL` in `src/data/config.js` and the "In the Edit Bay" card becomes the embed
+- Community photo wall now grouped by event: Boat Parades, Fireworks, Firecracker 7K, Skydivers, plus "Random Fun" for untagged shots (galleries.js events + api/lib/photo-slugs.js allowlist)
+- EventPhotoWall general-bucket label is now per-gallery (`generalTitle`) - Men's Club keeps "Club Life"
+- Removed stale content: fireworks committee/origin section, 7K registration/pricing tabs, "check back for more events" copy; all recap copy flipped to past tense
+- 7K added to the main-events recap timeline so it's still represented
 
 **What's live / deployed:**
-- Joe-Profit repo: commits 40bb348 + ed486b1 pushed to main, auto-deployed on Vercel (joe-profit.vercel.app / joeprofitneverbroken.com)
+- Pushed to main on Gitdaryl/Manitou-Beach → Vercel auto-deploy
 
 **Next up:**
-- Yeti: create promotion code ULM40 in Stripe Dashboard (Products > Coupons > ULM40 > Add promotion code), then test by applying ULM40 on any checkout
-- Optional: rename to ULM10 (ULM40 reads like 40% off but it is 10%); if 40 is Joe's jersey number, keep and say so in the blurb
-- Optional: disable Link wallet in Stripe Dashboard payment method settings if the shipping-bypass concern is still real
+- Yeti to upload his America 250 photos: on the page, pick the event in the "Which event are these from?" dropdown, then multi-select photos (batch per event)
+- Paste the YouTube URL into `USA250_FILM_URL` when the long-form video is live
+- Optional: verify the live page renders (headless screenshot trick) after Vercel deploy
 
 **Notes for other environments:**
-- Physical book sales were dead May 18 to July 20; if anyone reports "couldn't buy the book," this was why
+- The film placeholder links to the Dispatch newsletter signup for the premiere; the shared /gallery/america-250 page gets the same event grouping automatically
