@@ -1,21 +1,18 @@
-## Session: July 20, 2026 ET
+## Session: July 21, 2026 ET
 **Environment:** Antigravity IDE
 **What was done:**
-- Reorganized `/america-250` on the Manitou Beach site for post-event mode (commit cb390a3, pushed to main)
-- New page order: hero (recap mode) → The Film section → The Gallery → fireworks stats recap → main-events timeline → stay connected
-- Added long-form YouTube film placeholder: paste the watch URL into `USA250_FILM_URL` in `src/data/config.js` and the "In the Edit Bay" card becomes the embed
-- Community photo wall now grouped by event: Boat Parades, Fireworks, Firecracker 7K, Skydivers, plus "Random Fun" for untagged shots (galleries.js events + api/lib/photo-slugs.js allowlist)
-- EventPhotoWall general-bucket label is now per-gallery (`generalTitle`) - Men's Club keeps "Club Life"
-- Removed stale content: fireworks committee/origin section, 7K registration/pricing tabs, "check back for more events" copy; all recap copy flipped to past tense
-- 7K added to the main-events recap timeline so it's still represented
+- Fixed social share previews for crowd gallery photo links on the Manitou Beach site (commit f49c543, follows yesterday's America 250 reorg cb390a3)
+- Middleware now resolves /gallery/:slug?photo= against /api/photos-list and injects that photo's Blob URL as og:image, so Messenger/Facebook/iMessage cards show the actual photo instead of a bare link
+- Share links from the lightbox now use the photo's stable KV id instead of its list position, so links keep pointing at the same photo as new uploads shift the feed (old numeric links still resolve by position)
+- Deep-linked photos now open their lightbox even on multi-section event walls
+- Verified live as facebookexternalhit: ?photo=33 on /gallery/america-250 serves the Blob photo as og:image
 
 **What's live / deployed:**
-- Pushed to main on Gitdaryl/Manitou-Beach → Vercel auto-deploy
+- f49c543 pushed to main on Gitdaryl/Manitou-Beach → Vercel, verified live
 
 **Next up:**
-- Yeti to upload his America 250 photos: on the page, pick the event in the "Which event are these from?" dropdown, then multi-select photos (batch per event)
-- Paste the YouTube URL into `USA250_FILM_URL` when the long-form video is live
-- Optional: verify the live page renders (headless screenshot trick) after Vercel deploy
+- Links shared BEFORE this fix (like Chelsea's) keep Facebook's cached preview; reshare the link or run it through developers.facebook.com/tools/debug to force a rescrape
+- Still open from yesterday: upload America 250 photos per event via the page dropdown; paste the YouTube URL into USA250_FILM_URL when the film is live
 
 **Notes for other environments:**
-- The film placeholder links to the Dispatch newsletter signup for the premiere; the shared /gallery/america-250 page gets the same event grouping automatically
+- Any crowd gallery (mens-club, ladies-club, america-250, july-4-2026) now gets per-photo share cards automatically
