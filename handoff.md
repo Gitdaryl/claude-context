@@ -1,15 +1,22 @@
 ## Session: July 21, 2026 ET
 **Environment:** Antigravity IDE
+
 **What was done:**
-- Meta domain verification for manitoubeachmichigan.com: walked Yeti through Business Suite (Brand Safety → Domains → Add → "Create a domain", not "Request access"), added the facebook-domain-verification meta tag to index.html (commit 22b1d1d), deployed, and confirmed the tag is live on the homepage exactly as Meta's crawler fetches it (including the http redirect path)
-- This follows today's share-card work (f49c543, 9ba665c, d1643bb): photo cards proven working in FB feed, WhatsApp, iMessage, and the Sharing Debugger; Messenger alone suppresses previews for the domain (reputation filter). Domain verification is the trust signal to help that clear
+- Validated the ULM40 newsletter promo flow end to end for Joe Profit's Never Broken store (joe-profit.vercel.app / joeprofitneverbroken.com)
+- Found and fixed two blockers: (1) promo code field was digital-only, now enabled on all five editions; (2) physical checkout (paperback/hardcover) had been 500ing since May 18 due to an unsupported Stripe Link parameter in api/checkout.js, removed it
+- Verified live: all five editions create checkout sessions; headless screenshot confirms "Add promotion code" on hardcover checkout ($31.95 + $7.97 shipping)
+- Updated site copy in src/App.jsx (4 spots) to Joe's own wording: "first Black athlete to play football at a predominantly white college in Louisiana" (per his July 20 note), Gulf States Conference kept as secondary detail
+- Wrote newsletter blurb (full + short versions) for SJ at ULM (tuohy@ulm.edu)
 
 **What's live / deployed:**
-- 22b1d1d on Gitdaryl/Manitou-Beach main → Vercel, tag verified live
+- Joe-Profit repo, 3 commits pushed to main and auto-deployed via Vercel: promo codes on physical checkouts (40bb348), physical checkout 500 fix (ed486b1), "first" claim wording (085baae)
 
 **Next up:**
-- Yeti clicks "Verify Domain" in Meta Business Suite (tag is live now; if Meta claims it can't find it, wait a few minutes and click again - Meta allows up to 72h but it's usually instant)
-- Still open from July 20: finish uploading/tagging America 250 photos; paste the YouTube URL into USA250_FILM_URL when the film is live
+- BLOCKER for the newsletter: the ULM40 coupon exists in Stripe (10% off, expires Feb 14, 2027) but has NO promotion code attached, so customers cannot type it at checkout. Yeti must add it: Stripe Dashboard > Coupons > ULM40 > Add promotion code > code ULM40. One-minute task.
+- Optional: disable Stripe Link wallet in Dashboard > Settings > Payment methods if the shipping-bypass concern still stands (per-session disable is not supported by the API)
+- Naming optics: code is ULM40 but the discount is 10%; consider whether 40 (Joe's jersey number) needs a word of explanation in the newsletter or rename to ULM10
+- Repo has unrelated uncommitted changes (api/generate-comp.js, api/webhook.js, deleted public/images/Joe_Joe.png) left unstaged, from a previous session
 
 **Notes for other environments:**
-- Memory saved earlier: messenger-og-preview-quirk (3-test matrix for "no preview in Messenger" complaints)
+- Joe's canonical "first" wording is now in auto-memory (joe-profit-first-claim-wording); use it in all Joe Profit copy on every platform
+- Newsletter blurb delivered in this session's chat; ULM sends the alumni newsletter around end of July
