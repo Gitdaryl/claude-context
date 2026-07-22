@@ -1,23 +1,17 @@
 ## Session: July 22, 2026 ET
 **Environment:** Antigravity IDE
 **What was done:**
-- New client Mitchel "Mitch" Ramsey onboarded (Irish Hills Realty + Devils Lake Bar & Grill); saved to memory + Session Brain
-- Built and deployed the 8580 Marr Hwy listing site (900MB shoot compressed to 22MB WebP, 110 photos processed)
-- Added vertical 9:16 video slot (reel-style player) for the social cut Yeti is making
-- Fixed portrait photos in the gallery: letterboxed on blurred fill instead of hard-cropped, excluded from wide feature slots
-- CAUGHT: drone-3 and the property-line overlay aerial have "8590 Marr Hwy" burned in; correct address is 8580 (Yeti confirmed). Both pulled from the gallery; Yeti is editing the graphics
+- Corrected-address aerials (drone-3 + property-line overlay, now reading 8580) compressed to WebP, restored to the 8580 Marr Hwy gallery, committed, and deployed
+- Gallery back to the full 110 photos, verified live
 
 **What's live / deployed:**
-- https://irish-hills-realty.vercel.app/8580-marr-hwy (branded) and /8580-marr-hwy/unbranded (MLS-safe), verified live with 108 photos
-- GitHub Gitdaryl/irish-hills-realty (private), Vercel project irish-hills-realty
+- https://irish-hills-realty.vercel.app/8580-marr-hwy fully current: portrait letterbox fix, vertical video slot, corrected aerials, 110 photos
 
 **Next up:**
-- Yeti edits the two 8590-captioned aerials; then recompress (full 1600px q80, thumb 420px q70 WebP), drop into public/photos/8580-marr-hwy/, restore 'drone-3' + 'drone-overlay' in the gallery list in src/data/properties.js, redeploy
-- CubiCasa floorplan arrives 7/23: set floorplanImage in properties.js
-- Vertical video: set videoUrl (videoAspect already 'vertical')
-- Beds/baths/sqft/acreage/price from Mitch to unhide facts row
-- Custom domain decision
+- CubiCasa floorplan (due 7/23): set floorplanImage in src/data/properties.js, rebuild, redeploy
+- Vertical video: set videoUrl when cut (videoAspect already 'vertical')
+- Beds/baths/sqft/acreage/price from Mitch to unhide the facts row
+- Custom domain decision; share link with Mitch
 
 **Notes for other environments:**
-- Deploy = `cd ~/Projects/irish-hills-realty && npm run build && npx vercel deploy --prod --yes` (needs Yeti approval in IDE)
-- Keep Mitch's work separate from Holly / Foundation Realty (same territory)
+- Full session context in Session Brain rows dated 7/22 (Project: Mitch Ramsey)
