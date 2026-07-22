@@ -1,22 +1,18 @@
-## Session: July 22, 2026 ET
+## Session: 2026-07-22 ET
 **Environment:** Antigravity IDE
 **What was done:**
-- New client Mitchel "Mitch" Ramsey onboarded (Irish Hills real estate + Devils Lake Bar & Grill); saved to IDE memory and Session Brain, and a "Mitch Ramsey" Project option was added to the Brain DB
-- Built and shipped the listing site for his brokerage Irish Hills Realty (confirmed from yard-sign photo: office 517-467-2000, Mitch 517-403-5953)
-- 900MB Dropbox shoot (114 photos) compressed to 22MB WebP; 8580 Marr Hwy page has hero, highlights, 110-photo lightbox gallery, map, agent band, sticky mobile call/text bar
-- Vertical 9:16 social video slot added (renders as a centered reel); floorplan slot wired; both hidden until assets exist
+- Built pitch package for Decker & Sons Insurance Agency (5-generation agency, Addison + Onsted MI, since 1897; already an MB events card sponsor at $500, wants a sit-down for "fresh ideas")
+- Idea menu artifact (client-facing, with discovery-lift ratings + AI answer readiness item): https://claude.ai/code/artifact/c7384d4e-268f-4663-b7d3-2bd9fec3f58a
+- Full SEO audit of deckerandsonsinsurance.com (Wix): no homepage H1, zero inner-page meta descriptions, Wix-default titles, no InsuranceAgency schema (JS-render verified), no location/lake pages, near-zero reviews, no CrUX field data at all. AI layer: all AI crawlers allowed + Wix auto llms.txt, but nothing citable. Audit artifact: https://claude.ai/code/artifact/3b88e2ce-a379-41f0-89cd-0ec872e8bd33
+- Plain-English client version (assumption: non-tech-savvy, older clients) with before/after contrasts and honest month-by-month timeline (no instant results): https://claude.ai/code/artifact/044ce4f2-17a2-498f-be82-52a3443ec3a4
 
 **What's live / deployed:**
-- https://irish-hills-realty.vercel.app deployed to production and verified. Branded: /8580-marr-hwy. MLS-safe: /8580-marr-hwy/unbranded
-- GitHub: Gitdaryl/irish-hills-realty (private), Vercel project irish-hills-realty (yetigroove)
+- Three private Claude artifacts (links above), nothing deployed to client
 
 **Next up:**
-- Share https://irish-hills-realty.vercel.app/8580-marr-hwy with Mitch
-- CubiCasa floorplan arrives 7/23: set floorplanImage in src/data/properties.js, rebuild, redeploy
-- When the vertical video is cut: set videoUrl (videoAspect already 'vertical')
-- Get beds/baths/sqft/acreage/price from Mitch to unhide the facts row
-- Consider a custom domain for the site or per-listing
+- Yeti's sit-down with Decker contact; anchor pitch on QR review engine + GBP tune-up + $990/yr sponsored MB page (Men's Club precedent)
+- If closed: weeks 1-2 = Wix on-page fix pack + review cards; then Addison/Onsted/lake pages
+- PSI free quota was exhausted 7/22; rerun Lighthouse another day if a speed number is wanted
 
 **Notes for other environments:**
-- Deploys are CLI only: `cd ~/Projects/irish-hills-realty && npm run build && npx vercel deploy --prod --yes`
-- Keep Mitch's site fully separate from Holly / Foundation Realty work (same territory)
+- Decker contact is the agency's rep from email thread; she asked for "fresh ideas" for advertising. All three artifacts are print-friendly; plain-English one is the one to hand her.
