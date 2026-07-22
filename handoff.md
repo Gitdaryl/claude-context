@@ -1,18 +1,23 @@
-## Session: 2026-07-22 ET
+## Session: July 22, 2026 ET
 **Environment:** Antigravity IDE
 **What was done:**
-- Built pitch package for Decker & Sons Insurance Agency (5-generation agency, Addison + Onsted MI, since 1897; already an MB events card sponsor at $500, wants a sit-down for "fresh ideas")
-- Idea menu artifact (client-facing, with discovery-lift ratings + AI answer readiness item): https://claude.ai/code/artifact/c7384d4e-268f-4663-b7d3-2bd9fec3f58a
-- Full SEO audit of deckerandsonsinsurance.com (Wix): no homepage H1, zero inner-page meta descriptions, Wix-default titles, no InsuranceAgency schema (JS-render verified), no location/lake pages, near-zero reviews, no CrUX field data at all. AI layer: all AI crawlers allowed + Wix auto llms.txt, but nothing citable. Audit artifact: https://claude.ai/code/artifact/3b88e2ce-a379-41f0-89cd-0ec872e8bd33
-- Plain-English client version (assumption: non-tech-savvy, older clients) with before/after contrasts and honest month-by-month timeline (no instant results): https://claude.ai/code/artifact/044ce4f2-17a2-498f-be82-52a3443ec3a4
+- New client Mitchel "Mitch" Ramsey onboarded (Irish Hills Realty + Devils Lake Bar & Grill); saved to memory + Session Brain
+- Built and deployed the 8580 Marr Hwy listing site (900MB shoot compressed to 22MB WebP, 110 photos processed)
+- Added vertical 9:16 video slot (reel-style player) for the social cut Yeti is making
+- Fixed portrait photos in the gallery: letterboxed on blurred fill instead of hard-cropped, excluded from wide feature slots
+- CAUGHT: drone-3 and the property-line overlay aerial have "8590 Marr Hwy" burned in; correct address is 8580 (Yeti confirmed). Both pulled from the gallery; Yeti is editing the graphics
 
 **What's live / deployed:**
-- Three private Claude artifacts (links above), nothing deployed to client
+- https://irish-hills-realty.vercel.app/8580-marr-hwy (branded) and /8580-marr-hwy/unbranded (MLS-safe), verified live with 108 photos
+- GitHub Gitdaryl/irish-hills-realty (private), Vercel project irish-hills-realty
 
 **Next up:**
-- Yeti's sit-down with Decker contact; anchor pitch on QR review engine + GBP tune-up + $990/yr sponsored MB page (Men's Club precedent)
-- If closed: weeks 1-2 = Wix on-page fix pack + review cards; then Addison/Onsted/lake pages
-- PSI free quota was exhausted 7/22; rerun Lighthouse another day if a speed number is wanted
+- Yeti edits the two 8590-captioned aerials; then recompress (full 1600px q80, thumb 420px q70 WebP), drop into public/photos/8580-marr-hwy/, restore 'drone-3' + 'drone-overlay' in the gallery list in src/data/properties.js, redeploy
+- CubiCasa floorplan arrives 7/23: set floorplanImage in properties.js
+- Vertical video: set videoUrl (videoAspect already 'vertical')
+- Beds/baths/sqft/acreage/price from Mitch to unhide facts row
+- Custom domain decision
 
 **Notes for other environments:**
-- Decker contact is the agency's rep from email thread; she asked for "fresh ideas" for advertising. All three artifacts are print-friendly; plain-English one is the one to hand her.
+- Deploy = `cd ~/Projects/irish-hills-realty && npm run build && npx vercel deploy --prod --yes` (needs Yeti approval in IDE)
+- Keep Mitch's work separate from Holly / Foundation Realty (same territory)
