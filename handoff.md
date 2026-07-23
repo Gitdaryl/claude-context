@@ -1,20 +1,22 @@
 ## Session: July 23, 2026 ET
 **Environment:** Antigravity IDE
-**What was done (8580 Marr Hwy, continued):**
-- CubiCasa floor plans live (main + lower level, dimensioned, correct floor mapping) and now ENLARGEABLE: lightbox with tap-to-zoom at full resolution and pan
-- Facts: 3,778 finished sq ft (CubiCasa measured) replaces the 2,025 record number
-- "Around the Area" band below the map: lake-country blurb + 3 columns of real driving distances (computed via OSRM from drone-EXIF GPS 42.010366,-84.245997)
-- Three-POV review (buyer/seller/agent) then implemented the 5 quick wins: Coming Soon hero badge (auto-shows price when set), gallery jump chips (Curb/Inside/Lower/Backyard/Barn/Aerial), Vercel Analytics injected, EHO + deemed-reliable footer, RealEstateListing JSON-LD
-- Yeti's strategy saved to memory: listing microsites are a productized service; this page is the demo to win agents
+**What was done (8580 Marr Hwy engagement layer):**
+- Discussed public social proof: yes it motivates buyers, but only above thresholds; low numbers are anti-proof
+- Built and shipped: anonymous "Save this home" heart in the hero (localStorage visitor id, idempotent per visitor) + session-deduped view counting
+- Proof line above the facts renders only past floors: 100 views / 5 saves, so it can never look weak
+- /api/engage + /api/health on Vercel Blob (store: marr-engage, linked to project with BLOB_READ_WRITE_TOKEN via expect-scripted CLI)
+- CAUGHT + FIXED a real gotcha: Blob content reads are CDN-cached, so a read-modify-write JSON counter silently lost increments. Redesigned to one-blob-per-event counted via the authoritative list API. Verified: sequential views 1-2-3-4 no loss, duplicate hearts idempotent, unheart decrements. Saved to memory (blob-event-counters)
+- All verified live end to end including UI round trip
 
 **What's live / deployed:**
-- https://irish-hills-realty.vercel.app/8580-marr-hwy all of the above, verified live
+- https://irish-hills-realty.vercel.app/8580-marr-hwy with Save button + gated proof line; /api/health returns ok
 
 **Next up:**
-- Enable Web Analytics for the irish-hills-realty project in the Vercel dashboard if data doesn't appear (script is injected; the project-side toggle may be needed)
-- Showing-request lead form (half-day: Blob persistence + notify, persist-before-notify standard)
-- From Mitch: list price + status flip, MLS photo cap, well/septic/heat/internet/school facts for a "Good to Know" section
-- Print flyer + QR for sign box; custom domain decision; vertical video
+- Showing-request lead form (persist-before-notify, reuse the marr-engage Blob store)
+- From Mitch: price/status flip, MLS photo cap, well/septic/heat/internet/school facts
+- Print flyer + QR; custom domain; vertical video; FB debugger priming before broad sharing
+- Check Vercel dashboard Analytics toggle for the project
 
 **Notes for other environments:**
-- Gallery photo section boundaries (photo ids): curb 6-10, inside 11-58, lower 59-69, backyard 70-84, barn/garage 85-97, aerial drone-*
+- Counter floors are constants in PropertyPage.jsx (VIEW_FLOOR 100, HEART_FLOOR 5)
+- Current live counts include ~5 test views and Yeti's own visits; negligible against the 100 floor
