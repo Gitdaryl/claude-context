@@ -1,20 +1,20 @@
 ## Session: July 23, 2026 ET
 **Environment:** Antigravity IDE
-**What was done:**
-- CubiCasa floor plans landed and are live on the 8580 Marr Hwy page: main floor + finished lower level, dimensioned, with captions and the CubiCasa reliability disclaimer (note: CubiCasa's export labels the basement "1st floor"; corrected the mapping)
-- Facts updated to the measured story: 3,778 finished sq ft total (2,211 main + 1,567 lower). Zillow's 2,025 was above-grade only
-- Description now leads with total finished space
-- Yesterday's items all closed: sharper full-res overlay aerial deployed and verified
+**What was done (8580 Marr Hwy, continued):**
+- CubiCasa floor plans live (main + lower level, dimensioned, correct floor mapping) and now ENLARGEABLE: lightbox with tap-to-zoom at full resolution and pan
+- Facts: 3,778 finished sq ft (CubiCasa measured) replaces the 2,025 record number
+- "Around the Area" band below the map: lake-country blurb + 3 columns of real driving distances (computed via OSRM from drone-EXIF GPS 42.010366,-84.245997)
+- Three-POV review (buyer/seller/agent) then implemented the 5 quick wins: Coming Soon hero badge (auto-shows price when set), gallery jump chips (Curb/Inside/Lower/Backyard/Barn/Aerial), Vercel Analytics injected, EHO + deemed-reliable footer, RealEstateListing JSON-LD
+- Yeti's strategy saved to memory: listing microsites are a productized service; this page is the demo to win agents
 
 **What's live / deployed:**
-- https://irish-hills-realty.vercel.app/8580-marr-hwy complete: photos, aerials, floor plans, facts, share, mobile-polished
+- https://irish-hills-realty.vercel.app/8580-marr-hwy all of the above, verified live
 
 **Next up:**
-- MLS photo export (waiting on Mitch's photo cap; ordered 2048px JPEGs to Desktop when confirmed)
-- List price from Mitch
-- Vertical video: set videoUrl in src/data/properties.js when cut
-- Prime the URL in Facebook Sharing Debugger before Mitch shares broadly
-- Custom domain decision
+- Enable Web Analytics for the irish-hills-realty project in the Vercel dashboard if data doesn't appear (script is injected; the project-side toggle may be needed)
+- Showing-request lead form (half-day: Blob persistence + notify, persist-before-notify standard)
+- From Mitch: list price + status flip, MLS photo cap, well/septic/heat/internet/school facts for a "Good to Know" section
+- Print flyer + QR for sign box; custom domain decision; vertical video
 
 **Notes for other environments:**
-- Floor plan source files: ~/Downloads/8580_marr_highway_manitou_beach/ (with-dim and without-dim PNG sets)
+- Gallery photo section boundaries (photo ids): curb 6-10, inside 11-58, lower 59-69, backyard 70-84, barn/garage 85-97, aerial drone-*
