@@ -3102,3 +3102,15 @@ Optionally also `npx vercel env add LEAD_EMAIL production` with Mitch's email (d
 - Manitou-Beach generators patched + deployed: api/generate-article.js and api/cron-newsletter-draft.js now forbid em dashes in the prompt AND scrub them from every AI output (stripEmDashes). Future blog posts and newsletter drafts cannot contain them.
 - Existing content cleaned in Notion: scanned all 14 Dispatch articles, fixed 28 body blocks + 6 property fields across 5 articles (incl. live "July's Sweet Spot" and "Lake's Finally Showing Off"). Re-scan verified zero em dashes remain. Formatting/links preserved.
 - Note: newsletter issues already sent through beehiiv can't be un-sent; everything from here forward is clean.
+
+---
+
+## 2026-07-24 16:11 AEST
+
+
+## Addendum 3: OG card + hero upgrade (/social)
+- Root cause of missing link previews: og:image/og:url on /social and /lakeaccess pointed at social.yetigroove.com, a subdomain that does not resolve. Both pages now use www.yetigroove.com.
+- New og-social.png (1200x630): yeti-influencer from the MB library composed over the page's navy/cyan palette with real typography (Playfair + DM Sans), price chips. Confirmed rendering in iMessage.
+- /social hero upgraded to match the card: two-column desktop with floating glowing yeti (73KB webp), stacked mobile, reduced-motion respected. Verified live via headless screenshot.
+- Note for future checks: the repo's catch-all rewrite makes EVERY path return 200 with index.html, so "is it deployed" checks must test content-type or content, never status code.
+- Offered but not done: same hero treatment for /lakeaccess.
