@@ -1,28 +1,27 @@
-## Session: July 23, 2026 ET (IDE, Mitch Ramsey listing site)
+## Session: 2026-07-24 (Thu) ET
 **Environment:** Antigravity IDE
 
-**⚡ FIRST THING NEXT DESKTOP SESSION (Yeti asked to be reminded):**
-```
-cd ~/Projects/irish-hills-realty && npx vercel env add RESEND_API_KEY production
-# paste the Resend key (same as Holly project), then:
-npx vercel deploy --prod --yes
-```
-Optionally also `npx vercel env add LEAD_EMAIL production` with Mitch's email (defaults to admin@yetigroove.com). This turns on instant email alerts for showing requests; leads are already persisting safely without it.
-
-**What was done today:**
-- CubiCasa floor plans live + enlargeable (tap-to-zoom with pan); facts corrected to 3,778 finished sqft
-- Around the Area section: OSRM driving distances from drone-EXIF GPS
-- Three-POV review implemented: Coming Soon badge, gallery jump chips, Vercel Analytics, EHO/disclaimer footer, JSON-LD
-- Save hearts + view counters (public only past 100 views / 5 saves); Blob event-counter pattern after catching CDN-cache increment loss
-- Request-a-Showing form: persist-before-notify verified live; key-protected /api/leads (key: Desktop/irish-hills-leads-key.txt); one TEST lead in store
+**What was done:**
+- Root-caused the vanished /social order: the Resend API key on Vercel was revoked, every order email 500ed, and the old code bailed before sending the SMS. The order existed only in ephemeral logs.
+- Rebuilt the yetigroove.com/social order pipeline (repo Gitdaryl/Yeti-Groove, 4 commits pushed to main, live in production):
+  - Orders now persist to Vercel Blob BEFORE any notification (orders/{YG-id}/order.json + append-only event trail). New Blob store "yeti-groove-orders" created and connected.
+  - Admin email, customer confirmation email, and SMS to 517-260-5907 all fire independently; one failing can no longer swallow an order.
+  - Direct photo/video upload on /social and /lakeaccess (Blob client uploads, up to 1GB per file). Google Drive workflow removed.
+  - New /admin dashboard: view orders + media, email customer a question, upload delivery files, Deliver button sends customer download links and texts Yeti a confirmation (or DELIVERY FAILED alert). Key is in Vercel env ORDERS_ADMIN_KEY and locally in ~/Yeti-Groove/.env.local.
+  - /api/health live-validates Resend/Twilio/Blob/admin key; daily cron /api/health-alert texts Yeti if the pipeline is down (max 1 alert per 20h).
+- End-to-end tested in production: test order YG-20260724-OTU1 (API) and YG-20260724-UEGI (real browser run). SMS notifications confirmed delivered (adminSms ok). Question + delivery actions verified. Admin page verified via headless Chromium screenshots. Yeti received ~4 test texts today from this.
+- Stage 2 (automating first drafts) evaluated, not built: docs/STAGE2-AUTOMATION.md in the repo.
 
 **What's live / deployed:**
-- https://irish-hills-realty.vercel.app/8580-marr-hwy everything above, verified
+- All of the above on www.yetigroove.com (Vercel production, commits 5977817..9273893).
 
-**Next up (after the Resend command):**
-- Mitch: list price (flip status to For Sale), MLS photo cap (then I cut the 2048px export), well/septic/heat/internet/school facts for a Good to Know section
-- Print flyer + QR, custom domain decision, vertical video, FB debugger priming
+**Next up:**
+- BLOCKING: Yeti must create a new Resend API key at resend.com/api-keys and run: cd ~/Yeti-Groove && vercel env rm RESEND_API_KEY production && printf '<newkey>' | vercel env add RESEND_API_KEY production, then redeploy (or ask any environment to do it). Until then orders persist + SMS works but NO emails send. /api/health will confirm when green.
+- Yeti: log into yetigroove.com/admin with the key from ~/Yeti-Groove/.env.local; the two TEST orders can be ignored or we can clean them up.
+- Optional cleanup: delete stale origin branch fix/social-order-form; delete test order blobs.
+- Stage 2 build order suggested: auto-captions first, then AI Slideshow first drafts (see docs/STAGE2-AUTOMATION.md).
 
 **Notes for other environments:**
-- Full detail in Session Brain rows July 22-23, Project: Mitch Ramsey
-- Mobile: listing URL to share with Mitch is https://irish-hills-realty.vercel.app/8580-marr-hwy
+- yetigroove.com is Cloudflare-fronted: 502/504 JSON bodies get masked, APIs on that domain return 200 + success:false by design.
+- Twilio env vars are "sensitive" type on Vercel: env pull shows them empty but they work at runtime.
+- Vercel CLI could not add the preview-scope ORDERS_ADMIN_KEY (CLI quirk); production + development are set.
