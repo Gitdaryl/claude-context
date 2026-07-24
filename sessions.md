@@ -3080,3 +3080,14 @@ Optionally also `npx vercel env add LEAD_EMAIL production` with Mitch's email (d
 **Notes for other environments:**
 - Emails were the last unverified leg; they are now verified end to end with real sends. Nothing blocking.
 - Test emails from the release test are in daryl@ (admin notification) and admin@ (customer-side emails) inboxes.
+
+---
+
+## 2026-07-24 15:14 AEST
+
+
+## Addendum: project sync sweep (same session)
+- Swept every project dir for unsynced work after Yeti got stranded on Mobile (Mitch/Devils Lake project wasn't in git).
+- New PRIVATE GitHub repos created + pushed: Devils-Lake-Cove (the stranded project: development presentation microsite + lot data), yeti-specs, platform-story (was deployed on Vercel but never in git!), hyperframes-assets, debate-copilot.
+- Committed + pushed pending work in: YetiClone (.gitignore), Devils-Lake-View-Living (Darlene proposal + OG image + CLAUDE.md), Yetickets (migration script), crew-yetigroove (Triple P proposal), daryl-recovery (em dash cleanup), Yeti-Signature-Films (CLAUDE.md, renders ignored), Joe-Profit (HeyGen scripts + movie docs + social content; carousel/ 246MB gitignored).
+- NEEDS YETI'S CALL (not touched): (1) family-payroll: blocked from pushing family financial data, decide if it belongs on GitHub. (2) Hammill-Electric: 3 finished commits from May never pushed (real truck photos, robots.txt/sitemap); pushing deploys hammillelectric.com. (3) Joe-Profit modified api/generate-comp.js + api/webhook.js + deleted Joe_Joe.png left uncommitted (unknown if mid-work). (4) Sunny-Skies: 11GB of assets, too big for GitHub, lives only on this Mac (consider Shade DAM or drive backup).
