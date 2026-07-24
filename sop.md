@@ -81,4 +81,25 @@ When handing off a task between environments, the handoff summary must include:
 3. Which environment is best suited for the next step
 
 ---
-*Last updated: 2026-05-24*
+
+## Writing Style (All Environments, All Output)
+
+Applies to EVERYTHING written for Yeti or his brands: blog posts, newsletters, social copy, site copy, client proposals, emails, video scripts, code comments.
+
+### No em dashes. Ever.
+Em dashes (—) read as AI slop. Yeti has found them leaking into the Manitou Beach blog and newsletter. Zero tolerance:
+
+- Rewrite the sentence with a comma, a period, or a colon
+- If a dash is truly needed, use a short dash with spaces ( - )
+- This applies to NEW writing and to EDITS of existing content: if you touch a file that contains em dashes, clean them while you are there
+
+### Before publishing anything
+Run a slop check on the final draft before it ships:
+1. Search for em dashes (—) and en dashes (–) used as punctuation
+2. Kill filler phrases ("in today's fast-paced world", "dive into", "elevate", "unleash", "game-changer")
+3. Read it in Yeti's voice: direct, plain, no waffle
+
+A post that fails the check does not publish until it is cleaned.
+
+---
+*Last updated: 2026-07-24*
