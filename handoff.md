@@ -1,19 +1,22 @@
-## Session: 2026-07-24 (evening ET, part 2)
+## Session: July 31, 2026 (evening ET)
 **Environment:** Antigravity IDE
 **What was done:**
-- Follow-up to Gypsy Blue diagnosis: Yeti supplied the correct coordinates (41.9169583, -84.3115321)
-- Patched Lat/Lng on the Gypsy Blue Vineyards record in the Notion businesses DB (the auto-geocode had placed it ~7 km too far south at 41.8489)
-- Verified live /api/businesses now serves the corrected pin; endpoint is Cache-Control no-store, so effective immediately with no deploy
-- Confirmed the fix can't be overwritten: businesses.js only auto-geocodes on brand-new submissions, never on reads
-- Note: notion-business MCP integration returns 401 invalid token; used the default notion integration instead
+- Built Idea Greenhouse from scratch: shared kanban idea tracker for Yeti + Holly (spec'd, coded, deployed)
+- Pipeline: Germinate, Brainstorm, Planning, Filming, Editing, Releasing, plus Harvest log
+- Grow feature: /api/grow sends the idea to Claude (claude-opus-5 + web search) with an anti-sycophancy prompt (mandatory "Why this might flop" section, real research, 3 physical next actions auto-added to the card checklist)
+- Storage: Vercel Blob, one blob per card, persist-before-notify, /api/health self-check
+- Auth: shared access code + Yeti/Holly picker. Current code: growroom-2026 (change via ACCESS_CODE env var)
+- Repo: Gitdaryl/idea-greenhouse (private), pushed to main
+- Verified live: card create/move/checklist/delete all pass, UI screenshot confirmed on mobile viewport
 
 **What's live / deployed:**
-- Gypsy Blue map pin now at the correct location on manitoubeachmichigan.com (data fix in Notion, no code change)
+- https://idea-greenhouse-pi.vercel.app (Vercel project idea-greenhouse, Blob store idea-greenhouse-blob connected)
 
 **Next up:**
-- Decide whether Discover's "All" view should surface paid businesses (list panel is empty and map is village-centered at zoom 12 until a category chip is tapped) — this is why Kristin thought she was invisible
-- Reply to Kristin (draft provided in session part 1)
-- Fix or remove the notion-business MCP server token (401s)
+- Yeti must add ANTHROPIC_API_KEY env var in Vercel (any existing key from console.anthropic.com works), then the Grow button goes live. Untested end-to-end until then.
+- Optional: GROW_MODEL=claude-sonnet-5 env var for cheaper brainstorms (default claude-opus-5, roughly 5 to 15 cents per grow)
+- Later ideas in SPEC.md: n8n stale-card pings, auto-grow on create, per-platform release checklists
 
 **Notes for other environments:**
-- Nothing is down; all Manitou feeds healthy. Do NOT run the Notion-feed DOWN runbook.
+- Holly needs the URL + access code + pick "Holly" on the gate. Works on mobile (columns swipe).
+- /api/health shows env + blob status; currently all green except ANTHROPIC_API_KEY.
