@@ -1,19 +1,18 @@
 ## Session: 2026-08-02 ET
 **Environment:** Antigravity IDE
 **What was done:**
-- Built the Signature Films quoting system in Yeti-Groove repo docs/: SIGNATURE-RATE-CARD.md (internal, tiers + a la carte), PROPOSAL-TEMPLATE.md, SERVICE-AGREEMENT-TEMPLATE.md, DISCOVERY-CALL-SHEET.md
-- Added Signature Films Quoting SOP to claude-context sop.md so ALL platforms run the same play: Yeti meets remotely, reports to Mobile while fresh, receiving Claude logs to Session Brain immediately and scopes against the rate card; IDE/Cowork generate the proposal and agreement
-- Coached the professional flow developers expect: same-day ack, discovery call, branded proposal (investment framing, never hourly), agreement + deposit invoice, milestone touchpoints, vendor paperwork (W-9, COI, FAA Part 107)
+- Legal sweep for the one-appointment attorney visit. Package/checklist at ~/Desktop/attorney-review-package.md
+- MB (commit 4a1c46e): privacy now discloses the crowd photo system (uploads, Anthropic AI screening, Vercel Blob, Upstash, local-storage identifier, photo removal rights); terms add photo upload section (license grant, rights warranty incl. minors, AI moderation, flag/auto-hide, takedown promise). Verified live via headless render
+- yetigroove (commit 319d845): NEW /terms page (social order terms, $50 revisions, refunds, customer media license, visualization disclosure, MI law); privacy fixed manitoubeach.com -> manitoubeachmichigan.com, added Resend + Vercel Blob processors, disclosed order media collection; footer links /terms. Verified live
+- Open attorney questions (in the package): event-photo consent for identifiable people/minors in MI, off-plan visualization clause strength, drone indemnity, entity name + Signature Films DBA
 
 **What's live / deployed:**
-- Gitdaryl/Yeti-Groove main: 4dc7d17 (rate card), a1459d8 (templates)
-- Gitdaryl/claude-context sop.md: 1ffb30e (quoting SOP, loads via GDay everywhere)
+- manitoubeachmichigan.com/privacy + /terms (Updated August 2026)
+- yetigroove.com/terms (new) + privacy fixes
 
 **Next up:**
-- One-time Michigan attorney review of SERVICE-AGREEMENT-TEMPLATE.md before first use
-- COI (general liability ~$1M) and FAA Part 107 paperwork ready for developer vendor onboarding
-- Style the proposal as branded PDF when the first real inquiry lands
+- Book the attorney: review live drafts + service agreement template + the 4 questions
+- COI + Part 107 paperwork for developer vendor onboarding
 
 **Notes for other environments:**
-- Mobile: after Yeti's remote meetings, capture his report against docs/DISCOVERY-CALL-SHEET.md questions and log Session Brain IMMEDIATELY, tagged client
-- Never quote commissioned films below $7,500; a la carte prices stay private
+- All legal drafts are live but flagged "pending attorney review" in the Desktop package; do not represent them as attorney-approved
