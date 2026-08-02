@@ -1,16 +1,20 @@
 ## Session: 2026-08-02 ET
 **Environment:** Antigravity IDE
 **What was done:**
-- Fixed responsive column wrap Yeti spotted on yetigroove.com/signature: craft cards now a clean 2x2 grid (stack under 600px), commission tiers 3-up or fully stacked under 920px. No more orphan cards at mid viewport widths from auto-fit wrapping
-- Verified at 850px, 1100px, and 390px widths with headless screenshots, no horizontal overflow
+- Yeti defined the Signature Films core niche: ~95% AI pre-visualization of unbuilt developments. Real filming is land flyovers + references; AI + Photoshop make the plans look real and lived-in so buyers purchase off the plans
+- Updated yetigroove.com/signature: new Pre-Visualization section ("Most of what you see in the Devils Lake Cove film does not exist yet"), featured Photoreal Visualization craft card, visualization bullet in the $7,500 tier, honest-labeling line for off-plan protection
+- Rewrote all copy in studio voice per Yeti (no solo-operator phrasing; he plans to hire talent)
+- Fixed responsive orphan-card wrap on the craft and tier grids (2x2 / 3-up with clean stacking breakpoints)
+- Memories saved: signature-films-previz-niche, yetigroove-studio-voice
 
 **What's live / deployed:**
-- https://www.yetigroove.com/signature - commit a24f347 on Gitdaryl/Yeti-Groove main, deploy confirmed in production
+- https://www.yetigroove.com/signature - commits a24f347, d39ae2a, c7cfb91 on Gitdaryl/Yeti-Groove main, production verified
 
 **Next up:**
-- Proper OG image for /signature (currently borrows the Cove film poster)
-- Wire /signature inquiries into the persist-before-notify pipeline instead of mailto
-- Do not quote commissioned films below $7,500
+- OG image for /signature (currently borrows Cove film poster)
+- Wire inquiries into persist-before-notify pipeline instead of mailto
+- Do not quote commissioned films below $7,500; pitch pre-visualization first when scoping
 
 **Notes for other environments:**
-- Full /signature build context is in Session Brain (rows dated 2026-08-01 and 2026-08-02) and sessions.md
+- ALL YetiGroove copy from now on: studio voice ("we", "the studio"), never one person. Yeti stays as brand character
+- When pitching developers: the offering is previz-first (plans in, photoreal film out), cinematography second
