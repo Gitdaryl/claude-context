@@ -121,6 +121,29 @@ When handing off a task between environments, the handoff summary must include:
 
 ---
 
+## Signature Films Quoting SOP (all platforms)
+
+Yeti sells commissioned films for unbuilt developments (see yetigroove.com/signature). Expected flow: he takes a discovery meeting remotely, then reports to whichever Claude is closest, often Mobile, while it is fresh. Every platform must know this play:
+
+**The source of truth** lives in the Gitdaryl/Yeti-Groove repo under `docs/`:
+- `SIGNATURE-RATE-CARD.md` - tiers ($7,500 / $15,000 / $25,000) + PRIVATE a la carte prices
+- `DISCOVERY-CALL-SHEET.md` - the questions Yeti answers after a meeting
+- `PROPOSAL-TEMPLATE.md` - the branded proposal structure
+- `SERVICE-AGREEMENT-TEMPLATE.md` - the contract (attorney review required before first use)
+
+Fetch via GitHub (raw URL or GitHub MCP). Local on the Mac: ~/Documents/Claude Code/Yeti-Groove/docs/.
+
+**The flow:**
+1. Inquiry arrives -> respond same day, schedule discovery call. Log the lead to Session Brain (Tags: client).
+2. Yeti reports meeting answers (any platform, any order). Whichever Claude receives them logs a Session Brain row IMMEDIATELY (Log-It-Now) with everything he said, tagged client + decision.
+3. Scope against the rate card: map to a tier, price extras from the a la carte list. NEVER quote a commissioned film below $7,500. Quotes are proposals, never bare numbers.
+4. Best platform finishes: Mobile captures and logs; Cowork or IDE generates the proposal from the template and the agreement + deposit invoice on acceptance.
+5. Payment: 50/50 under $15,000; 40/30/30 at $15,000 and above. Two revision rounds included, then $300/round, changes by written change order.
+
+**Rules that never bend:** studio voice (never solo phrasing), renders are always presented as visualizations of approved plans, drafts watermarked until final payment, a la carte prices never published publicly.
+
+---
+
 ## Writing Style (All Environments, All Output)
 
 Applies to EVERYTHING written for Yeti or his brands: blog posts, newsletters, social copy, site copy, client proposals, emails, video scripts, code comments.
