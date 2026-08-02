@@ -1,16 +1,18 @@
-## Session: Aug 2, 2026 ET (checklist UX fix)
+## Session: Aug 2, 2026 ET (nav + assignees + urgency)
 **Environment:** Antigravity IDE
 **What was done:**
-- Fixed two Idea Greenhouse checklist quirks Yeti reported:
-- Scroll jump: every checkbox click re-rendered the board and reset column scroll to top. render() now saves and restores the board's horizontal scroll and each column's vertical scroll. Verified live with a scripted Playwright test (scrollTop 1564 before and after click).
-- Checkbox semantics: checked items no longer strikethrough (read as "idea eliminated"). They dim, keep their text readable, and sink below the open items, so the remaining work is always on top. Cards now show a progress pill (☑ 2/5, turns green when complete). SOP logic: a checklist is a work queue, checked = progress banked, not elimination.
-- Test clicks toggled 3 real to-dos during verification; all restored to original state via API, board verified clean.
+- Idea Greenhouse round 4, from Yeti's feedback:
+- Horizontal scroll fix: Yeti could not scroll right with a mouse (Mac hides scrollbars, wheel gets captured by columns). Added ‹ › arrows in the header that move one column per click, plus an always-visible styled scrollbar under the board. Scroll snap relaxed from mandatory to proximity. First attempt used floating edge arrows but they covered checkboxes, moved to header.
+- Per-task assignees like Trello: every checklist item has a chip that cycles + → Yeti → Holly → off. Colored to match author tags (blue Yeti, pink Holly). Stored as who on each checklist item, validated server-side.
+- Staleness jolt: cards stuck 30+ days get a red 🥀 wilting tag and a slow pulsing red border. Committed cards past their due date pulse too. The 14-day amber "stuck" tag remains the first warning tier.
+- All verified live with Playwright (arrows scroll 14 → 608, chip cycles Yeti and back to +), test assignment reverted, board clean.
 
 **What's live / deployed:**
-- idea-greenhouse-pi.vercel.app, commit a204e2d on Gitdaryl/idea-greenhouse main. (Deploy note: index.html deployed via vercel --prod BEFORE the git commit this time; commit pushed after, content identical.)
+- idea-greenhouse-pi.vercel.app, commit 53a021b on Gitdaryl/idea-greenhouse main.
 
 **Next up:**
-- Optional: date field in the Plant It add bar for one-step committed entries.
+- Optional: date field in the Plant It add bar.
+- Optional: "my tasks" filter showing only items assigned to the signed-in person.
 
 **Notes for other environments:**
-- Nothing new to configure. UI behavior change only.
+- Desktop users: header arrows, visible scrollbar, shift+mousewheel, or trackpad swipe all scroll the board now. Mobile swipes as before.
