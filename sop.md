@@ -63,6 +63,45 @@ At the end of any substantive session (3+ meaningful actions), Claude must write
 
 ---
 
+## Universal Conversation Backup SOP (ALL environments)
+
+Every substantive conversation must be findable from every platform. Two systems, both required:
+
+1. **Session Brain (Notion)** - the queryable cross-platform memory
+2. **Context repo handoff** - what GDay loads at session start
+
+### Session Brain: every platform writes it
+
+Database: **Session Brain** under the Yeti Command Center.
+- URL: https://app.notion.com/p/9d5702d67e804d6c9abb5ac650edd233
+- Data source ID: `cb17cfa2-7849-45d2-93bd-3aaefe5c66d0`
+
+At the end of any substantive session (3+ meaningful actions), append ONE row: Session (short title), Date, Platform (IDE / Cowork / Mobile / VPS), Project, Summary, What's Live, Next Up, Tags. Dense and plain.
+
+This applies to Cowork and Mobile the same as IDE. A conversation that only happened in chat still counts if anything important was said.
+
+### The Log-It-Now rule
+
+Do NOT wait for session end when any of these land mid-conversation:
+
+- Client feedback or testimonials (especially pricing signals)
+- A decision Yeti makes about direction, pricing, or strategy
+- A new client, referral, or lead
+- Anything Yeti says he wants to remember or find later
+
+Log it to Session Brain immediately as its own row (Tags: feedback / decision / lead). Session-end summaries compress; important things get lost or the session never gets logged at all. Real example: Dave's feedback on the Devils Lake Cove video ($2,000 paid, $30,000 California comp) lived only in an unlogged conversation and could not be found later from any platform.
+
+### Finding past discussions
+
+When Yeti asks "did we ever..." or "find the session where...":
+1. Query Session Brain (Notion) first - works from every platform
+2. On IDE only: `python3 ~/.claude/tools/csearch.py "search terms"` greps all local transcripts
+3. Check `sessions.md` in this repo for the handoff history
+
+If a discussion cannot be found, say so plainly and ask Yeti to relay what he remembers, then log THAT to Session Brain so it is captured going forward.
+
+---
+
 ## General Rules (All Environments)
 
 ### Before Starting Any Multi-Step Task
@@ -102,4 +141,4 @@ Run a slop check on the final draft before it ships:
 A post that fails the check does not publish until it is cleaned.
 
 ---
-*Last updated: 2026-07-24*
+*Last updated: 2026-08-02*
