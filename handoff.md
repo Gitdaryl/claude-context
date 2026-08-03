@@ -1,15 +1,17 @@
-## Session: 2026-08-03 ET (continued, pt 7)
+## Session: Aug 3, 2026 (evening ET)
 **Environment:** Antigravity IDE
 **What was done:**
-- Yeti flagged the wine-red section gradients looked messy/blotchy on his display (correctly diagnosed as an alpha overlay problem)
-- Replaced all radial rgba glows with pre-blended solid-color vertical gradients: each section runs base color → mixed plum/blush tone → base color, so edges match wave dividers exactly and nothing bands (03e415c)
-- Verified live: new gradient hex present in deployed bundle
+- Built the /dream nightly memory-consolidation routine (DIY version of Anthropic's dreaming feature)
+- Skill at ~/.claude/skills/dream/ (SKILL.md + extract_recent.py + run-nightly.sh)
+- launchd plist at ~/Library/LaunchAgents/com.yetigroove.claude-dream.plist (3:07am nightly, survives sleep/reboot) — NOT YET LOADED, Yeti must run the launchctl bootstrap command once
+- Ran /dream test pass over last 24h of transcripts; 5 proposals written to memory/dream-report.md (MB wine tasting rooms, MB paid-placement model, NAS asset library, previz loop video, simulation film pointer)
 
 **What's live / deployed:**
-- Everything through 03e415c on manitoubeachmichigan.com/wineries
+- Nothing deployed; all local config
 
 **Next up:**
-- Boathouse: Amoritas offerings + photos (only remaining wineries-page gap)
+- Yeti: run the launchctl command to arm the 3:07am schedule
+- Yeti: review dream-report.md and reply /dream apply N (or all)
 
 **Notes for other environments:**
-- Gradient recipe if reused elsewhere: never stack transparent color over dark bases for section washes - pre-mix the hex and run base→mix→base vertically
+- /dream only exists on this Mac (IDE); it reads local transcripts, so Cowork/Mobile can't run it. Applied memories flow to auto-memory as usual.
