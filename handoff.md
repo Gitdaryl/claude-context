@@ -1,17 +1,18 @@
-## Session: 2026-08-03 ET (continued, pt 5)
+## Session: 2026-08-03 ET (continued, pt 6)
 **Environment:** Antigravity IDE
 **What was done:**
-- DLVL wine count 9 → 11 everywhere (chip, description, itinerary, SEO FAQ) (122a213)
-- Color/energy pass on /wineries (9592bce): new brand tokens C.wine/#6B1F2E, C.wineDeep/#3A0F1A, C.rose/#C97B9A; merlot radial glows on dark sections + rosé blush on cream sections ("page deepens like a glass of red"); scrolling now-pouring marquee of real bottle names on a bordeaux band (reuses .scoreboard-ticker animation, pauses on hover); two fixed-background parallax quote breaks - Chateau Fontaine 5-bottle lineup ("Walk the boulevard. Follow the pour.") and Brengman rack ("Ask Darlene where to start.")
-- All verified live on production via Playwright text checks + screenshots
+- Parallax quote changed to "Walk the village. Follow the pour." per Yeti (0c18d9b)
+- Full boulevard → Village copy sweep across wineries + village pages; street addresses keep "Blvd" (7c771c2, 0c890dd)
+- Boathouse at Michigan Gypsy hours added: Sun-Mon 11-3, Tue closed, Wed 11-4, Thu 11-5, Fri-Sat 9-5 (7c771c2)
+- Scrub hero navbar overlap fixed earlier (73f4b8b)
+- All verified live: zero "boulevard" in the deployed wineries bundle, hours live
 
 **What's live / deployed:**
-- Everything through 9592bce on manitoubeachmichigan.com/wineries: scrub hero, 11 wines, marquee, parallax breaks, wine gradients
+- Everything through 0c890dd on manitoubeachmichigan.com - all 3 open tasting rooms now have real hours
 
 **Next up:**
-- Boathouse at Michigan Gypsy: hours, offerings, photos still pending
-- Marquee wine list is hardcoded in WineriesPage.jsx (NOW_POURING_WINES) - update when lineups rotate
-- iOS shows parallax breaks as static photo bands (fixed-bg unsupported) - same as DL-boat pattern
+- Boathouse: Amoritas offerings + photos still pending (only remaining gap on the wineries page)
+- Marquee wine list hardcoded in WineriesPage.jsx (NOW_POURING_WINES) - update when lineups rotate
 
 **Notes for other environments:**
-- Wine tokens now in src/data/config.js for reuse on other pages
+- Full day of wineries work: 3 rooms featured, hours, photos, program hidden behind WINE_PROGRAM_LIVE flag, cork-pop scrub hero, wine-red color pass, marquee, 2 parallax breaks
