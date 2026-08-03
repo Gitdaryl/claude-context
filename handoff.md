@@ -1,18 +1,17 @@
-## Session: 2026-08-03 ET (continued, pt 4)
+## Session: 2026-08-03 ET (continued, pt 5)
 **Environment:** Antigravity IDE
 **What was done:**
-- Hours + photos (8ca846d): Ang & Co and Devils Lake View Living real hours on cards (DLVL goes daily 10-5 after Labor Day - comment in wineries.js), 3 Brengman photos + Ang & Co storefront wired, Faust House pill now "Coming Soon"
-- Cork-pop scroll-scrub hero shipped (82fd02d): concept stills generated in Higgsfield (Soul Cinema, 4 options), Yeti supplied his own cork-pop reference; GPT Image 2 made the matching "corked at rest" start frame; Seedance 2.0 6s 21:9 1080p locked-camera video (54 credits); 73 WebP frames at 1280w (2.7MB); new CorkScrubHero = sticky 260vh canvas scrubber, content parallax/fade, reduced-motion fallback to static hero
-- Fixed: overflow-x hidden on html/body breaks position:sticky in Chrome - switched to overflow-x: clip globally (Layout.jsx GlobalStyles) + page root. Documented in project CLAUDE.md (40f0f54)
-- Verified locally via Playwright: frame scrub at 3 depths + keyboard scroll SOP pass
+- DLVL wine count 9 → 11 everywhere (chip, description, itinerary, SEO FAQ) (122a213)
+- Color/energy pass on /wineries (9592bce): new brand tokens C.wine/#6B1F2E, C.wineDeep/#3A0F1A, C.rose/#C97B9A; merlot radial glows on dark sections + rosé blush on cream sections ("page deepens like a glass of red"); scrolling now-pouring marquee of real bottle names on a bordeaux band (reuses .scoreboard-ticker animation, pauses on hover); two fixed-background parallax quote breaks - Chateau Fontaine 5-bottle lineup ("Walk the boulevard. Follow the pour.") and Brengman rack ("Ask Darlene where to start.")
+- All verified live on production via Playwright text checks + screenshots
 
 **What's live / deployed:**
-- All on main → Vercel: manitoubeachmichigan.com/wineries now has the scrub hero
+- Everything through 9592bce on manitoubeachmichigan.com/wineries: scrub hero, 11 wines, marquee, parallax breaks, wine gradients
 
 **Next up:**
-- Boathouse at Michigan Gypsy: hours, offerings, photos still pending from Yeti/Dave
-- Source video kept at scratchpad (temp) - cork-pop.mp4 also retrievable from Higgsfield job 43b78484-d366-4942-a461-8fafcb8a2e53
-- Watch for old-Safari (<16) overflow-x:clip fallback if anyone reports horizontal scroll
+- Boathouse at Michigan Gypsy: hours, offerings, photos still pending
+- Marquee wine list is hardcoded in WineriesPage.jsx (NOW_POURING_WINES) - update when lineups rotate
+- iOS shows parallax breaks as static photo bands (fixed-bg unsupported) - same as DL-boat pattern
 
 **Notes for other environments:**
-- Scrub kill-switch: SCRUB_FRAME_COUNT=0 in WineriesPage.jsx restores static hero instantly
+- Wine tokens now in src/data/config.js for reuse on other pages
