@@ -1,25 +1,24 @@
-## Session: 2026-08-05 ET
+## Session: 2026-08-05 (ET)
 **Environment:** Antigravity IDE
 
 **What was done:**
-- Compressed `~/Desktop/Yetis in the groove.mov` (160MB, uncompressed PCM audio) to a web MP4: 44MB, 1080p30, 78 sec, h264/AAC, faststart + byte-range seeking
-- Uploaded video + poster to Vercel Blob under `reel/` on the yeti-groove project
-- Added a new "The Reel" section to the yetigroove.com homepage above The Work, with six discipline chips (Aerial, Stop Motion, Construction, Trades, Events, Property) framing the mixed footage as range rather than inconsistency
-- Removed the duplicate Devils Lake Cove player from the homepage (`/signature#film` already served the identical film.mp4)
-- Replaced the whole Cove case-study section with a 2x2 social-proof grid of four real reviews: Holly Hagar Griewahn (Facebook), Michele Henson, Sandi Kerentoff, Karen Stipe (Google, 5 stars each)
-- Fixed two latent bugs: no `scroll-margin-top` on sections meant every anchor jump landed under the fixed nav (index.html + signature.html), and the global `footer { text-align: center }` was bleeding into the new quote attributions
-- Repointed nav "The Work" and the hero CTA at `#reel`; zero dead in-page anchors remain
+- Boathouse winery card on manitoubeachmichigan.com/wineries had NO photos array at all - it rendered logo-only. Fixed.
+- Pulled 10 stills off the OSMO SD card (DJI_20260805_0011-0021, shot 14:32-14:35 that day). Working copies + previews in ~/Desktop/boathouse-photos/. DNG raws also on the card if a redo is ever needed.
+- Relit 3 bottle shots via Higgsfield (Nano Banana Pro, 2K, 3:2, reference-driven so the real Amoritas labels survive rather than being regenerated): Pointes North reds, Amoritas "AV" whites, Riesling + Royal Ridge rosé row.
+- Graded the gallery interior with ImageMagick only - no AI - so the artists' real work on the walls is untouched.
+- Added photos array to the Boathouse entry in src/data/wineries.js, built, pushed, verified live.
 
 **What's live / deployed:**
-- yetigroove.com, three commits pushed to Gitdaryl/Yeti-Groove main: `161640e`, `5bf83ca`, `d8b3eb9`
-- Page order is now Hero → Reel → Proof → Clients → Doors → Roots → Contact
-- Blob assets: `reel/yetis-in-the-groove.mp4`, `reel/yetis-in-the-groove-poster-boat.jpg`
+- https://manitoubeachmichigan.com/wineries - Boathouse card now shows 4 photos
+- /images/wineries/boathouse_01..04.jpg (verified image/jpeg, 152-279KB each)
+- Commit 2f38719 on main
 
 **Next up:**
-- Lower-third client tags baked into the reel cuts (NLE work). The discipline chips frame the mix from outside the video, but tags in the edit travel with the file when it's sent to someone who never visits the site
-- Export preset fix: the source .mov had uncompressed PCM audio, which is why it was 160MB. Worth changing once in the project export settings rather than re-encoding every time
-- The $30k California-comp pull quote is now off the site entirely and is NOT to be republished (see notes below)
+- Address discrepancy: wineries.js has the Boathouse at 138 N. Lakeview Blvd; the Amoritas promo card in the tasting room says 132 N. Lakeview Blvd. One of them is wrong - worth confirming with the venue.
+- hostedBrands "pours" still reads "Ask what's pouring today". The photos confirm actual SKUs: Pointes North Red Blend, 2021 Riesling, Royal Ridge Blackberry Basil Hard Cider, and the AV white. Could enrich the card and the NOW_POURING_WINES marquee.
+- 8 video clips also sit on the OSMO card (~4GB, DJI_..._0001-0009). Unused. Candidate for a wineries page hero or social.
 
 **Notes for other environments:**
-- Yeti cut the "$30,000 agency quote" line deliberately: it read as bragging and made the price tier sound like a rare event. He wants buyers to read the rate as normal for the studio. Keep the $30k comp as internal pricing intel only, never client-facing copy
-- Holly's testimonial is trimmed to start at "From real estate videos to podcasts..." (the full version opens with personal warm-up and contains an em dash). The other three are verbatim
+- Higgsfield reference-driven relighting preserves real product labels well enough for web use, but the fine label artwork does drift - the watercolor AV monogram is reinterpreted, not copied. Fine at card thumbnail size, visible at full size if you know the original. Never let it generate a real brand's bottle from text alone.
+- Higgsfield returned a spurious "ran out of credits" warning at 612 credits remaining and suggested an auto-refill purchase. Ignored it; generation succeeded. Do not act on that upsell without checking balance first.
+- Vercel deploy on this repo takes ~40-60s. Polling the URL for HTTP 200 is NOT sufficient - the SPA fallback returns 200 with text/html. Check content-type is image/* before declaring a deploy done.
