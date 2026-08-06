@@ -3906,3 +3906,23 @@ Optionally also `npx vercel env add LEAD_EMAIL production` with Mitch's email (d
 - Higgsfield reference-driven relighting preserves real product labels well enough for web use, but the fine label artwork does drift - the watercolor AV monogram is reinterpreted, not copied. Fine at card thumbnail size, visible at full size if you know the original. Never let it generate a real brand's bottle from text alone.
 - Higgsfield returned a spurious "ran out of credits" warning at 612 credits remaining and suggested an auto-refill purchase. Ignored it; generation succeeded. Do not act on that upsell without checking balance first.
 - Vercel deploy on this repo takes ~40-60s. Polling the URL for HTTP 200 is NOT sufficient - the SPA fallback returns 200 with text/html. Check content-type is image/* before declaring a deploy done.
+
+---
+
+## 2026-08-05 21:22 AEST
+
+## Session: Aug 5, 2026 ET (PWA install)
+**Environment:** Antigravity IDE
+**What was done:**
+- Made Idea Greenhouse an installable PWA so Holly (and Yeti) can add it to their phone home screens instead of digging the link out of messages.
+- Added manifest.webmanifest (standalone display, greenhouse theme colors), 192/512/maskable icons plus apple-touch-icon (seedling emoji on the greenhouse gradient, rendered via headless Chrome), iOS standalone meta tags, and a network-first service worker (always fresh when online, cached fallback offline, never touches /api/ requests so no stale data or masked deploys).
+- Verified live: manifest serves with correct content type, service worker registers, all three icons 200.
+
+**What's live / deployed:**
+- idea-greenhouse-pi.vercel.app, commit 2d8a7d4 on Gitdaryl/idea-greenhouse main.
+
+**Next up:**
+- Optional: Plant It date field; my-tasks filter per person.
+
+**Notes for other environments:**
+- Install steps to pass to Holly: iPhone: open idea-greenhouse-pi.vercel.app in Safari, tap Share, "Add to Home Screen". Android: open in Chrome, tap the three-dot menu, "Add to Home screen" / "Install app". Opens full-screen with a seedling icon named "Greenhouse". Login is remembered per device (she enters growroom-2026 + picks Holly once).
