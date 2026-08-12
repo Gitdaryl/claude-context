@@ -1,25 +1,21 @@
-## Session: Aug 9 to 11 2026 ET
+## Session: 2026-08-11 ET
 **Environment:** Antigravity IDE
-
 **What was done:**
-- Recovered deleted footage and photos from a 256GB microSD (DJI Osmo, exFAT, Devils Lake Aug 5 to 8). Files were deleted in Finder with Trash emptied.
-- Took a byte exact 238GB clone (`~/SD-Recovery/osmo.dmg`) before touching anything. Card was mounted read-write at the time, so unmounting first mattered.
-- Wondershare Recoverit was the software Yeti had bought previously. Its "Disk Image" import rejects a raw 238GB clone; workaround is `hdiutil attach -readonly` so it shows up as a normal drive.
-- **Photos: 436 unique recovered and verified.** 269 read straight from exFAT directory entries, plus 167 only Recoverit found. Checked before deleting Recoverit's output, which is why those 167 were not lost.
-- **Video: 12.4 minutes of post 16:00 footage across 38 clips.** 20 clips at 96 to 100%, 6 partial, 12 lost.
-- Wrote a custom repair pass after diagnosing the real problem: DJI stores `mdat` and `moov` non-adjacently, video in fixed 5MB chunks with the LRF proxy woven between. Scanned the image for all 200 orphaned `moov` atoms, matched each to its clip by exact size, verified independently via `mvhd` timestamps, then reassembled fragment by fragment using each clip's own index as a validation oracle.
-- Repair beat Recoverit on 9 clips, adding 203 seconds of footage. Biggest wins: 0233 15% to 72% (228s clip), 0243 3% to 73%, 0241 12% to 67%.
-- Everything mirrored to NAS at `/Volumes/personal_folder/OSMO-recovery-2026-08/`.
+- Diagnosed Gypsy Blue Vineyards' "can't edit my events" report on manitoubeachmichigan.com. Two real bugs, both fixed and deployed.
+- Bug 1: `api/submit-event.js` session path (submitting more events after the first SMS verify) created an Edit Token and emailed it, but never texted it. Only the first event of a batch got a text with an edit link. Now every session-path event texts its own edit link (skipped when moderation holds the event).
+- Bug 2: the edit page could not change the event NAME. `EventEditPage.jsx` rendered it as a static heading and `api/event-edit.js` ignored the field. Since performer names live in the title, a misspelled artist was unfixable without touching Notion. Name is now an editable field; blank values ignored so a title can't be wiped.
+- Data fix: Gypsy Blue's Sept 5 "Holloway" event had start date `0026-09-05` (year typo). The events feed filters on start date, so it was invisible on the calendar. Corrected to 2026-09-05 and confirmed it now appears in /api/events.
+- Pulled all 18 Gypsy Blue edit links out of Notion and handed them to Yeti to forward to the client.
 
 **What's live / deployed:**
-- Nothing deployed. Local and NAS only.
-- `~/SD-Recovery/README.md` documents the whole method and folder layout.
+- Commits c801520 and db88e8c pushed to main, both auto-deployed to production and verified by asset content-type on manitoubeachmichigan.com.
+- Name-edit path smoke-tested against production (POST then GET round-trip on a real event, no data change).
 
 **Next up:**
-- `sudo rm -rf ~/SD-Recovery/recovered` to reclaim ~251GB. Root owned so it needs a password.
-- Once `osmo.dmg` finishes copying to NAS and size is verified, the local 238GB copy can go too. Keep the NAS copy, the card is being reused for Sunny Skies.
-- The 12 lost clips are all long ones. If ever worth revisiting, the image on the NAS is what to work from.
+- Not verified live: the new session-path edit SMS. Needs a real submission through /events/submit to watch a text arrive. Blocked here because DARYL_PHONE isn't in the local .env and the classifier blocked the test POST.
+- Consider a year-sanity check on submitted dates (reject anything outside ~this year to +5) so a `0026` typo can't hide an event again.
+- Consider a "manage all my events" magic link keyed to phone. Organizers logging a month of events now get one text per event, which works but is chatty.
+- Inbound SMS replies to the Twilio number go nowhere. Gypsy Blue replied to a text expecting a human. Worth either an auto-reply or forwarding.
 
 **Notes for other environments:**
-- Yeti's Recoverit licence works. Grant it Full Disk Access or it cannot read raw devices.
-- General lesson worth keeping: never scan a card directly, clone it first, then attach the clone read only. Also validate recovered video with `ffprobe`/`ffmpeg` rather than trusting that a file exists or that a player seems to open it.
+- Manitou Beach event edit links are per-event, not per-organizer. There is no single dashboard listing an organizer's events.
