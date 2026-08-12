@@ -1,23 +1,23 @@
 ## Session: 2026-08-11 ET (continued)
 **Environment:** Antigravity IDE
 **What was done:**
-- Yeti named the real failure mode: one person posts an event, the other spots a wrong date or spelling, goes in to fix it, and the event isn't on their list at all. My earlier fix only offered to text the other person their own list, which just means "ask her" - not a fix.
-- Built shared event lists. Either person can invite the other, and once accepted they both see and edit every event on the business's calendar.
-- Two design calls worth remembering:
-  1. The link is stored server-side keyed by phone, NOT baked into the magic-link token. Organizers install /my-events to their home screen and the installed launcher freezes its token into start_url, so membership carried in the token would silently never reach the people already using the app.
-  2. Sharing requires an invitation accepted on the receiving phone. Email is never verified at submission, so auto-merging by email would let anyone who typed a business's address into the form collect edit links for that business's whole calendar. The invite only goes to a number already on the records and names the inviting number so the recipient can judge it.
-- Storage is @vercel/blob in `api/lib/organizer-links.js`, both numbers encoded in the pathname so resolving a group uses list() rather than reading contents (blob content reads are CDN cached and go stale). Blob contents are empty on purpose. A storage failure degrades to solo rather than locking anyone out.
+- Yeti asked for a confirmation SMS to both numbers on submission, so one person knows the other already handled a task they were asked to do. Built it.
+- Anyone sharing a calendar now gets a heads-up when one of them adds an event, naming the event, its date, and the number that posted it, with a signed link straight into the shared list.
+- The design constraint was noise, not delivery. Gypsy Blue logged seven events in one sitting last week; seven texts would be ignored by the second one. It sends one heads-up per submitting session, with a 2 hour cooldown per direction.
+- Cooldown uses blob's own `uploadedAt` rather than a timestamp encoded in the pathname, since `list()` returns fresh metadata while blob content reads are CDN cached. If the cooldown check itself fails we stay quiet, because a missed heads-up beats a text storm.
+- Fires from both submission paths (first-verify and session), never fails the submission that triggered it, and skips held-for-review events since they aren't on the calendar yet.
+- Token helpers moved from `api/my-events.js` into `api/lib/organizer-links.js` so the notifier can mint a signed list link without importing an API route.
 
 **What's live / deployed:**
-- Commit a9db269 on main, deployed and verified.
-- Full flow tested on production against a scratch number, then cleaned up: solo before, invite details resolve, forged invite rejected, accept links the pair, both sides then report shared=true, and the partner number (which had submitted nothing) could see the other's event. Test blob deleted and rollback confirmed.
-- Gypsy Blue's two numbers each now show the share offer: 9974 sees its 8 and is offered 4607's 10, and vice versa.
+- Commit 8f0ec35 on main, deployed and verified end to end on production.
+- Test run: linked Daryl's number to a scratch number, posted two events as the scratch number, and confirmed exactly one heads-up text was delivered to Daryl naming the first event. The cooldown suppressed the second, which is the whole point.
+- Everything cleaned up afterwards: both test events archived in Notion, link and notice blobs deleted, Daryl's list confirmed back to solo, blob store confirmed empty under `organizer-`.
 
 **Next up:**
-- No SMS in this flow has been watched delivering, because every send target is a client phone. Gypsy Blue will be the first real use.
-- No way to un-share yet. Removing someone means deleting their blob under `organizer-links/` by hand.
-- Still unfixed: two people editing the same event simultaneously is last-write-wins with no warning (`api/event-edit.js` does a straight PATCH, no version check). More likely now that both can edit everything.
+- Nothing notifies on edits or cancellations yet. If one of them cancels Saturday's band the other won't hear about it, and that's arguably higher value than the add notice. Easy follow-up, needs a green light.
+- Still unfixed: simultaneous edits to one event are last-write-wins with no warning (`api/event-edit.js`, straight PATCH, no version check). More likely now that both can edit everything.
+- No way to un-share. Removing someone means deleting their blob under `organizer-links/` by hand.
 - Three events still unseen from the failed-alert period: two duplicate "Widow and Widower Group" (Review, Jun 10) and "Topless In The Hills" (Pending, May 16).
 
 **Notes for other environments:**
-- Event ownership is per phone number. Shared lists are opt-in per pair and live in Vercel Blob under `organizer-links/`.
+- Organizer identity lives in `api/lib/organizer-links.js` now: token minting, group resolution, and notification cooldowns. Vercel Blob under `organizer-links/` and `organizer-notices/`.
