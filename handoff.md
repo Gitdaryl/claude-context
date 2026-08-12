@@ -1,24 +1,21 @@
 ## Session: 2026-08-11 ET (continued)
 **Environment:** Antigravity IDE
 **What was done:**
-- Made `/my-events` installable to a phone home screen, so an organizer taps an icon instead of hunting for a link.
-- `api/my-events-manifest.js` generates the web app manifest per organizer. A static manifest would have been the trap: the launcher uses `start_url`, which would drop the token and open a stranger's sign-in screen. The token rides along in start_url.
-- iOS meta tags (`apple-mobile-web-app-title`, capable, touch icon) are injected by the page rather than sitting in index.html, because Safari reads them from the live DOM at Add to Home Screen time and they shouldn't apply to every page on the site.
-- Install card detects iOS vs Android and shows the right instructions, using the real `beforeinstallprompt` button where the browser offers one. Dismissible, remembered in localStorage.
-- Token TTL raised from 30 days to a year. An icon that dies in a month is worse than no icon.
-- Event links inside the list switched to router `<Link>` so the installed app doesn't bounce out to Safari on tap.
-- Icons generated at 192 and 512 from the existing 1052px `manitou_beach_icon.png`.
-- Turned the voice concierge off on `/my-events`, `/events/edit` and `/submit-event`. Caught it in an iPhone screenshot sitting on top of the "tap Share at the bottom of Safari" line. Nobody editing their own event wants to ask a tourism bot a question.
+- Yeti asked whether two people at one business (Gypsy Blue's owner and her daughter) both installing /my-events would cause sign-in problems. Checked it properly.
+- No sign-in conflict exists. Tokens are stateless HMAC over the phone number, no server sessions, no locking. Any number of devices can be installed at once without interfering.
+- But there IS a real issue, and it's already live in their data: `/my-events` filters strictly on the phone stored on each event, so each person only sees what they personally submitted. Gypsy Blue has 10 events under 419-367-4607 and 8 under 419-340-9974, same email and same organizer name throughout. Each phone was seeing about half the calendar.
+- Fixed by detecting the other number and offering to text it, rather than merging. Deliberately did NOT merge by email: email isn't verified at submission, so anyone who typed a business's address into the form could look up their own phone and walk off with edit links for that whole business. The offer texts the phone already on the record, so there's nothing to escalate.
+- Send target is recomputed server-side from the caller's own verified events. A client-supplied phone is never used as a destination, and the raw number never leaves the server (UI sees "(419) •••-4607").
 
 **What's live / deployed:**
-- Commits e5906a4 and 23333e9 on main, deployed and verified by asset content-type.
-- Verified headless at an iPhone 13 viewport: manifest link injected carrying the token, apple title "My Events", touch icon set, install card visible with correct iOS wording, manifest fetches 200 with the token in start_url, events list renders. Re-shot after the concierge fix and confirmed the instructions are fully readable.
+- Commit 2597e35 on main, deployed and verified.
+- Verified on production: 9974 sees its 8 events and is offered the masked 4607 with a count of 10; 4607 sees its 10 and is offered 9974; a forged token on the send endpoint is rejected; an unrelated phone gets an empty otherNumbers list, so there's no leakage between businesses.
+- Did NOT trigger an actual send, since that would text the client unprompted. That path is unverified end to end.
 
 **Next up:**
-- Three events still sitting unseen from when the admin alerts were failing: two duplicate "Widow and Widower Group" (Review, Jun 10, angandco.mi@gmail.com) and "Topless In The Hills" (Pending, May 16, Lgervick@newgenauto.com). Approve or reject.
-- Send Gypsy Blue the /my-events link and mention the home screen trick.
-- Untested on a real device: only checked in a simulated iPhone viewport. Worth adding it to a real phone once to see the icon land.
+- The "text their list" send path has not been watched delivering. Trigger it once from Daryl's own number pair, or let Gypsy Blue be the first real use.
+- Known and unfixed: two people editing the same event at the same time is last-write-wins with no warning. `api/event-edit.js` does a straight PATCH with no version check. Low probability, worth knowing before it confuses someone.
+- Three events still sitting unseen from the failed-alert period: two duplicate "Widow and Widower Group" (Review, Jun 10) and "Topless In The Hills" (Pending, May 16).
 
 **Notes for other environments:**
-- `/my-events` is the front door for event organizers now. Send that, not individual edit links.
-- If other pages ever need install-to-home-screen, the pattern is in MyEventsPage's `useInstallable` plus a per-user manifest endpoint.
+- Event ownership is per phone number, not per business or per email. Anyone asking "where did my events go" has almost certainly submitted from a second phone.
