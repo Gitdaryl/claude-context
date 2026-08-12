@@ -1,22 +1,30 @@
-## Session: 2026-08-11 ET (continued)
+## Session: 2026-08-11 ET
 **Environment:** Antigravity IDE
+
 **What was done:**
-- Added organizer display names, so alerts read "Allie just added Back Porch Duo" instead of "(419) 367-4607 just added Back Porch Duo". For a mother-and-daughter operation that difference is most of the value of the notification.
-- Asked for at the two natural moments rather than as a settings page: when you invite someone, and when you accept an invite. Changeable afterwards from a "Posting as" line, which only appears once a list is actually shared, since on a solo list a display name has nobody to be shown to.
-- The shared-list intro now names who you're sharing with ("shared with Allie"), and the share card labels the other number by name once known.
-- One place the name is deliberately not trusted: the invite screen still leads with the raw phone number. A display name is chosen by the sender, so it's the number that proves who's asking. The name rides alongside as a convenience, never as the identity.
-- Stored in the blob pathname like the links are, since `list()` returns pathnames fresh while content reads are CDN cached and a rename would appear to do nothing. A rename is a delete plus a write.
+Started with one client message (Gypsy Blue Vineyards couldn't fix a misspelled performer name) and ended with a full organizer self-service system. Five bugs fixed, four features built.
+
+Bugs:
+1. `api/submit-event.js` session path created an Edit Token and emailed it but never texted it, so only the first event of a batch got an edit link.
+2. The event NAME couldn't be edited at all. Static heading in the UI, ignored by the API. The actual reported problem was unfixable.
+3. `sendSMS()` blindly prefixed `+1` and `DARYL_PHONE` is stored E.164, so every admin alert had been going to `+1+1XXXXXXXXXX` and failing silently for months. Normalisation moved inside `sendSMS`.
+4. The new edit SMS was fire-and-forget; Vercel freezes the function on return, so the first live test never sent. Awaited now.
+5. The Twilio number's SMS webhook still pointed at `demo.twilio.com`. Gypsy Blue texted Sun Aug 9 about this exact fix and got Twilio's stock reply. Built `api/sms-inbound.js` and repointed the number.
+
+Features: `/my-events` (one texted link to every event you've submitted), home screen install with a per-organizer manifest, shared lists between two people at one business, crew alerts on add and on cancel, display names, and an edit-conflict guard. Plus a date sanity check after a `0026` year typo hid a live event.
 
 **What's live / deployed:**
-- Commit e053fa7 on main, deployed and verified end to end on production.
-- Test run: accepted an invite as "Allie", named the other side "Sue", confirmed the list reported displayName Sue and crew ["Allie"], then posted an event as Allie and confirmed the delivered text read "Heads up - Allie just added...". Also confirmed the invite screen still returns the masked number alongside the name.
-- All test data cleaned up: event archived, blob store confirmed empty under `organizer-`.
+- Commits c801520, db88e8c, 32c7517, c4d0dfd, e5906a4, 23333e9, 2597e35, a9db269, 8f0ec35, e7bf1dc, e053fa7 on main, all deployed and verified on production.
+- Twilio number PNba20430778bb125257249509ff2633d3 SmsUrl now `https://manitoubeachmichigan.com/api/sms-inbound`. One API call to revert.
+- Every test artefact cleaned up: test events archived in Notion, blob store confirmed empty under `organizer-`.
 
 **Next up:**
-- Gypsy Blue still hasn't been sent her email. The final wording, including the Allie paragraph, is in the chat and ready to go.
-- Reuse on another area (stays, food trucks) is still unproven. The libs are written to be domain-agnostic but events is the only caller.
-- No un-share. Removing someone means deleting their blob under `organizer-links/` by hand.
-- Three events still unseen from the failed-alert period: two duplicate "Widow and Widower Group" (Review, Jun 10) and "Topless In The Hills" (Pending, May 16).
+1. Send Gypsy Blue the email. Full text is in the Session Brain master row.
+2. Approve or reject three events stuck from the failed-alert period: two duplicate "Widow and Widower Group" (Review, Jun 10) and "Topless In The Hills" (Pending, May 16).
+3. Reuse the libs on stays or food trucks. Events is still the only caller, so the template is unproven.
+4. No un-share yet; removing someone means deleting their blob under `organizer-links/` by hand.
 
 **Notes for other environments:**
-- Organizer identity now lives entirely in `api/lib/organizer-links.js`: signed list tokens, shared-access groups, notification cooldowns, and display names. Blob prefixes `organizer-links/`, `organizer-notices/`, `organizer-names/`, all with the data in the pathname rather than the content.
+- Mobile: query Session Brain for "MASTER: Manitou organizer self-service (read this one)". It has the full write-up, the design rationale, the unsent client email, and every open item.
+- Local memory updated: `manitou-organizer-sharing`, `gypsy-blue-contacts`, and `blob-event-counters` (extended with the data-in-the-pathname pattern).
+- Repo `CLAUDE.md` now carries the SMS gotchas so they don't get re-learned.
