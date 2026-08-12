@@ -1,21 +1,26 @@
 ## Session: 2026-08-11 ET
 **Environment:** Antigravity IDE
 **What was done:**
-- Diagnosed Gypsy Blue Vineyards' "can't edit my events" report on manitoubeachmichigan.com. Two real bugs, both fixed and deployed.
-- Bug 1: `api/submit-event.js` session path (submitting more events after the first SMS verify) created an Edit Token and emailed it, but never texted it. Only the first event of a batch got a text with an edit link. Now every session-path event texts its own edit link (skipped when moderation holds the event).
-- Bug 2: the edit page could not change the event NAME. `EventEditPage.jsx` rendered it as a static heading and `api/event-edit.js` ignored the field. Since performer names live in the title, a misspelled artist was unfixable without touching Notion. Name is now an editable field; blank values ignored so a title can't be wiped.
-- Data fix: Gypsy Blue's Sept 5 "Holloway" event had start date `0026-09-05` (year typo). The events feed filters on start date, so it was invisible on the calendar. Corrected to 2026-09-05 and confirmed it now appears in /api/events.
-- Pulled all 18 Gypsy Blue edit links out of Notion and handed them to Yeti to forward to the client.
+- Started from Gypsy Blue Vineyards reporting she couldn't edit her events. Ended up finding and fixing five separate problems on manitoubeachmichigan.com.
+- Bug 1: `api/submit-event.js` session path (events 2+ after the first SMS verify) created an Edit Token and emailed it but never texted it. Fixed.
+- Bug 2: the edit page couldn't change the event NAME at all. `EventEditPage.jsx` showed it as a static heading and `api/event-edit.js` ignored the field, so a misspelled performer name in a title was unfixable. Fixed, blanks ignored so a title can't be wiped.
+- Bug 3 (found by testing bug 1's fix): `sendSMS()` blindly prefixed "+1". DARYL_PHONE is stored E.164, so every admin alert went to "+1+1XXXXXXXXXX" and failed silently, including the held-for-review notices. Normalization moved into `sendSMS` so all call sites are fixed at once.
+- Bug 4: the new edit-link SMS was fire-and-forget, and Vercel freezes the function on return, so the first live test never sent. SMS and welcome email are awaited now.
+- Bug 5: the Twilio number's SMS webhook still pointed at `demo.twilio.com`. Inbound texts got Twilio's stock "configure your SMS URL" reply and reached nobody. Gypsy Blue texted on Aug 9 asking about this exact spelling fix and got that back. Built `api/sms-inbound.js` (forwards to Daryl by SMS + email, replies in the site's voice) and repointed the number at it.
+- New `/my-events`: enter your phone, get one texted magic link listing every event you've submitted with an edit link on each. HMAC signed, 30 day TTL.
+- New date sanity check: `src/utils/dateSanity.js` + `src/components/DateHint.jsx`, wired into the submit and edit forms with min/max picker bounds. Warm amber nudge, never blocks submit.
+- Data fix: Gypsy Blue's Sept 5 "Holloway" event had start date `0026-09-05`. The feed filters on start date so it was invisible. Corrected, confirmed live.
 
 **What's live / deployed:**
-- Commits c801520 and db88e8c pushed to main, both auto-deployed to production and verified by asset content-type on manitoubeachmichigan.com.
-- Name-edit path smoke-tested against production (POST then GET round-trip on a real event, no data change).
+- Commits c801520, db88e8c, 32c7517 on main, all auto-deployed and verified by asset content-type.
+- Verified on production: my-events sends (Twilio shows delivered), magic link returns the right events, forged token rejected, inbound handler returns TwiML and the forward text was delivered. The Twilio log shows the before/after side by side: `+1+15172605907 failed` on Aug 11, `+15172605907 delivered` after the fix.
+- Twilio number PNba20430778bb125257249509ff2633d3 SmsUrl changed from `https://demo.twilio.com/welcome/sms/reply` to `https://manitoubeachmichigan.com/api/sms-inbound`. One API call to revert.
+- Smoke-test event created during testing was archived in Notion.
 
 **Next up:**
-- Not verified live: the new session-path edit SMS. Needs a real submission through /events/submit to watch a text arrive. Blocked here because DARYL_PHONE isn't in the local .env and the classifier blocked the test POST.
-- Consider a year-sanity check on submitted dates (reject anything outside ~this year to +5) so a `0026` typo can't hide an event again.
-- Consider a "manage all my events" magic link keyed to phone. Organizers logging a month of events now get one text per event, which works but is chatty.
-- Inbound SMS replies to the Twilio number go nowhere. Gypsy Blue replied to a text expecting a human. Worth either an auto-reply or forwarding.
+- Three events are sitting unseen because the admin alerts were failing: two "Widow and Widower Group" (Review, Jun 10, angandco.mi@gmail.com, duplicate submissions) and "Topless In The Hills" (Pending, May 16, Lgervick@newgenauto.com, never verified). Decide approve or reject.
+- Send Gypsy Blue the /my-events link.
 
 **Notes for other environments:**
-- Manitou Beach event edit links are per-event, not per-organizer. There is no single dashboard listing an organizer's events.
+- Manitou event edit tokens are per-event. `/my-events` is now the front door for organizers; send that rather than hunting individual edit links.
+- `sendSMS` in `api/lib/twilio.js` now normalizes any US phone format. Don't pre-format at call sites.
