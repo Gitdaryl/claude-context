@@ -1,26 +1,24 @@
-## Session: 2026-08-11 ET
+## Session: 2026-08-11 ET (continued)
 **Environment:** Antigravity IDE
 **What was done:**
-- Started from Gypsy Blue Vineyards reporting she couldn't edit her events. Ended up finding and fixing five separate problems on manitoubeachmichigan.com.
-- Bug 1: `api/submit-event.js` session path (events 2+ after the first SMS verify) created an Edit Token and emailed it but never texted it. Fixed.
-- Bug 2: the edit page couldn't change the event NAME at all. `EventEditPage.jsx` showed it as a static heading and `api/event-edit.js` ignored the field, so a misspelled performer name in a title was unfixable. Fixed, blanks ignored so a title can't be wiped.
-- Bug 3 (found by testing bug 1's fix): `sendSMS()` blindly prefixed "+1". DARYL_PHONE is stored E.164, so every admin alert went to "+1+1XXXXXXXXXX" and failed silently, including the held-for-review notices. Normalization moved into `sendSMS` so all call sites are fixed at once.
-- Bug 4: the new edit-link SMS was fire-and-forget, and Vercel freezes the function on return, so the first live test never sent. SMS and welcome email are awaited now.
-- Bug 5: the Twilio number's SMS webhook still pointed at `demo.twilio.com`. Inbound texts got Twilio's stock "configure your SMS URL" reply and reached nobody. Gypsy Blue texted on Aug 9 asking about this exact spelling fix and got that back. Built `api/sms-inbound.js` (forwards to Daryl by SMS + email, replies in the site's voice) and repointed the number at it.
-- New `/my-events`: enter your phone, get one texted magic link listing every event you've submitted with an edit link on each. HMAC signed, 30 day TTL.
-- New date sanity check: `src/utils/dateSanity.js` + `src/components/DateHint.jsx`, wired into the submit and edit forms with min/max picker bounds. Warm amber nudge, never blocks submit.
-- Data fix: Gypsy Blue's Sept 5 "Holloway" event had start date `0026-09-05`. The feed filters on start date so it was invisible. Corrected, confirmed live.
+- Made `/my-events` installable to a phone home screen, so an organizer taps an icon instead of hunting for a link.
+- `api/my-events-manifest.js` generates the web app manifest per organizer. A static manifest would have been the trap: the launcher uses `start_url`, which would drop the token and open a stranger's sign-in screen. The token rides along in start_url.
+- iOS meta tags (`apple-mobile-web-app-title`, capable, touch icon) are injected by the page rather than sitting in index.html, because Safari reads them from the live DOM at Add to Home Screen time and they shouldn't apply to every page on the site.
+- Install card detects iOS vs Android and shows the right instructions, using the real `beforeinstallprompt` button where the browser offers one. Dismissible, remembered in localStorage.
+- Token TTL raised from 30 days to a year. An icon that dies in a month is worse than no icon.
+- Event links inside the list switched to router `<Link>` so the installed app doesn't bounce out to Safari on tap.
+- Icons generated at 192 and 512 from the existing 1052px `manitou_beach_icon.png`.
+- Turned the voice concierge off on `/my-events`, `/events/edit` and `/submit-event`. Caught it in an iPhone screenshot sitting on top of the "tap Share at the bottom of Safari" line. Nobody editing their own event wants to ask a tourism bot a question.
 
 **What's live / deployed:**
-- Commits c801520, db88e8c, 32c7517 on main, all auto-deployed and verified by asset content-type.
-- Verified on production: my-events sends (Twilio shows delivered), magic link returns the right events, forged token rejected, inbound handler returns TwiML and the forward text was delivered. The Twilio log shows the before/after side by side: `+1+15172605907 failed` on Aug 11, `+15172605907 delivered` after the fix.
-- Twilio number PNba20430778bb125257249509ff2633d3 SmsUrl changed from `https://demo.twilio.com/welcome/sms/reply` to `https://manitoubeachmichigan.com/api/sms-inbound`. One API call to revert.
-- Smoke-test event created during testing was archived in Notion.
+- Commits e5906a4 and 23333e9 on main, deployed and verified by asset content-type.
+- Verified headless at an iPhone 13 viewport: manifest link injected carrying the token, apple title "My Events", touch icon set, install card visible with correct iOS wording, manifest fetches 200 with the token in start_url, events list renders. Re-shot after the concierge fix and confirmed the instructions are fully readable.
 
 **Next up:**
-- Three events are sitting unseen because the admin alerts were failing: two "Widow and Widower Group" (Review, Jun 10, angandco.mi@gmail.com, duplicate submissions) and "Topless In The Hills" (Pending, May 16, Lgervick@newgenauto.com, never verified). Decide approve or reject.
-- Send Gypsy Blue the /my-events link.
+- Three events still sitting unseen from when the admin alerts were failing: two duplicate "Widow and Widower Group" (Review, Jun 10, angandco.mi@gmail.com) and "Topless In The Hills" (Pending, May 16, Lgervick@newgenauto.com). Approve or reject.
+- Send Gypsy Blue the /my-events link and mention the home screen trick.
+- Untested on a real device: only checked in a simulated iPhone viewport. Worth adding it to a real phone once to see the icon land.
 
 **Notes for other environments:**
-- Manitou event edit tokens are per-event. `/my-events` is now the front door for organizers; send that rather than hunting individual edit links.
-- `sendSMS` in `api/lib/twilio.js` now normalizes any US phone format. Don't pre-format at call sites.
+- `/my-events` is the front door for event organizers now. Send that, not individual edit links.
+- If other pages ever need install-to-home-screen, the pattern is in MyEventsPage's `useInstallable` plus a per-user manifest endpoint.
