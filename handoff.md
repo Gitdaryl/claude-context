@@ -1,23 +1,25 @@
-## Session: 2026-08-12 ET
+## Session: Aug 12 2026 ET
 **Environment:** Antigravity IDE
 
 **What was done:**
-- Installed + authed the Higgsfield CLI (`@higgsfield/cli` v1.1.23), workspace "Private" (ultimate). Installed the Monid CLI (`@monid-ai/cli`) — **still needs `monid keys add` + funding**. Installed 8 `higgsfield-*` skills + `oso95/scroll-world` into `~/.claude/skills/`.
-- Two install gotchas: skills CLI agent flag is `claude-code` NOT `claude`; and `higgsfield account status` errors "No workspace selected" until `hf workspace set <id>`.
-- scroll-world fit assessment: strong for previz/unbuilt developments, roofing, software, trades, personal branding. Wrong tool for the two renovation *render* inquiries (different deliverable) and for flying a camera through an existing listed house (the still is accurate, Seedance invents geometry between frames). Best first build = `/signature`, photoreal Architecture A.
-- **Shipped to yetigroove.com (2 commits):**
-  - `738d68b` — custom reel play button replacing Chrome's default control bar (progressive enhancement, keyboard focusable, reduced-motion branch). Homepage hero via Topaz 2160p (6 credits): 49 frames 1280x720 -> 1920x1080, mp4 fallback 720p/2.7MB -> 1080p/2.5MB.
-  - `d2dae7f` — `/signature` hero via Topaz 2160p (11 credits): 65 frames 1088x612 -> 1600x900, mp4 fallback 4.3MB -> 3.0MB at 720p from the 4K master.
-- Credits: 345.11 -> 328.11 (17 total for both upscales).
+- Audited what is actually connected: Higgsfield is an MCP connector; Kie.ai is a raw REST key (not MCP); Krea has a skill installed but no KREA_API_TOKEN, so it is not connected at all.
+- Ran a real A/B cost test instead of trusting price pages. Same reference image, same prompt, same 5s clip on both platforms, measured by credit-balance delta.
+  - Higgsfield Kling 3.0 pro (sound off): 7.5 credits
+  - Kie.ai Kling 2.1 pro: 50 credits = $0.25
+- Found Kie's catalog tops out at Kling 2.5, so it has no Kling 3.0 at any price.
+- Kie's Kling 2.1 failed the palette: washed the steel raven orange and changed its material by second 3. Kling 3.0 held cold steel for the full 5s.
+- Solved the letter-placement problem for the Excitement Software raven concept: never let the model render letters. Composite sprites from the existing EXCITEMENT ASSEMBLED.png, and crossfade to EXCITEMENT BACKLIT.png for the backlight beat. Both files already exist, so those beats cost zero credits.
 
 **What's live / deployed:**
-- yetigroove.com through `d2dae7f`. Homepage verified in production (frame_001 138604b, mp4 2600464b, scrub-active, custom play button, 49 frame requests, zero console errors). **/signature deploy was still propagating at hand-off — re-verify `frame_001.webp` is 152770b, not 69910b.**
+- Nothing deployed. Test clips and a frame comparison saved to ~/Projects/excitement-software/tests/ (raven-place-higgsfield-kling30.mp4, raven-place-kie-kling21.mp4, raven-place-COMPARE.png).
+- PRODUCTION.md updated with the measured cost table and the letter-placement architecture.
 
 **Next up:**
-- Confirm the /signature deploy landed.
-- `monid keys add` + fund, then the `/signature` scroll-world build: 3 scenes, photoreal, 480p draft first.
+- Generate the remaining three raven clips (perch idle, settle, takeoff) on Kling 3.0 to match the dip-and-reach test.
+- Cut the 10 letter sprites from EXCITEMENT ASSEMBLED.png.
+- Wire the sequence into the scroll engine alongside the existing c/raven build.
+- Higgsfield balance is low (320 credits). Worth checking the actual plan charge to work out cost per credit, which is the only number that decides the Kie question.
 
 **Notes for other environments:**
-- Topaz cost scales with frame count: 6 credits for 97 frames, 11 for 194. Cheap enough to lift any old 720p client footage. Video *generation* is 40-55 by comparison.
-- Corrections worth carrying: the webp frame sets ARE the desktop scrub (canvas sequence), not orphans; the mp4s are the mobile/reduced-motion fallback. No HD masters exist for either hero. And ffprobe's `r_frame_rate` lies on these files (reports 48fps on an 8.1s/194-frame clip) — trust `format=duration`, and Topaz preserved timing exactly.
-- Frame payload is resolution-bound, not quality-bound: on the dense drone footage, webp q76->q48 only moved 15MB->11MB. AVIF saved ~25%, all-intra h264 for blob-seek was 27MB. 1600x900 was chosen because 1088->1600 carries nearly all the visible gain and 1600->1920 costs 5MB for nothing visible in motion.
+- Krea will fail on first call until KREA_API_TOKEN is set. The skill is installed, the access is not.
+- Rule of thumb going forward: Kie for throwaway volume on stock models, Higgsfield for anything that gets graded or needs character/product consistency.
