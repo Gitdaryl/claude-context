@@ -1,25 +1,20 @@
-## Session: Aug 12 2026 ET
+## Session: Aug 13 2026 ET
 **Environment:** Antigravity IDE
 
 **What was done:**
-- Audited what is actually connected: Higgsfield is an MCP connector; Kie.ai is a raw REST key (not MCP); Krea has a skill installed but no KREA_API_TOKEN, so it is not connected at all.
-- Ran a real A/B cost test instead of trusting price pages. Same reference image, same prompt, same 5s clip on both platforms, measured by credit-balance delta.
-  - Higgsfield Kling 3.0 pro (sound off): 7.5 credits
-  - Kie.ai Kling 2.1 pro: 50 credits = $0.25
-- Found Kie's catalog tops out at Kling 2.5, so it has no Kling 3.0 at any price.
-- Kie's Kling 2.1 failed the palette: washed the steel raven orange and changed its material by second 3. Kling 3.0 held cold steel for the full 5s.
-- Solved the letter-placement problem for the Excitement Software raven concept: never let the model render letters. Composite sprites from the existing EXCITEMENT ASSEMBLED.png, and crossfade to EXCITEMENT BACKLIT.png for the backlight beat. Both files already exist, so those beats cost zero credits.
+- Wrote AI Holly weekend script for Aug 14-16 from the live events feed: Manitou-Beach/marketing/ai-holly-weekend-aug14-16-2026.md (script + social caption + edit notes)
+- Added the antique wooden boat parade (Friday after 7pm, Devils Lake) which was not in the events DB
+- Added real Holly's open house Sunday Aug 16, 729 Walnut Hill, 11am-12:30pm, with the "she owes me a pinot" callback
+- Fixed a systematic Notion data bug: all 20 Two Lakes Tavern shows had Time End set to bare "11:00 PM", so the events API fell back to reading it as the START time. Every show displayed as starting 11pm. Rewrote all as "8:00 PM – 11:00 PM"; live feed verified clean.
+- Cleared the bogus time on the Oct 31 Halloween Party (no confirmed start time, did not guess)
 
 **What's live / deployed:**
-- Nothing deployed. Test clips and a frame comparison saved to ~/Projects/excitement-software/tests/ (raven-place-higgsfield-kling30.mp4, raven-place-kie-kling21.mp4, raven-place-COMPARE.png).
-- PRODUCTION.md updated with the measured cost table and the letter-placement architecture.
+- Notion event fixes are live on manitoubeachmichigan.com/api/events now (no deploy needed)
+- Script file is local only, not committed
 
 **Next up:**
-- Generate the remaining three raven clips (perch idle, settle, takeoff) on Kling 3.0 to match the dip-and-reach test.
-- Cut the 10 letter sprites from EXCITEMENT ASSEMBLED.png.
-- Wire the sequence into the scroll engine alongside the existing c/raven build.
-- Higgsfield balance is low (320 credits). Worth checking the actual plan charge to work out cost per credit, which is the only number that decides the Kie question.
+- Get the real start time for the Two Lakes Halloween Party Oct 31 and put it in Notion
+- Root cause still open: the Notion "Time" property is a created_time field, not rich_text, so api/events.js line 121 can never read it. Either convert the property to rich_text or drop the dead branch.
 
 **Notes for other environments:**
-- Krea will fail on first call until KREA_API_TOKEN is set. The skill is installed, the access is not.
-- Rule of thumb going forward: Kie for throwaway volume on stock models, Higgsfield for anything that gets graded or needs character/product consistency.
+- Two Lakes Tavern shows are 8-11 PM. Any older post or graphic saying 11 PM was from the bad data.
