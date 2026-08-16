@@ -2,23 +2,25 @@
 **Environment:** Antigravity IDE
 
 **What was done:**
-- Answered an AI-bubble exposure question, then audited the live projects for real operational risk. Result: no hotlinked vendor CDN assets anywhere (the thing most likely to break), photo pre-screen already fails open, vendor spread across Anthropic/Gemini/ElevenLabs is sane.
-- Two genuine gaps found: 17 Manitou-Beach cron endpoints only `console.error` on failure, so a vendor repricing would stop the agents silently; and `VoiceConcierge.jsx` has no fallback if ElevenLabs is unavailable (visitor gets a dead mic button).
-- Discovered Time Machine has NO off-disk destination. `tmutil destinationinfo` = Kind: Local, `tmutil latestbackup` empty, target resolves to the internal 2TB SSD which is 93% full. Local APFS snapshots only.
-- Built ~/Projects/nas-backup: backs up Vercel Blob + Upstash KV + git mirrors to the UGREEN DXP6800 Pro (10.10.10.2, 73TB, 50TB free), scheduled around the NAS sleeping 23:30-09:00 weekdays / 10:00 weekends.
-- Key discovery mid-build: hardlinks FAIL over this SMB share (tested, not assumed). The standard dated-tree + `--link-dest` design would have silently written a full 279MB copy every week. Switched to a content-addressed object store + JSON manifests, which needs no hardlinks.
-- Also added: TM pause at 22:45 / resume after wake, because TM over SMB to a sleeping NAS can corrupt the sparsebundle.
+- Assessed CoAuthor.ai (AI book-writing SaaS, $48 to $749/mo) for duplicability. Verdict: the product duplicates easily, the business does not. Their moat is publishing-industry credibility and distribution, not software.
+- Built `~/Projects/kdp-studio`, a self-owned replacement running on tools already paid for: DataForSEO for Amazon research, Claude for drafting, Nano Banana Pro or Higgsfield for covers, ElevenLabs for audiobook, pandoc for DOCX and EPUB.
+- Two modes over one drafting engine. **market**: research-first KDP non-fiction, 40k to 55k words. **ghost**: client memoir and business story built only from interview transcripts and documents, 60k to 90k. Ghost mode is the Never Broken pattern made repeatable.
+- Scripts, all stdlib and tested: `newbook.py`, `stats.py`, `continuity.py` (extracts names, years, ages, figures per chapter and surfaces age and date conflicts), `spine.py` (KDP wraparound cover math), `build.sh` (pandoc to DOCX and EPUB).
+- Core rule enforced in code, not in a doc: the model drafts prose, the source supplies facts. Unsourced facts get `[VERIFY: question]` inline and `build.sh` exits 2 rather than build a final manuscript while flags remain.
+- Templates: book bible with a mandatory pasted voice sample, outline, interview guide with question banks and a consent checklist, source log, style sheet, KDP metadata sheet.
+- Docs: ghostwriting rules, market research method, KDP specs and policy notes.
+- Installed pandoc via brew.
+- Wrote the `kdp-studio` skill to `~/.claude/skills/kdp-studio/SKILL.md`, command-driven with a fixed stage order.
+- Smoke tested end to end with a throwaway book, fixed a regex bug where names split across line breaks, then deleted the test.
 
 **What's live / deployed:**
-- Nothing deployed. nas-backup is built and tested but NOT installed (install.sh not run, no launchd jobs loaded).
-- Verified against the live Manitou Beach store and the real NAS share: cold pull 279MB/20s, warm pull reused all 240 objects in 1.3s, restore byte-identical to live blob (cmp), GC collects orphans correctly.
+- Nothing deployed. `~/Projects/kdp-studio` committed locally at 1dfe20e. Not pushed to GitHub yet, needs a repo created.
 
 **Next up:**
-- Yeti runs `./install.sh`, sets the TM destination in UGOS Pro, fills targets.json.
-- Upstash creds must come from the Upstash console, not `vercel env pull` (Vercel returns sensitive integration vars as empty strings).
-- NOT DONE: the cron heartbeat + watchdog for Manitou-Beach's 17 cron endpoints. Needs a `api/lib/heartbeat.js` plus a one-line beat call in each handler. Deferred because it touches production cron handlers and deserves its own pass.
-- Optional: hide the voice concierge mic button when the ElevenLabs session fails to start.
+- Push kdp-studio to GitHub (repo does not exist yet).
+- First real run when a ghostwriting client lands. Stage order is: new, two interview sessions, bible, outline, remaining interviews, draft, continuity, revise, metadata, cover, build.
+- Context: Yeti watched a video pitching KDP as a low-friction business. Flagged that the easy non-fiction categories are saturated and the titles that still earn carry first-hand knowledge a model cannot produce.
 
 **Notes for other environments:**
-- nas-backup repo not yet pushed to GitHub.
-- The NAS sleep window (23:30 to 09:00/10:00) constrains any future scheduled job touching 10.10.10.2. n8n on the VPS cannot reach it: private LAN address, would need Tailscale.
+- Ghost mode `source/` folders are gitignored. Client transcripts stay local unless there is a decision to put them in a repo.
+- Cowork: cover generation and market research reading are good fits there. Drafting and builds belong in the IDE.
