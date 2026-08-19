@@ -1,23 +1,18 @@
-## Session: 2026-08-18 (ET)
+## Session: 2026-08-19 ET
 **Environment:** Antigravity IDE
-
 **What was done:**
-- Qualified an Instagram inbound: Gregory Richard, principal of Remington Architecture, 630-584-2735. NCARB, practicing since 1989, Urban Guild member. Traditional residential, lake homes, historic private clubs. His firm lists Adrian MI, 12 minutes from Devils Lake, which is why the film reached him
-- Strategic call: he is a channel, not a customer. Built a three door ladder (paid workflow session, done-for-you previz pack, 15% referral commission)
-- Added the Architect Previz Pack, $2,900, to the Signature rate card as the one sanctioned sub-floor SKU, with guards so it cannot erode the $7,500 film floor
-- Wrote the 90-minute Architect Workflow Session outline, $750 credited against a first project, built around correcting "app plus prompt equals magic"
+- Drafted the two Owls Nest micro-wedding documents and placed them on the Desktop as visible reminders: OWLS-NEST-venue-agreement-DRAFT.md and OWLS-NEST-liability-waiver-DRAFT.md. Both are marked draft-for-attorney-review
+- Venue agreement covers: guest cap, quiet hours, licensed-bartender-only alcohol, required special event insurance naming the LLC, no temporary structures, tree house and zip line closed during events, indemnification, limitation of liability, zoning-cancellation clause
+- Waiver covers: per-adult signature, natural terrain risks, closed areas, alcohol responsibility; flags Michigan's restrictive stance on parental waivers for minors as an attorney question
+- Updated the attorney package (~/Archive/Business/attorney-review-package.md) section 4 to point at the finished drafts
 
 **What's live / deployed:**
-- Gitdaryl/Yeti-Groove commit e68e3b9: docs/SIGNATURE-RATE-CARD.md updated, docs/ARCHITECT-WORKFLOW-SESSION.md added
-- Session Brain row and 3 Master Task Board rows filed
+- Nothing deployed; documents are local drafts only
 
 **Next up:**
-- Reply to the IG DM today. Goal is the phone, not an answer. Lead with the Adrian angle
-- Discovery call. Money question: are renderings already a billed line item in his contracts
-- Get one real project with plans so the live contrast demo can be pre-built
-- Build the architect-facing Previz Pack one-pager (reusable for every architect after Greg)
+- Yeti: email the zoning administrator to memorialize the verbal micro-wedding clearance in writing (highest priority, before any booking)
+- Yeti: send the Noe Law Office contact-form message (drafted earlier), adding item 5 for the venue agreement + waiver review
+- After attorney blessing: convert both docs to signable PDFs, consider QR digital-signature flow for the waiver
 
 **Notes for other environments:**
-- The Previz Pack requires no drone, so the open COI / FAA Part 107 board row does not block this channel
-- Bigger prize is The Urban Guild, a national network of traditional architects with the same problem. Greg also does historic private clubs, same room as Men's Club and Mitch Ramsey
-- api/role-view.js in Yeti-Groove is still modified and uncommitted, pre-existing, untouched this session
+- The Owls Nest = Yeti's own cottage at 4205 Round Lake Hwy (MB Stays listing). Micro weddings zoning clearance is verbal only so far: no application needed until a structure build or a neighbor complaint. Full context in memory file owl-nest-micro-weddings.md and Session Brain row dated 2026-08-17
