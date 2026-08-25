@@ -2,31 +2,33 @@
 **Environment:** Antigravity IDE
 
 **What was done:**
-- Rebuilt the entire sound FX library from a NAS spaghetti ball into a local, categorised, searchable tree at `~/SFX` (34.5GB, 9,350 audio files)
-- Diagnosed the real problem: the library was never badly named, it was never INDEXED. Ocular pack (bought, left zipped) was already full UCS-compliant.
-- Extracted 47 Ocular packs (26GB of zips) + 18 loose zips to local SSD, stripped __MACOSX/.DS_Store junk
-- Converted 99 .wma files to WAV (Resolve cannot reliably read WMA); ffmpeg, 99/99 success
-- Split the flat 4,122-file `SFX lots` folder into categories using its own CATEGORY- filename prefix
-- Merged ~50 misc personal folders into ONE unified category namespace (Animal Trax 01/02 + AT 04 + 6003 Birds + Nature creatures all became ANIMAL/734)
-- Keyword-classified ~690 files from grab-bag folders (soundfx, 100-free-sfx, The Super Single Vol 1+2, Other, Other 2) per-file
-- Deduped: only 51 exact duplicates found (0.02GB). Predicted 15-30%, actual 0.5%. Library was clean, just unsearchable.
+- Researched pro Gmail-with-Claude patterns; confirmed the claude.ai Gmail connector was ALREADY authenticated (Yeti had been logging in manually for access he already had)
+- Diagnosed the inbox with real data: 6,032 messages / 5,731 unread / 1 empty user label / 0 stars. Three identities (hotmail forward, daryl@, admin@) land undivided, so the Aug 23 human-vs-machine split is unenforced at delivery
+- Built Ops Watch, the scheduled "tell me when something breaks" job, in ~/.claude/tools/ops-watch/
+  - OPS-WATCH.md: classification spec (Broken / Deadline / Security / Billing), grounded in 90 days of the actual mailbox, not guesses
+  - run.sh: headless `claude -p` runner, lockfile, logging, osascript notification
+  - Gmail labels created: Ops/1-Broken, Ops/2-Deadline, Ops/3-Security, Ops/4-Billing
+  - Read-and-label tools only. No send, reply, forward, trash, or delete in the allowlist. Shell owns the file write so Claude has zero write access
+  - Verify-before-alert: it runs `gh run list` to confirm a failure is still failing, and collapses repeat failures into one streak line
+- Verified end to end with two live runs. Second run proved dedupe (no repeat alerts on already-labeled threads)
 
 **What's live / deployed:**
-- `~/SFX/01_Libraries/Ocular/` - 47 categories, UCS-named WAV, untouched vendor metadata
-- `~/SFX/02_Personal/` - 118 category folders, unified namespace
-- `~/SFX/_INBOX/` - landing zone for new downloads, rule is nothing leaves unnamed
-- `~/SFX/_DUPES/` - 145MB quarantine (51 dupes, 99 original WMAs, 19 non-audio) + reorg-manifest.tsv with all 5,925 original paths
-- NAS `/Volumes/Production/Sound FX` COMPLETELY UNTOUCHED, read-only source. Nothing deleted anywhere in this job.
+- Ops Watch installed and working at ~/.claude/tools/ops-watch/, run manually so far
+- 4 Gmail labels created, 3 GitHub failure threads labeled Ops/1-Broken
+- Cron NOT installed: the crontab edit was blocked by the auto-mode classifier. Yeti must paste one line (in Next up)
 
 **Next up:**
-- Install Soundly or Resonic Player, point at `~/SFX` (needs GUI, blocked on Yeti). Soundly reads UCS natively and drags straight to Resolve timeline. Verify Soundly's local-library indexing tier/pricing first, unverified.
-- Review `~/SFX/02_Personal/_UNSORTED` (158 files, 2.7%) by ear. Names too ambiguous to classify (Zip1.mp3, give up.mp3, Catches 1.mp3)
-- Spot check then delete `~/SFX/_DUPES` when satisfied
-- Decide whether to mirror the organised `~/SFX` back to the NAS as the new master
+- Install the schedule:
+  (crontab -l 2>/dev/null; echo "0 7 * * * /Users/darylyoung/.claude/tools/ops-watch/run.sh >/dev/null 2>&1") | crontab -
+- FIX: Manitou-Beach "Daily Business Spotlight" has failed 30 for 30 runs since 2026-07-27, all on commit 471e663. The spotlight feed on the live site is stale
+- The Gmail -> Hotmail forward is still alive and still bouncing 550 5.7.509 (7 bounces since June). The Aug 23 decision was to reverse that direction; it was never fully done
+- Two emails to Becky re Food Truck Locator (sipandsweets@yahoo.com and sipandsweets2024@yahoo.com) both hard-bounced 552 address not found. She never received either. Needs a correct address
+- Vercel: 1 misconfigured domain, notified 5 times since June 14, never resolved
+- FormSubmit on spotted-owl-site.vercel.app may never have been activated (Jul 17 activation mail unread), so that form may be dead
+- Deadlines ahead: Google AI Studio billing migration Sep 14 2026; Google Cloud 2SV required Oct 20 2026
+- Remaining builds from the email plan, in order: lead catcher, morning brief, unsubscribe sweep, email-to-Notion
+- claude.ai n8n MCP server needs re-auth (shows "Needs authentication"; two stale duplicate entries also fail to connect)
 
 **Notes for other environments:**
-- Do NOT load SFX into the Resolve Media Pool, that DOES bloat projects. The Fairlight Sound Library is a separate global DB and does not, but is slow to scan. Best path is an external browser dragging into the timeline.
-- macOS gotcha hit this session: filesystems are case-insensitive, so `Scrape/` and `SCRAPE/` are the SAME folder. A merge script moving files between them silently fails. Cost 63 files temporarily, caught by an integrity count, restored.
-- macOS now ships `openrsync`, which does NOT support `--info=progress2`. Plain `rsync -a` works.
-- `unzip` returns exit code 1 for harmless warnings on Windows-made zips (backslash paths). Do not treat exit 1 as failure.
-- Scripts kept at the session scratchpad: unpack-sfx.sh, dedupe.sh, unify.sh. The keyword classifier in unify.sh is reusable for the Sunny Skies 10-sec clip library and footage-indexer.
+- Gmail, Drive, Calendar, Notion, Vercel, Higgsfield MCP connectors all verified connected at CLI level, and they survive headless `claude -p` runs. That means scheduled Claude jobs CAN touch Gmail
+- Writes into ~/.claude/ are blocked as a sensitive path in headless runs. Have the shell do the file write and give Claude read-only tools
