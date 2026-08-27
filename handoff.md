@@ -2,22 +2,25 @@
 **Environment:** Antigravity IDE
 
 **What was done:**
-- Ran the AI Holly reel kit on this week's HeyGen render (~/Downloads/83c5f414542d42ec80ebc2088f2559b0.mp4) for the AUG 27-30 weekend. 8 events anchored, none dropped, contrast passes WCAG AA.
-- Fixed a real bug in holly-reel-kit/reel/run.mjs: arg() returned argv[0] (the node binary path) for any absent flag, because indexOf is -1 and -1 + 1 is 0. --thursday was therefore never optional and the run crashed with "Invalid time value".
-- Fixed a layout error that blocked the render: Poppins ink at 62px ran ~3px past the title's line box and the clamp's overflow:hidden was shaving descenders. Added 4px vertical padding to .beat-what .title in build.mjs rather than changing the type.
-- Fixed silent SMS failure in run.mjs: it only checked msg.error_message (delivery failures) and not msg.message (API errors), so a 401 printed "401, undefined segments" and then "Done."
-- Verified the render by extracting frames, not by trusting the check.
+- Overlaid this week's AI Holly reel (AUG 27-30). 8 events anchored, contrast AA, FLYTE reads TIME TBA because the feed has no time for it.
+- Then automated the graphics pass so it runs with nobody at the desk.
+- Four real bugs fixed: run.mjs arg() returned argv[0] for any absent flag (indexOf -1, -1+1 = 0), so --thursday was never optional; Poppins ink ran 3px past the title line box and the clamp's overflow:hidden shaved descenders, blocking the render; the SMS step checked msg.error_message but not msg.message so a 401 printed "Done."; a job-level PATH in the new workflow would have dropped setup-node's own toolchain dir.
+- Date trap caught before it shipped: holly-weekend-script.js takes the UPCOMING Thursday, holly-reel-kit takes the PREVIOUS one. Identical only when run on a Thursday, seven days apart on the Wednesday cron. Job 1 now publishes the date; the overlay is told, never left to guess.
 
 **What's live / deployed:**
-- Uploaded to Blob preview: https://dmg0joh3jdjfmu8k.public.blob.vercel-storage.com/holly-weekend/preview/holly-2026-08-27-overlaid.mp4
-- Local master: ~/Projects/holly-reel-kit/holly-2026-08-27-OVERLAID.mp4 (172 MB), delivery copy -OVERLAID-web.mp4 (88 MB)
-- NOT posted. NOT published to the --post path (that needs `node run.mjs --video=<file> --publish`).
+- Gitdaryl/Manitou-Beach main: overlay job on a self-hosted Mac runner, chained to the render job; overlay_only dispatch input (redo graphics without re-billing HeyGen); watchdog job on GitHub hardware; named recipients on /api/internal-alert (admin default, holly from HOLLY_PHONE).
+- HOLLY_PHONE added to Vercel Production, site redeployed so it binds. Endpoint verified live, auth still enforced before recipient lookup.
+- Runner "yeti-mac-studio" online, labels self-hosted/macOS/ARM64, installed as a LaunchAgent.
+- VERIFIED END TO END: Actions run 33099266130, all steps green. Downloaded the render from Blob, rebuilt, published to holly-weekend/overlaid/ (arms "AI Holly Post"), and correctly HELD BACK on FLYTE, texting Daryl rather than Holly.
+- holly-reel-kit is now a local git repo (videos ignored, .git 1.9 MB). No remote yet.
 
 **Next up:**
-- THE TEXT TO HOLLY DID NOT SEND. Manitou-Beach/.env has no TWILIO_* vars at all, only UNSPLASH_ACCESS_KEY and BLOB_READ_WRITE_TOKEN, so run.mjs POSTed to /Accounts/undefined and got 401. Either add the three TWILIO vars from the Twilio console, or add a `to` parameter to /api/internal-alert (which currently only texts ADMIN_PHONE). Board row filed.
-- FLYTE at Devils Lake Bar & Grill (Sat Aug 29) has no start time in the events DB, so the reel shows TIME TBA. Board row filed. Write it to Time End with an EN DASH.
-- The .spoken.md sidecar item from last week is still open; it matters less now that captions are off by default.
+- Auto-login is OFF and the runner is a LaunchAgent, so a power cut with nobody home means the overlay queues instead of running. GitHub holds a queued self-hosted job 24h before failing.
+- Push holly-reel-kit somewhere. It is load-bearing now and unbacked.
+- FLYTE at Devils Lake Bar & Grill has no start time. That is what is holding this week's reel back from going to Holly automatically.
+- The Holly leg of the send is unproven: every run so far held back. First clean week is the real test; a failed send falls back to texting Daryl.
 
 **Notes for other environments:**
-- The weekly command is: nvm use 22; cd ~/Projects/holly-reel-kit/reel; node run.mjs --video=<file>. Add --keep-transcript when only the look changed. --upload and --notify are opt-in.
-- Twilio credentials live only on Vercel for this project, not on the Mac. Any local script that texts will fail the same way.
+- Weekly manual command unchanged: nvm use 22; cd ~/Projects/holly-reel-kit/reel; node run.mjs --video=<file>. Add --deliver for the gated send, --notify to always text Daryl.
+- To redo graphics on an existing take: Actions > AI Holly Weekly Video > Run workflow > overlay_only=true, week=YYYY-MM-DD. It never re-renders, so it cannot bill HeyGen twice.
+- Twilio credentials exist ONLY on Vercel. Any local or CI script that texts must go through /api/internal-alert, never Twilio directly.
