@@ -1,23 +1,42 @@
-## Session: Aug 31 2026 (ET)
+## Session: 2026-08-31 (ET)
 **Environment:** Antigravity IDE
+**Project:** Manitou Beach (Gitdaryl/Manitou-Beach)
+
 **What was done:**
-- Rewrote the end of both signups to hand over controls instead of pointing at the public locator. New shared modules: ControlHandoff.jsx, HomeScreenInstall.jsx (one copy of the install logic, was about to be three), controlSurfaces.js (new verticals are a data key, not a screen)
-- Wrote the Vendor Control Plane report: plumbing diagram, four POVs, ranked vulnerabilities, modularity layers. https://claude.ai/code/artifact/cec71906-af2f-464f-9013-53dff87e4f33
-- Auto-pin now ASKS permission instead of announcing after the fact. Consent is per day, silence means no, reply Y/N by text. Three unanswered weekends stops the asking and alerts Daryl once. Vendors choose: ask me first (default) / just do it / leave it to me. Every truck including Wieners defaults to being asked, per Yeti - a weekly decision teaches them it is their tool.
-- 'Skip Social' is now a real switch (map only, never post me), honoured in food-trucks.js
-- Weekly systems check: seven credential checks in plain English, each carrying either numbered steps or a copy-paste message for Claude. Runs Mondays, retries before crying wolf, remembers last week so it can say "this fixed itself". ?preview=1 renders the alert as if everything failed.
+- Built the poster QR router: printed A-frames encode only `/snap/<key>`, never a deep
+  link, so one board works for every event an org runs and routing stays changeable
+  without a reprint. `/api/snap-resolve` reads the live events feed at scan time and
+  pre-picks the event; the page shows the pick as a confirmable chip, never silently.
+  Covers morning-after uploads, two-events-at-once, cancelled events, weekly recurring
+  venues, and a Notion outage (returns 200, not 503).
+- Designed and generated the 24x36 Men's Club poster. Print-ready vector PDF with
+  0.125in bleed, "SHARE YOUR SHOTS", 12.2in QR at error correction Q. Verified by
+  decoding the QR back out of the rendered artwork.
+- Priced crowd photo galleries against live Vercel/Upstash rates: ~$10/yr per venue,
+  almost all of it the Haiku vision pre-screen. Decision: charge for moderation and
+  setup as a flat annual add-on, never metered storage. Clubs stay included as the demo.
+- Filed the Men's Club Golf Outing (Sep 13 2026) in Notion and made it the home page
+  hero with a Learn More CTA to /mens-club.
+- Fixed two hero bugs found on the way: `Time` is a created_time system field so every
+  featured event rendered with no time, and an event with both a background and an
+  inline image rendered the same subject twice, pushing the CTA to the fold edge.
 
 **What's live / deployed:**
-- Three commits pushed to main and deployed. Verified live: settings panel renders and saves (tested set/read/restore against production, wrong token refused), all seven health checks pass against production credentials including Facebook.
+- manitoubeachmichigan.com/snap/mensclub (verified 200, resolver + page render)
+- Home page hero is now the Golf Outing with video background and CTA to /mens-club
+- marketing/posters/mensclub-poster.pdf, regenerate with `node scripts/make-poster.mjs <key>`
+- Pushed through commit fce7a75
 
 **Next up:**
-- Store the Meta post id so checkout can retract a wrong announcement (highest value open item)
-- Vendor token regeneration (the only permanent credential in the system)
-- Rate limit the food truck write path
-- "Right now" live panel: trucks out, bands playing, events starting within the half hour. NOT a marquee, and it must never render empty
-- Then the lineup engine: confirm-to-pin, approver role, outreach queue
+- Print two copies of the poster for the A-frame (front and back, same design)
+- Purge is unbuilt: admin can hide a photo but not delete it. Needed before selling a
+  gallery to a paying venue.
+- Each new venue gallery is currently a code deploy across three files. Should become
+  one config entry if this becomes a product.
+- Logo art reads "DEVIL'S & ROUND LAKE"; canonical name everywhere else is
+  "Devils Lake & Round Lake Men's Club". Worth checking with the club before print.
 
 **Notes for other environments:**
-- CRON_SECRET and ADMIN_SECRET in the local .env.notion.tmp are both stale (production rejects them), so cron admin/dry-run endpoints cannot be triggered from this Mac. Third-party keys in that dump are still valid. Yeti evidently rotated the two he controls.
-- Only ONE secret in the whole project expires on a clock: the Meta page token. Everything else rotates on exposure only. Recommended against automating rotation - it needs a Vercel API token that can rewrite every env var, a bigger key than the ones it protects.
-- Delete .env.notion.tmp when not in use. Gitignored and never committed (checked), but it is a full copy of production secrets on disk.
+- Notion events DB gained a `Tagline` rich_text property (api/hero.js already read it
+  but it did not exist, so hero taglines were always blank).
+- `Cost` must always be set explicitly on an event; blank publishes as free.
