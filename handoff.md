@@ -7,21 +7,21 @@
 - Moved both jobs off cron onto LaunchAgents: `com.yetigroove.ops-watch` (07:00), `com.yetigroove.lead-catcher` (07:20). LaunchAgents run inside the GUI session (Keychain reachable) and fire a missed job on wake instead of skipping the day. Removed the ops-watch cron line; the three `sync-daryl.sh` entries were left untouched.
 - Built `~/.claude/tools/inbox-watch/`: `notify.sh` (desktop plus SMS through the already-deployed `manitoubeachmichigan.com/api/internal-alert` relay, capped at 6 texts a day), `heartbeat.sh` plus `com.yetigroove.inbox-heartbeat` at 11:07, and `README.md`.
 - The heartbeat is a dead man's switch. It checks brief files and their age, not whether a process is running, because a watcher that cannot run also cannot tell you it did not run. Both runners now grep specifically for "Not logged in" and alert on it, and both say something on quiet days so silence stays meaningful.
-- Verified end to end: ops-watch ran clean under launchd and produced a correct brief.
+- Verified BOTH agents end to end under launchd, not just installed them.
 
 **What's live / deployed:**
-- Three LaunchAgents loaded and registered. Nothing was deployed to any server; all changes are local to the Mac.
-- First real brief in 9 days found a genuine P1: `Daily Business Spotlight` on Gitdaryl/Manitou-Beach has failed every scheduled run Aug 29 through Sep 2, dying in ~35s.
-- It also correctly declined to alert on two things: AI Holly failures that recovered on their own, and a Stripe message that was a real $9.99 sale rather than an outage.
-- Four rows filed on the Master Task Board, one of them Done.
+- Three LaunchAgents loaded and registered. Nothing deployed to any server; all changes are local to the Mac.
+- `ops-watch` first real brief in 9 days found a genuine P1: `Daily Business Spotlight` on Gitdaryl/Manitou-Beach has failed every scheduled run Aug 29 through Sep 2, dying in ~35s, so config or secret rather than timeout. It correctly declined to alert on AI Holly failures that self-recovered, and on a Stripe message that was a real $9.99 sale.
+- `lead-catcher` ran clean (exit 0, under 4 minutes) and found 3 people waiting, with drafts confirmed present in Gmail with real bodies, on the correct threads.
+- Four rows filed on the Master Task Board, one Done. Session Brain row logged.
 
 **Next up:**
+- Three drafts are sitting in Gmail waiting on Yeti. Craig Gabel (VM Systems, DLYC beachfront previz, wants onsite Sept 12 or 13, Mike Clark cc'd, time-sensitive and the beachfront is NOT blocked by the boathouse consent issue). Kathy Decker (needs the 11-page PDF actually attached before sending). Christina at The Lakes Print Shop (waiting on go-ahead for four 24x36 Coro A-frames at $132).
 - Yeti must paste `ALERT_TOKEN` into `~/.claude/tools/inbox-watch/secrets.env`. Until then alerts stop at the desktop and nothing reaches the phone. Pulling the secret was blocked by the safety classifier, correctly, so this step is his.
 - Import `~/.claude/tools/unsub-sweep/yetigroove-filters.xml` into Gmail to archive the bulk mail. 67 filters, already written, excludes all banking, ops, and human senders.
 - Fix the Daily Business Spotlight workflow. Check the existing Node 20 to 24 Backlog row first, it names that same workflow file.
-- `lead-catcher` was still running its first full pass when the session ended. Check `~/.claude/tools/lead-catcher/briefs/2026-09-03.md`.
 
 **Notes for other environments:**
-- Inbox triage lives on the Mac, not in the cloud. It only runs when the Mac is awake and logged in. Cowork and Mobile cannot trigger it.
+- Inbox triage lives on the Mac, not in the cloud. It only runs when the Mac is awake and logged in. Cowork and Mobile cannot trigger it. Porting the two specs to the VPS or a cloud routine is the fix if that matters.
 - If "Not logged in" ever returns, the permanent fix is `claude setup-token` into `CLAUDE_CODE_OAUTH_TOKEN` in that same secrets file.
 - General rule worth carrying: any unattended watcher needs a separate check on its output, not its process.
