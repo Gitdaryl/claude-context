@@ -1,27 +1,36 @@
-## Session: 2026-09-03 ET
+## Session: 4 September 2026 ET
 **Environment:** Antigravity IDE
 
 **What was done:**
-- Yeti asked whether important email could alert him instead of getting buried. Investigated before building and found the system already existed: `ops-watch` and `lead-catcher` in `~/.claude/tools/`, with the full `Ops/*` and `Lead/*` Gmail label taxonomy already created.
-- Found it had been dead for 9 days. `ops-watch` ran from cron, cron cannot unlock the login Keychain where Claude Code keeps its OAuth token, so `claude -p` exited in 3 seconds with "Not logged in" every morning since Aug 26 and reported nothing. `lead-catcher` was never scheduled at all, it had run exactly once on Aug 25.
-- Moved both jobs off cron onto LaunchAgents: `com.yetigroove.ops-watch` (07:00), `com.yetigroove.lead-catcher` (07:20). LaunchAgents run inside the GUI session (Keychain reachable) and fire a missed job on wake instead of skipping the day. Removed the ops-watch cron line; the three `sync-daryl.sh` entries were left untouched.
-- Built `~/.claude/tools/inbox-watch/`: `notify.sh` (desktop plus SMS through the already-deployed `manitoubeachmichigan.com/api/internal-alert` relay, capped at 6 texts a day), `heartbeat.sh` plus `com.yetigroove.inbox-heartbeat` at 11:07, and `README.md`.
-- The heartbeat is a dead man's switch. It checks brief files and their age, not whether a process is running, because a watcher that cannot run also cannot tell you it did not run. Both runners now grep specifically for "Not logged in" and alert on it, and both say something on quiet days so silence stays meaningful.
-- Verified BOTH agents end to end under launchd, not just installed them.
+- Audited the whole estate against the question "what does YetiGroove run for itself." Answer: it runs an AI operations company for other people. Wrote the operating plan (rev 3) around income and inheritance rather than showmanship: https://claude.ai/code/artifact/ad58bdf0-2655-437b-afd9-776019d58d17
+- **/streamline was never routed.** No rewrite in vercel.json, so the flagship operations-audit page served the homepage for weeks. Routed, committed the 6 untracked files, deployed, form tested end to end (persist + all 3 notifications).
+- **Built agent config-as-code** (Yeti-Groove/tools): agents.json registry, agent-pull.mjs, agent-push.mjs, _agents-lib.mjs, AGENTS-README.md. Push is dry-run by default, backs up live config, and verifies by reading the agent back. Using it immediately found two bugs in it, both fixed.
+- **The live concierge had been giving wrong answers for months.** The committed config was MORE correct than production: Chateau Aeronautique at Parnall Rd Jackson (should be Pentecost Hwy Onsted, locked 2026-08-16, 22 miles off), "Devils and Round Lake Men's Club" (wrong name for a $990/yr client), "Shop with a Cop" (should be Hero), and the entire FOOD TRUCK PARTNER section missing. Every one had been fixed in the repo and never pushed. Corrected and verified live.
+- **concierge-businesses fixed.** One invalid status option ("Listed Comp") 400'd the ENTIRE Notion query, so the concierge answered "I'm having trouble pulling up the business directory" to every business question. Now returns 40.
+- **Embedding index root-caused.** Google RETIRED text-embedding-004 (404s now). Key was fine. Switched to gemini-embedding-001, deployed. Also fixed the reason it hid: `stale` was computed from indexedAt, which the cron writes even when every source fails, so an empty index certified itself healthy for a week.
+- **SMS alerts had NEVER sent, not once.** ALERT_TOKEN was empty in secrets.env, so ops-watch, lead-catcher and the heartbeat were all silently mute. Pulled the real token from Vercel. Yeti ran it and the text arrived.
+- **AI crawlers unblocked on yetigroove.com.** Cloudflare was injecting a robots.txt disallowing ClaudeBot, GPTBot, Google-Extended, CCBot and five others, overriding the repo's own file. Fixed by setting apex + www to DNS only, which also removed the masked-5xx problem. Tunnels left proxied.
+- **Found commercial and client material in a PUBLIC repo**, including the internal rate card and DLYC client drawing data. Untracked and gitignored 6 files. Two of them I had published myself that morning by committing untracked files without checking repo visibility.
+- **Built "The Envelope"**, the handover for Erin: https://claude.ai/code/artifact/cb0cbe5c-4042-488a-af4b-5aaeca7f1c44 — plain language, db-backed checkboxes so progress persists and can be read back, all nine domains with real registrars and expiry dates, and a yearly review anchored to 26 April when the renewal emails arrive.
+- Drafted the Hammill Electric letter and the LastPass note for Erin to ~/Documents/Estate/ (deliberately outside any repo).
 
 **What's live / deployed:**
-- Three LaunchAgents loaded and registered. Nothing deployed to any server; all changes are local to the Mac.
-- `ops-watch` first real brief in 9 days found a genuine P1: `Daily Business Spotlight` on Gitdaryl/Manitou-Beach has failed every scheduled run Aug 29 through Sep 2, dying in ~35s, so config or secret rather than timeout. It correctly declined to alert on AI Holly failures that self-recovered, and on a Stripe message that was a real $9.99 sale.
-- `lead-catcher` ran clean (exit 0, under 4 minutes) and found 3 people waiting, with drafts confirmed present in Gmail with real bodies, on the correct threads.
-- Four rows filed on the Master Task Board, one Done. Session Brain row logged.
+- yetigroove.com/streamline (Yeti-Groove 8c57de2, c51f463, 9210be8, plus the docs untracking)
+- Manitou-Beach c1289ff (concierge prompt), 674edb0 (businesses fix), d35f7f6 (embedding model + stale fix), ae27dff + test-embeddings.sh (diagnostics)
+- yetigroove.com apex/www now DNS-only at Cloudflare; own robots.txt served; GPTBot, ClaudeBot, Google-Extended, PerplexityBot all allowed
+- SMS relay working again
 
 **Next up:**
-- Three drafts are sitting in Gmail waiting on Yeti. Craig Gabel (VM Systems, DLYC beachfront previz, wants onsite Sept 12 or 13, Mike Clark cc'd, time-sensitive and the beachfront is NOT blocked by the boathouse consent issue). Kathy Decker (needs the 11-page PDF actually attached before sending). Christina at The Lakes Print Shop (waiting on go-ahead for four 24x36 Coro A-frames at $132).
-- Yeti must paste `ALERT_TOKEN` into `~/.claude/tools/inbox-watch/secrets.env`. Until then alerts stop at the desktop and nothing reaches the phone. Pulling the secret was blocked by the safety classifier, correctly, so this step is his.
-- Import `~/.claude/tools/unsub-sweep/yetigroove-filters.xml` into Gmail to archive the bulk mail. 67 filters, already written, excludes all banking, ops, and human senders.
-- Fix the Daily Business Spotlight workflow. Check the existing Node 20 to 24 Backlog row first, it names that same workflow file.
+- Run `bash scripts/reindex-now.sh` (needs the /yeti-admin token) or let the 04:00 UTC cron do it, then confirm passages > 0
+- cron-new-listing is DEAD (filters Status "Active", which does not exist on either DB). DO NOT just fix it: it posts to Facebook/Instagram and emails welcomes, filtered on "Social Welcome Posted = false", so a naive fix fires the whole backlog at once. Run the read-only count first.
+- Invoice Sam Quisenberry for 2 months delivered. His underwriter has banned further video, live or AI, so the relationship is closing and unbilled work becomes unbillable. Three YetiClone expansion rows lost their premise.
+- Fill the Envelope blanks: the four contact names (most important), income/outgoing figures, VPS provider, insurance, which card
+- LastPass Emergency Access for Erin, then rehearse one section with her
+- Send the Hammill letter; tell Joe his domain renews 4 Dec 2026
+- Check auto-renew for yetigroove.com at Cloudflare (the 7 Vercel domains are already auto-renewing)
 
 **Notes for other environments:**
-- Inbox triage lives on the Mac, not in the cloud. It only runs when the Mac is awake and logged in. Cowork and Mobile cannot trigger it. Porting the two specs to the VPS or a cloud routine is the fix if that matters.
-- If "Not logged in" ever returns, the permanent fix is `claude setup-token` into `CLAUDE_CODE_OAUTH_TOKEN` in that same secrets file.
-- General rule worth carrying: any unattended watcher needs a separate check on its output, not its process.
+- **Gitdaryl/Yeti-Groove and Gitdaryl/Manitou-Beach are PUBLIC.** Check visibility before committing. A secret scan is not a publication check.
+- Agent config now lives in git. Use tools/agent-pull.mjs before touching any ElevenLabs agent; the dashboard and the repo drifted for five months.
+- Recurring theme, four instances found: jobs that run, report success and do nothing. Freshness was measured on the attempt, not the result. Worth sweeping all 18 crons.
+- Local market has near-zero AI literacy (his attorney asked what Anthropic is). Lead with outcomes, never the stack.
