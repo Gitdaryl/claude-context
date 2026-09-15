@@ -1,1 +1,1 @@
-- UGREENlink ID confirmed = YetiGrooveNAS (https://ug.link/YetiGrooveNAS); relay shows Connection Failed while netevent fault is active. Re-test after 1.19.1.0126.
+- UPDATE 16:06 ET: RESOLVED. 1.19.1.0126 removed netevent.service (net_serv replaces it). Remaining Network error was ifcfg-eth0 gateway 10.10.10.1 (the Mac). Removed it, backup in interfaces.d/bak/, default route now 10.0.0.1 via eth1. UGREENlink (ug.link/YetiGrooveNAS) back online. Task Board row marked Done. Awaiting Yeti confirming LED colour + Check for updates.
