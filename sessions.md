@@ -6545,3 +6545,9 @@ Features: `/my-events` (one texted link to every event you've submitted), home s
 
 **Notes for other environments:**
 - NAS data is safe; this is an OS-partition fault only. Do not re-run SMART/RAID sweeps, start from the memory file.
+
+---
+
+## 2026-09-15 15:36 AEST
+
+- UGREENlink ID confirmed = YetiGrooveNAS (https://ug.link/YetiGrooveNAS); relay shows Connection Failed while netevent fault is active. Re-test after 1.19.1.0126.
