@@ -6762,3 +6762,12 @@ Features: `/my-events` (one texted link to every event you've submitted), home s
 ## Session: 2026-09-16 (ET), part 11: voicemail quality
 **What was done:** Voicemail audio now served via signed site link (/api/voicemail; Twilio's URL demanded a login on Holly's phone). Transcription switched to Deepgram (Yeti created the key, added via rotate-env.py, which now also creates brand-new keys with --only). Same recording: Twilio "you're not the bag" vs Deepgram "Yeti says you're a nut bag". Admin ?view=transcribe&rec= re-runs any recording.
 **Next up:** tidy alert wording; Holly to save 517-300-8226 in contacts; mark-sold from Listings; roadmap row.
+
+---
+
+## 2026-09-16 18:34 AEST
+
+
+## Session: 2026-09-16 (ET) evening, session 2
+**What was done:** Voicemail callback bug fixed (Twilio omits From on recording callbacks; number now rides in the signed URL), Deepgram transcript verified live ("Holly, I'm looking for a used car..."). Alerts reworded, Eastern times in the desk. Hourly follow-up cron shipped (nudges, check-ins, nurture, quiet hours, dry run). All test data purged from Blob + Notion; dry run = 0 actions.
+**Next up (roadmap row):** chat grounding in lake + sold data; lake market report pages; welcome kit product; bookings; inbound email parsing; milestones + mark-sold. Waiting on Holly: photos, list prices, lake confirmations.
