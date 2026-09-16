@@ -6699,3 +6699,12 @@ Features: `/my-events` (one texted link to every event you've submitted), home s
 - Cleanup: 6 "Key test (delete me)" rows in Holly Leads + Holly's inbox; test blobs.
 **Notes for other environments:**
 - Secrets are now hidden in Vercel: nothing can read them back, verify by sending.
+
+---
+
+## 2026-09-16 16:06 AEST
+
+
+## Session: 2026-09-16 (ET), part 5: rotation complete
+**What was done:** Twilio, Notion (7-day grace, auto-revoke Sep 23), Anthropic, Holly ADMIN_SECRET rotated via rotate-env.py; each verified live (VPS SMS to Yeti, Notion query, direct API + Holly chat, /admin ping). n8n credentials updated by Yeti. Final audit: every copy in Vercel is type=sensitive except joe-profit ADMIN_SECRET.
+**Next up:** Yeti to confirm old Resend keys deleted and old Anthropic key disabled. Optional: `rotate-env.py ADMIN_SECRET --only joe-profit`. Fix Holly chat prompt (claims Lake Columbia is biggest lake). Delete "Key test" rows in Holly Leads.
