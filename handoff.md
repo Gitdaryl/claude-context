@@ -1,4 +1,4 @@
 
-## Session: 2026-09-16 (ET), part 7: reviews
-**What was done:** Holly's GBP found (5.0 / 44 reviews). api/reviews.js + GoogleReviews.jsx: live reviews section on home, TrustStrip on property/sold/plan, placeholder testimonials deleted, /admin "Ask for a review" texts the Google write-review link to Client-status leads. Deployed and verified. Best-agent roadmap filed on the board (one row, 7 items in order).
-**Next up:** roadmap item 1 (nudges + Texts tab) needs Holly's Twilio number; item 2 (chat grounding) needs nothing, good next session.
+## Session: 2026-09-16 (ET), part 8: LLM/SEO prerender
+**What was done:** Measured: every URL served 62 chars + one title to non-JS bots (all AI crawlers), no robots/sitemap/llms.txt, no schema. Built scripts/prerender.mjs (runs after vite build): 66 static pages with per-page title/meta/canonical/OG, JSON-LD (RealEstateAgent, LakeBodyOfWater+FAQPage, RealEstateListing offers, Article, breadcrumbs), readable body; robots.txt, sitemap.xml, llms.txt, llms-full.txt. Verified live with a GPTBot UA: lake page 2,955 chars + 4 schema blocks.
+**Next up:** Yeti: add the site to Google Search Console + Bing Webmaster and submit /sitemap.xml (needs domain ownership; do it when hollygriewahn.com moves over; set PUBLIC_SITE_URL env then so canonicals switch). Review lakes.js claims that LLMs will now quote ("largest inland lake in southern lower Michigan" for Devils Lake is doubtful).
