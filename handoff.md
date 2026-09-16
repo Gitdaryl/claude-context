@@ -1,4 +1,4 @@
 
-## Session: 2026-09-16 (ET), part 10: voice + footer
-**What was done:** Calls to 517-300-8226 ring Holly's cell with a press-1 screen (her voicemail had been answering forwards), missed calls take a voicemail with transcript texted to her and logged in the thread; verified live with Yeti + Holly (press-1 confirmed). Footer tagline "Irish Hills Real Estate" (Mitch's brand) replaced with "Manitou Beach, Michigan", copyright 2026.
-**Next up:** voicemail transcript test pending Yeti; tidy alert wording; Holly to save the number in contacts. Remaining phase-2 item: mark-sold from Listings tab.
+## Session: 2026-09-16 (ET), part 11: voicemail quality
+**What was done:** Voicemail audio now served via signed site link (/api/voicemail; Twilio's URL demanded a login on Holly's phone). Transcription switched to Deepgram (Yeti created the key, added via rotate-env.py, which now also creates brand-new keys with --only). Same recording: Twilio "you're not the bag" vs Deepgram "Yeti says you're a nut bag". Admin ?view=transcribe&rec= re-runs any recording.
+**Next up:** tidy alert wording; Holly to save 517-300-8226 in contacts; mark-sold from Listings; roadmap row.
