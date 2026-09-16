@@ -1,12 +1,12 @@
 
-## Session: 2026-09-16 (ET), part 3
+## Session: 2026-09-16 (ET), part 4: secret rotation
 **Environment:** Antigravity IDE
 **What was done:**
-- /admin phase 1 ("Holly's desk") built, deployed, verified live on a 390px viewport with zero JS errors: texted-link login (no password), Inbox (every lead, every source, tap call/text/email, status New/Called/Showing set/Client/Dead), Waitlist by lake, Listings with this week's numbers + "Your report" + "Copy seller link". api/admin.js + api/lib/admin-auth.js + src/pages/AdminPage.jsx. Documented in docs/TOP-PRODUCER-PLAYBOOK.md section 5.
-**What's live / deployed:**
-- hollygriewahn.vercel.app/admin
+- Vercel "Needs Attention" = readable secrets post April-2026 incident. Built ~/.claude/tools/rotate-env.py (Yeti pastes once; writes hidden Secret to every project holding the key, redeploys, updates local .env + VPS /root/SunnySkies/.env over ssh).
+- Resend fully rotated to per-site, domain-locked, sending-only keys: holly-site, yetigroove-sites (yeti-groove/yeticlone/hammill/yetickets), manitou-beach-site, joe-profit-site, sunny-skies-vps. Every one verified by a real send (Holly contact, Joe send-test-email, Manitou subscribe, VPS curl). Hammill + YetiClone email had been dead (deleted key); Yetickets had a re_re_ typo; both fixed as a side effect.
+- Fixed un-awaited SMS in Holly contact/chat intakes (Vercel was aborting the Twilio call).
 **Next up:**
-- Yeti: buy Holly her own 517 Twilio number, add to the Manitou Messaging Service (check 10DLC campaign allows conversational), set TWILIO_PHONE on hollygriewahn to it. Board row filed (Backlog): admin phase 2 = Texts tab + mark-sold.
-- Still waiting on Holly's closed sales for /sold. Test rows to delete (Notion Holly Leads "Test (Yeti, delete me)"; Blob leads/_contact, leads/test-slug, waitlist/devils-lake test entries).
+- Yeti: delete old Resend keys (manitou-beach connect, Onboarding, Yetickets Production). Then same pattern for TWILIO_AUTH_TOKEN (also n8n credential), ANTHROPIC_API_KEY (then source ~/.zshrc), NOTION_TOKEN_DISPATCH, and `ADMIN_SECRET --only hollygriewahn` (press Return to auto-generate). Never rotate Manitou's ADMIN_SECRET blindly.
+- Cleanup: 6 "Key test (delete me)" rows in Holly Leads + Holly's inbox; test blobs.
 **Notes for other environments:**
-- Holly logs in at /admin by tapping "Text me a login link". Yeti signs in with ADMIN_SECRET under "Have a key instead?" (it's in Holly-main/.env).
+- Secrets are now hidden in Vercel: nothing can read them back, verify by sending.
