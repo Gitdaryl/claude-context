@@ -6735,3 +6735,12 @@ Features: `/my-events` (one texted link to every event you've submitted), home s
 ## Session: 2026-09-16 (ET), part 8: LLM/SEO prerender
 **What was done:** Measured: every URL served 62 chars + one title to non-JS bots (all AI crawlers), no robots/sitemap/llms.txt, no schema. Built scripts/prerender.mjs (runs after vite build): 66 static pages with per-page title/meta/canonical/OG, JSON-LD (RealEstateAgent, LakeBodyOfWater+FAQPage, RealEstateListing offers, Article, breadcrumbs), readable body; robots.txt, sitemap.xml, llms.txt, llms-full.txt. Verified live with a GPTBot UA: lake page 2,955 chars + 4 schema blocks.
 **Next up:** Yeti: add the site to Google Search Console + Bing Webmaster and submit /sitemap.xml (needs domain ownership; do it when hollygriewahn.com moves over; set PUBLIC_SITE_URL env then so canonicals switch). Review lakes.js claims that LLMs will now quote ("largest inland lake in southern lower Michigan" for Devils Lake is doubtful).
+
+---
+
+## 2026-09-16 16:55 AEST
+
+
+## Session: 2026-09-16 (ET), part 9: Holly's number + Texts tab
+**What was done:** Holly's Twilio number 517-300-8226 attached to the verified Manitou Messaging Service via API (from the VPS), TWILIO_PHONE switched, inbound webhook (/api/sms-inbound, signature-verified, stores + forwards to Holly), Texts tab in /admin with two-way replies. Verified with Yeti's phone both directions.
+**Next up:** voice forwarding on the number to Holly's cell; follow-up nudges (New >1h/24h); own 10DLC brand for Holly eventually. Board row "admin phase 2" can be closed except voice + mark-sold.
