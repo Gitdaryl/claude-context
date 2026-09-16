@@ -1,11 +1,12 @@
 
-## Session: 2026-09-16 (ET), part 2
+## Session: 2026-09-16 (ET), part 3
 **Environment:** Antigravity IDE
 **What was done:**
-- Yeti shared Holly Leads DB with Hero Events (verified notion:true) and ran ~/.claude/tools/holly-env-copy.sh: RESEND_API_KEY, TWILIO_ACCOUNT_SID, TWILIO_AUTH_TOKEN, TWILIO_PHONE, HOLLY_SMS_PHONE now on hollygriewahn. SMS tested end to end, switched to Holly's cell.
+- /admin phase 1 ("Holly's desk") built, deployed, verified live on a 390px viewport with zero JS errors: texted-link login (no password), Inbox (every lead, every source, tap call/text/email, status New/Called/Showing set/Client/Dead), Waitlist by lake, Listings with this week's numbers + "Your report" + "Copy seller link". api/admin.js + api/lib/admin-auth.js + src/pages/AdminPage.jsx. Documented in docs/TOP-PRODUCER-PLAYBOOK.md section 5.
 **What's live / deployed:**
-- Holly site fully wired: leads persist to Blob + Notion, email via Resend, SMS to Holly + auto-reply to the lead.
+- hollygriewahn.vercel.app/admin
 **Next up:**
-- Holly's closed sales for /sold (Waiting on Holly). Delete test entries (Blob: waitlist/devils-lake/2026-09-16, leads/_contact/2026-09-16, leads/test-slug/; Notion Holly Leads rows named "Test (Yeti, delete me)"). Optional: forward inbound Twilio texts to Holly's cell.
+- Yeti: buy Holly her own 517 Twilio number, add to the Manitou Messaging Service (check 10DLC campaign allows conversational), set TWILIO_PHONE on hollygriewahn to it. Board row filed (Backlog): admin phase 2 = Texts tab + mark-sold.
+- Still waiting on Holly's closed sales for /sold. Test rows to delete (Notion Holly Leads "Test (Yeti, delete me)"; Blob leads/_contact, leads/test-slug, waitlist/devils-lake test entries).
 **Notes for other environments:**
-- holly-env-copy.sh is the pattern for copying secrets between Vercel projects when Claude is blocked from env pull; Yeti runs it, not Claude.
+- Holly logs in at /admin by tapping "Text me a login link". Yeti signs in with ADMIN_SECRET under "Have a key instead?" (it's in Holly-main/.env).
