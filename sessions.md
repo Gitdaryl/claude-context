@@ -6717,3 +6717,12 @@ Features: `/my-events` (one texted link to every event you've submitted), home s
 ## Session: 2026-09-16 (ET), part 6: sold import
 **What was done:** Imported Holly's 26 closed 2026 sales from her Paragon export into amenities.js (sold, DOM, side), aerial covers via Google Static Maps for photo-less sales, /sold now shows 26 homes / $10.6M / 22 listing sides. Deployed.
 **Next up:** Holly to supply (a) listing photos from Paragon for her 22 list-side sales (folder named by MLS#), (b) a Paragon report with Original List Price, (c) confirm which non-obvious addresses are lakefront and on which lake. Then the "best agent" roadmap (reviews/GBP, follow-up nudges, lake market reports, welcome kit product, bookings, inbound email lead parsing, milestone tracker).
+
+---
+
+## 2026-09-16 16:25 AEST
+
+
+## Session: 2026-09-16 (ET), part 7: reviews
+**What was done:** Holly's GBP found (5.0 / 44 reviews). api/reviews.js + GoogleReviews.jsx: live reviews section on home, TrustStrip on property/sold/plan, placeholder testimonials deleted, /admin "Ask for a review" texts the Google write-review link to Client-status leads. Deployed and verified. Best-agent roadmap filed on the board (one row, 7 items in order).
+**Next up:** roadmap item 1 (nudges + Texts tab) needs Holly's Twilio number; item 2 (chat grounding) needs nothing, good next session.
