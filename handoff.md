@@ -1,4 +1,4 @@
 
-## Session: 2026-09-16 (ET), part 5: rotation complete
-**What was done:** Twilio, Notion (7-day grace, auto-revoke Sep 23), Anthropic, Holly ADMIN_SECRET rotated via rotate-env.py; each verified live (VPS SMS to Yeti, Notion query, direct API + Holly chat, /admin ping). n8n credentials updated by Yeti. Final audit: every copy in Vercel is type=sensitive except joe-profit ADMIN_SECRET.
-**Next up:** Yeti to confirm old Resend keys deleted and old Anthropic key disabled. Optional: `rotate-env.py ADMIN_SECRET --only joe-profit`. Fix Holly chat prompt (claims Lake Columbia is biggest lake). Delete "Key test" rows in Holly Leads.
+## Session: 2026-09-16 (ET), part 6: sold import
+**What was done:** Imported Holly's 26 closed 2026 sales from her Paragon export into amenities.js (sold, DOM, side), aerial covers via Google Static Maps for photo-less sales, /sold now shows 26 homes / $10.6M / 22 listing sides. Deployed.
+**Next up:** Holly to supply (a) listing photos from Paragon for her 22 list-side sales (folder named by MLS#), (b) a Paragon report with Original List Price, (c) confirm which non-obvious addresses are lakefront and on which lake. Then the "best agent" roadmap (reviews/GBP, follow-up nudges, lake market reports, welcome kit product, bookings, inbound email lead parsing, milestone tracker).
