@@ -6744,3 +6744,12 @@ Features: `/my-events` (one texted link to every event you've submitted), home s
 ## Session: 2026-09-16 (ET), part 9: Holly's number + Texts tab
 **What was done:** Holly's Twilio number 517-300-8226 attached to the verified Manitou Messaging Service via API (from the VPS), TWILIO_PHONE switched, inbound webhook (/api/sms-inbound, signature-verified, stores + forwards to Holly), Texts tab in /admin with two-way replies. Verified with Yeti's phone both directions.
 **Next up:** voice forwarding on the number to Holly's cell; follow-up nudges (New >1h/24h); own 10DLC brand for Holly eventually. Board row "admin phase 2" can be closed except voice + mark-sold.
+
+---
+
+## 2026-09-16 17:21 AEST
+
+
+## Session: 2026-09-16 (ET), part 10: voice + footer
+**What was done:** Calls to 517-300-8226 ring Holly's cell with a press-1 screen (her voicemail had been answering forwards), missed calls take a voicemail with transcript texted to her and logged in the thread; verified live with Yeti + Holly (press-1 confirmed). Footer tagline "Irish Hills Real Estate" (Mitch's brand) replaced with "Manitou Beach, Michigan", copyright 2026.
+**Next up:** voicemail transcript test pending Yeti; tidy alert wording; Holly to save the number in contacts. Remaining phase-2 item: mark-sold from Listings tab.
