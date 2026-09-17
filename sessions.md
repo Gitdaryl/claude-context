@@ -6777,3 +6777,9 @@ Features: `/my-events` (one texted link to every event you've submitted), home s
 ## 2026-09-16 20:16 AEST
 
 - Chat grounded in site data (Sonnet, prompt-cached facts). Verified: biggest lake, sales on Devils Lake, under-600k budget, unknown dues all answered correctly or declined. Roadmap next: lake market report pages, welcome kit product, bookings, inbound email parsing, milestones/mark-sold.
+
+---
+
+## 2026-09-16 20:23 AEST
+
+- Lake sales reports live at /market and /market/<lake> (19 lakes, FAQ schema, owner sign-up with its own alert/auto-reply, excluded from buyer counts). Verified live, test purged. Roadmap remaining: welcome kit product (needs Yeti's pricing decisions), bookings (Google Calendar), inbound email parsing (Zillow/Realtor.com), milestones + mark-sold, monthly owner update cron.
