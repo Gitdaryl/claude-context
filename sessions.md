@@ -6783,3 +6783,10 @@ Features: `/my-events` (one texted link to every event you've submitted), home s
 ## 2026-09-16 20:23 AEST
 
 - Lake sales reports live at /market and /market/<lake> (19 lakes, FAQ schema, owner sign-up with its own alert/auto-reply, excluded from buyer counts). Verified live, test purged. Roadmap remaining: welcome kit product (needs Yeti's pricing decisions), bookings (Google Calendar), inbound email parsing (Zillow/Realtor.com), milestones + mark-sold, monthly owner update cron.
+
+---
+
+## 2026-09-16 21:15 AEST
+
+- Map: interactive Leaflet sold map (Esri topo default, satellite toggle, hover cards) on /market, lake reports, /sold. Tracking + Stats tab with "Where to look" rules. 16-step Tour auto-runs on Holly's first desk sign-in ("Take the tour" replays). All verified live.
+**Next up:** welcome kit (talk pricing first), bookings, inbound email parsing, milestones/mark-sold, monthly owner update. Waiting on Holly: photos, list prices, lake confirmations, 1100 Elm Block location.
