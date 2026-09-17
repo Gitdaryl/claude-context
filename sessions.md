@@ -6771,3 +6771,9 @@ Features: `/my-events` (one texted link to every event you've submitted), home s
 ## Session: 2026-09-16 (ET) evening, session 2
 **What was done:** Voicemail callback bug fixed (Twilio omits From on recording callbacks; number now rides in the signed URL), Deepgram transcript verified live ("Holly, I'm looking for a used car..."). Alerts reworded, Eastern times in the desk. Hourly follow-up cron shipped (nudges, check-ins, nurture, quiet hours, dry run). All test data purged from Blob + Notion; dry run = 0 actions.
 **Next up (roadmap row):** chat grounding in lake + sold data; lake market report pages; welcome kit product; bookings; inbound email parsing; milestones + mark-sold. Waiting on Holly: photos, list prices, lake confirmations.
+
+---
+
+## 2026-09-16 20:16 AEST
+
+- Chat grounded in site data (Sonnet, prompt-cached facts). Verified: biggest lake, sales on Devils Lake, under-600k budget, unknown dues all answered correctly or declined. Roadmap next: lake market report pages, welcome kit product, bookings, inbound email parsing, milestones/mark-sold.
