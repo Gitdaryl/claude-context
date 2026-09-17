@@ -1,2 +1,4 @@
-- Map: interactive Leaflet sold map (Esri topo default, satellite toggle, hover cards) on /market, lake reports, /sold. Tracking + Stats tab with "Where to look" rules. 16-step Tour auto-runs on Holly's first desk sign-in ("Take the tour" replays). All verified live.
-**Next up:** welcome kit (talk pricing first), bookings, inbound email parsing, milestones/mark-sold, monthly owner update. Waiting on Holly: photos, list prices, lake confirmations, 1100 Elm Block location.
+
+## Session: 2026-09-17 (ET) morning
+**What was done:** Transcribed Holly's "real estate strategy" video (Monday seller updates via Claude). Built it: narrative (summary/market/recommendation) in the seller report, stored per week, Monday 8am cron, verified live on two listings. Function maxDurations set in vercel.json.
+**Next up:** Holly to add seller names/emails so the Monday run has recipients; Paragon hotsheet + showing-feedback forwards once inbound email parsing exists. Rest of roadmap unchanged.
