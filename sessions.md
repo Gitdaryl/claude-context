@@ -6935,3 +6935,9 @@ Features: `/my-events` (one texted link to every event you've submitted), home s
 ## 2026-09-19 12:04 AEST
 
 - Sep 19 03:00 ET: mockup deployed for Isaac: https://sunny-skies-mockup.vercel.app (Vercel project sunny-skies-mockup, personal scope, first deploy = production; noindex meta + X-Robots-Tag + robots.txt Disallow; immutable cache on asset folders; logos swept to WebP). Staged copy in ~/Projects/sunny-skies-mockup (not a git repo yet). Verified live: 200 + correct content-types, 13/13 swatches load, 75 hero frames requested, zero JS/HTTP errors at 1280 and 390. Redeploy = copy mockup html to index.html in that folder, run webp-sweep, `vercel deploy --yes`.
+
+---
+
+## 2026-09-19 12:17 AEST
+
+- Sep 19 12:20 ET: visit tracker on the mockup deploy. Page beacon (open / 30s beats / pagehide end, sections seen via IntersectionObserver, active seconds, max scroll) -> /api/track -> Vercel Blob (private store sunny-skies-mockup, persist-before-notify) -> SMS to DARYL_PHONE on first open and on end (>=10s). /api/health, /api/visits?key=TRACK_SECRET (per-visit rows). ?v=isaac names the viewer, ?v=me = Daryl, logged not texted; headless UAs never text. Verified: blob persists, beacon 200 from a real browser, log reads back. BLOCKED: TWILIO_AUTH_TOKEN is 'sensitive' on Manitou (unpullable) and the classifier refused reading it from the VPS; Yeti adds it with `vercel env add TWILIO_AUTH_TOKEN production` in ~/Projects/sunny-skies-mockup (board row filed). deploy.sh rebuilds index.html from the Desktop source + injects track-snippet.html + sweep + `vercel deploy --prod --yes` (plain `vercel deploy` only makes a preview; the public URL kept serving the old build until --prod).
