@@ -6899,3 +6899,9 @@ Features: `/my-events` (one texted link to every event you've submitted), home s
 ## 2026-09-18 23:47 AEST
 
 - Sep 19 00:35 ET: estimator cards now one row on desktop (refine | range | text-me), "not the cheapest" full width beneath; phone order range, text-me, refine, not-cheapest (verified by computed order, not by eye). Artifact Version 17.
+
+---
+
+## 2026-09-19 00:00 AEST
+
+- Sep 19 01:00 ET: color picker built on the mockup (Version 18): 13 Pinnacle Pristine swatch tiles + Atlas daylight preview (crossfade), "what is on your walls" matcher that dims all but three, and the photo text-back CTA ("text a photo of your house, we send it back in two colors"). Self-serve recolor tool deferred to a Backlog row; Atlas image-rights + pairings check filed as Waiting on Isaac. Assets in ~/Desktop/sunny-skies/mockup/atlas/ (26 WebP, 3.1MB).
