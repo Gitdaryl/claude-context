@@ -6881,3 +6881,9 @@ Features: `/my-events` (one texted link to every event you've submitted), home s
 
 **Notes for other environments:**
 - Two IDE sessions touched the same mockup tonight; check artifact version before editing.
+
+---
+
+## 2026-09-18 23:41 AEST
+
+- Sep 19 00:05 ET addendum: Yeti confirmed Sunny Skies lays Atlas and installs the full system for the top warranty. Verified Atlas facts from atlasroofing.com + Signature Select / Standard warranty PDFs and wrote them into the proof wall, hero badge, range card and FAQ (artifact Version 15). Sales line unlocked: "full Atlas system = 15 years full coverage, not 10." Memory: sunny-skies-atlas-shingles.md. Isaac list shrank to 8 items (board Waiting row updated).
