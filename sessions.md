@@ -6941,3 +6941,9 @@ Features: `/my-events` (one texted link to every event you've submitted), home s
 ## 2026-09-19 12:17 AEST
 
 - Sep 19 12:20 ET: visit tracker on the mockup deploy. Page beacon (open / 30s beats / pagehide end, sections seen via IntersectionObserver, active seconds, max scroll) -> /api/track -> Vercel Blob (private store sunny-skies-mockup, persist-before-notify) -> SMS to DARYL_PHONE on first open and on end (>=10s). /api/health, /api/visits?key=TRACK_SECRET (per-visit rows). ?v=isaac names the viewer, ?v=me = Daryl, logged not texted; headless UAs never text. Verified: blob persists, beacon 200 from a real browser, log reads back. BLOCKED: TWILIO_AUTH_TOKEN is 'sensitive' on Manitou (unpullable) and the classifier refused reading it from the VPS; Yeti adds it with `vercel env add TWILIO_AUTH_TOKEN production` in ~/Projects/sunny-skies-mockup (board row filed). deploy.sh rebuilds index.html from the Desktop source + injects track-snippet.html + sweep + `vercel deploy --prod --yes` (plain `vercel deploy` only makes a preview; the public URL kept serving the old build until --prod).
+
+---
+
+## 2026-09-19 12:50 AEST
+
+- Sep 19 13:10 ET: mobile fixes after Yeti's phone review (live + artifact v23): svh fallbacks on the hero stage/art (a collapsed stage under a 180vh section was the likely "huge gap"), phone scrub travel 180vh -> 140vh so the pinned stage does not read as dead space while the 5MB frames download; before/after wipes now use direct pointer handling (touch anywhere on the photo) with eager images instead of a hidden range input + lazy loads; work grid stacked one card per row at all widths. Verified touch on emulated iPhone. Isaac may already be looking at the site, so every deploy is --prod.
