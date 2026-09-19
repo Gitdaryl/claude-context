@@ -6917,3 +6917,9 @@ Features: `/my-events` (one texted link to every event you've submitted), home s
 ## 2026-09-19 00:28 AEST
 
 - Sep 19 02:00 ET: hero scrub pixelation fixed. Kling masters were 1344x768 but frames had been cut at 1024; upscaled both used clips 2x with Topaz Proteus via the app's own ffmpeg (recipe in memory topaz-video-cli-recipe), re-cut the same 75 frames at 1920 (rebuild_seq.py, frame map verified by image matching), 17MB at q70 in mockup/seq2k/. Page serves seq2k to desktop/retina and seq (1024) to phones; ?seq=1024|2k override for testing. Artifact Version 20. Upscaled PNG masters in ~/Desktop/sunny-skies/scrub/upscaled/ (6.2GB, safe to delete after).
+
+---
+
+## 2026-09-19 11:49 AEST
+
+- Sep 19 02:20 ET: estimator re-laid: address + refine chips are a full-width strip on top, range and text-me cards share the row below (the 3-up split had starved the address card). Proof wall stacked: spec card full width, credentials under it as a 2-column grid. Artifact Version 21.
