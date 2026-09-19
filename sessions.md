@@ -6947,3 +6947,9 @@ Features: `/my-events` (one texted link to every event you've submitted), home s
 ## 2026-09-19 12:50 AEST
 
 - Sep 19 13:10 ET: mobile fixes after Yeti's phone review (live + artifact v23): svh fallbacks on the hero stage/art (a collapsed stage under a 180vh section was the likely "huge gap"), phone scrub travel 180vh -> 140vh so the pinned stage does not read as dead space while the 5MB frames download; before/after wipes now use direct pointer handling (touch anywhere on the photo) with eager images instead of a hidden range input + lazy loads; work grid stacked one card per row at all widths. Verified touch on emulated iPhone. Isaac may already be looking at the site, so every deploy is --prod.
+
+---
+
+## 2026-09-19 12:58 AEST
+
+- Sep 19 13:30 ET: type pass after Yeti could not read the cards: body 17->18px, every fine-print size raised to 15px+, reviews 3-up -> 2-up at 18px, FAQ questions 19px bold, chips/labels/captions up. 45 CSS rules changed. Live + artifact v24.
