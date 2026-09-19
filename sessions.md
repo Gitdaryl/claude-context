@@ -6953,3 +6953,9 @@ Features: `/my-events` (one texted link to every event you've submitted), home s
 ## 2026-09-19 12:58 AEST
 
 - Sep 19 13:30 ET: type pass after Yeti could not read the cards: body 17->18px, every fine-print size raised to 15px+, reviews 3-up -> 2-up at 18px, FAQ questions 19px bold, chips/labels/captions up. 45 CSS rules changed. Live + artifact v24.
+
+---
+
+## 2026-09-19 13:02 AEST
+
+- Sep 19 13:50 ET: ROOT CAUSE of the phone "huge gap under the hero" and "contract-sized text": the deployed index.html was the raw mockup body with no doctype and no <meta viewport> (the artifact viewer supplies those, Vercel does not), so phones rendered a 980px desktop layout zoomed out, vh units 2.5x too tall. Fixed with ~/Projects/sunny-skies-mockup/build.py (proper skeleton + viewport + noindex + tracker; deploy.sh now calls it). Verified live on emulated iPhone: standards mode, stage fits the viewport. Body type also pushed to 19px (artifact v25). Lesson: any raw artifact HTML deployed elsewhere needs the skeleton added back.
