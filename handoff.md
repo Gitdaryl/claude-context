@@ -1,16 +1,16 @@
-
-## Session: 2026-09-20 ET
+## Session: 2026-09-20 ET (continued: push)
 **Environment:** Antigravity IDE
 **What was done:**
-- Updated HyperFrames Claude skills via `npx hyperframes@latest skills update` (8 outdated refreshed, new core skill `hyperframes-studio` installed; `skills check` now reports 10 current, 0 outdated).
-- Found HyperFrames CLI 0.8.55 now requires Node >= 22. Mac's nvm default is still Node 20; ran the update under `nvm use 22` (v22.23.2 already installed).
-- Verified Holly weekend automation is unaffected: both GitHub Actions jobs (ubuntu + self-hosted Mac Studio) pin Node 22 via setup-node, and run.mjs calls `hyperframes@latest`.
+- Pushed the Legacy line on /signature: commit 8eb7bd0 on Gitdaryl/Yeti-Groove main.
+- WebP sweep ran as Step 0 and converted 15 images (2015K -> 1038K); OG cards and brand icons left alone.
+- Verified live by content: #legacy section, both floors, waitlist modal copy, Never Broken link; four .webp paths serve image/webp; /, /streamline, /platform, /architects serve their own titles; /api/health ok on resend, twilio, blob, adminKey.
 
 **What's live / deployed:**
-- Nothing deployed. Skills live in ~/.claude/skills and ~/.agents/skills.
+- yetigroove.com/signature#legacy, live within 15s of push.
 
 **Next up:**
-- Decide whether to make Node 22 the nvm default on the Mac (`nvm alias default 22`) so interactive `npx hyperframes` works without `nvm use 22`. holly-reel-kit/reel/package.json scripts still pin 0.8.4; run.mjs (the unattended path) uses @latest.
+- Yeti: one live waitlist test on /signature#legacy with own email, confirm the "you are on the Legacy waitlist" email and the "YG LEGACY WAITLIST" text, then delete the blob leads/YGL-<id>/lead.json. Task board row is in Today with the steps.
+- Vlog pilot clip: the Joe Profit story (Backlog row).
 
 **Notes for other environments:**
-- Any `npx hyperframes` on the Mac from a Node 20 shell now fails with "requires Node.js >= 22". Prefix with `source ~/.nvm/nvm.sh && nvm use 22`.
+- Legacy floors are public now: Site from $15,000, Commission from $50,000, four and two slots a year. Joe is "the studio's pilot commission, built at studio cost as the showcase". No comps, no "free".
