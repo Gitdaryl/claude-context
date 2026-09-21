@@ -7096,3 +7096,10 @@ Features: `/my-events` (one texted link to every event you've submitted), home s
 
 
 **Update 4:** About candid strip relaid (commit on main after 6cd5641): horizontal photo centered, verticals share the row height; phone puts the horizontal first, verticals paired. Verified in production.
+
+---
+
+## 2026-09-21 19:16 AEST
+
+
+**Update 5:** Share button on every listing (native sheet on phones, Copy/Text/Email/Facebook menu on desktop), share event tracked, og:image width/height added to all prerendered pages. Live.
