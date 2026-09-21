@@ -7082,3 +7082,10 @@ Features: `/my-events` (one texted link to every event you've submitted), home s
 
 
 **Update 2 (design pass, same day):** Yeti asked for the design evaluation then "do what you can, task list for the rest". Shipped commit 740424e (3 Sonnet agents by file ownership, Fable verified locally + production crawl): /about and /sell pages (prerendered, in sitemap), nav now Listings/Sold/Sell/Home Value/Blog/About, home hero solid title + daytime Clark Lake clip + "Back to {lake}" chip, lake pages get region drone video + Manitou Beach events card via api/events.js proxy, property pages get lake/all-sports/access fact line + lightbox gallery, 12px type floor site-wide. Task list for Yeti with image dimensions: Holly-main/docs/ASSETS-NEEDED.md. Waitlist is empty in prod so the Sell page "Buyers already waiting" section is hidden until 3+ buyers register on a lake.
+
+---
+
+## 2026-09-21 19:00 AEST
+
+
+**Update 3 (assets, same evening):** Yeti pointed at Desktop/"Holly web heros" and Desktop/"Holly for claude pics". Shipped commit 6cd5641: daytime Devils Lake clip (home hero v2.mp4, re-encoded to 2.2 MB) now on home, Devils Lake and Manitou Beach; Grass Lake hero + poster + card wired into the region (Grass Lake and Wolf Lake pages inherit it); Manitou Beach card is the daytime Devils Lake still; About hero uses the front-door portrait, candid strip has 3 photos, 800x800 headshot on the property agent card + Person schema. Night fireworks clip kept at public/regions/home/hero-night.mp4, unused. Still open in docs/ASSETS-NEEDED.md: on-the-water portrait, Tecumseh card, sold photos (Holly + intern), frontage per listing, 5 bio facts, domain cutover.
