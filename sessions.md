@@ -7075,3 +7075,10 @@ Features: `/my-events` (one texted link to every event you've submitted), home s
 
 
 **Update (same session, later):** Yeti approved coding items 1/3/4/5 (item 2 hero numbers deferred until Holly confirms). Delegated to two Sonnet agents by file ownership, verified with headless crawl, pushed commit 04eb0c1 to Gitdaryl/Holly main, Vercel deployed, production re-verified on desktop + 390px: shared SiteNav (Regions/Listings/Sold/Home Value/Blog + Text Holly + Call Holly, hamburger <768px), MobileActionBar (Call/Text/Home Value) on every public page except admin/plan/property, texts go to desk number 517-300-8226 with per-page prefilled body, ChatWidget mounted in Router on all pages, /regions/<slug> now opens the region, home blog cards from /api/holly-articles, footer Lakefront/Rural links filter /listings?type=. Still open: hero rewrite with real numbers after the Holly demo; property hero lacks lake name + frontage; 13 href="#" links on the home page (have handlers, not dead, but poor for SEO).
+
+---
+
+## 2026-09-21 12:03 AEST
+
+
+**Update 2 (design pass, same day):** Yeti asked for the design evaluation then "do what you can, task list for the rest". Shipped commit 740424e (3 Sonnet agents by file ownership, Fable verified locally + production crawl): /about and /sell pages (prerendered, in sitemap), nav now Listings/Sold/Sell/Home Value/Blog/About, home hero solid title + daytime Clark Lake clip + "Back to {lake}" chip, lake pages get region drone video + Manitou Beach events card via api/events.js proxy, property pages get lake/all-sports/access fact line + lightbox gallery, 12px type floor site-wide. Task list for Yeti with image dimensions: Holly-main/docs/ASSETS-NEEDED.md. Waitlist is empty in prod so the Sell page "Buyers already waiting" section is hidden until 3+ buyers register on a lake.
