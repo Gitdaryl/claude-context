@@ -1,17 +1,2 @@
 
-## Session: 2026-09-21 ET
-**Environment:** Antigravity IDE
-**What was done:**
-- Evaluated hollygriewahn.vercel.app as a lead-gen site: headless crawl (desktop + 390px phone) of 10 pages, screenshots, CTA/form/nav audit, code verification in Holly-main.
-- Confirmed bugs: /regions/* deep links land on home (App.jsx never reads ?region=); mobile nav clips Blog/Contact/phone with no hamburger; home blog cards are static 2025 placeholders with no click handler; footer "Lakefront Properties"/"Rural & Farm Properties" are dead "#" links; ChatWidget only mounts in App.jsx (home), FAB covers stats strip on mobile.
-- Confirmed gaps: zero sms: links site-wide (site number 517-300-8226 unused on the front end); hero leads with name + "Explore Regions", proof below fold; no Sold/Market in any nav; nav differs per page; sticky mobile CTA only on property pages; property hero lacks lake name and frontage.
-- Verified NOT bugs: Google Maps embeds render (lazy), no broken images, no console errors, load ~1-2s.
-
-**What's live / deployed:**
-- Nothing changed. Evaluation only.
-
-**Next up:**
-- If Yeti approves: Text Holly CTA + sticky bar on every page, hero rewrite with proof strip, fix region param + hamburger + unified nav with Sold, mount chat everywhere, live articles on home, remove dead footer links.
-
-**Notes for other environments:**
-- Screenshots in the IDE scratchpad only; regenerate with the playwright crawl if needed.
+**Update (same session, later):** Yeti approved coding items 1/3/4/5 (item 2 hero numbers deferred until Holly confirms). Delegated to two Sonnet agents by file ownership, verified with headless crawl, pushed commit 04eb0c1 to Gitdaryl/Holly main, Vercel deployed, production re-verified on desktop + 390px: shared SiteNav (Regions/Listings/Sold/Home Value/Blog + Text Holly + Call Holly, hamburger <768px), MobileActionBar (Call/Text/Home Value) on every public page except admin/plan/property, texts go to desk number 517-300-8226 with per-page prefilled body, ChatWidget mounted in Router on all pages, /regions/<slug> now opens the region, home blog cards from /api/holly-articles, footer Lakefront/Rural links filter /listings?type=. Still open: hero rewrite with real numbers after the Holly demo; property hero lacks lake name + frontage; 13 href="#" links on the home page (have handlers, not dead, but poor for SEO).
