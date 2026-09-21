@@ -1,15 +1,17 @@
-## Session: 2026-09-20 ET (continued: live test + blob delete)
+
+## Session: 2026-09-21 ET
 **Environment:** Antigravity IDE
 **What was done:**
-- Yeti ran the live Legacy waitlist test on yetigroove.com/signature#legacy; email + SMS arrived.
-- Pulled production env to a gitignored .env.local, listed and deleted the test lead YGL-20260920-Z8F8 with the Vercel CLI, confirmed the store is empty under leads/YGL and the public URL 404s.
-- Taught the list/read/delete/list loop; Yeti declined an admin delete button (one-off).
+- Evaluated hollygriewahn.vercel.app as a lead-gen site: headless crawl (desktop + 390px phone) of 10 pages, screenshots, CTA/form/nav audit, code verification in Holly-main.
+- Confirmed bugs: /regions/* deep links land on home (App.jsx never reads ?region=); mobile nav clips Blog/Contact/phone with no hamburger; home blog cards are static 2025 placeholders with no click handler; footer "Lakefront Properties"/"Rural & Farm Properties" are dead "#" links; ChatWidget only mounts in App.jsx (home), FAB covers stats strip on mobile.
+- Confirmed gaps: zero sms: links site-wide (site number 517-300-8226 unused on the front end); hero leads with name + "Explore Regions", proof below fold; no Sold/Market in any nav; nav differs per page; sticky mobile CTA only on property pages; property hero lacks lake name and frontage.
+- Verified NOT bugs: Google Maps embeds render (lazy), no broken images, no console errors, load ~1-2s.
 
 **What's live / deployed:**
-- Legacy line on /signature (commit 8eb7bd0), tested end to end. Task board row Done.
+- Nothing changed. Evaluation only.
 
 **Next up:**
-- Vlog pilot clip: the Joe Profit story (Backlog row).
+- If Yeti approves: Text Holly CTA + sticky bar on every page, hero rewrite with proof strip, fix region param + hamburger + unified nav with Sold, mount chat everywhere, live articles on home, remove dead footer links.
 
 **Notes for other environments:**
-- Blob deletes from the Mac: `cd ~/Projects/Yeti-Groove && source .env.local`, `vercel blob list --prefix <path>`, `vercel blob del <full pathname>`.
+- Screenshots in the IDE scratchpad only; regenerate with the playwright crawl if needed.
