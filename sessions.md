@@ -7484,3 +7484,9 @@ The spec written earlier that day said move the climax to the bank/FAA sequence.
 ## 2026-09-23 19:30 AEST
 
 - (cont.) d8ed70d: newsletter Letter tab + resumable batch send shipped, tested via mocks; blocked on Holly's Resend steps (NEWSLETTER_FROM) and the hollygriewahn.com cutover. MLS research: Lenawee County MLS via LCAR; MLS fee unpublished.
+
+---
+
+## 2026-09-23 19:52 AEST
+
+- (cont.) e044c2d: MI compliance fix, broker logo panel sized to match signature (home/About) + broker address notice on every public page. Verified live at 3 widths. Broker approval email drafted for Holly to send.
