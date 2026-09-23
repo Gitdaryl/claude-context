@@ -1,31 +1,24 @@
-## Session: 2026-09-23 ET
+## Session: 2026-09-23 ET (continued)
 **Environment:** Antigravity IDE
 
 **What was done:**
-- Transcribed `Film Structure Recording Part 3.m4a` (Joe Profit interview session 3, ~75 min) locally with whisper large-v3-turbo; saved .txt + .srt to `~/Documents/Joe-Profit/interviews/2026-09-23-session3-transcript.*`
-- Wrote `interviews/2026-09-23-session3-notes.md` — full pass with grep-verified timecodes, worked against the Aug-25 structure review
-- Updated `CONTINUITY-RECORD.md` to v2: timeline additions, a new section 4b of recorded dialogue, a new section 6b of session-3 facts, new unsourced claims, and a rewritten open-questions section
-- Updated `VOICE-REFERENCE.md` with a section 5 for session 3
-- Wrote `TREATMENT-REVISION-SPEC-v3.md` — the change list for treatment.html, deliberately NOT applied
-- Task board: 8 new rows, 4 existing rows updated (1 closed)
-- Session Brain row logged
+- Applied Draft v3 to `~/never-broken-site/treatment.html`, rebuilt from the three recorded interview sessions and structured against the Vogler / McKee / Snyder framing Joe has already been taught on `structure.html`
+- Added nine place-and-year cards, one per session. This was Joe's own note from Aug 22, adopted Aug 25, and never applied until now
+- New or rebuilt scenes: the GI Bill door slammed on his father (sets up the closed-door motif); the Alcorn kitchen as ONE pre-dawn conversation on the sofa, not two mornings; the chair-and-pail-of-water night after his first fight; the barn corrected to last light with the frisk posture and the real interior thought; the real courthouse charges; his prayer to retire his father and the halftime death, so draft day arrives one beat too late; the trade he demanded; a properly dramatized All Is Lost before the deed; the Los Angeles room; Marcus's on-screen choice with a cost; the bank sequence as the finale's answer; Bobby DeWitt's real words; and "all they had to do was get out of my way" in the throughline
+- Added a closing block, "Seven holes only you can fill", each item with its own note anchor so Joe answers in place
+- Verified: all 38 of Joe's existing note anchors preserved, 22 added (nb-39 to nb-60), no duplicates, HTML balanced, zero em dashes, zero unescaped ampersands, page rendered headless and visually inspected
 
-**Headline findings:**
-- **There was no refusal at IHOP.** Asked four ways, Joe says he walked in braced for a no that never came. The treatment's stated climax cannot be given an obstacle without inventing one. The session instead handed over a complete refusal sequence in the business years — the $62M FAA contract and the $15M his bank would not lend, a BellSouth president writing a $500k check against Joe's *personal* guarantee, and the only time in three sessions he reports crying. Recommendation on file: move the climax there, make the IHOP deed the midpoint win. That call is Yeti's.
-- **The missing emotional engine:** Joe's biggest prayer was to earn enough to retire his father before he died. The father's death in college cancels the only thing he ever asked for — and the treatment has that death nowhere in its session structure.
-- **The date conflict is now an editorial decision, not a research task.** Three accounts, three methods, all ~1963. Stop asking; put the one thing that cannot work (his own "the law says you have to serve us" needs Title II, July 1964) to him in writing.
+**I reversed my own recommendation on the climax, and the reason is worth keeping:**
+The spec written earlier that day said move the climax to the bank/FAA sequence. Re-reading `structure.html` killed that. It already tells Joe in writing that "add extra wins and the line flattens, and a flat line is the one thing an audience will not forgive," so moving the climax would have meant two All Is Lost moments and a second, higher win, contradicting a craft document the client has already accepted. v3 instead keeps the deed as the climax, fixes the missing obstacle by dramatizing the All Is Lost immediately before it, which is where Snyder puts it anyway, and puts the bank story in the final session as Joe's answer to Marcus, which is exactly where Joe himself put it when asked. Nothing flattens, nothing is invented, and the finale gains its emotional peak. The question is flagged to Joe at nb-49 as the one change we most want his ruling on.
 
 **What's live / deployed:**
-- Nothing. `treatment.html` untouched on purpose — it is a page Joe reads, so v3 is a spec awaiting approval. No commits, no pushes.
+- Nothing deployed. v3 is applied locally and deliberately NOT pushed. `git status` shows only `treatment.html` and `styles.css` modified, no other machine's work in the tree. One push puts it in front of Joe.
 
 **Next up:**
-- Decide the climax (IHOP deed vs bank/FAA)
-- Build the production budget — Joe's son can write the offering document once there is one, so the raise is waiting on us
-- Put the Title II date question to Joe in writing
-- Session 4: get the barbecue at Mr. DeWitt's house, the film's last image, still unrecorded after three sessions
-- Fix three errors live on treatment.html now: "nineteen" appears twice and is nobody's number, Sunny Point called "largest military terminal in the world" when Joe says East Coast, and the barn written as total darkness when Joe describes last light
+- Push v3 so Joe can read it
+- The v2 LISTEN narration no longer matches any revised paragraph. The page says so honestly, but it wants re-recording
+- Still owed and unchanged: the production budget Joe's son needs before he can raise, and session 4 to finally get the barbecue
 
 **Notes for other environments:**
-- The prepared call-script method works — 23 of 25 questions got real answers. Keep using `interviews/SESSION-N-CALL-SCRIPT.md` (questions only, no reasoning, read straight down).
-- Two questions failed because they were heard as being about the Sunny Point *contract* rather than the barbecue. Phrase session-4's version so it cannot be mistaken.
-- Non-film: Joe mentioned a new medication that made him badly nauseated (stopped it, called his doctor). The AI ministry-video conversation from session 2 is still owed him.
+- Rule confirmed the hard way: before restructuring a client deliverable on craft grounds, check what that client has already been taught in writing. The craft argument was right in the abstract and wrong against the documents Joe already holds.
+- `treatment.html` note anchors are load-bearing. Never renumber; only append.
