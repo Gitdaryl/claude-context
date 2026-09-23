@@ -1,1 +1,1 @@
-- (cont.) d8ed70d: newsletter Letter tab + resumable batch send shipped, tested via mocks; blocked on Holly's Resend steps (NEWSLETTER_FROM) and the hollygriewahn.com cutover. MLS research: Lenawee County MLS via LCAR; MLS fee unpublished.
+- (cont.) e044c2d: MI compliance fix, broker logo panel sized to match signature (home/About) + broker address notice on every public page. Verified live at 3 widths. Broker approval email drafted for Holly to send.
