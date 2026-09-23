@@ -7408,3 +7408,10 @@ The spec written earlier that day said move the climax to the bank/FAA sequence.
 
 - (cont.) Brand pass shipped 06c3c42: her palette + Source Serif 4/Inter site-wide, signature hero (ink-in), teal scrim, fixed dead hero "Call Holly" button, stats wrap on phones, signature on About + desk login. Verified live.
 - Next: motion kit (rider swing, count-up, photo develop, heart pop), chat bubble into bottom bar on phones, desk refetch on reopen.
+
+---
+
+## 2026-09-23 18:43 AEST
+
+- (cont.) Motion kit shipped 2f77851: rider swing on property status, photo develop, Active dot, heart pop, count-up stats (home, /sold, lake record), Heather moved into mobile bar Ask slot, desk auto-refresh + new-lead ring. Verified live.
+- Remaining: waterline divider on lake pages (optional), Tecumseh photo, lake map check, IDX + listing photos.
