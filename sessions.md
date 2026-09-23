@@ -7478,3 +7478,9 @@ The spec written earlier that day said move the climax to the bank/FAA sequence.
 
 **Notes for other environments:**
 - Verified today: 184 non-underscore API endpoints, 20 crons registered, 18 reporting, 12 LLM endpoints, 29 Stripe, 960 commits. SOURCE-DOC.md still says 173/18 from August and is stale.
+
+---
+
+## 2026-09-23 19:30 AEST
+
+- (cont.) d8ed70d: newsletter Letter tab + resumable batch send shipped, tested via mocks; blocked on Holly's Resend steps (NEWSLETTER_FROM) and the hollygriewahn.com cutover. MLS research: Lenawee County MLS via LCAR; MLS fee unpublished.
