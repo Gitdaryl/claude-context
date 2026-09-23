@@ -7444,3 +7444,9 @@ The spec written earlier that day said move the climax to the bank/FAA sequence.
 
 **Notes for other environments:**
 - Editing source is ~/Desktop/sunny-skies/mockup/sunny-skies-site-mockup.html; redeploy with `zsh ~/Projects/sunny-skies-mockup/deploy.sh`
+
+---
+
+## 2026-09-23 19:13 AEST
+
+- (cont.) 67b32ef: desk Stats now shows AI assistants (answers that opened her site, click-throughs, leads, pages AI read) via new middleware.js; tested on preview first (edge runtime failed, moved to Node). Baseline 0 AI clicks: AI cites hollygriewahn.com = still Placester until domain cutover.
