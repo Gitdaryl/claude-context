@@ -1,24 +1,23 @@
-## Session: 2026-09-23 ET (v3 pushed)
+## Session: 2026-09-23 ET
 **Environment:** Antigravity IDE
 
 **What was done:**
-- Pushed Never Broken treatment Draft v3. Commit `b063df2` on `main`.
-- Ran the image sweep first per the build standard; it converted `images/joe-profit.png` to webp, 488 KB down to 23 KB, and rewrote the `index.html` reference. Verified the webp decodes at identical dimensions and left no dangling references.
-- No build script on this repo (static site plus serverless `api/`), so verification was done against the deployed page instead.
+- Evaluated the new-homeowner welcome packet business idea (sponsor-funded, realtor-distributed). Research only, nothing built.
+- Confirmed the idea is already on the Master Task Board as "Productize the new-homeowner welcome packet (realtor-branded, sponsor-funded)" (filed Aug 20 2026). No duplicate created.
+- Established the missing volume data: Lenawee County ran 1,764 home sales in the trailing 12 months against 53,015 housing units (3.33% turnover). Rollin Twp has 1,980 housing units (ACS). Derived the Rollin + Woodstock + Cambridge lake district at roughly 7,500 units and about 250 closings a year, roughly 21 a month.
+- Found real sponsor pricing benchmarks: Coastal Welcome Services charges $125/mo per 100 welcomes ($1.25 per household delivered), Welcome Wagon starts at $250/mo with category exclusivity.
+- Built a year-1 P&L for a lake-district-only launch: 14 category slots at $895, about $11.3k revenue, about $2.9k print, roughly $8.5k net on about 105 hours. Year 2 renewals roughly double the hourly.
+- Flagged the four real risks: unverifiable delivery by agents, sponsor wallet cannibalization against Men's Club / Autofest / photo wall asks, pre-printed coupon inventory risk, and RESPA exposure if any settlement-service category (lender, title, inspector, insurance) is sold a slot.
 
 **What's live / deployed:**
-- **Draft v3 is live** at https://never-broken-site.vercel.app/treatment
-- Deploy verified against the live URL rather than assumed: Draft v3 serving, 9 place-and-year cards, all 60 note anchors present, notes API returning 200, the `images/joe-profit.webp` serving as `image/webp`, and "nineteen" gone from the page.
-
-**Gotcha worth keeping:**
-- `/treatment.html` 302s to the clean URL `/treatment`. A `curl` without `-L` returns a "Redirecting..." stub, which reads exactly like a stale or failed deploy. It had actually been live the whole time. Follow redirects and assert on page content, never on a 200.
+- Nothing. Analysis only.
 
 **Next up:**
-- Tell Joe it's up. He does not know yet. Point him at the gold-edged "revised v3" paragraphs and the "Seven holes only you can fill" block at the bottom, where each item has its own note anchor so he answers in place. Do not summarise the draft for him.
-- The climax question is now his, asked directly at nb-49.
-- Re-record the LISTEN narration, but only after his v3 notes come back, since more text may still move. The clips are Joe's voice against the v2 text and now diverge on every revised paragraph. The page says so up front, so it is honest rather than broken.
-- Still owed and unchanged: the production budget Joe's son needs before he can raise, and session 4 to finally get the barbecue.
+- Pull the exact closing count from the Lenawee Register of Deeds Kofile search (lenawee.mi.publicsearch.us), warranty deeds recorded for Rollin, Woodstock and Cambridge townships over the last 12 months.
+- Ask Mitchel Ramsey for an MLS sold count for 49253, 49220, 49265 over 12 months. Two-minute job for him and a reason to call.
+- Check whether the Lenawee chamber already runs a relocation packet before pitching against it.
+- Go/no-go gate: 6 paid sponsors inside 3 weeks of calls, and print nothing before 8 slots are sold.
 
 **Notes for other environments:**
-- `treatment.html` note anchors are load-bearing. Never renumber; only append. v3 went nb-39 to nb-60 and preserved all 38 originals.
-- Before restructuring a client deliverable on craft grounds, check what that client has already been taught in writing. The original plan to move the film's climax was right in the abstract and wrong against `structure.html`, which Joe already holds.
+- Decision made this session: v1 is lake district only (Rollin + Woodstock + Cambridge), free to agents, sponsor-funded, QR scan tracking per agent batch so sponsors get proof of delivery. Countywide is a 4-zone, 56-slot build that needs a commission salesperson, not a year-1 move.
+- Keep settlement-service categories out of v1. Decker & Sons Insurance was previously named as a natural first sponsor; insurance sits close enough to settlement services that it needs a broker compliance sign-off first.
