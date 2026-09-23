@@ -7401,3 +7401,10 @@ The spec written earlier that day said move the climax to the bank/FAA sequence.
 
 **Notes for other environments:**
 - Brand board lives inside Desktop/for sale sign.svg (embedded raster)
+
+---
+
+## 2026-09-23 18:37 AEST
+
+- (cont.) Brand pass shipped 06c3c42: her palette + Source Serif 4/Inter site-wide, signature hero (ink-in), teal scrim, fixed dead hero "Call Holly" button, stats wrap on phones, signature on About + desk login. Verified live.
+- Next: motion kit (rider swing, count-up, photo develop, heart pop), chat bubble into bottom bar on phones, desk refetch on reopen.
