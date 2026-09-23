@@ -1,2 +1,1 @@
-- (cont.) Motion kit shipped 2f77851: rider swing on property status, photo develop, Active dot, heart pop, count-up stats (home, /sold, lake record), Heather moved into mobile bar Ask slot, desk auto-refresh + new-lead ring. Verified live.
-- Remaining: waterline divider on lake pages (optional), Tecumseh photo, lake map check, IDX + listing photos.
+- (cont.) d07a7a9: scroll-scrubbed signature sign-off on home contact note + About bio; hero stays on-load. Verified live.
