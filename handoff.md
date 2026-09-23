@@ -1,37 +1,16 @@
-## Session: 2026-09-22 ET
+
+## Session: 2026-09-22/23 (ET)
 **Environment:** Antigravity IDE
-
 **What was done:**
-- Debunked a viral 21-posts-a-week schedule. Real data (Buffer 9.6M posts, Mosseri) is 3-5 feed posts/wk + 1-2 stories daily. Explained reels vs stories vs carousels and FB vs IG.
-- Built the **Social Desk** at `~/Projects/social-desk`: Opus briefs and grades, Yeti creates, one client until a 3-clean-week graduation gate. RUBRIC (6 checks as right/wrong pairs), CADENCE, DELIVERY, AUTOMATION, SCORECARD.
-- **Audited Sunny Skies live and found it DARK since Sep 10.** READY empty, 67 empty-cron hits, daily SMS ignored 12 days. Dispatcher itself healthy and unpaused.
-- Root cause is burn rate, not a bug: 4 posts/day needs 28 finished assets a week. Nobody supplies that.
-- Confirmed YouTube fails on every post (known ambient wrong-channel issue, safety net working, not worth chasing).
-- Corrected docs against memory: Repurpose.io retired 2026-09-08 so the local RUNBOOK is stale, and Isaac is not the supply line, Yeti is.
-- Advised NOT to send Isaac the strategy plan (it creates an approval surface). Drafted a shoot-logistics email instead, with one line owning the 12-day gap.
-- Built the commercial flat-roof shoot pack: interview-brick method for a client who will not prep, 15 questions, day-by-day shot list, output map (27 assets = ~3.3 weeks runway), plus a no-visible-leak fallback hook after Yeti flagged there may be no leak to show.
-- Made a 6-sheet printable field card, rendered to `~/Desktop/Flat-Roof-Shot-Card.pdf`.
-- Caught a real print bug: a `@media print` token block on plain `:root` loses on specificity to the dark-theme `:root:not([data-theme="light"])`, so dark-mode machines print near-white on white. Fixed and verified in both host themes.
-- Wrote the reusable **client onboarding SOP + fill-in templates** at `~/Projects/social-desk/_template/` so Holly, Joe, MB and YetiGroove follow the same path.
-
-**What's live / deployed:**
-- Nothing deployed. Sunny Skies dispatcher untouched, still live and still empty.
-- Artifact: Flat Roof Shot Card, https://claude.ai/code/artifact/e48aa380-e4e6-4704-9a47-3518d4283f86
-- PDF on the Desktop, 6 pages, prints pure black.
-- 14 rows filed on the Master Task Board, 10 marked Today.
-- 7 memories saved (social desk, burn rate, directing non-actors, don't send the plan, fact/inference/evidence, print CSS trap, onboarding SOP).
-
+- Diagnosed the failed Holly demo: the login link was never broken. The guided tour auto-started on first sign-in and from step 7 navigated onto the PUBLIC pages, so the texted link looked like it just opened her website. Fixed: tour is offered by a welcome card (never auto-runs), the desk half ends at a "Show me the site" gate, public steps carry a back-to-desk link, ending/skipping returns to /admin, and a "Your desk" chip sits on every public page while signed in.
+- Login field now accepts a pasted login link or the whole text message, not just the admin key; expired links say so.
+- The desk is installable: manifest + icons + Apple meta injected only on /admin, so Add to Home Screen opens straight into the desk standalone. One-time hint card explains how (iOS wording on Safari).
+- Holly named her site assistant **Heather** (widget greeting/header/aria-label, chat persona, tour step). Verified live: "I'm Heather, the virtual assistant here on Holly's website."
+- Entity/SEO work, migration-proof: src/data/profiles.js holds every public profile (Google, Facebook, Instagram, LinkedIn, Manitou listing, hollygriewahn.com) + Foundation Realty (foundationlenawee.com) + phone; schema sameAs derives from buildSameAs(SITE) which drops self-referencing entries automatically when PUBLIC_SITE_URL changes. Fixed api/cron-seasonal-article.js reading SITE_URL instead of PUBLIC_SITE_URL (a domain-move landmine).
+- Manitou Beach public/llms.txt now has a "Real Estate on the Lakes" section naming Holly (live). Sand/Evans Lake drone hero, poster and card added for the Cambridge & US-12 Corridor region.
+**Careful:**
+- Manitou-Beach checkout has uncommitted work from another machine (promo-claim deletions, LaunchPage, offers, robots, wine village files) and is 2 commits behind. I restored it exactly as found and pushed the llms.txt change from a clean clone. See memory dirty-repo-commit-safety.
 **Next up:**
-- Put assets in READY today. The account has been silent 12 days.
-- Drop the dispatcher to 2x/day (config server :3847 or dispatcher-admin).
-- Add COMMERCIAL and SPOKESPERSON to `captions.json` before shoot footage lands, or new files post in the wrong voice.
-- One attempt at the YouTube active-channel lever, then let it go.
-- Commercial flat roof shoot starts ~Sep 24 or Fri 26, 3-4 days. Print the PDF: sheets 0 and 5 in the truck, 1-4 up the ladder.
-- Get the membrane system (TPO/EPDM/mod bit/coating, tear-off vs recover) from Isaac in a text before he names anything on camera.
-- Metal roof Oct 1: scripts written, parked at Yeti's request.
-- Week 1 due Wed Sep 30.
-
-**Notes for other environments:**
-- `~/Projects/social-desk` is the source of truth. Not a git repo yet.
-- `_template/ONBOARDING.md` is the SOP for adding any new client. Step 1 is audit the live account before planning anything.
-- The local `Documents/Claude Code/Sunny-Skies/dispatcher/` mirror is STALE: config says `paused:true` (live is false) and its RUNBOOK describes the retired Repurpose.io hop. The VPS copy is authoritative.
+- Redo the walkthrough with Holly: text a login link, tap it, land on the desk, then Add to Home Screen while she is there.
+- Still owed by Holly (crAIg thread 1a0af84010864c12): seller names/emails, Paragon photos for 22 list-side sales, Original List Price report, lake for 18 sold addresses, brokerage compliance wording, domain registrar, Paragon scheduled report (Way 1) and broker name/email for IDX (Way 2). Plus docs/ASSETS-NEEDED.md items.
+- Roadmap remaining: inbound email parser (unlocks listing sync + hotsheet/showing feedback in the Monday update), bookings, milestones/mark-sold, welcome kit, monthly owner update.
