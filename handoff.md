@@ -1,16 +1,29 @@
-
-## Session: 2026-09-22/23 (ET)
+## Session: 2026-09-23 ET
 **Environment:** Antigravity IDE
 **What was done:**
-- Diagnosed the failed Holly demo: the login link was never broken. The guided tour auto-started on first sign-in and from step 7 navigated onto the PUBLIC pages, so the texted link looked like it just opened her website. Fixed: tour is offered by a welcome card (never auto-runs), the desk half ends at a "Show me the site" gate, public steps carry a back-to-desk link, ending/skipping returns to /admin, and a "Your desk" chip sits on every public page while signed in.
-- Login field now accepts a pasted login link or the whole text message, not just the admin key; expired links say so.
-- The desk is installable: manifest + icons + Apple meta injected only on /admin, so Add to Home Screen opens straight into the desk standalone. One-time hint card explains how (iOS wording on Safari).
-- Holly named her site assistant **Heather** (widget greeting/header/aria-label, chat persona, tour step). Verified live: "I'm Heather, the virtual assistant here on Holly's website."
-- Entity/SEO work, migration-proof: src/data/profiles.js holds every public profile (Google, Facebook, Instagram, LinkedIn, Manitou listing, hollygriewahn.com) + Foundation Realty (foundationlenawee.com) + phone; schema sameAs derives from buildSameAs(SITE) which drops self-referencing entries automatically when PUBLIC_SITE_URL changes. Fixed api/cron-seasonal-article.js reading SITE_URL instead of PUBLIC_SITE_URL (a domain-move landmine).
-- Manitou Beach public/llms.txt now has a "Real Estate on the Lakes" section naming Holly (live). Sand/Evans Lake drone hero, poster and card added for the Cambridge & US-12 Corridor region.
-**Careful:**
-- Manitou-Beach checkout has uncommitted work from another machine (promo-claim deletions, LaunchPage, offers, robots, wine village files) and is 2 commits behind. I restored it exactly as found and pushed the llms.txt change from a clean clone. See memory dirty-repo-commit-safety.
+- Planned and started a 4-part build on Holly Griewahn's site (~/Documents/Claude Code/Holly/Holly-main, Gitdaryl/Holly). Plan at ~/.claude/plans/velvet-foraging-grove.md
+- Shipped /events: the Manitou Beach calendar collected for buyers, 64 events through December, prerendered with a real FAQ. Deliberately NOT schema.org/Event (Holly is not the source of truth; ItemList + CollectionPage + isBasedOn instead)
+- Fixed a live bug: api/events.js capped at 40 and was silently dropping all of December
+- Fixed: lake-page event rows deep-link now. Only 10 of 64 upstream records carry eventUrl, so 33 of 40 rows used to dump you on a generic index
+- Shipped /holly-yeti: her own version of the show page, different copy from Manitou's on purpose. Episode wall from the channel's public RSS feed, which needs NO API key
+- robots.txt now names 15 AI crawlers in generated groups, Disallow before Allow. Verified with a parser: GPTBot + /admin is blocked, which the old file did not guarantee
+- Daily deploy hook (api/cron-refresh.js, 5:30am ET) so prerendered pages a crawler reads never go more than a day stale. Needs VERCEL_DEPLOY_HOOK_URL
+- Newsletter foundation: subscribe/confirm/unsubscribe, double opt-in, RFC 8058 one-click, 400-day unsub tokens, ONE shared email template. No send path exists yet, by design
+- FOUND: the previous session's entity/SEO work (src/data/profiles.js, buildSameAs) was never committed. The live site had the old 2-entry sameAs. Now committed and live with 6
+
+**What's live / deployed:**
+- hollygriewahn.vercel.app, commits 80f9c17, beb5897, 5d4674f, d804848
+- /events, /holly-yeti, /api/events?all=1, /api/youtube, /api/newsletter, robots.txt with AI groups, 90 prerendered pages
+- Newsletter signup form is deliberately HIDDEN until the env is set, so nothing is half-live
+
 **Next up:**
-- Redo the walkthrough with Holly: text a login link, tap it, land on the desk, then Add to Home Screen while she is there.
-- Still owed by Holly (crAIg thread 1a0af84010864c12): seller names/emails, Paragon photos for 22 list-side sales, Original List Price report, lake for 18 sold addresses, brokerage compliance wording, domain registrar, Paragon scheduled report (Way 1) and broker name/email for IDX (Way 2). Plus docs/ASSETS-NEEDED.md items.
-- Roadmap remaining: inbound email parser (unlocks listing sync + hotsheet/showing feedback in the Monday update), bookings, milestones/mark-sold, welcome kit, monthly owner update.
+- Yeti: NEWSLETTER_SECRET, and start the Resend sending domain news.hollygriewahn.com (SPF/DKIM/_dmarc). This does NOT depend on the domain move and is the longest lead time
+- Yeti: Vercel Deploy Hook -> VERCEL_DEPLOY_HOOK_URL
+- Then: admin Letter tab (draft + preview + approve) and the resumable send endpoint
+- Verify whether Resend /emails/batch supports per-message headers before writing the send path
+
+**Notes for other environments:**
+- IDX first, then the domain. Everything is built migration-proof: PUBLIC_SITE_URL drives all canonicals, and PRERENDER_ORIGIN now exists so the first build after the flip cannot ship empty pages if the new host is not serving yet
+- HARD GATE: no real newsletter send while the site is on vercel.app. Unsubscribe links are absolute URLs that live in inboxes forever
+- holly-engage is a PUBLIC blob store, so access:'private' is rejected outright. Subscriber pathnames are HMAC-keyed instead
+- @vercel/blob put() does NOT overwrite without allowOverwrite:true, it throws
