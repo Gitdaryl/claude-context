@@ -1,23 +1,20 @@
 ## Session: 2026-09-23 ET
 **Environment:** Antigravity IDE
-
 **What was done:**
-- Evaluated the new-homeowner welcome packet business idea (sponsor-funded, realtor-distributed). Research only, nothing built.
-- Confirmed the idea is already on the Master Task Board as "Productize the new-homeowner welcome packet (realtor-branded, sponsor-funded)" (filed Aug 20 2026). No duplicate created.
-- Established the missing volume data: Lenawee County ran 1,764 home sales in the trailing 12 months against 53,015 housing units (3.33% turnover). Rollin Twp has 1,980 housing units (ACS). Derived the Rollin + Woodstock + Cambridge lake district at roughly 7,500 units and about 250 closings a year, roughly 21 a month.
-- Found real sponsor pricing benchmarks: Coastal Welcome Services charges $125/mo per 100 welcomes ($1.25 per household delivered), Welcome Wagon starts at $250/mo with category exclusivity.
-- Built a year-1 P&L for a lake-district-only launch: 14 category slots at $895, about $11.3k revenue, about $2.9k print, roughly $8.5k net on about 105 hours. Year 2 renewals roughly double the hourly.
-- Flagged the four real risks: unverifiable delivery by agents, sponsor wallet cannibalization against Men's Club / Autofest / photo wall asks, pre-printed coupon inventory risk, and RESPA exposure if any settlement-service category (lender, title, inspector, insurance) is sold a slot.
+- Reviewed the Ford "Director, AI Transformation Architect" posting (Dearborn, Ford Next / Integrated Services, LL4) against the AI leadership positioning doc. Verdict: strong match on the job description, stretch on the job level. Four real gaps, two of them put in writing on purpose.
+- Re-fetched the posting verbatim after the first summarised fetch invented a preferred qualification about MCPs and CLIs that Ford never wrote. Corrected the advice that came off it.
+- Wrote applications/ford-cover-letter.txt (854 words) and applications/ford-ai-transformation-architect.md (requirement map, strategy, interview prep) in yeti-positioning.
+- Added the ford entry to site/role.html and the /ford rewrite, registered the ford slug in Yeti-Groove api/role-view.js. The read tracker already existed from the WongDoody application, so it was extended, not rebuilt.
+- Found and fixed a disclosure hole: role.html shipped every ROLES entry to whoever opened any role page, so a Ford reviewer viewing source could have read the WongDoody pitch. Archived that entry, documented one-live-role-at-a-time, and de-identified a served comment in index.html that named a company.
 
 **What's live / deployed:**
-- Nothing. Analysis only.
+- https://work.yetigroove.com/ford, verified live, no other company named in the source.
+- api/role-view.js accepts slug `ford`, verified with a preview POST so no SMS fired.
+- Both repos pushed. Yeti-Groove committed with a pathspec, the modified .gitignore from another machine was left alone.
 
 **Next up:**
-- Pull the exact closing count from the Lenawee Register of Deeds Kofile search (lenawee.mi.publicsearch.us), warranty deeds recorded for Rollin, Woodstock and Cambridge townships over the last 12 months.
-- Ask Mitchel Ramsey for an MLS sold count for 49253, 49220, 49265 over 12 months. Two-minute job for him and a reason to call.
-- Check whether the Lenawee chamber already runs a relocation packet before pitching against it.
-- Go/no-go gate: 6 paid sponsors inside 3 weeks of calls, and print nothing before 8 slots are sold.
+- Yeti decides the Dearborn commute question before submitting. 75 miles, 4 days onsite, ends YetiGroove as a running studio.
+- On submit: bare work.yetigroove.com in the form field, /ford in the letter body.
 
 **Notes for other environments:**
-- Decision made this session: v1 is lake district only (Rollin + Woodstock + Cambridge), free to agents, sponsor-funded, QR scan tracking per agent batch so sponsors get proof of delivery. Countywide is a 4-zone, 56-slot build that needs a commission salesperson, not a year-1 move.
-- Keep settlement-service categories out of v1. Decker & Sons Insurance was previously named as a natural first sponsor; insurance sits close enough to settlement services that it needs a broker compliance sign-off first.
+- Verified platform numbers as of today: 184 non-underscore API endpoints, 20 cron entries, 18 agents reporting to the live status feed, 12 LLM endpoints, 29 Stripe endpoints, 960 commits. SOURCE-DOC.md still says 173/18 from August and is now stale.
