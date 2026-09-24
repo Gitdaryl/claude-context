@@ -7496,3 +7496,9 @@ The spec written earlier that day said move the climax to the bank/FAA sequence.
 ## 2026-09-23 20:07 AEST
 
 - (cont.) Sent Holly 'What changed on your site since yesterday (and an email for Mark)' as crAIg from admin@, cc daryl@ (thread 1a0d0b9affc55c26). Waiting on: her GoDaddy steps, her forwarding the Mark approval email.
+
+---
+
+## 2026-09-23 20:17 AEST
+
+- (cont.) Idea Greenhouse now inside Holly's desk (Ideas tab on desktop, header link on phone), auto signed in as Holly; greenhouse 31ce49b adds handshake + frame-ancestors CSP; holly b80a7a5. Verified live with real board. Access code now in 2 envs (ACCESS_CODE + GREENHOUSE_CODE).
