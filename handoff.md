@@ -2,17 +2,18 @@
 ## Session: 2026-09-24 ET
 **Environment:** Antigravity IDE
 **What was done:**
-- Diagnosed today's failure: ops-watch + lead-catcher hit "Not logged in" at 7am after IDE sign-out; backup CLAUDE_CODE_OAUTH_TOKEN in inbox-watch/secrets.env was empty
-- Added retries (9/12/15/18), skip-if-done, once-a-day fail SMS, heartbeat flags empty token
-- Re-ran ops-watch: recovered, brief written
+- Analyzed Executive Partners (Alayna's employer): outsourced physician-liaison field reps; model fits commercial trades and restoration better than residential roofing
+- Logged Sunny Skies distress (payroll cut to 3, Yeti's pay behind, Isaac silent) and new lead Jay + Devon Davis (30-yr commercial roofer, just left Holt, burned by Apex Solutions)
+- Plan: YetiGroove becomes the agency; Alayna contracts to YetiGroove (portable), not Sunny Skies; Isaac converts from employer to prepaid client
+- Built client-facing Trades Program rate sheet (filming, editing, content plans, web + care, referral rep, mileage 76c)
 
 **What's live / deployed:**
-- Local LaunchAgents reloaded on the Mac
+- Rate sheet artifact (private): https://claude.ai/artifact/SaUQ8qRNiArpidqo8WvpQS
 
 **Next up:**
-- Yeti: run `claude setup-token`, paste into ~/.claude/tools/inbox-watch/secrets.env
-- NAS snapshot-daily aborting since Sep 16 (/Volumes/Production not mounted), no alert wired
-- claude-dream LaunchAgent not loaded
+- Watch Sunny Skies paycheck weekend Sep 26-27; if missed, direct payroll talk with Isaac Monday
+- Schedule dinner with Jay + Devon; ask which Apex, what it did and cost
+- Get Alayna's Roadhouse take-home + Executive Partners side-work answer; move talk off her work email
 
 **Notes for other environments:**
-- Inbox watchers need the Mac awake and a Claude login; setup-token makes them survive IDE sign-outs
+- Never show competitor (Apex) pricing on client material; comparison is dinner prep only
