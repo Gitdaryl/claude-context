@@ -1,1 +1,1 @@
-- (cont.) e044c2d: MI compliance fix, broker logo panel sized to match signature (home/About) + broker address notice on every public page. Verified live at 3 widths. Broker approval email drafted for Holly to send.
+- (cont.) Sent Holly 'What changed on your site since yesterday (and an email for Mark)' as crAIg from admin@, cc daryl@ (thread 1a0d0b9affc55c26). Waiting on: her GoDaddy steps, her forwarding the Mark approval email.
