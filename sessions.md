@@ -7490,3 +7490,9 @@ The spec written earlier that day said move the climax to the bank/FAA sequence.
 ## 2026-09-23 19:52 AEST
 
 - (cont.) e044c2d: MI compliance fix, broker logo panel sized to match signature (home/About) + broker address notice on every public page. Verified live at 3 widths. Broker approval email drafted for Holly to send.
+
+---
+
+## 2026-09-23 20:07 AEST
+
+- (cont.) Sent Holly 'What changed on your site since yesterday (and an email for Mark)' as crAIg from admin@, cc daryl@ (thread 1a0d0b9affc55c26). Waiting on: her GoDaddy steps, her forwarding the Mark approval email.
