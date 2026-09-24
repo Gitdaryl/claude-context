@@ -2,18 +2,16 @@
 ## Session: 2026-09-24 ET
 **Environment:** Antigravity IDE
 **What was done:**
-- Analyzed Executive Partners (Alayna's employer): outsourced physician-liaison field reps; model fits commercial trades and restoration better than residential roofing
-- Logged Sunny Skies distress (payroll cut to 3, Yeti's pay behind, Isaac silent) and new lead Jay + Devon Davis (30-yr commercial roofer, just left Holt, burned by Apex Solutions)
-- Plan: YetiGroove becomes the agency; Alayna contracts to YetiGroove (portable), not Sunny Skies; Isaac converts from employer to prepaid client
-- Built client-facing Trades Program rate sheet (filming, editing, content plans, web + care, referral rep, mileage 76c)
+- UI/UX review of manitoubeachmichigan.com (desktop + phone, headless screenshots + DOM audit)
+- Found broken logos: Holly, Blackbird Cafe, Gypsy Blue. Cause: WebP sweep commit 8649917 deleted 142 originals; logo URLs live in Notion, not code, and SPA fallback returns HTML 200
+- Drafted fix: vercel.json rewrite legacy /images/*.png|jpg -> .webp. Committed in a clean clone (scratchpad mbclean), push BLOCKED by permission guard, NOT live
 
 **What's live / deployed:**
-- Rate sheet artifact (private): https://claude.ai/artifact/SaUQ8qRNiArpidqo8WvpQS
+- Nothing
 
 **Next up:**
-- Watch Sunny Skies paycheck weekend Sep 26-27; if missed, direct payroll talk with Isaac Monday
-- Schedule dinner with Jay + Devon; ask which Apex, what it did and cost
-- Get Alayna's Roadhouse take-home + Executive Partners side-work answer; move talk off her work email
+- Push the vercel.json rewrite (or add it by hand) and re-check the 3 logos
+- Design pass: 12px text floor -> 16px, tap-to-call on all 32 phone numbers (only 3 are links), hide public "Upgrade" labels, fix duplicate Cherry Creek Cellars, replace night-campfire hero frame, unique Dispatch cover images
 
 **Notes for other environments:**
-- Never show competitor (Apex) pricing on client material; comparison is dinner prep only
+- Local ~/Projects/Manitou-Beach is 3+ commits behind with uncommitted edits (App.jsx, offers.js, robots.txt, promo-claim.js deleted) from another machine. Don't commit over it.
