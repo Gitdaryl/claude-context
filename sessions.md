@@ -7594,3 +7594,10 @@ The spec written earlier that day said move the climax to the bank/FAA sequence.
 
 **Notes for other environments:**
 - Local ~/Projects/Manitou-Beach is 3+ commits behind with uncommitted edits (App.jsx, offers.js, robots.txt, promo-claim.js deleted) from another machine. Don't commit over it.
+
+---
+
+## 2026-09-24 19:34 AEST
+
+- UPDATE same session: pushed + verified live. eadbce7 (legacy image rewrite, logos fixed) and e61d089 (readability pass: text sizes +2px, textMuted darkened, 32/32 phones tap-to-call, public Upgrade labels removed, nav tightened). Live check: 0 broken images desktop+phone.
+- Still open: micro-animation set, duplicate Cherry Creek Cellars, address cleanup, Dispatch covers, emoji placeholder cards, other pages' small text (only home/nav/shared done).
