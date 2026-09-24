@@ -1,18 +1,18 @@
 
-## Session: 2026-09-23 ET
+## Session: 2026-09-24 ET
 **Environment:** Antigravity IDE
 **What was done:**
-- AI Holly Sep 24-27 reel: 5 of 10 events had no card. Fixed 4 matcher bugs in holly-reel-kit/reel/build.mjs (street-address Location borrows venue from title pipe prefix; full-name-first rule now falls back to short variants when full name appears fewer times than the venue has events, with adjacent hits collapsed; 12s same-venue dedup skipped across a day word; event-name fallback treats & as "and" with 0.80 bar for long names). All 10 anchor.
-- Trimmed the opener: reel now starts at "Here's your weekend" (cut at 13.8s of the HeyGen take), 73s.
-- Re-rendered locally: ~/Projects/holly-reel-kit/holly-2026-09-24-OVERLAID(-web).mp4. NOT uploaded, NOT sent.
+- Diagnosed today's failure: ops-watch + lead-catcher hit "Not logged in" at 7am after IDE sign-out; backup CLAUDE_CODE_OAUTH_TOKEN in inbox-watch/secrets.env was empty
+- Added retries (9/12/15/18), skip-if-done, once-a-day fail SMS, heartbeat flags empty token
+- Re-ran ops-watch: recovered, brief written
 
 **What's live / deployed:**
-- Nothing. build.mjs changes are local and uncommitted (holly-reel-kit still has no remote).
+- Local LaunchAgents reloaded on the Mac
 
 **Next up:**
-- Yeti QA the reel, then upload/publish (`node run.mjs --video <trimmed> --thursday=2026-09-24 --keep-transcript --upload --publish`).
-- Data: Cherry Creek Location fields are bare street addresses again; Wheels and Wine + Tyler Aukerman have blank Cost; Bike Night time shows 10:00 PM (check).
-- Push holly-reel-kit to GitHub.
+- Yeti: run `claude setup-token`, paste into ~/.claude/tools/inbox-watch/secrets.env
+- NAS snapshot-daily aborting since Sep 16 (/Volumes/Production not mounted), no alert wired
+- claude-dream LaunchAgent not loaded
 
 **Notes for other environments:**
-- Opener trim was a one-off for this week, not built into the pipeline.
+- Inbox watchers need the Mac awake and a Claude login; setup-token makes them survive IDE sign-outs
