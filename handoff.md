@@ -1,1 +1,3 @@
-- ce0db92 live: 10 Higgsfield FLUX.2 images (15 credits) -> WebP. 8 seasonal Dispatch fallback covers in public/images/dispatch (season by publish date, alternates weekly), 2 photo cards replace emoji placeholders in Relocate & Stay (public/images/living). Source PNGs in scratchpad only.
+- bb5bcbc live: readability codemod on 28 visitor pages (18 checked desktop+phone, no overflow/errors); bobber + "Added to your calendar" on event Add to Calendar.
+- Discussing next: automated unique Dispatch covers. Pipeline facts: cron-newsletter-draft.js creates Weekend Guide rows with no Cover Image URL; generate-article.js picks from a Yeti illustration catalog or Unsplash. Seasonal pool is the fallback.
+- Noticed: /happening hero on phone has a giant "2026" watermark overlapping the "Events" title (likely pre-existing).
