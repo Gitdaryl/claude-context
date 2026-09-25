@@ -7609,3 +7609,9 @@ The spec written earlier that day said move the climax to the bank/FAA sequence.
 - b3c5ecc live: lake micro-motion on homepage (wind-speed weather ripple, calendar-flip event dates, lighthouse beam on spotlight cards, handset on phone links, drifting wave dividers, boat-wake category lines). Cut float circles, row dot pulse, aura/pulse/shimmer. All off under reduced motion.
 - Cherry Creek Cellars: 3 rows in Business Listings. Kept 3c98c729...5910 (owner submission), phone -> (517) 592-4663 (Google), full address. Hid (not deleted) Feb import 3148c729...0178 and unapproved dup 3c98c729...0022. Live API shows 1 row.
 - Not done: "add to list" bobber (events pages), other pages' small text, Dispatch covers, emoji placeholder cards.
+
+---
+
+## 2026-09-24 20:55 AEST
+
+- ce0db92 live: 10 Higgsfield FLUX.2 images (15 credits) -> WebP. 8 seasonal Dispatch fallback covers in public/images/dispatch (season by publish date, alternates weekly), 2 photo cards replace emoji placeholders in Relocate & Stay (public/images/living). Source PNGs in scratchpad only.
