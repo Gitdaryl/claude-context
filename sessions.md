@@ -7623,3 +7623,27 @@ The spec written earlier that day said move the climax to the bank/FAA sequence.
 - bb5bcbc live: readability codemod on 28 visitor pages (18 checked desktop+phone, no overflow/errors); bobber + "Added to your calendar" on event Add to Calendar.
 - Discussing next: automated unique Dispatch covers. Pipeline facts: cron-newsletter-draft.js creates Weekend Guide rows with no Cover Image URL; generate-article.js picks from a Yeti illustration catalog or Unsplash. Seasonal pool is the fallback.
 - Noticed: /happening hero on phone has a giant "2026" watermark overlapping the "Events" title (likely pre-existing).
+
+---
+
+## 2026-09-26 20:45 AEST
+
+
+## Session: Sep 26 2026 ET
+**Environment:** Antigravity IDE
+**What was done:**
+- New client/partner On Point JD LLC (Jay + Devon Davis): memory filed, brand board with 4 logo directions + mockups
+- Hybrid badge (D) rebuilt as vector: outlined SVG + transparent PNG exports (dark, light, white, black, small icon), shirt-back + distance test
+- Marketing agreement drafted as a Claude Doc (contractor not partnership, $750 floor + revenue tiers, domain transfer on exit)
+- onpointjd.com registered on Vercel (WHOIS privacy confirmed, auto-renew on)
+
+**What's live / deployed:**
+- Brand board: https://claude.ai/artifact/CuRT144uWfHrt23q83o2vk
+- Agreement doc: https://claude.ai/code/artifact/d81de462-c1d5-47dd-b209-ba5bea99f2d8
+
+**Next up:**
+- Jay picks direction; decide ON POINT size bump; fill agreement brackets (monthly revenue, entity); attorney review
+- Consolidate to one phone number; confirm BBB + license; ask if onpointjd.net is theirs
+
+**Notes for other environments:**
+- Files: ~/Projects/on-point-jd/brand/ (not yet a git repo)
