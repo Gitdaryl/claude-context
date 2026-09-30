@@ -7653,3 +7653,9 @@ The spec written earlier that day said move the climax to the bank/FAA sequence.
 ## 2026-09-30 16:52 AEST
 
 - Sep 30: 26 sold photos live (73a3fa4), satellite fallback gone for sold homes. Confirm 786 Brookview / 392 Egan house numbers; Heatherwood + 4108 Woodland photos are low-res.
+
+---
+
+## 2026-09-30 16:58 AEST
+
+- dc39763: Heatherwood back to aerial (upscaled plat hallucinated lot numbers). 25 sold photos + 1 aerial live.
