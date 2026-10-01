@@ -1,20 +1,18 @@
 
-## Session (cont. 2): 2026-09-30 ET
+## Session (cont. 3): 2026-09-30 ET
 **Environment:** Antigravity IDE
 **What was done:**
-- OnPoint JD /snow page (plow, salt, sidewalks) with season quote form; shared site.css/site.js; 3 spam traps, spam saved to spam/
-- Site facts aligned to BBB (Curtice OH, 4 NW Ohio counties, founded 2022, Linda)
-- Square profile pictures for BBB/Google/social (brand/export/clean/black/profile-*-1080.png)
-- LAUNCHED onpointjd.com (www redirect, indexing on, sitemap)
+- OnPoint JD: scroll-scrubbed logo hero (shipped), review pass (8 fixes), rain with card splashes, /partners page, BBB reviews section (4 verbatim, no average), cache-busting (tools/stamp_assets.py)
 
 **What's live / deployed:**
-- https://onpointjd.com and /snow (Vercel project onpointjd)
+- onpointjd.com, /snow, /partners
 
-**Next up:**
-- ALERTS: no Twilio/Resend on the project, leads only saved to Blob. Decide routing (OnPoint's own Twilio number vs Yeti's) and set env
-- Devon: swap Google + BBB logos, unify business name; add onpointjd.com to BBB/Google/Facebook
-- Ask Jay: windows, power washing, siding, SE Michigan (Google post shows them, site doesn't)
-- Drone photos into site/assets/photos/; print templates
+**Next up (Oct 1):**
+- Twilio number -> crew alerts, customer texts, missed-call text-back, restore "text within a minute" copy
+- Drone photos into site/assets/photos/ + job captions
+- Devon: unify Google/BBB/FB name + new logo + add website; Jay: reply to 2-star BBB review; ask recent customers for Google reviews
+- Ask Jay: warranty/certification, financing, insurance (COI) wording, SE Michigan
+- Print templates (yard sign first)
 
 **Notes for other environments:**
-- Lead files: Vercel Blob store onpointjd-leads under leads/ (spam/ for trapped)
+- Deploy = stamp_assets.py, commit, push, vercel deploy --prod (site/)
