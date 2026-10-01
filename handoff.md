@@ -1,16 +1,14 @@
-
-## Session: 2026-10-01 ~6:45pm ET
+## Session: 2026-10-01 ~7pm ET
 **Environment:** Antigravity IDE
 **What was done:**
-- OnPoint JD print kit: 4.25x11 tear-off door hanger (perf 2in from bottom, $500 neighbor card) + 24x18 double-sided yard sign, press PDFs with 0.125 bleed in ~/Projects/on-point-jd/print/out/ (build.mjs rebuilds; README has printer specs + crew routine)
-- QR short links /ys /dh /nc -> UTM-tagged home URLs (site/vercel.json), verified on preview
-- Reviewed The Lakes Print Shop quote: recommend tear-off 1,000 @ $585 + $25 setup
+- Deployed OnPoint JD QR short links to production (Yeti approved): onpointjd.com/ys, /dh, /nc each 307 to UTM-tagged home URLs; homepage 200
 
 **What's live / deployed:**
-- Commit 9b3a726 pushed. Redirects NOT on prod yet.
+- onpointjd.com prod includes commit 9b3a726 (print kit + redirects)
 
 **Next up:**
-- Yeti says "deploy" for the redirects; Jay OKs $500; send PDFs to Lakes Print Shop (ask size, die template, writable stock); yard sign quote
+- Show Jay the hanger + yard sign proofs (print/out/*-proof.png); tweak the $500 offer if he asks (OFFER in print/build.mjs, then node print/build.mjs)
+- Order from Lakes Print Shop: tear-off 1,000 @ $585 + $25; confirm size, die template, writable stock
 
 **Notes for other environments:**
-- Do not print anything until onpointjd.com/ys, /dh, /nc return 307 on production
+- QR links are live, so the PDFs can print as soon as Jay signs off
