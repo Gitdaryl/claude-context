@@ -7806,3 +7806,10 @@ The spec written earlier that day said move the climax to the bank/FAA sequence.
 
 **Notes for other environments:**
 - OnPoint repo branch is master. Explicit "deploy" needed for prod in auto mode.
+
+---
+
+## 2026-10-01 12:39 AEST
+
+
+- Later: review section rebuilt as an endless row of square cards + lightbox (commit e5a11d0), deployed to onpointjd.com and verified on desktop + phone.
