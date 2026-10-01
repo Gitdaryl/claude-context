@@ -7755,3 +7755,9 @@ The spec written earlier that day said move the climax to the bank/FAA sequence.
 
 **Notes for other environments:**
 - Deploy = stamp_assets.py, commit, push, vercel deploy --prod (site/)
+
+---
+
+## 2026-10-01 09:47 AEST
+
+- Oct 1: REALTOR of the Year award live on About + hero pill + schema/llms.txt (20792a0).
