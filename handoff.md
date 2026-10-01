@@ -1,20 +1,16 @@
 
-## Session: 2026-10-01 ET
+## Session: 2026-10-01 ~6:45pm ET
 **Environment:** Antigravity IDE
 **What was done:**
-- Verified Holly's site number 517-300-8226 rides Manitou's LOW_VOLUME A2P campaign (Yeti Groove Media LLC, "community event reminders"): use-case mismatch, risks Manitou texting
-- SEO/GEO audit of hollygriewahn.vercel.app: unknown paths (incl /privacy, /terms) return home page with 200; broker address missing from prerendered HTML on /about, /sell; citability + Lenawee hub gaps
-- Pulled reusable details from her Placester footer (office phone 517.252.5523, office email, accessibility statement, Mailchimp list); Placester has no privacy/terms either
-- hollygriewahn.com = Holly's own GoDaddy domain, expires Feb 22 2027; fallback hollygriewahnrealtor.com is unregistered
-- Sent crAIg email to Holly (thread 1a0f945c9f76fc69) explaining domain ownership, texting registration, privacy/terms, with a 4-item checklist
+- OnPoint JD print kit: 4.25x11 tear-off door hanger (perf 2in from bottom, $500 neighbor card) + 24x18 double-sided yard sign, press PDFs with 0.125 bleed in ~/Projects/on-point-jd/print/out/ (build.mjs rebuilds; README has printer specs + crew routine)
+- QR short links /ys /dh /nc -> UTM-tagged home URLs (site/vercel.json), verified on preview
+- Reviewed The Lakes Print Shop quote: recommend tear-off 1,000 @ $585 + $25 setup
 
 **What's live / deployed:**
-- Nothing deployed; email sent
+- Commit 9b3a726 pushed. Redirects NOT on prod yet.
 
 **Next up:**
-- Build /privacy, /terms, accessibility page, optional SMS consent checkbox, real 404, broker line (office phone + address) in prerendered footer
-- Twilio subaccount + Holly's own brand/campaign once she answers LLC/EIN vs own name
-- Watch thread 1a0f945c9f76fc69 for broker answer, auto-renew, Mailchimp yes/no
+- Yeti says "deploy" for the redirects; Jay OKs $500; send PDFs to Lakes Print Shop (ask size, die template, writable stock); yard sign quote
 
 **Notes for other environments:**
-- Holly owns her domain; broker approval is about advertising review, not ownership
+- Do not print anything until onpointjd.com/ys, /dh, /nc return 307 on production
