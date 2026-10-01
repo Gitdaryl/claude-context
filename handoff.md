@@ -1,19 +1,17 @@
 
-## Session: 2026-10-01 ET (OnPoint JD, evening)
+## Session: 2026-10-01 ET
 **Environment:** Antigravity IDE
 **What was done:**
-- Nav logo swapped to full JD mark (roofer + plow), all pages
-- Before/after drag sliders (Milford re-roof, commercial flat roof) + storm tarp photo: home Recent work, /roofing, /commercial, /storm-damage
-- Website lead email: Resend domain onpointjd.com verified, DMARC added, leads go to JDavis@onpointjd.net + admin@yetigroove.com from leads@onpointjd.com, reply-to customer
-- Text-ready Google/Facebook access steps and Atlas PRO+ directory steps written for Devon
+- Explained the yellow CONFIRM pills on onpointjd.com (preview-only markers for unconfirmed copy; hidden on prod, verified headless)
+- Closed the 3 job-photo confirms (Yeti took the photos) on home, /roofing, /commercial, /storm-damage
+- Added a "Same three jobs. Same block." word-of-mouth section under Recent work with Yeti's drone pin map
+- Fixed build_pages.py so the work-grid regen can't delete neighbouring homepage sections (WORK markers)
 
 **What's live / deployed:**
-- onpointjd.com prod: logo, sliders, lead email (health email:true)
+- onpointjd.com prod deploy of commit 2c58a71 (master), verified live
 
 **Next up:**
-- Email Devon (task board row, Today): GBP/FB access, Atlas PRO+ signup, follow-ups
-- Twilio number for crew texts
-- Jay: slider captions (town/month/material), CONFIRM.md
+- 33 open items in on-point-jd/CONFIRM.md for Jay
 
 **Notes for other environments:**
-- OnPoint form leads now email Jay; check Resend Emails for delivery
+- Pushing on-point-jd to GitHub does not deploy; prod goes out via Vercel CLI from site/
