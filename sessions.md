@@ -7969,3 +7969,9 @@ The spec written earlier that day said move the climax to the bank/FAA sequence.
 
 **Notes for other environments:**
 - QR links are live, so the PDFs can print as soon as Jay signs off
+
+---
+
+## 2026-10-01 20:07 AEST
+
+- Added crew drone photo to the door hanger front: variants photo-edge (recommended) and photo-fade, compare at print/out/compare-hanger-fronts.png (commit f4dc68b). Open questions: is the photo an OnPoint job (not a Sunny Skies sub job)? No harnesses visible on crew.
