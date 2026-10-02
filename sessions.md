@@ -7975,3 +7975,9 @@ The spec written earlier that day said move the climax to the bank/FAA sequence.
 ## 2026-10-01 20:07 AEST
 
 - Added crew drone photo to the door hanger front: variants photo-edge (recommended) and photo-fade, compare at print/out/compare-hanger-fronts.png (commit f4dc68b). Open questions: is the photo an OnPoint job (not a Sunny Skies sub job)? No harnesses visible on crew.
+
+---
+
+## 2026-10-01 20:11 AEST
+
+- Hanger back now shows the SAME job finished (print/assets/finished-A.jpg); photos labeled "Tear-off day" / "Same roof, finished". Yeti confirmed it is a JD roof. No harness photo exists; Yeti has photographed only one roof with harnesses. Commit 030d0cb. Show Jay print/out/compare-photo-edge-front-back.png.
