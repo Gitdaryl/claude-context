@@ -1,1 +1,1 @@
-- Hanger back now shows the SAME job finished (print/assets/finished-A.jpg); photos labeled "Tear-off day" / "Same roof, finished". Yeti confirmed it is a JD roof. No harness photo exists; Yeti has photographed only one roof with harnesses. Commit 030d0cb. Show Jay print/out/compare-photo-edge-front-back.png.
+- Yard sign now uses the full logo (roofer) per Yeti (ca3fdc5). Truck rear-window decal (permanent) drafted at 16x6, size-parametric: DECAL=WxH node print/build.mjs decal (2977188). Yeti gets the real dimensions Oct 2.
