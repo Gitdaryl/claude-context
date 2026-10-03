@@ -1,16 +1,18 @@
-## Session: 2026-10-03 ET (continued)
+## Session: 2026-10-03 ET (wrap)
 **Environment:** Antigravity IDE
 **What was done:**
-- DLYC C1 aerial: east background replaced with dense tall hardwoods (matches real site, hides neighbours, camper removed).
-- Boathouse redesigned per Craig's verbal brief (predates the Wilson drawings): half nearer the club = open all-weather pavilion out to the patio edge, veranda-pitch roof, white posts with angled brackets, roll-down clear vinyl curtains (one bay lowered), outdoor kitchen with stone counter and grill; other half = enclosed multipurpose room with black-framed glass folding doors. Crop-edited and region-composited so nothing else in C1 changed.
+- DLYC previz: first visuals. Exact-geometry beach view (L.01 projected into the Sep 15 photo), photoreal C1 aerial from Wilson L.02 with real-site backgrounds (village street west, dense hardwoods east).
+- Craig's verbal brief clarified: pavilion = UPSTAIRS right half of the boathouse, classroom upstairs left with glass folding doors, downstairs unchanged.
+- Six boathouse roof-junction studies made; Yeti sent them to Craig Gabel.
+- Task board row "DLYC: concept renders" moved to Waiting on Craig; Session Brain row logged; dlyc-previz-program memory updated.
 
 **What's live / deployed:**
-- Nothing deployed. Desktop `DLYC composites/`: C1_aerial_FINAL.png (current), C1_aerial_v1..v3 (history), BOARD_C1_aerial.jpg, ALT_pavilion_closeup_variant.png, REF_drone_*.jpg.
+- Nothing deployed. ~/Desktop/DLYC composites (C1_aerial_FINAL.png, boathouse-roof-studies/, BOARD_*.jpg, _scripts/).
 
 **Next up:**
-- Refinements Yeti may want: pavilion brackets are angled knee braces vs the club's curved brackets; pavilion roof reads as a hip (matches Craig's "hip all the way around").
-- Other angles off C1 once locked. Wilson SketchUp file still the best route to exact geometry.
-- Craig/Otis email still unsent.
+- Craig picks a roof option, then paint it into C1 with a masked edit (Gemini reframes the cut-off boathouse otherwise).
+- Ask Wilson for the SketchUp file; power-cycle NAS for drone plates.
+- Craig/Otis email (pavilion placement, floor levels, Krieghoff consent) still unsent.
 
 **Notes for other environments:**
-- All images internal. Wilson drawings carry copyright notice; Krieghoff consent question still open.
+- Roof study #1 wrongly put the classroom downstairs; if Craig points at it, it is the roof form, not the layout.
