@@ -1,1 +1,1 @@
-- UPDATE Oct 3 (night): estimator funnel fixes LIVE (dcede85): email-me-this-estimate capture, compact phone hero, Example-house label. Next: Meta Pixel ID from Yeti, Jay's rates, then link /estimate from /roofing + home and drop noindex.
+- Oct 3: estimator + FB reminder email sent to Jay cc Devon (thread 1a103ef0e2fc8417). Board: new row 'OnPoint JD: Meta access for Daryl' (Waiting).
