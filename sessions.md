@@ -8159,3 +8159,9 @@ The spec written earlier that day said move the climax to the bank/FAA sequence.
 
 **Notes for other environments:**
 - Laura, Piper, Erin are teacher's aides; QLD vs US school breaks drive availability. Pricing and airfares on the page are unverified guesses.
+
+---
+
+## 2026-10-03 13:17 AEST
+
+- UPDATE same session: page redesigned with 20 Pirate Ball archive photos (from Downloads zip) and deployed: https://after-the-pirate-ball.vercel.app (~/Projects/after-the-pirate-ball, CLI deploy, no repo, noindex + robots.txt, OG card og.jpg). Verified 200 public, images serve as image/webp, no overflow on phone.
