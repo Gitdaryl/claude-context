@@ -8198,3 +8198,9 @@ The spec written earlier that day said move the climax to the bank/FAA sequence.
 ## 2026-10-03 17:32 AEST
 
 - UPDATE Oct 3 (later): estimator adds 1.5/2-story height adders (8/15%, guessed) + garage attached/separate-included (+15% guessed)/separate-skipped. Commits 19642d0, e951249 pushed (master). Preview: https://onpointjd-m90dq7u2u-daryls-projects-5d48a4f8.vercel.app/estimate . Not on prod.
+
+---
+
+## 2026-10-03 17:44 AEST
+
+- UPDATE Oct 3 (eve): PROD DEPLOYED (cd80292, Yeti approved): /estimate live at onpointjd.com/estimate, noindex, not in nav/sitemap; ?tune shows rate knobs on live. Also shipped the Oct 2 local SEO work (service-area hub, 3 town pages, titles) that had not been on prod. Jay + Devon reviewing. Next: their rate answers, then link from /roofing + home, drop noindex, sitemap. Notion-editable rates offered, not built.
