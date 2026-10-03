@@ -8204,3 +8204,9 @@ The spec written earlier that day said move the climax to the bank/FAA sequence.
 ## 2026-10-03 17:44 AEST
 
 - UPDATE Oct 3 (eve): PROD DEPLOYED (cd80292, Yeti approved): /estimate live at onpointjd.com/estimate, noindex, not in nav/sitemap; ?tune shows rate knobs on live. Also shipped the Oct 2 local SEO work (service-area hub, 3 town pages, titles) that had not been on prod. Jay + Devon reviewing. Next: their rate answers, then link from /roofing + home, drop noindex, sitemap. Notion-editable rates offered, not built.
+
+---
+
+## 2026-10-03 18:18 AEST
+
+- UPDATE Oct 3 (night): estimator funnel fixes LIVE (dcede85): email-me-this-estimate capture, compact phone hero, Example-house label. Next: Meta Pixel ID from Yeti, Jay's rates, then link /estimate from /roofing + home and drop noindex.
