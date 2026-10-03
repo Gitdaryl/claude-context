@@ -8192,3 +8192,9 @@ The spec written earlier that day said move the climax to the bank/FAA sequence.
 ## 2026-10-03 14:45 AEST
 
 - UPDATE Oct 3: estimator on Jay's rate (base $410/sq, typical full-Atlas roof ~$480/sq = his $12k/25 sq). Preview: https://onpointjd-g9zhr0bcr-daryls-projects-5d48a4f8.vercel.app/estimate
+
+---
+
+## 2026-10-03 17:32 AEST
+
+- UPDATE Oct 3 (later): estimator adds 1.5/2-story height adders (8/15%, guessed) + garage attached/separate-included (+15% guessed)/separate-skipped. Commits 19642d0, e951249 pushed (master). Preview: https://onpointjd-m90dq7u2u-daryls-projects-5d48a4f8.vercel.app/estimate . Not on prod.
