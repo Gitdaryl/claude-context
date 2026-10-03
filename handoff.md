@@ -1,1 +1,1 @@
-- Oct 3: estimator + FB reminder email sent to Jay cc Devon (thread 1a103ef0e2fc8417). Board: new row 'OnPoint JD: Meta access for Daryl' (Waiting).
+- Oct 3: estimator on Devon's rates ($715/sq ranch, +3% 2 story, +3% steep), live dc6f6b6.
