@@ -8186,3 +8186,9 @@ The spec written earlier that day said move the climax to the bank/FAA sequence.
 
 **Notes for other environments:**
 - $150/sq is a placeholder; do not publish until Jay's numbers are in
+
+---
+
+## 2026-10-03 14:45 AEST
+
+- UPDATE Oct 3: estimator on Jay's rate (base $410/sq, typical full-Atlas roof ~$480/sq = his $12k/25 sq). Preview: https://onpointjd-g9zhr0bcr-daryls-projects-5d48a4f8.vercel.app/estimate
