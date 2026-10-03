@@ -8216,3 +8216,9 @@ The spec written earlier that day said move the climax to the bank/FAA sequence.
 ## 2026-10-03 18:42 AEST
 
 - Oct 3: estimator + FB reminder email sent to Jay cc Devon (thread 1a103ef0e2fc8417). Board: new row 'OnPoint JD: Meta access for Daryl' (Waiting).
+
+---
+
+## 2026-10-03 19:12 AEST
+
+- Oct 3: estimator on Devon's rates ($715/sq ranch, +3% 2 story, +3% steep), live dc6f6b6.
