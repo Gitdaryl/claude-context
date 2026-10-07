@@ -8410,3 +8410,9 @@ The spec written earlier that day said move the climax to the bank/FAA sequence.
 ## 2026-10-07 18:48 AEST
 
 - SEO skill review (Oct 7): checked ~10 repos from social reels (seo-god, geo-seo-claude, superseo-skills, Agentic-SEO-Skill, geo-optimizer, seranking, amazing-seo-skill, etc). Only worthwhile action: upgrade AgriciDaniel/claude-seo 1.8.2 -> 2.4.2 (+7 skills: seo-drift, seo-agentic, seo-content-brief, seo-cluster, seo-sxo, seo-ecommerce, seo-flow; +6 agents). Code reviewed clean; installed files had no custom edits. Backup at ~/.claude/backups/claude-seo-1.8.2-before-2.4.2-2026-10-07.tgz. Install BLOCKED by auto mode (external code); Yeti runs it on Mac and VPS (VPS also on 1.8.2, no agents). Not uploading to claude.ai/Cowork/Mobile: pack needs Claude Code subagents + Python.
+
+---
+
+## 2026-10-07 18:52 AEST
+
+- claude-seo 2.4.2 files + 20 agents installed on Mac by Yeti; Python runtime step failed (PATH python3 is Apple 3.9.6; Homebrew 3.11 + 3.13 installed but unlinked). Old 1.8.2 venv was already broken (pointed at a removed python3.14). Fix: CLAUDE_SEO_PYTHON=/opt/homebrew/opt/python@3.13/bin/python3.13 ~/.claude/skills/seo/scripts/claude-seo setup. VPS upgrade still pending.
