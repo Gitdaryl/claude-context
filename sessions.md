@@ -8398,3 +8398,9 @@ The spec written earlier that day said move the climax to the bank/FAA sequence.
 ## 2026-10-07 18:27 AEST
 
 - Later Oct 7 (Opus 5.5): desk got a Roof estimator card (13 rates, bounds, live example price); rates save with desk settings, served by /api/offer, estimate page loads them live with baked fallback. Nav tidied (smaller type, wordmark hidden 960-1079px). Pushed 9e0987f, NOT deployed (auto mode blocks vercel --prod). Font is Archivo.
+
+---
+
+## 2026-10-07 18:39 AEST
+
+- AUTO-DEPLOY ON (Oct 7): Yeti set Vercel Root Directory = site, skip-unaffected on, and connected Gitdaryl/on-point-jd (production branch master). Every push to master now deploys production. Verified with commit 7ea1c41: READY in production, print/ and brand/ not published, desk estimator card + nav fix live. The old `cd site && vercel --prod` command no longer works (root dir); never needed now. Deleted my one test yard-sign scan from production Blob; 1 real yard-sign scan remains.
