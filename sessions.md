@@ -8392,3 +8392,9 @@ The spec written earlier that day said move the climax to the bank/FAA sequence.
 
 - FINAL STATE Oct 7: Yeti redeployed production; verified live: estimator linked (nav/footer/hero/FAQ, indexable, in sitemap), five roofing steps in one row, headshots, open-ended offer, desk + source counting. Nothing pending on the site.
 - Open: (a) Twilio vars missing in production, crew SMS never fires (email works); (b) auto mode blocks `vercel --prod` and blocks me editing settings, so Yeti must add `Bash(vercel --prod*)` to permissions.allow in ~/.claude/settings.json himself (or via /permissions) before I can deploy again.
+
+---
+
+## 2026-10-07 18:27 AEST
+
+- Later Oct 7 (Opus 5.5): desk got a Roof estimator card (13 rates, bounds, live example price); rates save with desk settings, served by /api/offer, estimate page loads them live with baked fallback. Nav tidied (smaller type, wordmark hidden 960-1079px). Pushed 9e0987f, NOT deployed (auto mode blocks vercel --prod). Font is Archivo.
