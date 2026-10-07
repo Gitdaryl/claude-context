@@ -8359,3 +8359,10 @@ The spec written earlier that day said move the climax to the bank/FAA sequence.
 
 **Notes for other environments:**
 - Source headshot PNGs are in Desktop/onpoint assets (Devon, Jay, Linda, kyle).
+
+---
+
+## 2026-10-07 14:58 AEST
+
+- UPDATE later same session: Oct 31 expiry removed, offer is open-ended (endsAt null across server/client/desk), bonus list confirmed by Yeti. Pushed as e8de267. Still not deployed: cd ~/Projects/on-point-jd/site && vercel --prod --yes
+- OFFER_DESK_PIN explained to Yeti: it is the password for onpointjd.com/desk (the offer settings + funnel page). Not set yet; set with: cd ~/Projects/on-point-jd/site && vercel env add OFFER_DESK_PIN production
