@@ -1,21 +1,21 @@
 
-## Session: 2026-10-06 ET
+## Session: 2026-10-07 ET
 **Environment:** Antigravity IDE
 **What was done:**
-- HeyGen is retiring all v1/v2 endpoints on Nov 1 2026. Inventoried every HeyGen call across ~/Projects, ~/Documents/Claude Code, ~/.claude tools and skills.
-- Manitou-Beach scripts/holly-render.js: status poll moved from v1/video_status.get to GET /v3/videos/{id}; keeps polling through 429/5xx; surfaces v3 failure_code/failure_message. Create call was already v3.
-- YetiClone api/_heygen.js, api/video-status.js, api/avatars.js: moved to v3 (GET /v3/videos/{id}, GET /v3/avatars + /v3/avatars/looks with cursor pagination). The v2 "match video avatar by list index" hack is gone; look id is the avatar_id.
-- media-use skill, holly-reel-kit, hyperframes: already v3, nothing to change.
-- Verified by mocked-fetch tests + builds. Could NOT live-test: the YetiClone HEYGEN_API_KEY (same value in Vercel prod and .env.production) returns 401 on every endpoint, so it has been revoked on HeyGen's side. Holly's key (GitHub secret) works: Oct 1 render succeeded.
+- Investigated "Google Drive filling up fast". The Drive connector is dyoung@callsunnyskies.com, not admin@yetigroove.com.
+- Authoritative quota via Drive API (new tool /root/SunnySkies/quota-check.js on the VPS): Sunny Skies account uses 650 GB total, 446 GB in Drive, 0 in Trash, pooled limit ~198 TB. Not near full.
+- The 446 GB is raw DJI footage uploaded Apr 28 to May 27 2026 (Avata/osmo/timelapse/Mini 4 folders, 4,398 files, up to 7.8 GB per clip). Nothing larger than 72 MB added since June.
+- Dispatcher evergreen copies (Tier 2) stopped Jun 11; fallback is off; READY empty since Sep 20. Not a storage driver.
+- The ~204 GB of non-Drive usage on the Sunny Skies account is Gmail or Google Photos (not queryable from here).
+- No Google storage warning email found in admin@yetigroove.com. Found an Apple "iCloud storage is full" notice (Sep 9) to darylyoung@hotmail.com.
 
 **What's live / deployed:**
-- Manitou-Beach origin/main 19bc131 (pushed from a clean clone; local main still carries the same change as 5e231a1 plus unrelated uncommitted work from another machine, left untouched)
-- YetiClone origin/main 9e54c3a -> Vercel auto-deploy
+- /root/SunnySkies/quota-check.js (read-only, reuses dispatcher creds).
 
 **Next up:**
-- Yeti: issue a new HeyGen API key, update the yeticlone Vercel env (rotate-env.py) and local .env.production. Then open /admin clients in YetiClone and confirm the client avatar group id e4bc6858... still matches what v3 returns (v3 docs show ag_ style ids; unverified whether legacy hex ids carried over).
-- After the new key: `curl -s https://api.heygen.com/v3/avatars/looks?ownership=private -H "x-api-key: $KEY"` and check each look's supported_api_engines includes avatar_v, since generate.js hardcodes that engine.
-- First Wednesday Holly run after this (Oct 7, 8pm ET) proves the v3 poller live; check the Actions log for "status: completed".
+- Yeti to say WHICH Google account shows the warning (admin@yetigroove.com, personal Gmail, or the Sunny Skies account on the phone). No credentials exist here for admin@yetigroove.com Drive.
+- If it is the Sunny Skies account on the phone: check Google Photos backup setting, likely iPhone photo backup after iCloud filled.
+- Fuel Gauge Monitor (daily Google Doc in "Ready to Post") reports urgency quote folder empty, investment folder inaccessible, SMS alert blocked by proxy.
 
 **Notes for other environments:**
-- Any v1/v2 HeyGen call anywhere dies Nov 1 2026. Legacy responses carry Deprecation: true + Sunset header + a warning.v3_endpoint field.
+- Cowork could check admin@yetigroove.com storage at one.google.com/storage or Workspace admin console.
