@@ -8416,3 +8416,10 @@ The spec written earlier that day said move the climax to the bank/FAA sequence.
 ## 2026-10-07 18:52 AEST
 
 - claude-seo 2.4.2 files + 20 agents installed on Mac by Yeti; Python runtime step failed (PATH python3 is Apple 3.9.6; Homebrew 3.11 + 3.13 installed but unlinked). Old 1.8.2 venv was already broken (pointed at a removed python3.14). Fix: CLAUDE_SEO_PYTHON=/opt/homebrew/opt/python@3.13/bin/python3.13 ~/.claude/skills/seo/scripts/claude-seo setup. VPS upgrade still pending.
+
+---
+
+## 2026-10-07 18:59 AEST
+
+- claude-seo 2.4.2 DONE on Mac + VPS (33 skills, 20 agents, runtime + Chromium ready on both). Mac needed two ~/.zshrc exports (CLAUDE_SEO_PYTHON -> Homebrew 3.13; CLAUDE_SEO_DATA_DIR -> ~/.claude/skills/seo because Codex's CLAUDE_PLUGIN_DATA hijacked the launcher). First drift baselines captured for onpointjd.com / and /estimate.
+- Security note: a grep of ~/.zshrc printed KREA_API_TOKEN and ANTHROPIC_API_KEY into this session's local log. Not written anywhere else. Rotate if session transcripts leave this Mac.
