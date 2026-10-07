@@ -8436,3 +8436,9 @@ The spec written earlier that day said move the climax to the bank/FAA sequence.
 ## 2026-10-07 19:15 AEST
 
 - Anthropic key rotated by Yeti (Oct 7 ~19:13): verified new key in all 3 local files, 5 Vercel projects redeployed READY, sites load. Old key (console row sk-ant-api03-3AD7) to be deleted Oct 8+ after its Last used stops moving. Krea: Yeti leaning to cancel billing + revoke token; then remove KREA_API_TOKEN from ~/.zshrc and decide on the krea-ai skill. Side finding: social.yetigroove.com has no DNS record.
+
+---
+
+## 2026-10-07 19:21 AEST
+
+- Krea: Yeti cancelled the subscription (account kept). KREA_API_TOKEN removed from ~/.zshrc, absent in a clean shell. Token itself still needs deleting in the Krea dashboard (board row updated).
