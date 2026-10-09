@@ -1,19 +1,17 @@
 
-## Session: 2026-10-07 21:30 ET
+## Session: 2026-10-09 ET
 **Environment:** Antigravity IDE
 **What was done:**
-- Overlaid the Oct 8-11 AI Holly take (Downloads/f8b55da55121ddfaf83a603b24f342d7.mp4) with holly-reel-kit: 9/9 events anchored, check passed, rendered
-- Fixed build.mjs crash that also killed tonight's automated overlay: Location "TBD" had zero venue variants (scanVenue TypeError)
-- Coded around flipped Cherry Creek titles ("Event | Venue") in build.mjs + fetch-assets.mjs, and folded "Gypsy Blue Vineyard"/"Vineyards"
-- Kept the auto-staged 203MB take as reel/holly-2026-10-08-raw-auto.mp4
+- Picked flyer 3 of the 6 "DLRLMC - Halloween" options (16:9, has date/time/place) and cropped it to a 1200x630 JPG: public/images/og/mens-club-hot-dog-roast-og.jpg
+- Created Notion Events row "Men's Club Halloween Hot Dog Roast" (id 3f48c729-eb59-8101-a355-dc89b75d01fd): Oct 31 2026, 6:00 PM – 8:00 PM, Sterling Market & Pizzeria, 860 Manitou Rd, Published, Cost "Free"
+- /mens-club Halloween card date: "Late October" -> "October 31, 2026 - 6 to 8 PM at Sterling's Market"
 
 **What's live / deployed:**
-- Nothing uploaded or sent. Local: holly-reel-kit/holly-2026-10-08-OVERLAID.mp4 + -OVERLAID-web.mp4
+- Manitou-Beach commit f4480f7 (pushed from a clean clone; Yeti's local checkout untouched and still behind origin)
+- https://manitoubeachmichigan.com/events/3f48c729-eb59-8101-a355-dc89b75d01fd with flyer as og:image
 
 **Next up:**
-- Yeti QA; decide Bike Night (description says season ended Sept, card shows 10 PM end time) - Task Board row filed
-- On approval: node run.mjs --video <file> --thursday 2026-10-08 --keep-transcript --upload --publish
-- reel-kit fixes still uncommitted (Push holly-reel-kit row)
+- Confirm the roast is actually free (Cost set to "Free" from the flyer's community framing, not stated on it)
 
 **Notes for other environments:**
-- Holly's Oct 8-11 reel has NOT gone to Holly; do not post it until Yeti approves
+- Share link for the club/Facebook: manitoubeachmichigan.com/events/3f48c729-eb59-8101-a355-dc89b75d01fd
