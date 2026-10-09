@@ -1,18 +1,21 @@
-## Session: Oct 9 2026 ET (continued)
+
+## Session: Oct 9 2026 ET (build)
 **Environment:** Antigravity IDE
 **What was done:**
-- OnPoint CRM: Yeti answered most of the open questions. They're recorded in section 15 of ~/Projects/on-point-jd/crm/CRM-DESIGN.md: Spanish crew; $715/sq; no accounting software; insurance about 1 in 20; 1099 day-rate crew moving to W-2; mixed phones; Modern Builders Supply; 50/50 payments by check, cash or Hearth; AccuLynx "too detailed"
-- New design rule at the top of the doc: the fewest taps wins, not the most features
-- FirstMate (1m8.ai: $7 roof reports + an all-in-one roofing CRM) saved to memory as a buy option
-- Board: CRM buy test row rewritten as an ease test with Devon (FirstMate Pro vs JobNimbus vs light stack); new rows for books + CPA before Jan 1 2027, 1099-to-W-2 switch, and Hearth setup
+- Yeti chose to BUILD the OnPoint CRM. Milestone 1, the snow visit log, is built in ~/Projects/onpoint-office (local commit 5749417, no remote)
+- Vite React PWA + local Supabase: schema with row-level security, an offline outbox, phone + PIN login, EN/ES
+- Crew and office screens built by Sonnet agents, reviewed and integrated by Opus
+- 30 tests pass; e2e passes on iPhone (WebKit) and Android (Chromium) engines, including offline capture and sync on reconnect
+- Fixed Safari IndexedDB Blob refusal and the WebP thumbnail issue (memory safari-pwa-offline-gotchas.md)
 
 **What's live / deployed:**
-- Nothing deployed. CRM-DESIGN.md still uncommitted
+- Nothing. Local only (Docker Supabase on the Mac)
 
 **Next up:**
-- $21 FirstMeasure accuracy test on 3 known roofs; then demos with Devon
-- Jay: pick a CPA, open QuickBooks Online in On Point's name
-- Yeti: Twilio number + A2P brand with the EIN
+- Yeti: create a Supabase project, run `npx supabase login` in ~/Projects/onpoint-office, OK a Vercel project at app.onpointjd.com
+- Real crew list (name, phone, role, truck, language) + prime contractor + direct accounts
+- Ask Jay: does the prime round billing to 15 minutes?
+- Push the repo to a PRIVATE GitHub repo when Yeti says
 
 **Notes for other environments:**
-- Another session was meant to get the 1m8.ai link; it's now in memory (firstmate-1m8-roofing-software.md)
+- Local Docker Supabase is running on the Mac; `npx supabase stop` in ~/Projects/onpoint-office frees about 2 GB of RAM
