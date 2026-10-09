@@ -1,13 +1,18 @@
-## Session: 2026-10-09 ET (addendum)
+## Session: 2026-10-09 ET
 **Environment:** Antigravity IDE
 **What was done:**
-- Committed the OnPoint Solar API test tools locally: 9e69072 "OnPoint: Solar API roof measurement test tools" (tools/solar_validate.mjs, tools/solar_view.py, .gitignore adds solar-test/). Estimate parity tests 8/8 pass, no images to convert, no keys in the commit.
+- OnPoint JD Twilio A2P prep: found the new number +1 567-708-7208 sits in the Yeti Groove Media LLC main Twilio account (no Messaging Service, no inbound webhook)
+- Decided route: Yeti Groove = ISV; OnPoint gets its own Secondary Customer Profile + Low-Volume Standard brand + Low Volume Mixed campaign, created by API (Console cannot create Secondary profiles)
+- Site A2P audit: /terms was a 404, opt-in box did not name the brand or link policies. Fixed: "OnPoint JD can text me about this request" + Privacy Policy and Terms links under all 18 boxes, new /terms page with SMS terms, consent version sms-v2-2026-10-09, tests pass
+- Paste-ready brand + campaign answers in on-point-jd/A2P-REGISTRATION.md
 
 **What's live / deployed:**
-- Nothing pushed. ~/Projects/on-point-jd master is 1 commit ahead of origin.
+- Nothing new live. Commit aa62d13 on master, not pushed (push = prod deploy)
 
 **Next up:**
-- Push together with the CRM session's work (crm/ is still untracked from that session, left untouched). Push to master = prod deploy of onpointjd.com.
+- Yeti: say "deploy"; send legal name exactly as on the CP 575 + address on the letter + Jay's title; say "go" on registration
+- Claude: create profile/brand/Messaging Service/campaign from the VPS; EIN typed by Yeti into a hidden prompt
+- After approval: inbound reply forwarding, TWILIO_* env on onpointjd, phone test
 
 **Notes for other environments:**
-- Whoever pushes the CRM work: 9e69072 goes along with it. That is intended.
+- Do not put 567-708-7208 on Manitou's campaign
