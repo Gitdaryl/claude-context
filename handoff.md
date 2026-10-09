@@ -1,17 +1,17 @@
-
-## Session (cont.): Oct 9 2026, ~12:30 ET
+## Session: Oct 9 2026 ET
 **Environment:** Antigravity IDE
 **What was done:**
-- OnPoint review cards trimmed to Jay + Devon only (crew cards removed, pushed).
-- YetiGroove got its own: phone-case review sticker -> www.yetigroove.com/review/tap, wallet contact card -> /card/tap (save-contact page with reel + yeti.vcf), counts at the top of /admin. Print files + ordering/chip steps in Yeti-Groove/print (kept off the site by .vercelignore).
+- Designed the OnPoint JD CRM ("OnPoint Office") v0: ~/Projects/on-point-jd/crm/CRM-DESIGN.md (build vs buy with real prices, per-person views, job spine, 14 modules, data model, roles/RLS, money boundary with QuickBooks, branded paperwork set, Ohio contract items for the attorney, runtime model per AI task, build-team model routing, stack, 6 phases, 9 questions)
+- Board: marked Done the /desk lead pipeline row and the SMS consent checkbox row (both shipped in 77d7c11, consent tests 10/10) and the EIN row (Yeti has it). Moved "lead alerts live" to Today with the exact Twilio A2P steps. Added a software-clause note to the "reconcile the agreement" row. New rows: CRM Phase 0 (Waiting on Devon) and CRM Phase 1 build (Backlog)
 
 **What's live / deployed:**
-- yetigroove.com /review, /review/tap, /review/qr, /card, /card/tap, /card/qr, /yeti.vcf (commit f765d3c, verified live).
+- Nothing deployed. crm/CRM-DESIGN.md is uncommitted in ~/Projects/on-point-jd
 
 **Next up:**
-- Yeti: order the YG contact card + 10 black on-metal stickers, write chips, test taps (verifies the storage write, /admin box and contact import on a real phone).
-- Yeti: decide whether the YG card and contact file carry a phone number (currently email only).
-- Add "a Google review means a lot to the studio: yetigroove.com/review" to every delivery message.
+- Yeti: buy OnPoint's Twilio number and register the A2P brand with the EIN (steps on the lead alerts row)
+- Devon's wishlist + answers to the 9 questions in section 14, then map the wishlist onto the module/phase table
+- Terms amendment: software ownership, data export, running costs, care fee (attorney)
 
 **Notes for other environments:**
-- Yeti-Groove has an uncommitted .gitignore change (.env*.local) from another session; it was left alone.
+- OnPoint is Ohio-only, so contract templates follow Ohio law (Home Solicitation Sales Act 3-day cancel, ORC 4722); HB 769 roofing bill status unconfirmed
+- Don't send Jay/Devon the design doc; show them a working screen
