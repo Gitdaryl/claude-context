@@ -1,18 +1,21 @@
-## Session: 2026-10-09 ET (evening)
+## Session: Oct 9 2026, evening ET (resumed from Oct 7)
 **Environment:** Antigravity IDE
 **What was done:**
-- Deployed the OnPoint A2P site pass (brand-named SMS box, Privacy + Terms links on all forms, /terms page); verified live
-- Registered OnPoint JD's A2P brand by API from the VPS as an ISV client under Yeti Groove Media LLC: secondary profile + A2P trust product passed Twilio's compliance evaluation and are in review; Low-Volume Standard brand submitted
-- Script /root/onpoint-a2p/register.py (brand | status | campaign), state.json holds SIDs only, never the EIN
+- OnPoint JD fix workflow (8 agents) built the Oct 7 review fixes: optional SMS consent box + consent record + gated texts, IndexNow on deploy, crawlable estimator numbers + cost FAQs + /roof-replacement-cost, /desk lead pipeline with daily follow-up digest, phone menu + phone hero + owner photo, build-time photo detection. Another session committed and deployed it Oct 8 as 77d7c11; verified live Oct 9 (IndexNow Action logged "accepted 18 URLs: HTTP 200").
+- Pricing research (Ohio law, Toledo price benchmarks, estimator practice, behavioral evidence): don't pad the online rate; $715 (Yeti's Oct 9 pick) is top fifth of Toledo published prices and fine as the real full-system price; never present the quote as "under the website".
+- Found and verified: Ohio Home Solicitation Sales Act 3-day cancel notice applies to OnPoint's kitchen-table contracts (Cetorelli v. Duell Action Builders, 2026-Ohio-2811, $123k affirmed).
+- Commit 88a10d9 (LOCAL, not pushed): $1,000 offer conditions under every offer line (card, banner, claim sheet); "free" tarp wording becomes "credited". Rebuilt + stamped, 41/41 tests pass.
+- Board: closed GEO pass 2 + phone menu rows with evidence; offer decision row raised to High with the Ohio "free offer" rule; filed 3 rows (HSSA contract notice, Yeti env vars + deploy, estimator tiers). Memory: ohio-home-solicitation-3-day-cancel; MEMORY.md index trimmed under its limit again.
 
 **What's live / deployed:**
-- onpointjd.com: commits aa62d13 + 7bcab7b
-- Twilio: brand BN0e51f46163dcefaafba5eb19803f0c86 (TCR BID283M) PENDING; Messaging Service MG2d41656123110ba094806fd4702f19e1 (no number yet)
+- Nothing deployed by this session. 88a10d9 waits for Yeti's "deploy" (push to master = prod).
 
 **Next up:**
-- When the brand is APPROVED: `cd /root/onpoint-a2p && python3 register.py campaign` (submits the campaign, adds +15677087208)
-- A */15 self-removing cron (auto-campaign.sh) was installed to do that automatically; its verification was blocked as unapproved persistence, Yeti decides keep or remove
-- After campaign approval: inbound reply forwarding, TWILIO_* env on onpointjd, /api/health twilio:true, phone test
+- Yeti: vercel env add CRON_SECRET production; vercel env update LEAD_EMAIL_TO production (add desmonddd833@gmail.com, plus Linda once her address is known); then deploy 88a10d9.
+- Get Jay's contract form; add the 3-day cancel notice; Ohio counsel review (contract + offer terms).
+- Decide the wheel: dated window (slow season) or fixed "every roof includes" bundle; edit prize wording at /desk.
+- Facebook: two different pages (OnPointJD = Curtice page now linked site-wide; old id 100091420968036 = Toledo page with the recommendations). Pick one, merge, relink.
 
 **Notes for other environments:**
-- Never put 567-708-7208 on Manitou's campaign
+- crm/ in the OnPoint repo is another session's untracked work: commit by pathspec, never git add -A.
+- Deploy order for OnPoint: build_pages.py, then stamp_assets.py, then commit (a build strips the ?v= stamps).
