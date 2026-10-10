@@ -1,17 +1,17 @@
 
-## Session: 2026-10-10 ET
+## Session: Oct 10 2026, late evening ET (continued)
 **Environment:** Antigravity IDE
 **What was done:**
-- Researched Michelle Construction (michelleconstruction.com) as a growth-partner prospect: co-owners Chuck Schmalzried + Micky Jordan, Sylvania OH, builds OH + MI incl. Devils Lake; site frozen 2017-2020, IG dormant since Aug 2023, ~4 Google reviews
-- Wrote a growth-engineer approach: discovery first (leads vs capacity), portfolio reset, previz as the closer, build-journal client updates, Holly/OnPoint cross-referrals, floor + per-signed-build fee structure
-- Filed Master Task Board row (Backlog) + memory michelle-construction-prospect.md
+- OnPoint Office: review checklist on every finished job + customer card (one follow-up email 7 days after the thank-you, then no more; 3 stars or fewer opens a call-and-fix concern in Needs attention). Auto pull-in waits for Google Business Profile API approval (Places API only gives 5 reviews by relevance; verified in Google's docs).
+- Job photos built: crew capture by stage (Spanish, offline), office sharing, private customer link (EXIF-free 1024 px copies only), insurance photo report PDF, Google pack gated on the customer's yes at the final walk.
+- Commit e61021b (local). 484 unit/DB tests, 8 browser flows on Chromium and WebKit.
 
 **What's live / deployed:**
-- Nothing deployed
+- Nothing new.
 
 **Next up:**
-- Daryl: discovery conversation with the owners (questions in the IDE session)
-- Confirm whether the site's "Mike Clark" testimonial is South Shore Marine's Mike Clark
+- Apply for GBP API access around Dec 1 (reviews, replies, posts).
+- Yeti/Jay: 4 photo decisions (board row).
 
 **Notes for other environments:**
-- Treat Michelle Construction as a prospect, not a client. Do not send them a plan document.
+- Review asks are email only now (text consent does not cover them); the old "review text after each job" idea is dropped unless the consent wording and A2P campaign change.
