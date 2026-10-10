@@ -1,21 +1,18 @@
 
-## Session: Oct 9 2026 ET (build)
+## Session: Oct 9 2026 ET (invoices)
 **Environment:** Antigravity IDE
 **What was done:**
-- Yeti chose to BUILD the OnPoint CRM. Milestone 1, the snow visit log, is built in ~/Projects/onpoint-office (local commit 5749417, no remote)
-- Vite React PWA + local Supabase: schema with row-level security, an offline outbox, phone + PIN login, EN/ES
-- Crew and office screens built by Sonnet agents, reviewed and integrated by Opus
-- 30 tests pass; e2e passes on iPhone (WebKit) and Android (Chromium) engines, including offline capture and sync on reconnect
-- Fixed Safari IndexedDB Blob refusal and the WebP thumbnail issue (memory safari-pwa-offline-gotchas.md)
+- OnPoint Office: structured addresses, formatted phones, directions links (Apple Maps on iPhone, Google elsewhere), tap-to-call
+- Pricing dropdown (hourly per truck, per push/salting, per storm, seasonal, monthly, quoted), billing frequency, terms, payment method
+- Invoices tab: Ready to bill, drafts, finalize INV-0001, printable branded invoice with proof of visits, payments (check/cash/Venmo/Zelle/card/ACH), void
+- Commits 13da752, 81acaf1, 1a7cc17 in ~/Projects/onpoint-office (local, no remote). 57 tests + snow and invoice browser flows pass on iPhone/Android engines
 
 **What's live / deployed:**
-- Nothing. Local only (Docker Supabase on the Mac)
+- Nothing. Local Docker Supabase + vite preview on the Mac
 
 **Next up:**
-- Yeti: create a Supabase project, run `npx supabase login` in ~/Projects/onpoint-office, OK a Vercel project at app.onpointjd.com
-- Real crew list (name, phone, role, truck, language) + prime contractor + direct accounts
-- Ask Jay: does the prime round billing to 15 minutes?
-- Push the repo to a PRIVATE GitHub repo when Yeti says
+- Customer proof link + email invoices (Resend), crew pay sheet, notifications (texts once Twilio A2P is approved)
+- Deploy: Yeti creates a Supabase project + `npx supabase login`, OKs a Vercel project at app.onpointjd.com
 
 **Notes for other environments:**
-- Local Docker Supabase is running on the Mac; `npx supabase stop` in ~/Projects/onpoint-office frees about 2 GB of RAM
+- Invoices never run payroll or the books: QuickBooks stays the ledger, a payroll service handles W-2 taxes
