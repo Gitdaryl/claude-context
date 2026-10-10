@@ -1,17 +1,18 @@
-
-## Session: Oct 10 2026, late evening ET (continued)
+## Session: 2026-10-10 ET (On Point reel, three engines)
 **Environment:** Antigravity IDE
 **What was done:**
-- OnPoint Office: review checklist on every finished job + customer card (one follow-up email 7 days after the thank-you, then no more; 3 stars or fewer opens a call-and-fix concern in Needs attention). Auto pull-in waits for Google Business Profile API approval (Places API only gives 5 reviews by relevance; verified in Google's docs).
-- Job photos built: crew capture by stage (Spanish, offline), office sharing, private customer link (EXIF-free 1024 px copies only), insurance photo report PDF, Google pack gated on the customer's yes at the final walk.
-- Commit e61021b (local). 484 unit/DB tests, 8 browser flows on Chromium and WebKit.
+- Rebuilt the On Point "roofs don't leak from snow" ice-dam ad two more ways, same 21s timing and end card:
+  - Blender 4.5 3D cutaway, scripted in Python (social/video/winter-blender/build_scene.py), rendered with Eevee Next.
+  - Higgsfield: GPT Image 2 keyframes + Kling 3.0 pro push-in (start/end frames), with HyperFrames text overlays (social/video/winter-ai/edit). 35.5 credits.
+- Made a 3-way side-by-side: social/video/onpoint-winter-3way-compare.mp4.
+- Fixed the HyperFrames cut's house geometry (walls now meet the roof).
 
 **What's live / deployed:**
-- Nothing new.
+- Nothing posted. Three finished renders + comparison on disk.
 
 **Next up:**
-- Apply for GBP API access around Dec 1 (reviews, replies, posts).
-- Yeti/Jay: 4 photo decisions (board row).
+- Yeti picks one, shows Jay/Devon, posts (board row in Today).
+- Meta Pixel before any paid boost.
 
 **Notes for other environments:**
-- Review asks are email only now (text consent does not cover them); the old "review text after each job" idea is dropped unless the consent wording and A2P campaign change.
+- Higgsfield balance now 1295.86 credits.
