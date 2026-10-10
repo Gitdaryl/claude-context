@@ -1,18 +1,17 @@
 
-## Session: Oct 9 2026 ET (invoices)
+## Session: Oct 9 2026 ET (storm night + costs)
 **Environment:** Antigravity IDE
 **What was done:**
-- OnPoint Office: structured addresses, formatted phones, directions links (Apple Maps on iPhone, Google elsewhere), tap-to-call
-- Pricing dropdown (hourly per truck, per push/salting, per storm, seasonal, monthly, quoted), billing frequency, terms, payment method
-- Invoices tab: Ready to bill, drafts, finalize INV-0001, printable branded invoice with proof of visits, payments (check/cash/Venmo/Zelle/card/ACH), void
-- Commits 13da752, 81acaf1, 1a7cc17 in ~/Projects/onpoint-office (local, no remote). 57 tests + snow and invoice browser flows pass on iPhone/Android engines
+- OnPoint Office milestone 3 (commit bdc7638, local): shared lot status for every truck, on-page "Start anyway" before a second truck starts a lot, My route, owner storm board, routes (all-or-nothing save), subs see only their own lots
+- Salt per lot and visit, receipts, Costs tab (margins by customer/lot/storm, pay sheet with 40-hour flag, people & pay, CPA printout), shifts with the odometer (miles)
+- Fixed the stale cached app with an update banner (commit c551c31)
+- 83 tests; storm-night, snow and invoice browser flows pass on Chromium + WebKit
 
 **What's live / deployed:**
-- Nothing. Local Docker Supabase + vite preview on the Mac
+- Nothing. Local only
 
 **Next up:**
-- Customer proof link + email invoices (Resend), crew pay sheet, notifications (texts once Twilio A2P is approved)
-- Deploy: Yeti creates a Supabase project + `npx supabase login`, OKs a Vercel project at app.onpointjd.com
-
-**Notes for other environments:**
-- Invoices never run payroll or the books: QuickBooks stays the ledger, a payroll service handles W-2 taxes
+- Deploy: Supabase project + `npx supabase login` (Yeti), Vercel app.onpointjd.com
+- Jay opens QuickBooks in On Point's name and invites Yeti
+- Ask Jay: bulk salt or bags, what subs are paid
+- Later: snow watch weather, sub COI/W-9, SMS after A2P
