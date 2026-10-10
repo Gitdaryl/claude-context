@@ -1,14 +1,20 @@
-## Session: 2026-10-10 ET (addendum)
+## Session: 2026-10-10 ET (v2 goes live)
 **Environment:** Antigravity IDE
 **What was done:**
-- Closed 21 stale "Hyperframes upgrade available" rows on the Master Task Board (Done, superseded by the Business Spotlight v2 row).
-- Paused two cloud routines (Yeti approved): "Hyperframes Version Check" (trig_01K4TowsQKNbAkgw1zaL3ted, weekly board rows from a hardcoded 0.5.6 pin) and "Hyperframes Daily Release Monitor" (trig_01QgrPREjciGGVDz8ha15RN7, 25+ "HF Update" pages).
+- Yeti approved the Holly v2 renders and chose to replace the classic edit starting Wed Oct 14.
+- Hardened v2 for unattended weeks: approved-script text on screen (whisper timings), no-hook path, balanced hook wraps, stamp text fix, caption chunking, music bed extends for long takes (up to 135s tested), chips re-copied weekly, carve vendored.
+- Tested v2 on Sep 3, Sep 24, Oct 1 and Oct 8 takes (73-135s): all pass hyperframes check.
+- Wired v2 into holly-reel-kit/reel/run.mjs as step 11 with the classic edit as automatic fallback. Rehearsed the full production path in a scratch copy: v2 delivered; forced v2 crash delivered classic and produced the fallback note.
+- Verified Lyria music terms: Gemini API ToS, Google claims no ownership, no commercial restriction stated.
 
 **What's live / deployed:**
-- Both routines enabled:false (reversible by re-enabling). No code deployed.
+- reel/run.mjs change is on disk on the Mac Studio, which is what the self-hosted runner executes Wednesday. Uncommitted (repo has no remote).
+- v2/ folder is untracked in holly-reel-kit.
 
 **Next up:**
-- Unchanged from the main entry: Yeti watches the Holly v2 before/after, installs HeyGen CLI + oauth login.
+- Wed Oct 14 8pm ET: first unattended v2 reel. Board row in Waiting. Kill switch: mv ~/Projects/holly-reel-kit/v2/make.sh ~/Projects/holly-reel-kit/v2/make.sh.off
+- HeyGen CLI install + oauth login for licensed music (Today row).
+- Business Spotlight v2 and business media gap (Backlog).
 
 **Notes for other environments:**
-- The old "HF Update" pages in Notion were left in place; archive them if they clutter search.
+- If Yeti asks Cowork/Mobile why the Holly reel looks different from Oct 15 on: it is the v2 edit (hook, camera cuts, music, SFX).
