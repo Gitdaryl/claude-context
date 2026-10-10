@@ -1,19 +1,20 @@
-## Session: Oct 9 2026 ET (OnPoint go-live prep)
+
+## Session: 2026-10-10 ET
 **Environment:** Antigravity IDE
 **What was done:**
-- Supabase live project "onpoint" (ref ufddiuyxvnbtbuklfjuo, East US Ohio): 7 migrations, explicit API grants, sign-ups blocked, photo/receipt storage private, On Point JD org, Yeti's office account; mistaken Montreal project deleted
-- Twilio A2P approved for On Point JD LLC; (567) 708-7208 in messaging service "OnPoint JD (A2P)"; webhook -> https://onpointjd.com/api/sms-inbound
-- onpointjd.com: reply forwarder (/api/sms-inbound, signature-checked, commit 61deabf) live; TWILIO_* + CRON_SECRET set; redeployed; /api/health all green (twilio:true, cronSecret:true)
-- OnPoint Office app (~/Projects/onpoint-office, local commits through f96b8f4): storm night, invoices, costs, shifts, update banner; 84 tests + 3 browser flows
+- OnPoint JD stationery system: ~/Projects/on-point-jd/print/stationery (lib.mjs, build.mjs, docs/*.mjs, README). 22 print-ready PDFs + proofs in print/out/stationery
+- Contracts (roofing, siding, windows, gutters, power washing): Jay's clauses verbatim + Ohio ORC 1345.23 cancel statement + Notice of Cancellation x2, statute text verified from codes.ohio.gov
+- Estimate, change order, inspection report, EN/ES job sheet, storm tarp authorization (handwritten emergency statement page), completion walkthrough, invoice, receipt, warranty certificate, snow agreement, letterhead, envelope, business cards (Jay, Devon)
+- Glen Spetz invoice 1001 (paid in full, cash, $16,700) + warranty certificate W-1001 in print/out/jobs (gitignored)
+- print/build.mjs: finds the current headless Chrome (old path was gone)
 
 **What's live / deployed:**
-- onpointjd.com texting (lead alerts, customer confirmation for opted-in leads, reply forwarding); 9 AM follow-up digest email now armed
-- Supabase project live but the app itself is NOT deployed yet
+- Nothing deployed. Commit f6f0208 is local on master, not pushed (a push redeploys onpointjd.com; site unchanged)
 
 **Next up:**
-- Tomorrow with Jay + Devon: text (567) 708-7208 (forward test) and a site lead with Text me ticked; Claude checks Vercel logs
-- Deploy the app to app.onpointjd.com (needs Yeti's OK); add Jay (owner), Devon (sales), Linda (office), crew via npm run add-member:live
-- Ask Jay: bulk salt vs bags, sub pay; Jay opens QuickBooks in On Point's name
+- Jay/CPA: IRS Form 8300 for the Spetz cash ($16,700), about Oct 12 if final paid Sep 27
+- Devon: confirm Spetz spelling/email/ZIP, send invoice + certificate, register Atlas Signature Select by ~Nov 26
+- Send contract set + tarp form to Ohio counsel; Jay fills street address, license/registration, insurer, warranty years, Devon title/email
 
 **Notes for other environments:**
-- Keys for the app are in ~/.config/onpoint-office/ on the Mac only (chmod 600)
+- Board rows added/updated under On Point JD (Form 8300, Spetz invoice, contract blanks; 3-day row now Waiting on counsel)
