@@ -9457,3 +9457,9 @@ The spec written earlier that day said move the climax to the bank/FAA sequence.
 
 **Notes for other environments:**
 - Both `notion` and `notion-business` MCP connectors return 401 invalid token; the claude.ai Notion connector works. Fix the tokens or drop those two.
+
+---
+
+## 2026-10-11 19:30 AEST
+
+- UPDATE later Oct 11: Yeti's live phone test PASSED. Root cause of the first failure: the three pasted credentials still carried the `PASTE_` prefix (Twilio 20003 invalid username, Resend invalid key). Fixed in the Vercel dashboard, redeployed, both messages re-sent from Needs attention and showed "delivered". Email landed in Hotmail junk (new sender, expected). Test customer = Yeti himself (517-260-5907, darylyoung+test1@hotmail.com): archive it before Jay sees the app.
