@@ -1,17 +1,14 @@
-## Session: 2026-10-11 (ET), afternoon
+## Session: 2026-10-11 (ET), evening follow-up
 **Environment:** Antigravity IDE
 **What was done:**
-- OnPoint JD: emergency tarping night loop (morning), then the full diorama set: nine service cards on the home page, six service-page heroes (roofing, gutters, siding, windows, power washing, commercial), the snow hero, and the home commercial block all run matching loops of ONE house, one job each. Nano Banana Pro edits off one daytime base, Kling 3.0 pro locked camera, crossfade loops, lazy-loaded cards, posters under reduced motion, phones keep the icon list.
-- Judged by measurement (camera-lock border std, moving %, seam wrap step, heat maps, frame strips). Rejected and re-rendered: 5 takes for Kling spawning 3D cloud puffs from "clouds drift", 2 siding takes for slow zoom.
-- Scripts: ~/.claude/tools/stormloop.py, ~/.claude/tools/cardloop.py. Memory: storm-loop-lightning-seam (corrected: Nano Banana reference edits work; pick the /hf_ output URL), kling-containment-prompt-rule (cloud rule).
+- Yeti reviewed the OnPoint diorama set: "looks awesome". Flagged the siding loop (scaffold worker on the gable read as roof hammering). Redone: new still with three crew at wall height fitting a long grey panel under the old wood, driveway and garage kept; Kling take verified (camera locked, motion only at the crew); card and page encodes swapped.
 
 **What's live / deployed:**
-- onpointjd.com commits f4a1314 (storm loop), 76e391a (nine cards) and 41b5832 (heroes, snow hero, home commercial), all pushed from a clean worktree on origin/master and verified headlessly at desktop, tablet and phone widths.
+- onpointjd.com commit b8cd465 (siding card + /siding hero), verified serving.
 
 **Next up:**
-- Yeti reviews the loops on the live site (home cards, /roofing hero, /snow hero, home commercial). Anything he dislikes is a 2-credit still edit + 7.5-credit Kling take to swap.
-- Local on-point-jd master divergence is OWNED by another IDE session (board row "decide when to ship the local-only commits", In Progress). Origin moved 3 commits today; that session must rebase onto the new tip.
+- Any further card or hero swap: 2-credit still edit + 7.5-credit Kling take + ~/.claude/tools/cardloop.py. Sources in ~/Desktop/onpoint-diorama-set (card_siding_v2.png + take_siding_v2.mp4 added).
+- Local on-point-jd master still owned by the other IDE session; origin tip is now b8cd465 (4 commits ahead of where that session started).
 
 **Notes for other environments:**
-- Do not pass concurrent Higgsfield CLI generate calls; upload first, then generate by id with a retry loop.
-- Never write "clouds drift" in a Kling prompt on a plain-background diorama.
+- Board row "Yeti reviews the diorama loops" updated with the siding outcome.
