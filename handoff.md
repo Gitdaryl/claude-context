@@ -1,20 +1,18 @@
-
-## Session: Oct 11 2026, after midnight ET (same session, second wave)
+## Session: 2026-10-11 (ET)
 **Environment:** Antigravity IDE
 **What was done:**
-- Roof crew home (members.work: roof, snow or both): today's job with arrival time, this week, punch owed; Roof | Snow switch for people on both; office Crew view has "See it as" one roofer, read only; People & pay "Works on"
-- Text a group from Calendar and Storms (owner, office): crews, a day's crews, picked people, customers on a day (schedule changes only); one tracked message per person, resend failures; crew see the texts in-app
-- Auto/Light/Dark theme toggle (top bar and sign-in), dark contrast fixes, print always black on white
-- Measure screen no longer scrolls sideways on phones
-- Tutorial video series filed as a Backlog row; answered which tasks must be done before production
-- Commits 5591823 + 9ae9b7c in ~/Projects/onpoint-office; 739 tests, 9 browser flows on Chromium and WebKit; demo rebuilt
+- OnPoint JD emergency tarping section: built a 4s seamless night diorama loop (crew tarping a storm-damaged roof, work light, rain, lightning on the loop seam). Still: Nano Banana Pro on Higgsfield, text-only prompt. Motion: Kling 3.0 pro, start image only, one take passed. Loop: crossfade + lightning flash, measured seamless (wrap step below a normal frame step).
+- Wired into the home page `#storm` figure and the `/storm-damage` Tonight block as a muted autoplay loop with a WebP poster; reduced-motion visitors get the poster. Caption no longer claims "a real job" under the illustration; the real tarp photo stays in the storm page job section.
+- `tools/stamp_assets.py` now cache-busts `.mp4`. New reusable script `~/.claude/tools/stormloop.py`.
+- Verified live headlessly (desktop + 390px, both pages, video playing, no console errors).
 
 **What's live / deployed:**
-- Nothing. onpoint-office has no remote; on-point-jd still 5 local commits unpushed
+- onpointjd.com commit f4a1314 on master (Vercel auto-deploy).
 
 **Next up:**
-- Board row "5 small decisions" (Yeti: check the iPhone status bar in Light mode on a real phone)
-- Production order: software clause, deploy + Supabase Pro + real people, then Jay's contract paperwork + attorney, then Twilio campaign + website push. Snow side can launch first
+- DECISION for Yeti: on-point-jd local master has 8 commits origin never got (stationery set, SMS store in office app, STOP/START forwarding, job-done thank-you email, warranty expiry date) and origin has re-created versions of 2 of them under different hashes. I pushed the storm loop from a clean worktree on origin/master and did not touch local. Local master is now behind/diverged. Pick: rebase local onto origin (replays the 8, expect conflicts in build_pages.py + html stamps) or cherry-pick the stationery/SMS commits one at a time. Nothing in the api/ changes is live until this is resolved.
+- Board row "decide when to ship the local-only commits" updated with the new counts (ahead 9 / behind 3) and the rebase notes. Temporary worktree already removed.
 
 **Notes for other environments:**
-- Tutorial videos must be recorded from sample data (npm run db:reset), never the demo, which holds real customers' contracts
+- Lightning-flash seam technique is in memory (storm-loop-lightning-seam). Do not pass a style-reference image to Nano Banana Pro for diorama work; it copies the scene wholesale.
+- webp-sweep crawls on-point-jd/social/video (1.9GB), so commit-push Step 0 takes minutes there.
