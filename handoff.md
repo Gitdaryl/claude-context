@@ -1,20 +1,18 @@
-## Session: Oct 10 2026, late night ET
+
+## Session: Oct 11 2026 ~12:30am ET
 **Environment:** Antigravity IDE
 **What was done:**
-- OnPoint Office ops wave (commit 2495ba1, ~/Projects/onpoint-office, local only): "To send today" queue on Today (every customer and crew message due, reviewed and tapped, nothing automatic), 18 new templates, 7:30 am digest email (Vercel cron)
-- Customer texts now saved on the customer's job (/api/hooks/inbound); a cancel-like text inside the 3-day window is flagged "possible cancellation" and blocks scheduling until the owner or office decides
-- Calendar tab (double-booking, reschedule with reason, dumpster orders with drop-off and pickup), crew daily check-in, problem and decking photos with sheet counts, punch work after signing, PM hand-off, per-job cost card, private job folder
-- Integration fixed 2 company-leak bugs (digest and incoming texts now belong to one company: APP_ORG, or the only one) and 7 smaller gaps
-- Verified: 681 unit and DB tests, tsc, oxlint 0 errors, 8 browser flows on Chromium and WebKit; demo rebuilt with `npm run demo`
-- Website commit 459c548 in ~/Projects/on-point-jd (local): sms-inbound posts every customer text to the app and names the customer and job in the staff forward
+- OnPoint JD: Bleeker before/after (Desktop/onpoint assets) added to the home page. The two drone shots differed in size and angle; the before was SIFT-aligned onto the after and both cropped to a shared 4:3 (1200x900 WebP, named tarp-reroof-* so no street name is in a public URL)
+- Home "Recent work" is now 3 sliders, newest first (tarp to new roof, Milford, flat roof); the tarp photo moved beside the "Roof open at 3am?" headline in the storm section
+- Word-of-mouth copy: "our three most recent jobs" became "three of our recent jobs, including the two-story re-roof" (Bleeker is newer and not on the pin map)
+- Fixed: commit 8875f0c hand-edited the generated terms.html, so any build reverted the tablet/phone opt-in wording; ported into build_pages.py terms()
 
 **What's live / deployed:**
-- Nothing. onpoint-office has no remote. on-point-jd is 5 commits ahead and NOT pushed (a push to master is a live website deploy)
+- onpointjd.com home: ff9d3f3 + d1d8239 on origin/master, Vercel READY, screenshot-verified desktop + phone
 
 **Next up:**
-- Jay answers 7 questions (Master Task Board row "Jay answers 7 questions from the ops wave")
-- Yeti: deploy the app, set CRON_SECRET and DIGEST_TO, decide REPLY_TO; THEN push on-point-jd
-- Still open: Glen Form 8300 (due Oct 12), Devon's REVIEW.md answers, Twilio campaign update, attorney questions, Devon's drone (Part 107)
+- ~/Projects/on-point-jd local master is ahead 8 / behind 2: 5 unpushed commits from other Oct 10 sessions (stationery, warranty cert, thank-you email, SMS forward to office app) + the terms port. Shipped photos from a clean clone to avoid deploying them. Yeti decides: git pull --rebase && git push (check OFFICE_OPTOUT_URL + OPTOUT_SECRET in Vercel first)
+- Town + month + customer OK for the 3 before/after jobs turns them into /projects pages (engine already in tools/projects)
 
 **Notes for other environments:**
-- Every customer message in the CRM is a draft a person taps to send. Do not describe it to Jay or Devon as automatic texting
+- New before/after pairs: drop the photos in Desktop/onpoint assets and ask the IDE. The two shots rarely line up and must be aligned before going in a slider.
