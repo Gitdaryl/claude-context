@@ -1,18 +1,17 @@
-## Session: 2026-10-10 ET (On Point Airbnb-style spot)
+## Session: 2026-10-10 ET (HeyGen host spot)
 **Environment:** Antigravity IDE
 **What was done:**
-- Analyzed the Airbnb "K-pop Style" ad (continuous icon-to-world flight, 70-word escalating VO, ends on app UI + logo).
-- Built the On Point version: 5 Higgsfield keyframes from one clay house icon, 4 chained Kling 3.0 transitions, ElevenLabs "Chris" VO, labels synced to "Roofing. Snow. Storm.", real onpointjd.com on a phone with a tap on "Book a free inspection", cream end card. Every line sourced from the live site.
-- ElevenLabs: new restricted key "Claude Code Video" stored in ~/.claude/.env (old "Claude code" key was never saved anywhere).
-- Installed HeyGen CLI v0.10.0 (~/.local/bin). HeyGen host script drafted (host, not a testimonial).
+- Walked Yeti through HeyGen CLI OAuth login (Pro plan, 2,000 premium credits).
+- Shortlisted 13 HeyGen stock avatars (vertical, home settings); Yeti picked Blair (kitchen, digital twin).
+- Rendered Blair (Avatar V, motion prompt, default voice): 23.1s for 20 credits.
+- Edited the On Point ice-dam tip spot: hook stickers + stain polaroid, "IT MIGHT BE ICE." stamp, Higgsfield ice-dam B-roll with steps, On Point lower third, captions, end card. -14.5 LUFS.
 
 **What's live / deployed:**
-- Nothing posted. Render: on-point-jd/social/video/onpoint-airbnb-style/edit/renders/onpoint-airbnb-style-chris-v1.mp4
+- Nothing posted. Render: on-point-jd/social/video/onpoint-heygen-host/edit/renders/onpoint-heygen-blair-v1.mp4
 
 **Next up:**
-- Yeti: review the spot; say if Eric's voice should replace Chris.
-- Yeti: `heygen auth login --oauth` so the HeyGen host spot can be built.
-- Meta: Devon flips Daryl to Full control on the On Point page, then business portfolio + system user (Sunny Skies pattern).
+- Yeti reviews the three On Point pieces (ice-dam reel, Airbnb-style spot, Blair tip) and picks what to post.
+- Meta connection once Devon grants Full control.
 
 **Notes for other environments:**
-- Higgsfield balance 1225.86 credits after this session's video work.
+- HeyGen CLI now authenticated on the Mac Studio as admin@yetigroove.com (subscription credits). Holly's API key is unaffected.
