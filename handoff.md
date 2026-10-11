@@ -1,18 +1,17 @@
-
-## Session: Oct 11 2026, early morning ET (same session, third wave)
+## Session: 2026-10-11 (ET), afternoon
 **Environment:** Antigravity IDE
 **What was done:**
-- Team tab in OnPoint Office: owner/office add people (PIN shown once, never texted), change, reset PIN, turn off/on; project manager = Office or Sales picked on the job
-- Database guard: only the owner manages owner/office people, nobody changes their own role, last owner stays (closed a gap where any office login could make itself owner)
-- Spanish for typed crew texts and the job's crew note: Claude Haiku 4.5 translates from the English, "Check it" shows it back in English, stale Spanish blocked
-- Commit 9510246 (~/Projects/onpoint-office); 795 tests, 9 browser flows on Chromium and WebKit; demo rebuilt
+- OnPoint JD: emergency tarping night loop (morning), then the full diorama set: nine service cards on the home page, six service-page heroes (roofing, gutters, siding, windows, power washing, commercial), the snow hero, and the home commercial block all run matching loops of ONE house, one job each. Nano Banana Pro edits off one daytime base, Kling 3.0 pro locked camera, crossfade loops, lazy-loaded cards, posters under reduced motion, phones keep the icon list.
+- Judged by measurement (camera-lock border std, moving %, seam wrap step, heat maps, frame strips). Rejected and re-rendered: 5 takes for Kling spawning 3D cloud puffs from "clouds drift", 2 siding takes for slow zoom.
+- Scripts: ~/.claude/tools/stormloop.py, ~/.claude/tools/cardloop.py. Memory: storm-loop-lightning-seam (corrected: Nano Banana reference edits work; pick the /hf_ output URL), kling-containment-prompt-rule (cloud rule).
 
 **What's live / deployed:**
-- Nothing. onpoint-office has no remote; on-point-jd still 5 local commits unpushed
+- onpointjd.com commits f4a1314 (storm loop), 76e391a (nine cards) and 41b5832 (heroes, snow hero, home commercial), all pushed from a clean worktree on origin/master and verified headlessly at desktop, tablet and phone widths.
 
 **Next up:**
-- At deploy: set ANTHROPIC_API_KEY, CRON_SECRET, DIGEST_TO on Vercel; Yeti creates only Jay's owner login by script, Jay/Linda add everyone else on the Team tab
-- Board row "9 small decisions"; ask Miguel for a crew word list for the translator
+- Yeti reviews the loops on the live site (home cards, /roofing hero, /snow hero, home commercial). Anything he dislikes is a 2-credit still edit + 7.5-credit Kling take to swap.
+- Local on-point-jd master divergence is OWNED by another IDE session (board row "decide when to ship the local-only commits", In Progress). Origin moved 3 commits today; that session must rebase onto the new tip.
 
 **Notes for other environments:**
-- Never text or email a crew PIN; the Team tab shows it once to hand over in person
+- Do not pass concurrent Higgsfield CLI generate calls; upload first, then generate by id with a retry loop.
+- Never write "clouds drift" in a Kling prompt on a plain-background diorama.
