@@ -1,18 +1,15 @@
-
-## Session: 2026-10-11 ET
+## Session: 2026-10-11 ET (push)
 **Environment:** Antigravity IDE
 **What was done:**
-- OnPoint JD: service-card grids no longer orphan a 4th card on a second row. New site.css rule (`:has()` child-count selectors) puts 2-card grids side by side and 4- and 8-card grids 4-up at >=1000px, with slightly tighter padding and h3 at 4-up. Fixes siding, gutters, power-washing (4 cards), the three town pages and roof-replacement-cost (8 cards), and the 2-card town intro grids.
-- `cards()` in tools/build_pages.py now takes an optional icon key; added an ICO set (11 stroke icons in the home-page `.ico` tile style). Siding, gutters and power-washing cards now carry icons. Commercial (6 cards, 3x2) left without icons.
-- Rebuilt pages + restamped assets; verified with headless Chromium at 1280 / 1024 / 390.
+- Pushed the OnPoint card-row + icon work (see earlier entry today). Push hit a diverged remote: another environment had pushed today's diorama-loop commits (b8cd465, 16:41 ET) while this Mac held 7 commits from Oct 10 that never reached GitHub (office stationery set, warranty expiry, /desk thank-you email, STOP/START forwarding, text logging, terms copy).
+- Merged in a scratchpad clone (local repo never touched mid-merge), resolved the 21 generated-HTML conflicts by rebuilding from the merged build_pages.py, kept both site.js blocks, pushed the merge (ed4dc06), fast-forwarded the local checkout. crm/ and social/video/ stay untracked and untouched.
 
 **What's live / deployed:**
-- Nothing pushed yet. Changes sit uncommitted in ~/Projects/on-point-jd (site.css, build_pages.py, rebuilt HTML). Push deploys via Vercel Git integration.
+- onpointjd.com serves ed4dc06. Verified: siding, gutters, power-washing show 4 icon cards each; hero diorama loops intact; css stamp afa3d3a7.
 
 **Next up:**
-- Yeti to review and say "push".
-- Optional: trim the "Not your shingles" power-washing card; it is twice the height of its row-mates at 4-up.
-- Optional: icons on the commercial page cards for consistency.
+- The environment that pushed the diorama loops (Cowork?) must pull before its next push; its checkout is behind the merge.
+- Optional: trim the "Not your shingles" power-washing card (twice the row height at 4-up); icons on commercial cards for consistency.
 
 **Notes for other environments:**
-- Playwright that works on this Mac: NODE_PATH=~/Projects/onpoint-office/node_modules (v1.64, matches cached chromium 1248). The copy under n8n's node_modules (1.53) cannot find its browser.
+- Yesterday's IDE session committed 7 OnPoint commits but they never landed on GitHub. If a session ends with "push" and the push is rejected, say so loudly; a silent failure is how this happened.
