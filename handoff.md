@@ -1,14 +1,18 @@
-## Session: 2026-10-11 (ET), evening follow-up
+
+## Session: 2026-10-11 ET
 **Environment:** Antigravity IDE
 **What was done:**
-- Yeti reviewed the OnPoint diorama set: "looks awesome". Flagged the siding loop (scaffold worker on the gable read as roof hammering). Redone: new still with three crew at wall height fitting a long grey panel under the old wood, driveway and garage kept; Kling take verified (camera locked, motion only at the crew); card and page encodes swapped.
+- OnPoint JD: service-card grids no longer orphan a 4th card on a second row. New site.css rule (`:has()` child-count selectors) puts 2-card grids side by side and 4- and 8-card grids 4-up at >=1000px, with slightly tighter padding and h3 at 4-up. Fixes siding, gutters, power-washing (4 cards), the three town pages and roof-replacement-cost (8 cards), and the 2-card town intro grids.
+- `cards()` in tools/build_pages.py now takes an optional icon key; added an ICO set (11 stroke icons in the home-page `.ico` tile style). Siding, gutters and power-washing cards now carry icons. Commercial (6 cards, 3x2) left without icons.
+- Rebuilt pages + restamped assets; verified with headless Chromium at 1280 / 1024 / 390.
 
 **What's live / deployed:**
-- onpointjd.com commit b8cd465 (siding card + /siding hero), verified serving.
+- Nothing pushed yet. Changes sit uncommitted in ~/Projects/on-point-jd (site.css, build_pages.py, rebuilt HTML). Push deploys via Vercel Git integration.
 
 **Next up:**
-- Any further card or hero swap: 2-credit still edit + 7.5-credit Kling take + ~/.claude/tools/cardloop.py. Sources in ~/Desktop/onpoint-diorama-set (card_siding_v2.png + take_siding_v2.mp4 added).
-- Local on-point-jd master still owned by the other IDE session; origin tip is now b8cd465 (4 commits ahead of where that session started).
+- Yeti to review and say "push".
+- Optional: trim the "Not your shingles" power-washing card; it is twice the height of its row-mates at 4-up.
+- Optional: icons on the commercial page cards for consistency.
 
 **Notes for other environments:**
-- Board row "Yeti reviews the diorama loops" updated with the siding outcome.
+- Playwright that works on this Mac: NODE_PATH=~/Projects/onpoint-office/node_modules (v1.64, matches cached chromium 1248). The copy under n8n's node_modules (1.53) cannot find its browser.
