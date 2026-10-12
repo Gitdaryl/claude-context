@@ -1,20 +1,20 @@
-
 ## Session: 2026-10-12 ET
 **Environment:** Antigravity IDE
 **What was done:**
-- OnPoint Office: new "YetiGroove support" role (owner-level, hidden from team lists, owner-only on/off switch, changes audit-logged)
-- Crew (roof/snow) now only required for field roles; office/sales/owner can be "No crew"; bookkeeper/support never
-- Team texts: new Office group (owner, office, sales, bookkeeper)
-- 938 + 21 new tests pass on a fresh DB; Playwright screen check tests-e2e/support-office.mjs passes
+- Priced OnPoint Office as a product, "Field Office": Clone $12-18k + $650-900/mo, Adapted $20-35k + $900-1,200/mo, Custom $40-60k+ + $1,200-1,500/mo. The pick is $15k + $750/mo.
+- Built the landing page yetigroove.com/field-office in Yeti-Groove: field-office.html, api/field-office-lead.js, a vercel.json rewrite and media/field-office/.
+- Built a 72 s teaser video (16:9 + vertical) from the real app on fake data, with OnPoint's prices blurred. Source is in ~/Projects/field-office-media/video.
+- Built the health watcher for app.onpointjd.com. Code: onpoint-office monitor/, api/health.ts monitor mode, digest job_runs record, migration 20261028000000_job_runs.sql.
+- Tests: 16 new + 143 related pass. A live dry run passed.
 
 **What's live / deployed:**
-- onpoint-office bef83a5 pushed to main (Vercel auto-deploy), INCLUDING the earlier unpushed RoofIT wave commits
-- Live Supabase NOT migrated yet: 20261026000000, 20261027000000, 20261027100000 pending (auto mode blocked db push)
+- Nothing. All changes are uncommitted in onpoint-office and Yeti-Groove.
 
 **Next up:**
-- Yeti: `cd ~/Projects/onpoint-office && npx supabase db push` NOW (live sign-in likely broken until then)
-- Yeti: convert own live login to support: `npm run add-member:live -- --phone <your 10 digits> --name "Daryl" --role support` (asks for a PIN, 8+ digits; this sets the PIN)
-- Show Jay the Team tab support card before Devon's demo
+- Board row "switch on the health watcher": db push, MONITOR_TOKEN, deploy, VPS .env + cron. Order is in the row and in monitor/README.md.
+- Board row "review /field-office page + teaser", then push Yeti-Groove (PUBLIC repo).
+- Supabase Pro for OnPoint backups (Free has none).
 
 **Notes for other environments:**
-- Pitch to Jay: support access is his switch; every change logged under Daryl's name
+- Never publish stills 01/03/05/09 in ~/Projects/field-office-media/stills. They show OnPoint's price-book figures.
+- The watcher never re-sends customer texts or emails. That is by design.
