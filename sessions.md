@@ -9475,3 +9475,9 @@ The spec written earlier that day said move the climax to the bank/FAA sequence.
 ## 2026-10-11 21:05 AEST
 
 - UPDATE Oct 11 (late night): (1) Customer messages now sign as the job's salesperson, never the office (commit 3415e87, live). (2) PAYING THE TEAM built and live (commit 6e74bdb, migration 20261025000000 on the live DB): pay sheet Paid column + Pay buttons + Record a payment + period list; People & pay person file (W-9 details, last-4 TIN only, W-9 + COI uploads to private 'people-docs' bucket, expiry flags); CPA printout 'Paid to the team' with the 1099 list for a whole-year period and CSV. 809 tests pass; iPad screenshots clean (tests-e2e/team-pay-shots.mjs). Yeti still has to rename his account to Daryl on the Team tab and archive his test customer.
+
+---
+
+## 2026-10-12 10:26 AEST
+
+- UPDATE Oct 12: Phone app no longer scrolls sideways (commit dd24656, live). Cause: iPhone Safari date/time inputs ignore width:100% and overflowed the inspection row. Fix is global in src/styles.css (appearance none + min-width 0 on date/time inputs, html/body overflow-x: clip) plus SE-width fixes (top bar wraps under 360 px, jobs summary + Costs totals minmax(0,1fr), loss badge wraps). New regression check: node tests-e2e/overflow-audit.mjs (WebKit, iPhone SE + 14, every tab, 4 jobs x all sections, crew homes) = 0 overflow. Yeti to confirm on his phone after tapping "Update now".
