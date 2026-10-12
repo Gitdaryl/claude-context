@@ -9600,3 +9600,9 @@ The spec written earlier that day said move the climax to the bank/FAA sequence.
 
 **Notes for other environments:**
 - Series pitches "the crew the big names call, hire us direct" while Jay still subs for Sunny Skies/Holt; keep company names and branding out of every frame.
+
+---
+
+## 2026-10-12 14:32 AEST
+
+- (later Oct 12) Org Chart re-edited with VO: v2 (32s, VO + sharp photos) then v3 "story" (61s) adding a big-company chart setup act + theirs-vs-ours payoff, because the end card didn't land without setup. Yeti: "EXCELLENT". All finished renders now live in on-point-jd/social/video/renders/.
