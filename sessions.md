@@ -9469,3 +9469,9 @@ The spec written earlier that day said move the climax to the bank/FAA sequence.
 ## 2026-10-11 19:55 AEST
 
 - UPDATE later Oct 11 (late): GitHub repo Gitdaryl/onpoint-office (private) pushed with one clean commit on main; local master keeps the 34-commit history. Vercel project connected to GitHub: push to main = production deploy (proven: health now reports version 915f216). Importer has `npm run import:live` (asks phone + hidden PIN; loads only Devon-confirmed rows, today just Glen Spetz). Live company details (name, address, phone, email) already written to the live record. Board rows "ASK DEVON IN PERSON" and "ASK JAY IN PERSON" (Today) hold every open question, ranked. Memory: onpoint-ask-in-person.
+
+---
+
+## 2026-10-11 21:05 AEST
+
+- UPDATE Oct 11 (late night): (1) Customer messages now sign as the job's salesperson, never the office (commit 3415e87, live). (2) PAYING THE TEAM built and live (commit 6e74bdb, migration 20261025000000 on the live DB): pay sheet Paid column + Pay buttons + Record a payment + period list; People & pay person file (W-9 details, last-4 TIN only, W-9 + COI uploads to private 'people-docs' bucket, expiry flags); CPA printout 'Paid to the team' with the 1099 list for a whole-year period and CSV. 809 tests pass; iPad screenshots clean (tests-e2e/team-pay-shots.mjs). Yeti still has to rename his account to Daryl on the Team tab and archive his test customer.
