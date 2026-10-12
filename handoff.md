@@ -1,17 +1,5 @@
 
-## Session: 2026-10-12 ET
-**Environment:** Antigravity IDE
-**What was done:**
-- Wrote ~/Projects/on-point-jd/social/ACCOUNTS-SETUP.md: IG/YT/TT setup under one Workspace login social@onpointjd.net + how Claude gets posting access (Meta system user token, YouTube OAuth on a non-Brand channel, TikTok via Higgsfield connector)
-- Filed Master Task Board row "OnPoint JD: create IG / YouTube / TikTok under social@onpointjd.net + Claude posting access" (Today)
-
-**What's live / deployed:**
-- Nothing deployed
-
-**Next up:**
-- Jay: create social@onpointjd.net. Devon: flip Daryl to FULL CONTROL on FB page
-- Daryl: claim @onpointjd on IG/TT/YT (content board slot due Oct 13)
-- Claude: /tt /yt /nd short links (board slot Oct 15), VPS dispatcher /root/OnPoint
-
-**Notes for other environments:**
-- TikTok posting via Higgsfield needs a per-post confirm in claude.ai web/desktop (widget), not the IDE
+**Update, Oct 12 ~7:46 pm ET:**
+- Watcher is LIVE on the VPS: cron every 5 min, all 5 keys set, first "all good" text sent.
+- On its first run it caught a real production crash: /api/digest (the 7:30 email) and /api/documents (PDFs) failed with ERR_MODULE_NOT_FOUND, from 12 imports missing ".ts". The fix c1e350f is LIVE and verified (digest 401, documents 405 = modules load). tests/server-imports.test.ts now guards it.
+- Next: confirm tomorrow's 7:30 email + the 8:30 text has no digest warning.
