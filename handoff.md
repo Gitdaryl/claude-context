@@ -1,21 +1,21 @@
 
-## Session: 2026-10-13 (ET)
+## Session: 2026-10-13 (ET), update
 **Environment:** Antigravity IDE
 **What was done:**
-- Checked the Master Task Board: "OnPoint Office: tutorial video series" already existed (Backlog since Oct 10). Moved it to Today with the review steps.
-- Built the in-app help system in ~/Projects/onpoint-office (UNCOMMITTED): ? button in the top bar opens a sheet of short clips for the current screen; hidden when none; never auto-opens; one-time hint; Spanish falls back to English with a tag; videos excluded from the PWA precache.
-- Built the recorder (help/): seeds an isolated tutorial org (local DB holds real customers; reset was blocked), Playwright drives the app with injected cursor, spotlight ring and caption bar, narration placed per step, ffmpeg mux, sync checked.
-- Three clips in public/help: add-a-lead.en (43 s), roof-day.es (48 s), roof-day.en (41 s). Narrated with the Mac "say" voice because no ElevenLabs key is on the Mac.
-- Office clips English only; Spanish only for crew clips (Yeti's call).
+- Finished the OnPoint Office help-video system: all 13 clips recorded with ElevenLabs Chris (Yeti's pick), 11 English iPad/office clips + Spanish and English phone clips for roof-day and snow-visit. All under 60 s, frames and sync verified.
+- Recorder hardened: tutorial org rebuilt fresh before every take, lock so two recorders never overlap, posters as WebP (the push-time WebP sweep would otherwise orphan JPG names), `npm run help:stale` lists clips whose screens changed since recording.
+- SOP written: README "Shipping updates", src/lib/whatsNew.ts comment, help/README.md: a release that changes a screen re-records its clips before deploy.
+- ElevenLabs key "OnPoint help clips" (Text to Speech + Voices read) saved in ~/.claude/.env; help/voice.mjs reads it there.
+- Board: tutorial row on Today for Yeti (review + push); new rows: in-app roof measurement idea (parked), punch-list wrap bug, sample job 1005 half-finished.
 
 **What's live / deployed:**
-- Nothing. All local and uncommitted.
+- Nothing yet. Everything is uncommitted in ~/Projects/onpoint-office (18 changed/new paths plus help/ and public/help/).
 
 **Next up:**
-- Yeti reviews the 3 clips and narration (help/tours/*.mjs).
-- Put ELEVENLABS_API_KEY in the shell, `node help/voice.mjs --list`, pick a voice, rerun `npm run help:record -- add-a-lead` and `-- roof-day`.
-- Then produce the remaining clips (book-the-inspection, present-and-sign, schedule-and-order, final-walk, invoice-and-payment, send-today, snow-visit) from the same tour pattern.
-- Commit + deploy. `npm run help:seed` again after any `npm run demo` or `db:reset`.
+- Yeti watches the clips, then says "push" (Vercel auto-deploys the help button + clips).
+- Optional after commit: re-record all 13 so the manifest build id matches HEAD (VO cached, ~25 min unattended).
+- `npm run help:seed` after any `npm run demo` or `db:reset`.
 
 **Notes for other environments:**
-- The ElevenLabs key is not in any .env on the Mac; it is probably only in Vercel (Joe Profit / Yeti-Groove). Cowork may know where.
+- Spanish narration only for crew clips. Office clips English only.
+- The pre-existing untracked tests-e2e/review-ux-*.mjs files are from another session; left alone.
