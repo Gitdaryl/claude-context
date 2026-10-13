@@ -1,18 +1,19 @@
-## Session: 2026-10-13 ET
+## Session: 2026-10-13 ET (part 2)
 **Environment:** Antigravity IDE
 **What was done:**
-- Traced how pay is recorded in OnPoint Office (app.onpointjd.com): Snow margin tab -> Pay sheet -> "Record a payment" writes one row to member_payments (person, date, amount, method, check number, optional work period, note). Not an expense, so margins never double count. Rows show in "Payments to the team" and roll into the CPA printout's "Paid to the team" / January 1099 list.
-- Ran the exact demo scenario locally with Playwright (tests-e2e/support-pay.mjs): Yeti's support login (Daryl) records a payment to Daryl, Jay sees it, Jay can delete it. All checks pass.
-- Found and fixed one bug: the support role had no label, so the CPA printout showed the raw key `cost.role.support` under Daryl's name. Added EN/ES labels. Commit ad24184 pushed to GitHub main (Vercel auto-deploys).
-- Reverted the WebP sweep's conversion of a test fixture (ruler.jpg) before committing.
+- OnPoint Office: Costs tab renamed "Snow margin" -> "Money" (EN/ES); "Snow margin" stays the first section with its snow-only note inside it; Jobs/Team/roof-home hints now say "Money, People & pay"; CPA printout back button says "Back to Money".
+- CPA printout: a person with a business name on their W-9 file prints that under their name (on screen and in the payments CSV) instead of the app role. Yeti shows as "Daryl / Yeti Groove Media LLC" once the Tax and insurance file has the business name.
+- Browser flow tests-e2e/support-pay.mjs extended (business name on the printout). All checks pass locally.
+- Reverted the WebP sweep's test-fixture conversion again before committing (memory saved: webp-sweep-converts-test-fixtures).
 
 **What's live / deployed:**
-- onpoint-office ad24184 pushed; live /api/health still reported c1e350f at push time (deploy in flight).
+- onpoint-office bfb9735 pushed to GitHub main (after ad24184 earlier today). Vercel deploys app.onpointjd.com.
 
 **Next up:**
-- Yeti: on app.onpointjd.com as Daryl, Snow margin -> Pay sheet -> Record a payment -> pick Daryl, enter Jay's check. Then People & pay -> Daryl -> Tax and insurance file -> Type: LLC (Yeti Groove Media LLC) so the CPA printout is right.
-- Optional: the reference field expects just the check number (the method label is prepended, so "Check 2087" prints as "Check Check 2087").
-- Optional: add tests/ and tests-e2e/ to webp-sweep.py's protected list.
+- Yeti on the live app: Money > People & pay > Daryl > Tax and insurance file > Business name "Yeti Groove Media LLC", Type LLC. Then Money > Pay sheet > Record a payment > Daryl, Jay's check (number only in the reference field).
+- Yard-sign reimbursement: record as a RECEIPT (Money > Receipts), vendor = the sign printer, category Other (no Advertising category exists), note "paid by Daryl, reimbursed check #". Not team pay (it would inflate the 1099 total).
+- Candidate build: an "Advertising & marketing" expense category (DB check constraint on expenses, needs a migration + `npx supabase db push`), plus a "reimbursed to" field on receipts.
+- Optional: protect tests/ and tests-e2e/ in ~/.claude/tools/webp-sweep.py.
 
 **Notes for other environments:**
-- Live DB reads via the service key are blocked by auto mode in the IDE; local Supabase stack + Playwright is the verified path.
+- Live DB reads with the service key are blocked by IDE auto mode; verify through the local stack + Playwright.
