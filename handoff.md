@@ -1,20 +1,13 @@
-## Session: Oct 13 2026 (evening ET)
+
+## Session: 2026-10-13 (ET), final
 **Environment:** Antigravity IDE
 **What was done:**
-- Transcribed the Downloads video "Steal this 1 Claude AI landing page strategy until you hit $1M/mo" (whisper-cli large-v3-turbo, 12.5 min) and pulled frames.
-- Mapped the strategy (listicle page on proof/promise/properties/position/package, cloned per persona, one ad per persona) onto OnPoint JD using only facts already in on-point-jd/NOTES.md and the 7 review quotes on the site.
-- Wrote the plan with six personas, headlines, matching proof quotes, build steps and the success test: on-point-jd/social/PERSONA-PAGES.md (uncommitted).
-- Filed a Backlog row on the Master Task Board and a Session Brain row. Memory: persona-listicle-pages.md.
+- Sheet turned into a near-full-screen lightbox (X top right) on Yeti's ask; shows on desktop, iPad and phone.
+- Pushed: onpoint-office commit 77cfd20 "Help videos: a ? on every screen plays short narrated clips of the app". The WebP sweep converted tests/fixtures/ruler.jpg again; reverted before committing (known trap).
 
 **What's live / deployed:**
-- Nothing. No site changes, no push.
+- app.onpointjd.com: the ? help lightbox with all 13 clips. Verified live: manifest JSON, every mp4 206 video/mp4, WebP posters, PWA precache still 18 entries.
 
 **Next up:**
-- Build /reasons master page + personas.json + reviews.json + tools/build-reasons.mjs in on-point-jd/site; add utm_campaign grouping to the desk sources table.
-- Point the next GBP and FB posts at a persona page with utm_campaign.
-- Ads only after the Meta row (ad account + Pixel) closes and Jay approves a budget. Start with storm, burned, neighbor.
-- Judge by Dec 1 2026 on the desk: leads and close rate per persona vs /estimate and direct.
-
-**Notes for other environments:**
-- Scaled the video's 20 personas down to 6 for a local roofer. Proof is OnPoint's weak element (7 quotes); the NFC review cards are what grow it.
-- If OnPoint shows a result, generalize the build script for Sunny Skies, Mitch Ramsey, Spotted Owl.
+- Optional: re-record all 13 so the manifest build id matches HEAD (`npm run help:stale` currently flags them as recorded before the commit).
+- Board follow-ups: punch-list wrap, sample job 1005, "Plowe d", double delivery line after a PO send; roof measurement idea parked.
