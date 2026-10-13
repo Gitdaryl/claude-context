@@ -1,21 +1,20 @@
-
-## Session: 2026-10-13 (ET), update
+## Session: Oct 13 2026 (evening ET)
 **Environment:** Antigravity IDE
 **What was done:**
-- Finished the OnPoint Office help-video system: all 13 clips recorded with ElevenLabs Chris (Yeti's pick), 11 English iPad/office clips + Spanish and English phone clips for roof-day and snow-visit. All under 60 s, frames and sync verified.
-- Recorder hardened: tutorial org rebuilt fresh before every take, lock so two recorders never overlap, posters as WebP (the push-time WebP sweep would otherwise orphan JPG names), `npm run help:stale` lists clips whose screens changed since recording.
-- SOP written: README "Shipping updates", src/lib/whatsNew.ts comment, help/README.md: a release that changes a screen re-records its clips before deploy.
-- ElevenLabs key "OnPoint help clips" (Text to Speech + Voices read) saved in ~/.claude/.env; help/voice.mjs reads it there.
-- Board: tutorial row on Today for Yeti (review + push); new rows: in-app roof measurement idea (parked), punch-list wrap bug, sample job 1005 half-finished.
+- Transcribed the Downloads video "Steal this 1 Claude AI landing page strategy until you hit $1M/mo" (whisper-cli large-v3-turbo, 12.5 min) and pulled frames.
+- Mapped the strategy (listicle page on proof/promise/properties/position/package, cloned per persona, one ad per persona) onto OnPoint JD using only facts already in on-point-jd/NOTES.md and the 7 review quotes on the site.
+- Wrote the plan with six personas, headlines, matching proof quotes, build steps and the success test: on-point-jd/social/PERSONA-PAGES.md (uncommitted).
+- Filed a Backlog row on the Master Task Board and a Session Brain row. Memory: persona-listicle-pages.md.
 
 **What's live / deployed:**
-- Nothing yet. Everything is uncommitted in ~/Projects/onpoint-office (18 changed/new paths plus help/ and public/help/).
+- Nothing. No site changes, no push.
 
 **Next up:**
-- Yeti watches the clips, then says "push" (Vercel auto-deploys the help button + clips).
-- Optional after commit: re-record all 13 so the manifest build id matches HEAD (VO cached, ~25 min unattended).
-- `npm run help:seed` after any `npm run demo` or `db:reset`.
+- Build /reasons master page + personas.json + reviews.json + tools/build-reasons.mjs in on-point-jd/site; add utm_campaign grouping to the desk sources table.
+- Point the next GBP and FB posts at a persona page with utm_campaign.
+- Ads only after the Meta row (ad account + Pixel) closes and Jay approves a budget. Start with storm, burned, neighbor.
+- Judge by Dec 1 2026 on the desk: leads and close rate per persona vs /estimate and direct.
 
 **Notes for other environments:**
-- Spanish narration only for crew clips. Office clips English only.
-- The pre-existing untracked tests-e2e/review-ux-*.mjs files are from another session; left alone.
+- Scaled the video's 20 personas down to 6 for a local roofer. Proof is OnPoint's weak element (7 quotes); the NFC review cards are what grow it.
+- If OnPoint shows a result, generalize the build script for Sunny Skies, Mitch Ramsey, Spotted Owl.
