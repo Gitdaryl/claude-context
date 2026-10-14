@@ -10298,3 +10298,12 @@ The spec written earlier that day said move the climax to the bank/FAA sequence.
 
 **Notes for other environments:**
 - Mobile/Cowork: if Devon texts the McEachen price or the Braun/McEachen dates, pass them to the IDE for contracts.json.
+
+---
+
+## 2026-10-14 16:19 AEST
+
+- LIVE (226853f, verified): /questions hub + 3 answer-first pages (ice dam leak tonight, insurance + ice dams in Ohio, roof life in Ohio), every fact sourced. Winter-roof and snow-pricing pages built but noindex until Jay answers (questions added to ASK JAY IN PERSON page).
+- LIVE (eeffd5c, verified): /reasons + 6 noindex persona pages, 100-mile radius copy.
+- Bing Webmaster verified (Yeti); board row closed.
+- Note: the Meta-tracking session committed 3051a26/91bebeb/588612c in the same checkout today; no overlap with these commits.
