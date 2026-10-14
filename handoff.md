@@ -1,15 +1,16 @@
 
-## Session: 2026-10-13 ET (PIN self-service)
+## Session: 2026-10-14 ET
 **Environment:** Antigravity IDE
 **What was done:**
-- OnPoint Office: Change my PIN (commit d8bf0cd). "My PIN" button in the top bar for everyone; sheet asks current PIN + new PIN twice. Server action change_pin on /api/members verifies the current PIN by signing in with it, enforces role length (6 crew / 8 office) and the weak-PIN rule, audits every try (pin_change), caps at 5/hour, ends all sessions; sign-in screen then says to use the new one. Migration 20261030000000_pin_change.sql pushed to production. Yeti added Devon, Linda, Jay and Kyle on the Team tab; PINs still to hand over in person.
+- OnPoint Office promo (2:48, 16:9) for Jay, Devon, Linda, Kyle: features by person, the ? help clips, close naming JobNimbus/AccuLynx/CompanyCam
+- Real app screens from the tutorial company (help tours replayed in Playwright), ElevenLabs Chris VO, HeyGen rock bed carved under VO, HyperFrames scenes built from data
+- Audit of the app + help clips: 2 clips wrong, 11 dated, 6 new clips needed, What's New stale, Kyle has no fitting role
 
 **What's live / deployed:**
-- onpoint-office main d8bf0cd, Vercel production Ready, bundle verified on app.onpointjd.com. Prod DB migration applied.
+- Nothing deployed. File: on-point-jd/social/video/renders/onpoint-office-promo-v1.mp4 (internal only: real price book on screen)
 
 **Next up:**
-- Hand each person their first PIN in person; they change it themselves from My PIN after first sign-in.
-- Existing jobs: tap Change on the salesperson line and pick Devon (now that he exists).
+- Show the promo at a sit-down; re-record help clips + rewrite whatsNew.ts; new clips; ASK JAY Kyle's role (Task Board rows filed)
 
 **Notes for other environments:**
-- Local seed crew PIN 555555 is "weak" by the app's rule, so the app refuses to set it; restore via admin API, not the app.
+- Promo project uncommitted in on-point-jd/social/video/onpoint-office-promo; check repo visibility before pushing (price book in captures)
