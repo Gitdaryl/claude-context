@@ -1,19 +1,15 @@
 
-## Session: Oct 14 2026 ET
+## Session: 2026-10-14 ET (later)
 **Environment:** Antigravity IDE
 **What was done:**
-- OnPoint: Three Little Pigs reel packaged for posting (social/posts/2026-10-14-three-pigs.json)
-- Scripted 3 fillers: attic-heist, roof-dating, drip-edge (social/video/*/SCRIPT.md)
-- Built + rendered drip-edge Blueprint reel: social/video/renders/onpoint-drip-edge-v1.mp4 (27s, Chris VO, -14 LUFS), captions in social/posts/drip-edge.json
-- Content board: f-drip ready, f-heist + f-dating making
+- OnPoint Office: superintendent role (Kyle), Partner switch (Devon), sign a message as Jay (signed_as), paper receipt stacks (Haiku reads, person confirms), ? beside fields opening the clip at that step
+- 4 new help clips + 13 re-recorded; security review found and fixed a High (superintendent bypassed Ohio cancel window) and a Medium
 
 **What's live / deployed:**
-- Nothing posted by Claude; Yeti posts Pigs to YT/FB/IG
+- app.onpointjd.com a8573e0; live DB migrated (20261031000000-400000); live Devon = sales + partner
 
 **Next up:**
-- Yeti posts Pigs, tells Claude to mark it used
-- Yeti reviews Heist + Dating scripts, then VO/frames/stickers stage
-- Ask Devon in person: does the inspection cover soffit/fascia critter gaps (blocks Heist)
+- Yeti: add ANTHROPIC_API_KEY to Vercel onpoint-office + redeploy; switch Kyle to Superintendent in person (new 8-digit PIN); scan Jay's receipts
 
 **Notes for other environments:**
-- HyperFrames now needs Node 22 (nvm v22.23.2); default node is 20
+- Jay is paper-first and getting a tablet; Devon drives the app and can sign as Jay
