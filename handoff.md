@@ -1,14 +1,14 @@
-
-## Session: 2026-10-13 ET
+## Session: 2026-10-13 ET (continued)
 **Environment:** Antigravity IDE
 **What was done:**
-- OnPoint Office (app.onpointjd.com): Measure screen now has a Decking field (sheets of 7/16 OSB known bad). Roof pricing adds a "Decking replacement, N sheets" line at the price book sheet price ($50) to both options, outside the roof price and after any minimum. Assumption note updated. EN + ES. Tests added (997 pass). Commit 900c70d.
+- OnPoint Office: salesperson on the job (commit 5db1332). Job page line "Devon is the salesperson" with a picker (active owner or sales people). The estimate PDF, contract, emails and texts all read jobs.sales_rep, so a change shows on the next document or message. New jobs made by the office or by support (Daryl signed in as the owner) default to the team's one active salesperson, so Daryl's name stays off Devon's paperwork.
 
 **What's live / deployed:**
-- onpoint-office main 900c70d, Vercel production Ready, bundle verified on app.onpointjd.com.
+- onpoint-office main 5db1332, Vercel production Ready, bundle verified on app.onpointjd.com.
 
 **Next up:**
-- Materials order does not yet add the counted OSB sheets; decking photos after tear-off still bill ALL counted sheets as a change order, so a crew count that includes the sheets already on the estimate would double bill. Decide whether the change order should subtract deckingSheetsEst.
+- Existing jobs still carry Daryl as salesperson until tapped once on each job page (Change > Devon > Save). A bulk fix script was blocked by the permission classifier; Yeti can tap through them or ask again in an interactive session.
+- Materials order does not add the counted OSB sheets; change order after tear-off still bills all counted sheets (possible double bill with the new estimate line).
 
 **Notes for other environments:**
-- webp-sweep again converted tests/fixtures/ruler.jpg in onpoint-office; reverted before commit (known trap).
+- webp-sweep converts tests/fixtures/ruler.jpg in onpoint-office every run; revert before committing.
