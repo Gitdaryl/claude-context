@@ -10307,3 +10307,9 @@ The spec written earlier that day said move the climax to the bank/FAA sequence.
 - LIVE (eeffd5c, verified): /reasons + 6 noindex persona pages, 100-mile radius copy.
 - Bing Webmaster verified (Yeti); board row closed.
 - Note: the Meta-tracking session committed 3051a26/91bebeb/588612c in the same checkout today; no overlap with these commits.
+
+---
+
+## 2026-10-14 16:44 AEST
+
+- (later, same session) Customer list rebuilt for hundreds of customers: compact rows, tap to open, chips Needs me first / Open jobs / Owes / A-Z, pinned search. onpoint-office 066e170, LIVE (health version 066e170). Pre-existing failing test tradesProd filed as Backlog. webp sweep again converted tests/fixtures/ruler.jpg: reverted before commit.
