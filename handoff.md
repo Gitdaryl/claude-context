@@ -1,16 +1,19 @@
 
-## Session: 2026-10-14 ET
+## Session: Oct 14 2026 ET
 **Environment:** Antigravity IDE
 **What was done:**
-- OnPoint Office promo (2:48, 16:9) for Jay, Devon, Linda, Kyle: features by person, the ? help clips, close naming JobNimbus/AccuLynx/CompanyCam
-- Real app screens from the tutorial company (help tours replayed in Playwright), ElevenLabs Chris VO, HeyGen rock bed carved under VO, HyperFrames scenes built from data
-- Audit of the app + help clips: 2 clips wrong, 11 dated, 6 new clips needed, What's New stale, Kyle has no fitting role
+- OnPoint: Three Little Pigs reel packaged for posting (social/posts/2026-10-14-three-pigs.json)
+- Scripted 3 fillers: attic-heist, roof-dating, drip-edge (social/video/*/SCRIPT.md)
+- Built + rendered drip-edge Blueprint reel: social/video/renders/onpoint-drip-edge-v1.mp4 (27s, Chris VO, -14 LUFS), captions in social/posts/drip-edge.json
+- Content board: f-drip ready, f-heist + f-dating making
 
 **What's live / deployed:**
-- Nothing deployed. File: on-point-jd/social/video/renders/onpoint-office-promo-v1.mp4 (internal only: real price book on screen)
+- Nothing posted by Claude; Yeti posts Pigs to YT/FB/IG
 
 **Next up:**
-- Show the promo at a sit-down; re-record help clips + rewrite whatsNew.ts; new clips; ASK JAY Kyle's role (Task Board rows filed)
+- Yeti posts Pigs, tells Claude to mark it used
+- Yeti reviews Heist + Dating scripts, then VO/frames/stickers stage
+- Ask Devon in person: does the inspection cover soffit/fascia critter gaps (blocks Heist)
 
 **Notes for other environments:**
-- Promo project uncommitted in on-point-jd/social/video/onpoint-office-promo; check repo visibility before pushing (price book in captures)
+- HyperFrames now needs Node 22 (nvm v22.23.2); default node is 20
