@@ -10269,3 +10269,9 @@ The spec written earlier that day said move the climax to the bank/FAA sequence.
 - /api/track now awaits the Meta send in full and logs the answer (commit 91bebeb); a 1.5s race could leave the function frozen before the send finished.
 - VERIFIED: server log `track meta tap-m2wait1-abc111 {"ok":true,"received":1}`. Meta receives events with test code TEST44463.
 - Memory added: secret-entry-interactive-prompt.
+
+---
+
+## 2026-10-14 15:51 AEST
+
+- Meta's Test events UI never listed our events (new UI, unclear rules); went live instead: META_TEST_EVENT_CODE removed from both projects (vercel env rm) and both redeployed. Live events now count in the dataset's Overview tab.
