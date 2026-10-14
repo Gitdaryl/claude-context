@@ -1,20 +1,16 @@
 
-## Session: 2026-10-14 (ET)
-**Environment:** Antigravity IDE (Claude Code, Sonnet 5.5)
+## Session: Oct 14 2026 (evening ET), continued
+**Environment:** Antigravity IDE
 **What was done:**
-- Early Stage 3 SEO + GEO check of onpointjd.com (day 14, technical and AI-crawler only). No code changed.
-- All 18 sitemap URLs 200 with title, description, canonical, h1, valid JSON-LD. robots and llms.txt fine. 14 bot user agents (GPTBot, ClaudeBot, PerplexityBot, Google-Extended, Applebot, Bingbot, etc.) all get 200. Redirects and noindex 404 correct.
-- DuckDuckGo shows /, /commercial, /snow indexed. Google index, Bing, Yelp (403), GBP (JS only), PageSpeed (quota) NOT verified.
-- Google site-verification TXT is in DNS, so Search Console is likely set up (board row was stale).
-- Updated Master Task Board rows: Stage 3 SEO follow-up, Search Console + Bing verify.
+- Walked Yeti through Meta setup click by click (guide + all ids: on-point-jd/social/META-SETUP.md). Portfolio On Point JD Roofing 1851270032966151, ad account OnPoint JD Ads 2096465794304438 (Yeti's card), dataset/Pixel 1084662177881561, CAPI token generated (business email was the missing prerequisite), test code TEST44463.
+- Yeti set META_PIXEL_ID, META_CAPI_TOKEN, META_TEST_EVENT_CODE on both Vercel projects.
+- Pushed on-point-jd 299a3ab (pixel + Lead/Contact CAPI, docs) and onpoint-office ac075b5 (meta-sync cron, meta_events migration). Office commit excluded another session's uncommitted work.
+- Verified live: onpointjd.com/api/pixel serves the pixel with the id (200, application/javascript); headless load sets _fbp and builds _fbc from fbclid, keeps it in sessionStorage, a call tap posts /api/track; app.onpointjd.com/api/meta-sync answers 401 without bearer, 405 on POST.
+- webp sweep on on-point-jd walked 1,186 untracked social/ images for 6 min; killed, no damage; memory updated (scope it to site/).
 
 **What's live / deployed:**
-- Nothing pushed. Observation: live Last-Modified Oct 14 17:43 but last commit Oct 13 19:53, and many site files are modified and uncommitted in ~/Projects/on-point-jd.
+- Both deploys live. meta_events migration NOT pushed (no supabase CLI on PATH; Yeti runs npx supabase db push). Until then the hourly meta-sync logs an error per run; harmless.
 
 **Next up:**
-- Yeti: Search Console Sitemaps + Pages report, Bing Webmaster import from GSC, review requests after every job.
-- Day-30 full seo-local pass about Oct 30.
-- Decide: projects section (page per job), Toledo page.
-
-**Notes for other environments:**
-- Biggest remaining lift is off-site (reviews, Yelp wrong phone, BBB website, Bing Places, Apple Business, Nextdoor), not the site.
+- Yeti: npx supabase db push (office); domain verify onpointjd.com in Meta (TXT on Vercel DNS); watch Events Manager > Test events, then vercel env rm META_TEST_EVENT_CODE on both + redeploy.
+- Board rows: "Meta access for Daryl" closed Done; "first Meta ad spend DECIDE funding model" carries the open list.
