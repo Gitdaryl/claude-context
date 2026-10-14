@@ -1,14 +1,15 @@
-## Session: 2026-10-13 ET (continued)
+
+## Session: 2026-10-13 ET (PIN self-service)
 **Environment:** Antigravity IDE
 **What was done:**
-- OnPoint Office: salesperson on the job (commit 5db1332). Job page line "Devon is the salesperson" with a picker (active owner or sales people). The estimate PDF, contract, emails and texts all read jobs.sales_rep, so a change shows on the next document or message. New jobs made by the office or by support (Daryl signed in as the owner) default to the team's one active salesperson, so Daryl's name stays off Devon's paperwork.
+- OnPoint Office: Change my PIN (commit d8bf0cd). "My PIN" button in the top bar for everyone; sheet asks current PIN + new PIN twice. Server action change_pin on /api/members verifies the current PIN by signing in with it, enforces role length (6 crew / 8 office) and the weak-PIN rule, audits every try (pin_change), caps at 5/hour, ends all sessions; sign-in screen then says to use the new one. Migration 20261030000000_pin_change.sql pushed to production. Yeti added Devon, Linda, Jay and Kyle on the Team tab; PINs still to hand over in person.
 
 **What's live / deployed:**
-- onpoint-office main 5db1332, Vercel production Ready, bundle verified on app.onpointjd.com.
+- onpoint-office main d8bf0cd, Vercel production Ready, bundle verified on app.onpointjd.com. Prod DB migration applied.
 
 **Next up:**
-- Existing jobs still carry Daryl as salesperson until tapped once on each job page (Change > Devon > Save). A bulk fix script was blocked by the permission classifier; Yeti can tap through them or ask again in an interactive session.
-- Materials order does not add the counted OSB sheets; change order after tear-off still bills all counted sheets (possible double bill with the new estimate line).
+- Hand each person their first PIN in person; they change it themselves from My PIN after first sign-in.
+- Existing jobs: tap Change on the salesperson line and pick Devon (now that he exists).
 
 **Notes for other environments:**
-- webp-sweep converts tests/fixtures/ruler.jpg in onpoint-office every run; revert before committing.
+- Local seed crew PIN 555555 is "weak" by the app's rule, so the app refuses to set it; restore via admin API, not the app.
