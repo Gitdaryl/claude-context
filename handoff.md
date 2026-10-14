@@ -1,17 +1,18 @@
 
-## Session: Oct 14 2026 ET (late)
+## Session: Oct 14 2026 ET
 **Environment:** Antigravity IDE
 **What was done:**
-- POSTED Three Little Pigs via tools/meta-post.mjs + tools/yt-upload.mjs (FB reel 1838835574131306, IG DeetDnwkoq1, YT aRcPCtt_L8s)
-- Middleman v2-hook + Org Chart v4-hook (rewind pre-roll cold opens); Jay OK recorded, slots Oct 28 / Nov 11 cleared
-- Built Now Direct (Middleman #2): renders/onpoint-now-direct-v1.mp4, posts/now-direct.json
+- Tami Frampton (On Point roof, 2701 Bleeker St, Oregon OH): fixed the Oct 10 transcription (house number was 3701), confirmed with Yeti (419-494-1538, finished Oct 8, paid in full, 10-yr labor); local import passed; Atlas registration due Dec 7
+- scripts/import-paper.mjs gained --only KEY
+- Built locally (onpoint-office, uncommitted): "More work at this house" (spotted work -> lead job for the same customer, jobs.from_job_id, Pipeline "Past customer" tag) and true photo dates on the insurance report (EXIF date + GPS for library photos, job_photos.time_from)
 
 **What's live / deployed:**
-- Pigs on FB, IG, YouTube
+- Nothing. Two migrations local only (20261101000000, 20261101100000)
 
 **Next up:**
-- Yeti looks at Now Direct, then post; Fri Oct 16 Roof Dating, Mon Oct 19 drip edge v3 (post with the two tools/ scripts)
-- Heist animatic review -> Kling shot
+- Yeti runs the live Tami import (command in Session Brain row)
+- Ship: npx supabase db push FIRST, then commit + push (leave scripts/add-lead.mjs and tests-e2e/review-ux-* out)
+- Devon: upload original tear-off photos, make the report, email Tami; add Inside repair + Gutters leads on her job
 
 **Notes for other environments:**
-- OnPoint posting works from the IDE: node tools/meta-post.mjs / tools/yt-upload.mjs social/posts/X.json
+- Board rows: "ship More work..." and "Tami Frampton..." (Today); Tami questions added to ASK DEVON IN PERSON
