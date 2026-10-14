@@ -10249,3 +10249,12 @@ The spec written earlier that day said move the climax to the bank/FAA sequence.
 - Yeti OKs push of 08d20c8, then request indexing for the 5 new URLs in Search Console.
 - Yeti answers the 3 job questions so /projects can go live.
 - Persona listicle /reasons page as its own build.
+
+---
+
+## 2026-10-14 15:08 AEST
+
+- LIVE: 5 town pages (Toledo, Rossford, Perrysburg, Maumee, Oak Harbor) pushed 08d20c8, verified on onpointjd.com; sitemap 23 URLs.
+- Jay (Oct 14): jobs up to 100 miles from Curtice, Ohio only. Findlay/Sandusky board row closed Done.
+- Built /reasons + 6 noindex persona pages and the 100-mile copy: commit eeffd5c LOCAL, waiting on Yeti's OK to push.
+- Next: push eeffd5c, request indexing (5 town URLs + /reasons), desk close rate by utm_campaign, point GBP/FB posts and /ys /dh /nc at persona pages, consider 6 more GBP service-area towns (limit 20).
