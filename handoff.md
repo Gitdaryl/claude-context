@@ -1,17 +1,18 @@
-
-## Session: 2026-10-15 ET
+## Session: Oct 15 2026, 10:20 AM ET
 **Environment:** Antigravity IDE
 **What was done:**
-- Fingerprinted luckyowlstudio.com (friend Cayt's site): Showit + WordPress blog on BigScoots, not Wix. No API/CLI/MCP exists for Showit.
-- Yeti's "padding clashing" screenshots were all in Times New Roman. Headless Playwright render with fonts loaded showed no collisions; blocking Google Fonts reproduced his screenshots exactly. Root cause is a font-blocking browser, not her layout.
-- Real issues found: mobile rotated side text clipped off left edge, strikethrough "not ready yet" placeholder live on /weddings, a screenshot PNG used as a content image.
+- YUP Ministries: fixed HeyGen saying "YUP" as "yoop". Yeti confirmed it should be "yup" (uh vowel).
+- Tested 5 spellings voice-only (5 credits): "YUP" and "Yuhp" read as "yoop"; "Yup", "yup", "Yupp" read as "yup".
+- Created HeyGen brand glossary "YUP Ministries" (b9070af9c24a441188472b94999a6e52), term YUP pronounced "Yup".
+- Added brand_glossary_id to every ministry/heygen/render-*.json; README step 2 documents it.
+- Verified with a 5s Avatar IV test render of Joe: whisper hears "Yup Ministries" twice (3 credits).
 
 **What's live / deployed:**
-- Nothing. Advice only.
+- Glossary lives in Yeti's HeyGen account. Nothing published.
 
 **Next up:**
-- Yeti to find what blocks fonts.googleapis.com on his Mac (ad blocker / DNS filter).
-- Tell Cayt to upload Arapey as a custom font in Showit so the site stops depending on Google Fonts.
+- S6 v1 and v2 renders still say "yoop". Re-render v2 (~100 credits) before sending to Joe, or send as is.
+- Credits: HeyGen 1,724 left, resets Nov 10.
 
 **Notes for other environments:**
-- Scratch screenshots and overlap scripts were in the IDE scratchpad only; nothing committed.
+- Any HeyGen render of Joe must pass brand_glossary_id b9070af9c24a441188472b94999a6e52, or YUP comes out "yoop".
