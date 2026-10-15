@@ -1,14 +1,19 @@
 
-## Session: 2026-10-15 ~2:35pm ET (continued)
+## Session: 2026-10-15 ET
 **Environment:** Antigravity IDE
 **What was done:**
-- v1 Halloween reel rejected (animated leaves jittered). Made a leaf-free Autumn Witch image (Higgsfield edit), new 95s HeyGen take via type:image
-- v2 reel = this weekend's events (Oct 15-18) with Halloween puns + "list your Halloween event free by Wednesday, next week's video is all Halloween" call-out
-- Halloween edition added to Manitou-Beach/scripts/holly-weekend-script.js (LOCAL, NOT PUSHED): Oct 21 run also covers every Halloween-themed event to Oct 31 + October pun instruction. holly-persona.md untouched (Yeti: memory only)
-- Final: ~/Desktop/holly-halloween-weekend-2026-10-15-v2.mp4 (v1 file also still on Desktop, superseded)
+- Found Joe's Sep 24 edits (1964 / fourteen) had been promised "Done" but never applied; Sep 23 "treatment updated" email linked to a Ford careers page
+- Built Yeti's call sheet; Yeti called Joe (unrecorded). Found Joe's missed 9-25 written-answers docx
+- Treatment v3.1: 1964 throughout, barbecue at DeWitt's from Joe's account, kitchen details, Lapin spelling, holes 1/2/3/7 settled, new nb-61..63
+- Notes: Joe-Profit/interviews/2026-10-15-session4-call-notes.md, CONTINUITY-RECORD §8
 
 **What's live / deployed:**
-- Nothing. Script change needs commit + push to main before Wed Oct 21 8pm ET or the Halloween edition won't run.
+- never-broken-site treatment Draft v3.1, commit 2aff35a, verified on the live URL
 
 **Next up:**
-- Yeti reviews/posts v2; push holly-weekend-script.js; fix feed data (Bunco $5, Sinatra dinner cost, Artesian Wells Bike Night past season)
+- Email Joe the correct v3.1 link
+- Joe to answer nb-62 (Sunny Point courtroom vs "Washington ordered him") and nb-63 (Deacons)
+- Log sermon answers from the same call (other session's read-aloud script)
+
+**Notes for other environments:**
+- Joe's written Q10 is pasted AI-overview text; do not cite. "Arrested a hundred times" = many times, never print a number.
