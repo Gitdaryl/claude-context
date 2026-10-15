@@ -1,17 +1,17 @@
 
-## Session: 2026-10-15 ET
+## Session: 2026-10-15 (Thu) ~9:35am ET
 **Environment:** Antigravity IDE
 **What was done:**
-- Joe Profit / YUP Ministries S6 v2: rewrote "Pilate Washed His Hands" around Joe's own Never Broken courthouse story (arrested at 14 for "unlawful thinking", the public defender who spoke up) braided with Pilate; open-loop hook in the first 3s; book card + Never Broken CTA
-- Wrote kit/SERMON-FORMULA.md: Me-We-God-You-We (Andy Stanley), hook + braid rules, "delete the verse" test, Never Broken story pairing for all 8 sessions
-- Kit fixes: HeyGen 5k-char split + join-takes.sh, zero-length caption bug, gold-span line breaks, list timing, book card type
+- Built the Witches Night Out "tonight" reel for Holly Griewahn (Foundation Realty): HeyGen photo avatar (Holly as pink witch flying over Brooklyn, look id 9f51e887989a442b9786adb4ff46aa54 in Yeti's own HeyGen account, Avatar IV + motion prompt, Holly voice a7d9bb2b…) + HyperFrames overlays (hook, name, 15th Annual, info card, Kelsey's lower third, keyword pops, outro w/ signature + Foundation logo), 5 b-roll inserts from the 2024 NAS footage + 2 drone stills, HeyGen-catalog Halloween bed, Ocular/personal SFX, -14 LUFS.
+- Transcribed Holly's selfie video (Desktop/witches night out.mov) → Desktop/witches night out transcript.txt.
+- Project: ~/Projects/holly-witches-night-out (build.mjs + timings.json → index.html; `npm run check` passes; renders/ holds raw + final). Local git init, not committed.
 
 **What's live / deployed:**
-- Nothing published. ~/Documents/Joe-Profit/ministry/renders/YUP-S06v2-* (FULL 6:11, REEL 1:38)
+- Nothing posted. Final file: ~/Desktop/holly-witches-night-out-2026-10-15.mp4 (46.7s, 1080x1920). Yeti reviews then sends to Holly / posts.
 
 **Next up:**
-- Yeti/Joe review v2; Joe OKs interview-only lines (his mother's "prayer without action is no good")
-- Next interview: record the DeWitt barbecue (serves film ending + Sermon 7)
+- Holly posts it today before 5:30pm. If Yeti wants edits: change timings.json or build.mjs, `node build.mjs && npm run check`, re-render (~2 min).
+- Whisper -ml 1 word timings drift past ~30s on the HeyGen take; use HeyGen's subtitle_url SRT for anchors instead.
 
 **Notes for other environments:**
-- Board + Session Brain updated
+- HeyGen credits: 1746 → ~1720 premium (Pro plan, Yeti's OAuth login). The witch photo avatar lives in Yeti's workspace, not Holly's.
