@@ -1,15 +1,20 @@
-## Session: Oct 15 2026 ET (addendum to the earlier OnPoint map pack entry)
+## Session: Oct 15 2026 ET (afternoon, OnPoint Sit-Down sheet)
 **Environment:** Antigravity IDE
 **What was done:**
-- Committed and pushed on-point-jd f0cb070: seo/MAP-PACK.md (video verdict, baseline, plan, GBP Products paste kit), seo/scans/2026-10-15/, review line in the thank-you draft.
-- webp-sweep (commit-push Step 0) deleted social/video/three-pigs/frames/00-characters.png, which is git-ignored; restored it from the WebP at the same 1344x752. Memory updated: sweep the deploy root only (`webp-sweep.py site --apply` on this repo).
+- Built the OnPoint Sit-Down sheet (claude.ai artifact Biywyct3b6bQSa97gVDgnT): tabs for Jay, Devon, Linda, Kyle and a Recap; 56 questions from the ASK pages and open board rows; tap chips, labeled fields, notes; answers save live.
+- Send to Claude files a board row "Sit-down answers, <day>: ready for Claude" through Yeti's Notion connector.
+- New watcher ~/.claude/tools/sitdown-watch (run.sh + SIT-DOWN.md) on LaunchAgent com.yetigroove.sitdown-watch, hourly 9:05 to 21:05. Updates board, ASK pages, memory; repo changes only on worktree branches sitdown-YYYYMMDD; never pushes; texts Yeti. Dry run passed.
+- OnPoint Office top bar: Sit-down button for the support login only.
 
 **What's live / deployed:**
-- onpointjd.com f0cb070 READY in production; home 200.
-- onpoint-office f259b5b on main.
+- onpoint-office 0e1372c (Sit-down button), on-point-jd b9523f6 (page source), LaunchAgent loaded.
 
 **Next up:**
-- Same as the earlier entry: Jay's OK on the GBP name + his customer list; Yeti pastes the Products kit; re-scan Nov 15 2026.
+- Oct 16 visit: answer in the sheet, then Recap > Send to Claude. The first Send asks to allow Notion.
+- Switch Daryl's live login to support so the app button appears.
+- After the watcher runs: review branch sitdown-20261016 in each repo and say push.
+- Delete the retired TEST board row when convenient.
 
 **Notes for other environments:**
-- Do not run webp-sweep on the repo root of on-point-jd (3 GB of video work in social/, and it deletes originals with no backup).
+- Headless claude -p cannot read artifacts. Anything automated reads Notion instead.
+- To load questions for a future visit, ask Claude to add them to the sheet (see memory onpoint-sitdown-sheet).
