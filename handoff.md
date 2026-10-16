@@ -2,17 +2,18 @@
 ## Session: 2026-10-16 ET
 **Environment:** Antigravity IDE
 **What was done:**
-- Reorganised ~/Documents/Joe-Profit/ministry into Sessions/ (one folder per sermon: current FULL + REEL, srt, YouTube copy, scripts, Older versions/) and Workshop/ (the kit). Kit now writes finished videos straight into the session folder.
-- Fixed the jump-cut fault Yeti found in S01 (2-frame reframes, slivers of Joe between B-roll shots, double cuts after cutaways): editor pass in build.mjs, B-roll re-encoded with 0.5s keyframes, card size capped to clear Joe's head. New checkers: kit/check-edit.mjs (blocks the render) and kit/check-flash.py (final pixels). S01 left as is per Yeti.
-- Built S02 "When the Crowd Is Persuaded" and S03 "Character Still Matters" on Avatar V, full + reel each, all facts from Never Broken. 12 new Kling clips (tackle regenerated once for a modern look).
+- Transcribed the 2h05m OnPoint team meeting (Jay, Devon, Kyle, Linda) with whisper large-v3-turbo; loudness-tagged (no speaker ID)
+- 28 app/site asks checked against onpoint-office code, tagged NEW / HAVE / FIX: on-point-jd/crm/meetings/2026-10-16-team-meeting.md
+- Raw transcript saved beside it, gitignored (customer address, private talk)
+- Board: Oak Harbor snow quote (Today) + meeting change list build row (Backlog)
 
 **What's live / deployed:**
-- Nothing uploaded. All local in ministry/Sessions/.
+- Nothing deployed. on-point-jd .gitignore changed (uncommitted)
 
 **Next up:**
-- Send Joe S01-S03. Upload after his OK.
-- Next sermons: S04 or S05; S06 redo on V when reached; S07 needs Joe's OK on the barbecue story; S08 is interview-only.
-- HeyGen 606 credits left until Nov 10 (~1 session).
+- Email the Oak Harbor snow quote ($500 plow / $200 salt / 2 in trigger)
+- Get Jay's price per square + adder % before building estimate pricing
+- Reproduce "very steep didn't change price" (likely saved draft ignores new measurements)
 
 **Notes for other environments:**
-- Board row "produce Sessions 1-8" carries the full status.
+- Penny Jo's content: Jay wants it on the OnPoint site; conflicts with the Sunny Skies firewall. Yeti's call.
