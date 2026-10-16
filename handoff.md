@@ -1,17 +1,16 @@
-
-## Session: 2026-10-15 late evening ET (addendum)
+## Session: 2026-10-16 ET (in progress)
 **Environment:** Antigravity IDE
 **What was done:**
-- Switched the YUP sermon kit's HeyGen engine to Avatar V (Yeti: IV lip sync drifts, face floats, beady eye whites). Kit README, render template (heygen/render-template-v.json) and memory updated.
-- Rebuilt Session 1 on V: renders/YUP-S01-The-Choice-Before-The-Crowd-FULL-16x9.mp4 (5:57) and -REEL-9x16.mp4 (1:46). -14 LUFS, "yup" verified, no dead air. IV versions kept as *-IV.mp4. Side-by-side: renders/COMPARE-IV-vs-V.mp4.
-- Measured cost: Avatar V = 48 credits/min through the CLI, same as the web app. Making takes by hand would not be cheaper and would lose the transparent background. About 5 sessions/month fit the Pro plan.
+- Yeti raised a new app idea: an AI "radar" that tells a person whether the account/message in front of them is a bot, AI account, troll, scammer/catfish or predator, and where it really comes from (VPN question). Board + Session Brain checked: nothing related exists. Nearest relatives: the Receipts debate-copilot idea (claim-checking) and the Stormy social-data API radar row in Backlog.
+- Launched an ultracode research workflow (5 lenses, adversarial verify, memo). Run ID wf_ceeb3b73-323. Script: ~/.claude/projects/-Users-darylyoung/22590ac8-0fa6-4e32-940b-f1d435318730/workflows/scripts/radar-app-feasibility-wf_ceeb3b73-323.js
+- Memo lands at ~/Projects/bot-radar-idea/FEASIBILITY.md when the workflow finishes.
 
 **What's live / deployed:**
-- Nothing uploaded.
+- Nothing deployed.
 
 **Next up:**
-- Send Joe S1 (V). Re-render S6 v2 on V with the new end cards. Then S2 or S4.
-- Optional: digital twin of Joe (few minutes to camera + consent link) to unlock motion prompts on V.
+- If this session died before the memo was written: resume with Workflow({scriptPath: the script above, resumeFromRunId: "wf_ceeb3b73-323"}). Completed agents return cached; check journal.jsonl in the transcript dir first.
+- Read the memo, give Yeti the verdict, file a Decision row on the Master Task Board, write the idea to memory.
 
 **Notes for other environments:**
-- HeyGen credits 1,217 left, resets Nov 10.
+- Usage cap was at ~25% when this started; the research may have been cut off. Check for the memo file before redoing anything.
