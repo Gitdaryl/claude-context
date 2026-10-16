@@ -1,18 +1,18 @@
+
 ## Session: 2026-10-16 ET
 **Environment:** Antigravity IDE
 **What was done:**
-- Yeti raised a new app idea: an AI "radar" that tells a person whether the account/message in front of them is a bot, AI account, troll, scammer/catfish or predator, and where it really comes from (VPN question). Board + Session Brain checked first: nothing related existed.
-- Ran an ultracode research workflow (run wf_ceeb3b73-323): 5 research lenses, adversarial verification of 33 load-bearing claims (23 held, 1 refuted, 9 uncertain), memo written.
-- Verdict delivered: the "behind the veil / where are they really" version cannot exist from outside the platform. A second-opinion scam check is buildable but Norton, Bitdefender, Malwarebytes, Trend Micro give it away free and Meta/Google are shipping it in-app. Recommended wedge: a local scam check line (screenshot to a Michigan Twilio number, risk signals + questions to ask, human review) sold to credit unions, senior centers, churches.
-- Memory file bot-radar-app-idea.md written; MEMORY.md index trimmed under its size limit.
-- Session Brain row added. Master Task Board: Decision row filed (Today, Daryl).
+- Reorganised ~/Documents/Joe-Profit/ministry into Sessions/ (one folder per sermon: current FULL + REEL, srt, YouTube copy, scripts, Older versions/) and Workshop/ (the kit). Kit now writes finished videos straight into the session folder.
+- Fixed the jump-cut fault Yeti found in S01 (2-frame reframes, slivers of Joe between B-roll shots, double cuts after cutaways): editor pass in build.mjs, B-roll re-encoded with 0.5s keyframes, card size capped to clear Joe's head. New checkers: kit/check-edit.mjs (blocks the render) and kit/check-flash.py (final pixels). S01 left as is per Yeti.
+- Built S02 "When the Crowd Is Persuaded" and S03 "Character Still Matters" on Avatar V, full + reel each, all facts from Never Broken. 12 new Kling clips (tackle regenerated once for a modern look).
 
 **What's live / deployed:**
-- Nothing deployed. Memo: ~/Projects/bot-radar-idea/FEASIBILITY.md
+- Nothing uploaded. All local in ministry/Sessions/.
 
 **Next up:**
-- Yeti decides pursue-or-park (board row). If pursue: pitch one credit union and one senior group with a demo before building past MVP day 2; attorney review of disclaimers, REPORT Act screenshot duties, retention.
+- Send Joe S01-S03. Upload after his OK.
+- Next sermons: S04 or S05; S06 redo on V when reached; S07 needs Joe's OK on the barbecue story; S08 is interview-only.
+- HeyGen 606 credits left until Nov 10 (~1 session).
 
 **Notes for other environments:**
-- The memo has the two-week MVP plan (section 8) and the legal guardrails (section 5). Do not re-research; the verifier verdicts are in section 6.
-- Usage cap was near its limit this session; nothing was cut short.
+- Board row "produce Sessions 1-8" carries the full status.
