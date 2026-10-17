@@ -1,19 +1,19 @@
-## Session: 2026-10-17 ET
+
+## Session: Oct 17 2026, 12:10 pm ET
 **Environment:** Antigravity IDE
 **What was done:**
-- Answered Kyle's PIN question: 568 566 is a 6-digit crew PIN, correct for his live role (crew_lead, added Oct 14, never signed in). 8 digits is for owner/office/sales/bookkeeper/superintendent.
-- Found the gap: the Oct 16 meeting said Kyle adds the crew on the Team tab, but only owner and office could. Yeti chose superintendent + add crew over the office role (keeps Kyle on the no-money line).
-- Built it in onpoint-office: a superintendent adds, changes, resets the PIN of and turns off crew, crew leads and subs; never anyone else, never a move out of the field. src/lib/people.ts SUPER_MANAGES, api/_lib/members.ts, migration 20261104000000_superintendent_people.sql (app.members_guard), Team tab opens for him, EN + ES refusal text, docs.
-- Tests: new logic, server and RLS cases; full suite 76 files / 1328 tests green.
+- OnPoint Office: home-screen install already worked (PWA). Built phone alerts (web push) on branch feature/push-alerts in ~/Projects/onpoint-office
+- Bell + Alerts sheet: Got it, Open job, Directions, Sent view (who got / saw / tapped Got it / was texted)
+- Alerts: new lead, customer reply, issue photo, put on a job, job moved. Backup text if no Got it: 10 min leads/replies, 30 min job news (held to 7am)
+- Tests: 15 new, full suite 1342/1343 (1 = PIN hourly cap from repeated runs)
 
 **What's live / deployed:**
-- onpoint-office commit e871894 pushed to main; migration applied to the live Supabase project; Vercel production deploy Ready; app.onpointjd.com serves the new bundle (verified by string in index-Def0UBhi.js).
-- Master Task Board: new Done row (build) + updated Notes on "In person: switch Kyle to Superintendent and hand him his new PIN" (still Today).
+- Nothing. Uncommitted on feature/push-alerts. Migration only on LOCAL Supabase.
 
 **Next up:**
-- In person: Team tab > Kyle > Change > Superintendent > Save, hand him the 8-digit PIN face to face (568 566 stops the moment the role changes), then show him Team > Add a person and the ? beside Move it.
-- Nothing else pending from this session.
+- Commit/push, `npx supabase db push`, VAPID keys in Vercel (`npx web-push generate-vapid-keys`), deploy, real iPhone test
+- Website (on-point-jd) to skip phones listed in the app's `pushed` answer
+- Group texts as push (deferred)
 
 **Notes for other environments:**
-- Kyle is still crew_lead in the live database until Yeti or Jay flips him on the Team tab. The app and database are ready for him as superintendent.
-- The webp sweep would convert tests/fixtures/ruler.jpg in onpoint-office; it was skipped on purpose (test fixture, not served).
+- Task board rows filed (Today: take alerts live). Old dev API still running on :8787 from 12:14 am, left alone.
