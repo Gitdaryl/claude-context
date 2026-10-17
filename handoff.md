@@ -1,19 +1,17 @@
 
-## Session: 2026-10-16 ET
+## Session: 2026-10-16 ET (later)
 **Environment:** Antigravity IDE
 **What was done:**
-- Transcribed the 2h05m OnPoint team meeting (Jay, Devon, Kyle, Linda) with whisper large-v3-turbo; loudness-tagged (no speaker ID)
-- 28 app/site asks checked against onpoint-office code, tagged NEW / HAVE / FIX: on-point-jd/crm/meetings/2026-10-16-team-meeting.md
-- Raw transcript saved beside it, gitignored (customer address, private talk)
-- Board: Oak Harbor snow quote (Today) + meeting change list build row (Backlog)
+- Linda = partner on live OnPoint Office (same access as Jay/Devon)
+- onpoint-office commit 973a2fa (local): Roof prices (Money tab, 3% steps editable), Measure defaults, estimate rebuild fix, Holt sub-job type, Supplies tab (tool register + yard sign orders), phone layout fixes
+- 1273/1273 tests; browser flows green on Chromium + WebKit
 
 **What's live / deployed:**
-- Nothing deployed. on-point-jd .gitignore changed (uncommitted)
+- Linda partner only. Code waits for Yeti's go-live OK
 
 **Next up:**
-- Email the Oak Harbor snow quote ($500 plow / $200 salt / 2 in trigger)
-- Get Jay's price per square + adder % before building estimate pricing
-- Reproduce "very steep didn't change price" (likely saved draft ignores new measurements)
+- npx supabase db push, then git push origin main; ORDER_ALERT_PHONES / ORDER_ALERT_EMAILS on Vercel; tap Save roof prices
+- Re-record 7 help clips
 
 **Notes for other environments:**
-- Penny Jo's content: Jay wants it on the OnPoint site; conflicts with the Sunny Skies firewall. Yeti's call.
+- Holt jobs never text/email the homeowner; tools prices hidden from Kyle
