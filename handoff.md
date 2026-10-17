@@ -1,19 +1,20 @@
 
-## Session: Oct 17 2026, 12:10 pm ET
+## Session: 2026-10-17 ET
 **Environment:** Antigravity IDE
 **What was done:**
-- OnPoint Office: home-screen install already worked (PWA). Built phone alerts (web push) on branch feature/push-alerts in ~/Projects/onpoint-office
-- Bell + Alerts sheet: Got it, Open job, Directions, Sent view (who got / saw / tapped Got it / was texted)
-- Alerts: new lead, customer reply, issue photo, put on a job, job moved. Backup text if no Got it: 10 min leads/replies, 30 min job news (held to 7am)
-- Tests: 15 new, full suite 1342/1343 (1 = PIN hourly cap from repeated runs)
+- Pulled a YouTube transcript with no install (uvx youtube-transcript-api); yt-dlp only needed for visuals
+- Built ~/Clients hub: 10 client folders + _prospects/_ventures/_infra, 87 symlinks, START-HERE.md + client.json each. Nothing moved.
+- Notion Clients DB "Files folder" filled on all 10 rows
+- Wrote ~/Clients/MOVE-PLAN.md: what breaks if folders move (launchd storm-watch + snapshots, ~/.claude refs), duplicate repo table, Desktop/Downloads dry run
+- Board: 1 Done, 1 Today (Desktop+Downloads sort, needs Yeti's yes), 2 Backlog
 
 **What's live / deployed:**
-- Nothing. Uncommitted on feature/push-alerts. Migration only on LOCAL Supabase.
+- Nothing deployed. Local hub only.
 
 **Next up:**
-- Commit/push, `npx supabase db push`, VAPID keys in Vercel (`npx web-push generate-vapid-keys`), deploy, real iPhone test
-- Website (on-point-jd) to skip phones listed in the app's `pushed` answer
-- Group texts as push (deferred)
+- Yeti approves Desktop + Downloads sort, then add router rules (OnPoint, DLYC, Pirate Ball, Joe sermons) and apply with undo log
+- Retire duplicate repos (keep ~/Yeti-Groove, ~/Projects/Manitou-Beach)
+- ~/Inbox + nightly sort; Dropbox/NAS paths into client.json
 
 **Notes for other environments:**
-- Task board rows filed (Today: take alerts live). Old dev API still running on :8787 from 12:14 am, left alone.
+- Find any client's files at ~/Clients/<slug>/START-HERE.md on the Mac
