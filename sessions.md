@@ -10969,3 +10969,9 @@ The spec written earlier that day said move the climax to the bank/FAA sequence.
 
 **Notes for other environments:**
 - Find any client's files at ~/Clients/<slug>/START-HERE.md on the Mac
+
+---
+
+## 2026-10-17 13:09 AEST
+
+- (later same session) Desktop + Downloads sorted: 400 moved into ~/Archive, undo log ~/Archive/_logs/moves-2026-10-17.tsv; 39 unsure items in ~/Archive/_Review/2026-10-17; hub re-pointed, 0 broken
