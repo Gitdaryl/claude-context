@@ -1,17 +1,11 @@
 
-## Session: 2026-10-16 ET
+## Session: 2026-10-16 ET (deploy)
 **Environment:** Antigravity IDE
 **What was done:**
-- Wrote "Celestial Mansion" ex-Mormon satire reel script; added glass-floor beat and Black-angel reveal scene; main cut locked at 90s, fish/tithing beats moved to Part 2
-- Proved Higgsfield Kling 3.0 pro (sound on) speaks typed dialogue lip-synced in two-shots: 20 credits/10s, beats Seedance 2.5 (70 credits)
-- Built character sheets + keyframes (Nano Banana Pro), rendered reveal scene as 2 chained clips, fixed a speaker swap and boxy audio
-- Saved memory: kling-native-dialogue-recipe.md
-
+- Unattached garage built (db90c27); deployed db push + git push; ORDER_ALERT env set; redeployed
 **What's live / deployed:**
-- Nothing posted. Project at ~/Projects/celestial-mansion (cuts/reveal-v4-final-audio.mp4 is current)
-
+- app.onpointjd.com version db90c27 (roof prices 3% rule, Holt jobs, Supplies tab, unattached garage)
 **Next up:**
-- When Higgsfield credits refresh (~373 left): confirm the stammer, then render the remaining scenes (est. 250-350 credits)
-
+- Yeti runs cleanup-test-data.sh; Devon: Kirk Reid gutters done/paid?; re-record help clips
 **Notes for other environments:**
-- HeyGen isn't needed for animated dialogue; Kling handles it. Keep HeyGen credits for Joe Profit
+- Print orders text 517-260-5907 and email admin@
