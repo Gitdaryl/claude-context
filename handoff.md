@@ -1,21 +1,19 @@
-
-## Session: Oct 18 2026 (ET)
+## Session: Oct 18 2026 ET
 **Environment:** Antigravity IDE
 **What was done:**
-- 7 research agents + 1 adversarial fact-checker on growing OnPoint: Matt Clark channel (42 transcripts), Meta ads under Housing, Holt + Toledo competitor teardown, buyer psychology/climate, 24 non-weather lead sources, content formulas, connector gaps. Reports in ~/Projects/marketing-playbook/research/01-08.
-- Claude Doc "OnPoint Growth Playbook": https://claude.ai/code/artifact/8cef8b40-144f-46dc-be3c-f148696af5fe (answer, findings, 90-day moves, ad/content/landing formulas, brand, throttle, connectors, skills).
-- New skills: local-growth (whole playbook, any business) and channel-study (YouTube channel study tool, tested). Installed on Mac + VPS; zips for claude.ai in ~/Projects/marketing-playbook/skills-upload/.
-- Correction blocks added (uncommitted) to on-point-jd social/ADS-PILOT.md and social/STORM-TRIGGER.md.
-- 7 board rows filed (skill upload, Cloudflare token rotation, Jay deposit promise, referral program, storm trigger one-ad-set, first-roof list, GSC/GA4 service account).
+- Audited onpointjd.com (home, /estimate, /reasons + 6 personas, 21 storm + 21 snow town pages) against on-point-jd/social/GROWTH-FINDINGS.md checklist
+- Fixed in tools/build_pages.py + rebuilt: Ohio 3-day cancel FAQ on home/estimate/storm pages; hail-size (&in=) line removed from storm town pages; persona h1s now name town + persona; reviews newest first; Google review link on every proof block; new price section on reasons pages (total + monthly + decking + warranty + 3-day cancel); reviews added to /storm-damage, /storm/<town>, /estimate; snow pages get review links
+- New fact (Yeti): whole roof crew does a thorough final check at the end of every job. In NOTES.md; on site as a reason, an /estimate inclusion and a home reviews line
+- Call/text tap beacons now carry utm_campaign (track/tap/<source>/<button>/<campaign>/<uuid>; desk tally unchanged)
 
 **What's live / deployed:**
-- Nothing deployed. Doc + skills only.
+- Nothing. 82 files changed in ~/Projects/on-point-jd, uncommitted, all 9 test files pass. Push to master = production deploy.
 
 **Next up:**
-- Yeti: upload the 2 skill zips to claude.ai; rotate the Cloudflare token found in ~/.claude.json; start the review push with Jay's customer list (20 Google reviews by Dec 1).
-- Jay (in person): pick one written deposit promise; OK referral amounts.
-- Commit the two on-point-jd doc edits when ready.
+- Yeti to OK the push (commit with pathspec; social/ADS-PILOT.md + STORM-TRIGGER.md are someone else's uncommitted work, leave them)
+- Decide the $1,000 offer + bonus wheel (no end date; OAC 109:4-3-04(H) risk)
+- Build personas "roof turned 15 (insurance)" and "property manager" once facts are in
+- Ask Jay: who answers the phone after hours; a real "you didn't need a roof" story; OK the storm line "we'll tell you honestly if it's worth a claim"
 
 **Notes for other environments:**
-- Holt runs NO Meta ads; busy from 79 yrs + 221 reviews + Maps #1. Price transparency is no longer unique in Toledo (COX 60-second estimate ad).
-- For any marketing ask, use the local-growth skill; for any guru video, channel-study.
+- Desk does not yet group taps or leads by utm_campaign; the data is now being captured for it
