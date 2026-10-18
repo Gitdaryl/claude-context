@@ -1,18 +1,21 @@
 
-## Session: 2026-10-17 ET (later)
+## Session: Oct 18 2026 (ET)
 **Environment:** Antigravity IDE
 **What was done:**
-- Teaser narrated by ElevenLabs Chris; scenes now sized to the narration (61.6s, 0.65s gaps); trade-neutral script (roofing example, good/better/best + add-ons, off-season side work)
-- Site copy made trade-neutral; new tutorials band ("Technology is a lot. So we make the how-to videos."); FAQ "We are not roofers"
-- Fixed a sync-tool bug ($1 backreference corrupted "$184.20" in prerendered HTML)
+- 7 research agents + 1 adversarial fact-checker on growing OnPoint: Matt Clark channel (42 transcripts), Meta ads under Housing, Holt + Toledo competitor teardown, buyer psychology/climate, 24 non-weather lead sources, content formulas, connector gaps. Reports in ~/Projects/marketing-playbook/research/01-08.
+- Claude Doc "OnPoint Growth Playbook": https://claude.ai/code/artifact/8cef8b40-144f-46dc-be3c-f148696af5fe (answer, findings, 90-day moves, ad/content/landing formulas, brand, throttle, connectors, skills).
+- New skills: local-growth (whole playbook, any business) and channel-study (YouTube channel study tool, tested). Installed on Mac + VPS; zips for claude.ai in ~/Projects/marketing-playbook/skills-upload/.
+- Correction blocks added (uncommitted) to on-point-jd social/ADS-PILOT.md and social/STORM-TRIGGER.md.
+- 7 board rows filed (skill upload, Cloudflare token rotation, Jay deposit promise, referral program, storm trigger one-ad-set, first-roof list, GSC/GA4 service account).
 
 **What's live / deployed:**
-- yetigroove.com/field-office LIVE (Yeti-Groove 67fd4a9), API reads app.onpointjd.com/field-office.json live
-- onpoint-office 713fe65 on main: field-office.json + guard test + features:stale (pushed from a clean clone; another session is on feature/team-chat with uncommitted team-chat work, untouched)
-- Vercel env FIELD_OFFICE_SOURCES on yeti-groove (production)
+- Nothing deployed. Doc + skills only.
 
 **Next up:**
-- Backlog row: SEO audit of /field-office, own OG image, booking link
+- Yeti: upload the 2 skill zips to claude.ai; rotate the Cloudflare token found in ~/.claude.json; start the review push with Jay's customer list (20 Google reviews by Dec 1).
+- Jay (in person): pick one written deposit promise; OK referral amounts.
+- Commit the two on-point-jd doc edits when ready.
 
 **Notes for other environments:**
-- New OnPoint feature = add an entry to onpoint-office public/field-office.json in the same commit; the sales page picks it up within ~15 min.
+- Holt runs NO Meta ads; busy from 79 yrs + 221 reviews + Maps #1. Price transparency is no longer unique in Toledo (COX 60-second estimate ad).
+- For any marketing ask, use the local-growth skill; for any guru video, channel-study.
