@@ -1,16 +1,16 @@
 
-## Session: 2026-10-19 ET
+## Session: 2026-10-19 ET (cont.)
 **Environment:** Antigravity IDE
 **What was done:**
-- Turned the OnPoint JD logo SVG into a segmented 3D model in Blender 5.2 (headless): Roof, Man, J, D, Plow as separate animatable objects under one parent empty
-- Added backer plates so moving the man or the plow out leaves no hole; demo assemble animation (120 frames, 30fps)
-- Exported .blend, .glb, preview mp4, front + exploded stills, and re-runnable pipeline scripts
+- OnPoint logo v2 in Blender: solid bevelled J and D, black wall behind man, white wall in D counter, hip roof with 1000+ shingle tiles, two gables with open timber trusses
+- Procedural worker figure with 22-bone rig (logo pose, walk-ready), plow truck with 4 separate spinning wheels and liftable plow
+- Demo animation (truck rolls, plow lifts, hammer swings), stills, GLB, mp4
 
 **What's live / deployed:**
-- Nothing deployed. Files in ~/Desktop/onpoint assets/logo-3d/
+- Nothing deployed. ~/Desktop/onpoint assets/logo-3d/v2/
 
 **Next up:**
-- Yeti to review the model in Blender; decide on the real animation (logo sting, site hero, Office splash)
+- Yeti review; walk cycle for the man; decide final use (logo sting / site hero / Office splash)
 
 **Notes for other environments:**
-- No Blender MCP is actually connected to Claude Code; Blender is driven via CLI scripts
+- Man is a stylized toy-figure build; a sculpted/realistic man would need image-to-3D (Higgsfield generate_3d) plus rigging
