@@ -2,15 +2,15 @@
 ## Session: 2026-10-19 ET
 **Environment:** Antigravity IDE
 **What was done:**
-- Added "Who goes" (earned seats, spouse plus-ones, costs) and app-first rollout to the Topping Out doc
-- Built the Team game into OnPoint Office: Jay's 14-question rules form with live roof preview, lock by Jay/partner, live scoreboard, "our part this week" accountability board, hand entry, crew home card (EN/ES)
-- Hidden for everyone but Daryl until he taps "Show it to the team"; Daryl can preview the team's view
+- Turned the OnPoint JD logo SVG into a segmented 3D model in Blender 5.2 (headless): Roof, Man, J, D, Plow as separate animatable objects under one parent empty
+- Added backer plates so moving the man or the plow out leaves no hole; demo assemble animation (120 frames, 30fps)
+- Exported .blend, .glb, preview mp4, front + exploded stills, and re-runnable pipeline scripts
 
 **What's live / deployed:**
-- onpoint-office 3ced86e on app.onpointjd.com; migration 20261107000000_team_game on live Supabase
+- Nothing deployed. Files in ~/Desktop/onpoint assets/logo-3d/
 
 **Next up:**
-- Daryl refines it; before the next meeting tap "Show it to the team"; Jay answers and locks the rules in person
+- Yeti to review the model in Blender; decide on the real animation (logo sting, site hero, Office splash)
 
 **Notes for other environments:**
-- The doc and the game stay off Jay/Devon until Daryl flips it on; never send them the design doc
+- No Blender MCP is actually connected to Claude Code; Blender is driven via CLI scripts
