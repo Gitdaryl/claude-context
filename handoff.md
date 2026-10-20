@@ -1,1 +1,2 @@
-- Seedance 2.0 on Kie test (Oct 20): Yeti "awesome result". Crowd now protests all 8s (prompt line in kit/README Audio). Files: broll/tests-2026-10-20/KIE-A-seedance-voice-CROWD.mp4 and KIE-B-joe-voice-CROWD.mp4. Kie charged $1.64 per 8s (more than Higgsfield's ~$1.45). Kie balance $18.97, Higgsfield 137.
+- Joe (call with Yeti, Oct 20) approves S01-S03 direction: NO re-render; add inserts (prayer, Joe-in-the-past speaking shots) and rebuild locally with the kit. Board row updated.
+- Head-bowed speaking prayer works (Seedance 2.0 on Higgsfield, 54 credits/12s): broll/tests-2026-10-20/PRAYER-A (Seedance voice) and PRAYER-B (Joe's real voice phrase-aligned). Higgsfield ~83 credits left.
