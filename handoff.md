@@ -1,19 +1,18 @@
 
-## Session: 2026-10-19 ET
+## Session: 2026-10-20 ET
 **Environment:** Antigravity IDE
 **What was done:**
-- OnPoint "Roof Price" Meta campaign for onpointjd.com/estimate (no phone/address needed to see a price)
-- 3 reels (HyperFrames, 13.7-16.4s, music+SFX, no narrator, -14 LUFS): r1 the-form, r2 price-tag, r3 one-minute; covers = frame 0
-- 4 statics x feed 1080x1350 + story 1080x1920 (price tag, skip the form, before the sales call, per month)
-- social/posts/roof-price-{form,tag,minute}.json with utm_campaign=roof-price; CAMPAIGN.md with captions + held paid copy
-- Added 3 ready fillers to the OnPoint content board
+- Built Manitou Beach Marketplace (For Sale by Owner): /marketplace index + /marketplace/17239-manitou-rd listing (43 photos WebP, facts, details, gallery+lightbox, map, drive times, call/text Bryson, appointment-only notice, OG card, sitemap, nav, llms.txt)
+- Commit 685af4b pushed from a scratch clone; local ~/Projects/Manitou-Beach untouched (still 5 commits behind + Yeti's uncommitted work)
+- MISTAKE: overwrote 2 originals in Desktop/17239 Manitou rd (House ext 7.png, Shed ext 4.png); no backup found
 
 **What's live / deployed:**
-- Nothing posted or committed (on-point-jd repo, social/video/roof-price/)
+- https://manitoubeachmichigan.com/marketplace and /marketplace/17239-manitou-rd (verified: OG tags, images 200, no console errors, no horizontal scroll at 390px)
 
 **Next up:**
-- Yeti review, then post Reel 2 first (node tools/meta-post.mjs social/posts/roof-price-tag.json)
-- Paid use waits for the 20-review gate
+- Yeti re-exports House ext 7 + Shed ext 4, then add them to the gallery in src/data/marketplace.js
+- Confirm with Bryson: sq ft (does 2,560 include basement?), "sewer" at the pad vs septic
+- Share the listing link with Bryson / on the MB Facebook
 
 **Notes for other environments:**
-- Prices are blurred on purpose in all creative; never add a dollar figure
+- To add a listing: data object in src/data/marketplace.js + photos + OG_MAP entry in middleware.js + sitemap
