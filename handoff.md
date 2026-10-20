@@ -2,17 +2,16 @@
 ## Session: 2026-10-20 ET
 **Environment:** Antigravity IDE
 **What was done:**
-- Found onpointjd.com/estimate was NOT wired to the Office Roof prices card (own /desk book at $715; Office saved $800 on Oct 17). Low pitch priced below Standard because the site shrank the roof and had no Low percent.
-- Office: GET app.onpointjd.com/api/public/roof-rates; price-book basics moved to src/lib/jobs/roofBook.ts (9387eb8).
-- Website: /api/offer prices from the Office card; calculator uses the Office's per-answer percents; Low sized like Standard + its 3%; /desk shows Office prices read only, edits only the range spread; page build bakes in the live Office prices (88de8f2).
+- YUP series notes from Yeti: ancient/Bible B-roll is now voice-over only, never Joe keyed in front (rule in Workshop/kit/README.md cue table)
+- Tested prayer pose shot (head bowed, eyes closed, hands open) and "Joe visits the past" courtyard shot: Nano Banana Pro still + Kling 3.0 pro 10s each, 36 Higgsfield credits (211 left)
+- Files: ~/Documents/Joe-Profit/ministry/Workshop/broll/tests-2026-10-20/pray-test.mp4, courtyard-test.mp4
 
 **What's live / deployed:**
-- Both deployed and verified in a headless browser: typical 1,800 sq ft house Standard $20,200-$25,800, Low $20,800-$26,600 (+3%), 28 squares each.
+- Nothing
 
 **Next up:**
-- Devon decides: Office charges 2 layers +3% but the site promises the 2nd layer free (CONFIRM.md).
-- After any Office price change, rebuild on-point-jd (build_pages + stamp_assets) and push so FAQ/llms prices match.
-- Another session has uncommitted work in ~/Projects/on-point-jd (build_pages.py + generated html): it must pull, rebase, and rebuild before pushing.
+- Yeti reviews both test clips; if good, show Joe one before it goes in a session
+- Untested: Joe speaking inside an ancient scene (lip-sync his voice onto a Kling clip)
 
 **Notes for other environments:**
-- Prices now change in ONE place: OnPoint Office, Costs tab, Roof prices.
+- Older S1/S6 cuts put Joe in front of the crowd/basin clips; fix on redo
