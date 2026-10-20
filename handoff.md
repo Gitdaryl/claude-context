@@ -1,17 +1,1 @@
-
-## Session: 2026-10-20 ET
-**Environment:** Antigravity IDE
-**What was done:**
-- YUP series notes from Yeti: ancient/Bible B-roll is now voice-over only, never Joe keyed in front (rule in Workshop/kit/README.md cue table)
-- Tested prayer pose shot (head bowed, eyes closed, hands open) and "Joe visits the past" courtyard shot: Nano Banana Pro still + Kling 3.0 pro 10s each, 36 Higgsfield credits (211 left)
-- Files: ~/Documents/Joe-Profit/ministry/Workshop/broll/tests-2026-10-20/pray-test.mp4, courtyard-test.mp4
-
-**What's live / deployed:**
-- Nothing
-
-**Next up:**
-- Yeti reviews both test clips; if good, show Joe one before it goes in a session
-- Untested: Joe speaking inside an ancient scene (lip-sync his voice onto a Kling clip)
-
-**Notes for other environments:**
-- Older S1/S6 cuts put Joe in front of the crowd/basin clips; fix on redo
+- Follow-up same day: speaking Joe works. Wan 2.7 (Higgsfield) lip-syncs a still to his real HeyGen voice line, 20 credits per 8s; audio comes back identical, so it cuts straight into a session. Test: Workshop/broll/tests-2026-10-20/speak-test-wan.mp4. Yeti likes that it reads as obvious AI.
