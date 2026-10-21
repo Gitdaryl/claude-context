@@ -1,1 +1,1 @@
-- S04 Barabbas Within Us DONE: FULL 5:07 + REEL 1:22 in Sessions/S04 (thumbnail, reel cover, YouTube copy). Inserts: courtyard, Galilee hillside (Matthew 7:3), head-bowed prayer; reel courtyard. HeyGen dropped 2 short sentences from the full take (left out). Not yet sent to Joe / not uploaded.
+- Oct 21: S01-S04 READY TO UPLOAD (full, reel, srt, thumbnail, reel cover, YouTube copy in each Sessions folder). S01-S03 reels re-rendered with vertical inserts. Yeti uploads S01-S03 then S04; no drafts to Joe. Yeti to sort HeyGen credits for S05.
