@@ -1,17 +1,17 @@
 
-## Session: 2026-10-21 ET
+## Session: 2026-10-22 ET
 **Environment:** Antigravity IDE
 **What was done:**
-- YUP S01-S04 brought to READY TO UPLOAD: full + srt, reel + srt (reels re-rendered with vertical Joe-in-the-past inserts), thumbnail, reel cover, YouTube copy (chapters verified) in each Sessions folder.
-- S04 Barabbas Within Us written, Joe-approved, rendered (HeyGen dropped 2 sentences, left out).
-- S05 script sent to Joe; Joe replied with edits (Gmail 1a15c2539ee2cb55), not yet applied.
-- Kit: kit/cut-line.py, kit/retime-to-voice.py (DTW), kit/mouth-sync.py, kit/covers.py, kit/kie-seedance.py; build.mjs sync-insert + amb cues.
+- Holly + Yeti Halloween tag-team reel (~/Projects/holly-yeti-halloween): locked script, HeyGen clone VO for both (Yeti voice id 042720d3..., orca, EQ'd), Suno "Bewitched" instrumentals as the bed
+- Lip-sync bake-off: HeyGen singles vs Kie Seedance two-shot. Seedance re-voices every clip (Yeti's voice drifts), and the eyeline missed with the height difference. Pivoted to Holly hosts to camera, Yeti heckles off-screen with silent Kling cutaways
+- 21 Kie Nano Banana stills (a Halloween set per venue), 6 HeyGen Holly takes, 7 Kling cutaways, rough v1 (102s) on the Desktop
 
 **What's live / deployed:**
-- Nothing uploaded; Yeti uploads S01-S03 then S04.
+- Nothing posted. Rough v1 at ~/Desktop/holly-yeti-halloween-rough
 
 **Next up:**
-- S05: apply Joe's edits, check HeyGen credits (243 read, Yeti says topped up), render to ready-to-upload. Full detail: ~/Documents/Joe-Profit/ministry/HANDOFF-2026-10-21.md
+- Yeti records his 11 lines on his phone (sheet on Desktop), then rebuild the timeline, re-render Holly's HeyGen takes with calm hands, add event cards + end card, final -14 LUFS, post to Holly & the Yeti ~Oct 26-27
+- Two Lakes Tavern Halloween Party still has no start time in Notion
 
 **Notes for other environments:**
-- Yeti does not send drafts to Joe; only scripts by email. Finish jobs end to end; fix issues found in review without asking.
+- Posts to Holly & the Yeti only (wine gag). Boo(ze) & Bites taste-test reel kept, unposted
