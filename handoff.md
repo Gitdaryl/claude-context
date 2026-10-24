@@ -1,14 +1,19 @@
+
 ## Session: 2026-10-24 ET (later)
 **Environment:** Antigravity IDE
 **What was done:**
-- YUP S07 "Pilate Washed His Hands" script drafted in the S01-S06 format: Joe's own Session 6 text + the courthouse at 14 and the public defender's hand on his shoulder (Never Broken ch. 3-4). Full 4,028 chars (~4.4 min), reel 958 chars.
-- Gmail draft to Joe created (Yeti sends). Old S6 v1/v2 Pilate files moved to S07/Older versions.
+- OnPoint "Shields Up" reel taken from idea to rough cut v1 (62s): ~/Projects/on-point-jd/social/video/space-shield/renders/shields-up-roughcut-v1.mp4
+- Bedtime-story twist ending (Dad = the commander, "The roof part is."), Linda = ElevenLabs Kerrigan, Devon + Kyle likeness cameos (Jay dropped)
+- 14 Kling 3.0 pro clips on Kie (~$6.40); stock end card over the night street
+- _kit/endcard/build_endcard.py: new --night (cream text, feathered snowdrift) and --bg none (transparent over a video track); default unchanged
 
 **What's live / deployed:**
-- Nothing new. S01-S06 ready to upload.
+- Nothing posted
 
 **Next up:**
-- Yeti sends the S07 draft email; on Joe's OK, render S07 (HeyGen wallet $24.03 + plan reset Nov 10; Kie $5.71, top up ~$10).
+- Yeti's timing notes, lip-sync talking shots, music bed, final mix
+- Devon + Kyle consent in person before posting (board row, Today)
+- Fix "up to 50 years" in social/GBP-POSTS.md, confirm 10-yr labor warranty with Jay (board row, Backlog)
 
 **Notes for other environments:**
-- Most S07 B-roll already exists from the Oct 14-15 Pilate builds, so S07 should cost less than S05/S06.
+- HyperFrames needs Node 22 (nvm v22.23.2); Kie balance ~9,800 credits after Yeti's top-up
