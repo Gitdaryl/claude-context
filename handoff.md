@@ -1,1 +1,1 @@
-- (later) Lip-sync pass done on 6 shots via ElevenLabs Sync 3; renders/shields-up-FINAL.mp4 replaced (old one kept as shields-up-FINAL-no-lipsync.mp4).
+- (later still) Yeti rejected the faint Sync 3 pass. FINAL v7: talking shots re-rendered in Kling with native dialogue, voices swapped to Miller/Sunny, lightning bolt removed (flicker in edit), subtitles off. renders/shields-up-FINAL.mp4 (64.9s).
