@@ -1,15 +1,19 @@
 
-## Session (cont.): 2026-10-26 ET
+## Session: 2026-10-26 ET
 **Environment:** Antigravity IDE
 **What was done:**
-- Shipped newsletter fixes to production (d52e111, ce7a62e): signup on /events, Thursday copy, signup source attribution, subscriber count now 71 (was 0)
-- Built and shipped MB Classifieds (7ffaea6): /classifieds, /classifieds/post, /classifieds/:id; Notion DB "Manitou Beach - Classifieds"; SMS code verify + Yeti approval; 30-day expiry cron; Thursday newsletter block
-- 25/25 flow checks vs real Notion (SMS/email stubbed); live pages verified headless
+- Built the Manitou Beach "Classifieds" reel posting bank: 16 agency-style briefs (hook, frame 0, beats, VO, SFX, b-roll real/AI, HyperFrames, models, cost, captions)
+- Opus scripts, Sonnet captions, Haiku lint against the live classifieds copy; lint fixes applied
+- Files: ~/Projects/mb-social/banks/classifieds (bank.json source, build.py, BANK.md, page/)
+- 6 Master Task Board rows filed (2 Today for Yeti)
 
 **What's live / deployed:**
-- manitoubeachmichigan.com/classifieds (nav + footer link "Classifieds")
+- Private page: https://claude.ai/artifact/XSed1QPaVyGWKs65gt4VLY (nothing posted, nothing rendered)
 
 **Next up:**
-- Yeti: one real test classified end to end + one ?utm_source=test newsletter signup (board row, Today)
-- Yeti's local ~/Projects/Manitou-Beach has uncommitted changes (App.jsx etc.) and is behind origin; commit or stash before pulling
-- Newsletter "What's open" + "Lake packing up" sections need a source (Yeti to pick: typed weekly or a Notion page)
+- Yeti: shoot dock/lift haul-out b-roll this week; seed 3-5 real classifieds (page has 0)
+- Lock an MB narrator voice; then produce Wave 1 starting CL-10 + CL-02
+- Build the posting schedule; plan banks for other MB segments
+
+**Notes for other environments:**
+- CL-05 "Broom For Sale" only works Nov 1-7
