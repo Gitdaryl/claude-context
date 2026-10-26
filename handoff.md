@@ -1,1 +1,1 @@
-- Addendum (same session): bank grew to 23 reels with seasonal moments (Thanksgiving Nov 26, Black Friday, pre/post Christmas, New Year), snow/ice weather gates (gates.py, Open-Meteo), season-map timeline on the page, and a Yeti humor pass (memory: yeti-humor-style)
+- Addendum 2: launch week (L-01..L-07, daily Tue Oct 27 to Mon Nov 2) added; TONIGHT Yeti posts the toddler bike only, films L-01, records CL-05 + L-02 lines; Wed 7-9pm add 'New, free classifieds' to the Dispatch draft (auto-sends Thu)
