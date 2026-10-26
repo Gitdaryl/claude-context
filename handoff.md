@@ -1,1 +1,1 @@
-- Addendum 2: launch week (L-01..L-07, daily Tue Oct 27 to Mon Nov 2) added; TONIGHT Yeti posts the toddler bike only, films L-01, records CL-05 + L-02 lines; Wed 7-9pm add 'New, free classifieds' to the Dispatch draft (auto-sends Thu)
+- Addendum 3: Holly kit hair -> short wispy (long-hair looks retired, new profiles 09-13 fall/winter/holiday); Yeti character LOCKED (variant C) with turnaround, expressions, measured height chart at ~/Clients/yeti-groove/media/yeti-character
