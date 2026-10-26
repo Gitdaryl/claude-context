@@ -1,18 +1,14 @@
 
-## Session: 2026-10-25 ET
+## Session (cont.): 2026-10-25 ET
 **Environment:** Antigravity IDE
 **What was done:**
-- Channel study of Jesse Cunningham (@jessecunninghamv): 16 transcripts (3 directory videos via whisper after YouTube 429s). Report: ~/Projects/marketing-playbook/research/10-jesse-cunningham.md
-- Verdict: micro directories (one niche, one region) fit MB's model; skip his rank-and-rent microsites (fake local identities). His directory method is learned from Frey Chu. Skool zip not needed.
-- Board: added Backlog rows "Micro directory pilot" (Daryl) and "Channel study: Frey Chu" (Opus)
-- channel-study skill: added audio + whisper-cli fallback for caption 429s
+- MB traffic pull (Vercel Analytics via CLI): real people visit events/lake pages; all business profiles got ~134 real visits in 5 months; site's own view counter is bot-inflated (memory: mb-traffic-reality)
+- MB newsletter fixes on branch `newsletter-signup-fixes` (pushed, NOT merged): signup box on /events, Thursday-promise copy, signup source attribution to beehiiv (utm/src), subscriber count fix (was always 0)
+- Built in a scratchpad clone; Yeti's dirty working tree in ~/Projects/Manitou-Beach untouched
 
 **What's live / deployed:**
-- Nothing deployed
+- Preview only. Merge newsletter-signup-fixes to main to ship.
 
 **Next up:**
-- Yeti scores 6 candidate niches on the 4-question test, calls 5 operators before building
-- Study Frey Chu channel
-
-**Notes for other environments:**
-- No roofing directories (OnPoint/Sunny Skies). Never sell "best of" badges; label paid spots.
+- Yeti: approve merge; after deploy, one real test signup via a ?utm_source=test link and confirm beehiiv shows the source
+- Start Thursday newsletter this week; recruit Eric (Wieners on the Water) + Smoky D's for Truck Report
