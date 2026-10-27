@@ -1,1 +1,1 @@
-- OnPoint Office 79f4fd5: estimate drafts autosave (2s + on leaving), open discount box blocks save, rebuild/new keep discounts. Cause of Devon's lost discounts not confirmed from data (no prod reads)
+- OnPoint Office 7b8a244: estimate PDF itemizes every line + per-option 'everything we looked at' page (H clips, $0.00 rows, dumpster). Present mode on the iPad still folds percent lines.
