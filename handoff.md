@@ -1,7 +1,16 @@
 
-### Addendum 4 (Oct 26 evening, IDE): Yeti voice v2 + voice library
-- Yeti recorded the 2-min closet read. Built the new HeyGen clone **Yeti v2 `ddfbbb70a02d4538b1244d208d0279bb`**, with noise removal off. Yeti approved the **orca** engine by ear, so the old 042720d3 is retired (boxy).
-- All 10 launch-week lines (L-02, CL-05, CL-10) are voiced with v2 orca: `~/Projects/mb-social/banks/classifieds/audio/lines/`. Nothing left to record except L-01 (real footage).
-- HeyGen plan premium credits ran out Oct 26. TTS now runs on the API wallet (`HEYGEN_API_KEY` from ~/.config/heygen-api-key).
-- **Voice library:** `~/Clients/yeti-groove/media/voice-library/` (vlib.py find/scan/cut/list). 365 takes are indexed across MB, Holly and OnPoint with whisper text and word timings. Run `find` before generating any VO and `scan` after. A nightly launchd scan was not installed (auto-mode blocked it; it needs Yeti's OK).
-- Open: re-voice the Halloween reel's Yeti lines with v2 before Oct 31, if it isn't posted yet.
+## Session: 2026-10-26 ET
+**Environment:** Antigravity IDE
+**What was done:**
+- Joe approved the S07 Pilate script as written (Claude's lines, ch. 3 charges, "In Jesus' name"; every prayer ends that way)
+- S07 REEL built end to end on the HeyGen API wallet: reel + srt, reel cover, thumbnail in Sessions/S07 Pilate Washed His Hands
+- New B-roll s07-shoulder (defender's hand on the boy's shoulder); covers.py got a per-episode thumbnail size override
+
+**What's live / deployed:**
+- Nothing uploaded. S07 reel is ready to upload.
+
+**Next up:**
+- Top up the HeyGen API wallet about $20 ($15.77 left, S07 full take needs ~$32), then submit Workshop/heygen/render-s07-long-v.json and finish the S07 full
+
+**Notes for other environments:**
+- Yeti's $100 HeyGen wallet deposit was spent on the S05 + S06 full takes
