@@ -1,1 +1,1 @@
-- Oct 27: onpoint-office d802ad9 COMMITTED LOCALLY, NOT PUSHED: Edit contact on job page + customers.email2 (copy on every email). Needs `npx supabase db push` (migration 20261109000000_customer_email2.sql) BEFORE git push, else SendPanel consent lookup breaks.
+- Oct 27: migration applied by Yeti; d802ad9 pushed and LIVE (Edit contact on job page, customers.email2 copy). Verify sales login can save a second email.
