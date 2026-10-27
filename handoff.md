@@ -1,16 +1,18 @@
 
-## Session: 2026-10-26 ET
+## Session: 2026-10-27 ET
 **Environment:** Antigravity IDE
 **What was done:**
-- Joe approved the S07 Pilate script as written (Claude's lines, ch. 3 charges, "In Jesus' name"; every prayer ends that way)
-- S07 REEL built end to end on the HeyGen API wallet: reel + srt, reel cover, thumbnail in Sessions/S07 Pilate Washed His Hands
-- New B-roll s07-shoulder (defender's hand on the boy's shoulder); covers.py got a per-episode thumbnail size override
+- OnPoint Office: Roof type multi-pick on Measure (Shingles / Ag panel / Standing seam / Flintlastic low slope), each its own estimate option
+- Roof prices card: ag panel $1,300, standing seam $1,400, Flintlastic $800 per square; same Measure percents, Flintlastic skips pitch
+- Old jobs stay shingles-only, priced as before; metal/Flintlastic start an empty materials order
+- Researched 6" commercial gutter options (no build yet)
 
 **What's live / deployed:**
-- Nothing uploaded. S07 reel is ready to upload.
+- onpoint-office 58e5f49 on app.onpointjd.com (READY, health version confirmed)
 
 **Next up:**
-- Top up the HeyGen API wallet about $20 ($15.77 left, S07 full take needs ~$32), then submit Workshop/heygen/render-s07-long-v.json and finish the S07 full
+- Devon: confirm Flintlastic is the right product, add warranty text for the 3 new options, write their "what you get" bullets
+- Gutter price book (5"/6" K-style, steel vs .032 aluminum, 3x4 / 4x5 downspouts per foot) once Devon gives per-foot prices
 
 **Notes for other environments:**
-- Yeti's $100 HeyGen wallet deposit was spent on the S05 + S06 full takes
+- New roof types only show on the estimate if picked on Measure; default is shingles
