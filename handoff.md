@@ -1,2 +1,1 @@
-- OnPoint Office e63ada9: Flintlastic 3-ply $1,100/20-yr (Plies pick), H clips 2/sheet, D&D = panel maker
-- OnPoint Office 61f19f7: "Also quote" second roof type on one estimate; customer picks (how Devon sends two quotes)
+- OnPoint Office c66ad5f: per-option discount ($ or %) on the estimate; discount code beside good-through. e2e jobs-flow updated but not run (no local stack)
