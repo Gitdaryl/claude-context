@@ -1,1 +1,1 @@
-- OnPoint Office c66ad5f: per-option discount ($ or %) on the estimate; discount code beside good-through. e2e jobs-flow updated but not run (no local stack)
+- OnPoint Office 79f4fd5: estimate drafts autosave (2s + on leaving), open discount box blocks save, rebuild/new keep discounts. Cause of Devon's lost discounts not confirmed from data (no prod reads)
