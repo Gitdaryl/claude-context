@@ -1,18 +1,17 @@
 
-## Session: 2026-10-27 ET
+## Session: 2026-10-27 ET (cont.)
 **Environment:** Antigravity IDE
 **What was done:**
-- OnPoint Office: Roof type multi-pick on Measure (Shingles / Ag panel / Standing seam / Flintlastic low slope), each its own estimate option
-- Roof prices card: ag panel $1,300, standing seam $1,400, Flintlastic $800 per square; same Measure percents, Flintlastic skips pitch
-- Old jobs stay shingles-only, priced as before; metal/Flintlastic start an empty materials order
-- Researched 6" commercial gutter options (no build yet)
+- OnPoint Office 77bf8e2: roof type is one pick per job; Flintlastic sets pitch Low
+- OnPoint Office 3598ca6: Flintlastic 2-ply $820 + warranties, metal gauge/color (USS chart), drip edge + dumpster lines for metal/Flintlastic, 1/2 OSB $55 through contracts/change orders, metal + Flintlastic materials orders with H clips
+- Commercial meeting scope sheet (Claude Doc): https://claude.ai/artifact/XZdgMRKoHHVWQNpuzfo4ZR
 
 **What's live / deployed:**
-- onpoint-office 58e5f49 on app.onpointjd.com (READY, health version confirmed)
+- app.onpointjd.com at 3598ca6 (health + public rates confirmed)
 
 **Next up:**
-- Devon: confirm Flintlastic is the right product, add warranty text for the 3 new options, write their "what you get" bullets
-- Gutter price book (5"/6" K-style, steel vs .032 aluminum, 3x4 / 4x5 downspouts per foot) once Devon gives per-foot prices
+- Devon: look over the new Measure rows on one job (not screen-checked; Docker was off), standing seam warranty, H clip count per sheet, 3-ply price
+- Contract roofing materials checklist is still shingle items; Devon writes metal/Flintlastic in "Additional materials"
 
 **Notes for other environments:**
-- New roof types only show on the estimate if picked on Measure; default is shingles
+- Scope sheet carries per-square prices; Devon can trim before sending
