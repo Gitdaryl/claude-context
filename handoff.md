@@ -1,17 +1,15 @@
-## Session: Oct 27 2026, evening ET
+
+## Session: 2026-10-28 ET
 **Environment:** Antigravity IDE
 **What was done:**
-- Joe approved the S08 script with answers on all 5 points: barbecue told the way he described it on the Oct 15 call, Bobby DeWitt named, our lines and the politics swaps kept, prayer opens "Lord, thank You".
-- Scripts updated, both takes rendered on the HeyGen API wallet ($45.87).
-- New B-roll and inserts on Kie (~$12): the gate, the cable room, the courtroom, the barbecue, the handshake, Joe on the road to the cross, the 2-shot prayer, and a vertical road insert for the reel.
-- S08 FULL (5:44) and REEL (1:17) built and checked; srt, thumbnail, reel cover and YouTube copy are in Sessions/S08.
+- Built the Yeti AI reel for the Men's Club Halloween Hot Dog Roast (Sat Oct 31, 6-8 PM, Sterling Market): ~/Projects/mb-social/reels/2026-10-31-hot-dog-roast/out/hot-dog-roast-v2.mp4 (17.7s) + caption.txt
+- Animated Yeti (locked v3) via Kie stills + HeyGen Avatar IV, voice clone v2 ddfbbb70 orca; B-roll = Yeti's real Oct 31 2022 roast footage from Downloads
 
 **What's live / deployed:**
-- Nothing uploaded. S08 is ready to upload in ~/Documents/Joe-Profit/ministry/Sessions/S08 The Crowd Is Not Beyond Redemption/.
+- Nothing posted
 
 **Next up:**
-- Yeti uploads S07 then S08 to the Joe Profit channel playlist.
-- S09 finale (Whom Will the Church Choose): the BellSouth story needs Joe's OK, then the script goes to Joe. Budget left: HeyGen wallet $59.05, Kie ~$16, which is just enough for S09 with no retakes.
+- Yeti reviews by ear ("Manitaw" pronunciation) and okays the kid shots (2022 footage, faces visible), then posts to Manitou Beach page by Fri Oct 30
 
 **Notes for other environments:**
-- S08 barbecue details now include the Falcons talk and DeWitt's apology (Joe approved, Oct 27). The beer was left out on purpose because this is a youth ministry.
+- HeyGen API wallet $58.65 left; plan premium 0 until Nov 10
