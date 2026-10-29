@@ -1,18 +1,18 @@
 
-## Session: 2026-10-28 8:30pm ET
+## Session: 2026-10-29 ET
 **Environment:** Antigravity IDE
 **What was done:**
-- Confirmed the Holly+Yeti two-host reel was never finished (rough v1 only, Oct 22); shelved it.
-- Built the AI Holly Halloween weekend edition (Oct 30-31, all 6 calendar events), 76s, 6 lip-synced HeyGen Avatar IV scenes + a silent animated-Yeti cameo at the Men's Club hot dog roast (Kie still + Kling, first try).
-- Spend: HeyGen API wallet $2.97 (balance $55.68), Kie ~1 still + 1 Kling clip.
+- Turned the OnPoint Meet Jay interview script into a phone-friendly Claude Doc for today's job shoot: https://claude.ai/artifact/HP3mnmoz8Vr6AWEHVsVnq5
+- Doc covers: hook line word for word, 9 interview questions, Meet Jay b-roll + site stills, before/after spots, Jay likeness photos, Direct series grabs, Stories clips, GBP photos
+- Created drop folders: on-point-jd/social/video/meet-jay/raw, before-after-loops/raw, job-shoots/2026-10-29
+- Linked the doc at the top of meet-jay/SCRIPT.md
 
 **What's live / deployed:**
-- Nothing posted. Final: ~/AI-Holly/reels/2026-10-28-halloween-weekend/ (mp4, post copy.txt, thumbnail).
+- Claude Doc only (private). Nothing pushed.
 
 **Next up:**
-- Yeti reviews and posts (Thu Oct 29 ideal).
-- Tonight's scheduled "AI Holly Weekly Video" run was still pending at 8:30pm; pausing it was blocked by permissions. It renders the OLD drifted avatar and can text Holly directly. Yeti: `gh workflow disable holly-weekend-script.yml -R Gitdaryl/Manitou-Beach` (re-enable later with `enable`).
-- The weekly run has failed 3 weeks running at the overlay upload step ("Response body object should not be disturbed or locked").
+- Ingest today's footage, read Jay's answers from the doc, pick takes, start the Meet Jay cut
+- New before/after pairs into the loop reels once afters are shot
 
 **Notes for other environments:**
-- Silent Yeti cutaways under Holly's VO are the cheap, reliable way to feature Yeti.
+- Mobile: open the doc link above; tick boxes and type Jay's answers there
