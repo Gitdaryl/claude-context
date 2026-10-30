@@ -2,19 +2,18 @@
 ## Session: 2026-10-29 ET
 **Environment:** Antigravity IDE
 **What was done:**
-- OnPoint "Wait Costs More" evergreen campaign: ~/Projects/on-point-jd/social/video/wait-costs-more/CAMPAIGN.md
-- Myron drone pair -> 8s loop reel renders/onpoint-ba-loop-myron-v1.mp4 (post JSON social/posts/wait-before-snow.json)
-- 4 posters, feed + story (statics/out), numbers in one FACTS const
-- Myron pair added to site home Recent work as ranch-reroof (build_pages.py job_ranch), not built
-- Content board fillers f-before-snow (ready), f-grasshopper (idea)
+- OnPoint Office contract screen: Devon could not find how to finish a signing. The last button is now "Done: save the signed contract" (ES too), the still-needed list is a yellow box above it, and a line under it says the next step is printing or emailing the customer's copy. Live DB showed no contract created since Oct 14, so today's signing never saved.
+- Email check for Bob Klumm (job 1012): both estimate emails (Oct 27) show delivered by Resend. His domain is Microsoft 365, so it is in Junk or quarantine on his side. Sender DNS (DKIM/SPF/DMARC) is fine.
 
 **What's live / deployed:**
-- Nothing posted or pushed
+- Nothing yet. Contract button change is uncommitted in ~/Projects/onpoint-office (typecheck + 976 unit tests pass), waiting for Yeti's OK to push.
 
 **Next up:**
-- Devon: source for the 13% hike + materials share of a job; posters 1-2 + R4 wait on it
-- Post R1 loop, then posters 4 and 3
-- LIVE SITE STILL SAYS "workers' comp" (Jay has none); fix uncommitted since Oct 20, ship it
+- Push the contract button change (push = production deploy).
+- Devon re-does the signing with the customer (the form was not saved).
+- Devon asks Bob Klumm to check Junk / search "On Point JD"; his IT may need to release it from quarantine.
+- Org tax ID and insurance certificate (COI) are still blank: any contract of $25k+ cannot be signed until the office fills them in under Invoices > Business info.
+- Re-record the present-and-sign help clip (button text changed).
 
 **Notes for other environments:**
-- Don't publish the "8-15% next year" forecast or "$20k becomes $23k" until sourced; no "cheapest price" claim
+- Contract signing in OnPoint Office = fill everything, then tap the big button at the bottom. Nothing is saved until that tap.
