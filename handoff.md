@@ -1,1 +1,1 @@
-- UPDATE (same session): Joe approved C (color) as his father. Locked at cast/simon/approved/. Aged candidates D (1955) and E (1967) generated from it, awaiting Joe's pick.
+- UPDATE: Joe says Army photo age 25-27. D (1955) "kinda", E (1967) rejected. HOLD on Simon age-ups until Joe sends the younger brother's photo (spitting image), then rebuild 1955/1967 from approved 1946 face + brother.
