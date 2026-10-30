@@ -1,18 +1,15 @@
 
-## Session: 2026-10-30 ET
+## Session: 2026-10-30 ET (continued)
 **Environment:** Antigravity IDE
 **What was done:**
-- OnPoint Office send box: "Copy to" (second email) now follows the job page's live customer; before, it only showed if the email was saved before the box opened. Server always copied it.
-- Pushed both fixes: 37f4876 (contract "Done: save the signed contract") and d6d55c7 (copy line). Live, health reports d6d55c7.
+- Built 3 evergreen "cost of waiting" reels for OnPoint with no numbers: G1 little drip/repair bill, G2 things that don't fix themselves, G3 two neighbors (HyperFrames, music+SFX, 16s, FREE ROOF INSPECTION end card)
+- Renders in social/video/wait-costs-more/renders/, post JSONs in social/posts/wait-*.json, CAMPAIGN.md updated, added to the content board as fillers (ready)
 
 **What's live / deployed:**
-- app.onpointjd.com at d6d55c7.
+- Nothing posted
 
 **Next up:**
-- Devon redoes the customer signing (Oct 29 one never saved).
-- Yeti contacts Kelly at Klumm Bros re: estimate in Junk/quarantine.
-- Org tax ID + COI still blank (blocks $25k+ contracts).
-- Re-record present-and-sign help clip (button text changed).
+- Yeti to approve the three renders, then post in this order: R1 loop, G3, Poster 4, G1, Poster 3, G2
 
 **Notes for other environments:**
-- webp-sweep converted tests/fixtures/ruler.jpg again in onpoint-office; reverted before commit.
+- These reels are paid-eligible (no VO) once the 20-review gate opens
