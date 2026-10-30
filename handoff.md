@@ -1,1 +1,1 @@
-- Added Chris VO to G1-G3 (ElevenLabs, 18 new lines, indexed in voice library). -vo.mp4 cuts are for organic posts, silent cuts are kept for paid ads
+- Built 3 Three.js 3D reels for the inflation angle (A Leaking Money, B Same Dollar Less Roof, C Fall or Spring), with silent + Chris VO cuts, post JSONs, and content board fillers 21-23. Reusable 3D kit is in wait-costs-more/shared3d/kit.js
