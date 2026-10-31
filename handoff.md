@@ -1,17 +1,18 @@
 
-## Session: 2026-10-30 ET (late evening, round 2)
+## Session: 2026-10-31 (ET)
 **Environment:** Antigravity IDE
 **What was done:**
-- Yeti's S01/S02 watch notes fixed across S00-S08: getup morph clip (clean in-point, 4 uses down to 2), title sting now dissolves straight into Joe (build.mjs), new Kie clips stadium2 (upright painted "40") + filming2 (phones held correctly), every prayer closes "In God's name, amen." (free: S00 TTS phrase spliced, folded-hands cutaway), max 2 uses per clip in every sermon.
-- New S00 REEL (1:12, $0, opening of the existing take) + reel cover + Short copy.
-- 18 videos rendered (S00 full+reel, S01-S08 full+reel), 0 errors; closes verified by whisper.
+- Joe Profit site (joeprofitneverbroken.com): nav links wrapped onto the hero between ~820px and ~1300px, and on short viewports the hero rode up under the fixed nav. Nav now owns its own breakpoints (nowrap, compact tier under 1300px, hamburger under 1024px); hero reserves nav height and grows on short screens. Removed 4 duplicated per-page breakpoint copies; My Books dropdown now works on every page.
+- WebP sweep on the site: 46 images, 16.4 MB to 7.7 MB. Added `--skip` flag and tests/social/brand-kit/carousel to SKIP_DIRS in ~/.claude/tools/webp-sweep.py so asset-source folders are never converted.
+- Fixed broken OG image: og:image pointed at /images/joeJoe.png which never existed (file was Joe_Joe.png), so share previews got HTML. New 1200x630 /images/og-never-broken.jpg.
+- Restored public/images/Joe_Joe.png (was deleted in the working tree, hero portrait).
 
 **What's live / deployed:**
-- Nothing uploaded. All files in ministry/Sessions/S0X.
+- Joe-Profit commit 0fbf21d on main, Vercel production verified at 1024 and 1280 wide.
 
 **Next up:**
-- Yeti watches, Joe OKs the CTA line, upload (new video + unlist old if posted). S00 Short: set Related video to S00 full.
-- Joe paid Yeti $50: earmark for S09 HeyGen top-up (~$47).
+- Per-route title/description/canonical on the hub (board row 3ed8c729eb5981a18d08ea82fab03ca3, OG half done).
+- Joe-Profit working tree still has uncommitted api/webhook.js, api/generate-comp.js and movie/ docs from an earlier session. Left as found.
 
 **Notes for other environments:**
-- Rule: no B-roll clip more than twice per video; QA AI clips for morphs, backwards phones, gibberish text.
+- Board row filed as Done for the nav fix; Session Brain row added.
