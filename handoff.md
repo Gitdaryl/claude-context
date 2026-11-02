@@ -1,5 +1,5 @@
 
-### Update (same session, later)
-- d4761bb pushed + live: /why-holly gets "How we sell your home, step by step" (3 tabbed phases, 11 steps) replacing the old timeline, and the whole page was rewritten in plain buyer/seller language (no HTML/structured data/llms.txt/crawler/desk-app/lead/waitlist wording; every tool named comes with the reason it helps the customer).
-- STILL NOT BUILT but described on the page (deliver by hand or build before a seller sees it): step 2 photo/video/drone tour, step 5 social launch post + reel, and a video slot on the property page (step 4 mentions "video tour"). Waitlist outreach is manual from her desk.
-- Rule applied: sell the outcome, never the stack (see memory local-market-ai-illiteracy).
+### Update 3 (same session): options menu on /why-holly (NOT pushed yet)
+- Replaced the 3-phase plan with "Ways we can sell your home better": 6 included basics + 9 optional extras (photos, video, drone, floor plan, own page, lake/local guide, open house, social launch, first look for lake buyers), toggle cards, "Text Holly my picks" SMS. Local only until Yeti says push.
+- Stats are from NAR 2025 Profile of Home Buyers and Sellers (read from the full PDF, exhibits 3-2, 3-6, 3-8, 7-8; buyers/sellers Jul 2024 to Jun 2025) plus Redfin open-house analysis (2016, updated 2020). Mixed evidence is hedged "Some research suggests". Left out on purpose: Redfin 2013 DSLR "$3,400 to $11,200" (13 years old, Redfin sells photography, no sample size) and vendor-blog stats like "X% more inquiries with video" (could not trace to a primary source).
+- Services still to arrange per listing: video, drone, floor plan, open house, social launch (and the property page has no video slot).
