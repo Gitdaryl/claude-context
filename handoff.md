@@ -1,18 +1,18 @@
-## Session: 2026-11-02 ET (part 2)
+
+## Session: 2026-11-02 ET
 **Environment:** Antigravity IDE
 **What was done:**
-- Idea Greenhouse: idea-to-script pipeline, run like a TV show producer would
-- Producer notes on any Grow result ("Regrow with notes")
-- Script writer: Holly and the Yeti shooting script from the brainstorm (run of show, scenes, word-for-word hooks and buttons, bullet riffs, facts marked "confirm", shoot notes); notes rounds rewrite the draft, hand edits, versions kept, lock for filming
-- Phone read mode: big type, speaker colors, auto-scroll, screen stays on, tap scenes to mark shot; print view; last board cached for no-signal reading
-- Shoot plan now builds from the script
+- AI Holly fall look: Holly asked for slimmer body, slightly slimmer face, a little curl. 12 Kie NB Pro stills (216 credits).
+- Candidate approved by QA: pink tweed turnaround, slimmer + soft curl, face still reads as Holly.
+- Cozy knit version failed slimming twice (edits lock body shape; outfit-swap edit pulled the old body back).
+- Memory holly-real-likeness-refs + SOP updated with PENDING note and the recipe (fresh gen for body, edit for hair).
 
 **What's live / deployed:**
-- idea-greenhouse 9b7f1a7 + 1b858ea; first script "The Off Season Crawl" written on the Devils Lake card, reader verified at phone width with no console errors
+- Nothing posted. Files in ~/AI-Holly/reels/2026-11-02-holly-fall-look/
 
 **Next up:**
-- Review The Off Season Crawl draft, give notes, lock before shoot day
-- Verify every (confirm) fact in the script before filming
+- Holly approves or adjusts the slim level on the pink tweed look.
+- Then: fresh-gen cozy knit with the slim build + hair edit; rewrite SOP identity block; add as profile 14.
 
 **Notes for other environments:**
-- Script lives on the card under the 📜 Script button; Read mode is the on-location view
+- SOP "do not slim" / "never curly" are superseded by Holly's own request once she OKs the look.
