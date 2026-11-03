@@ -1,2 +1,1 @@
-- PUSHED onpoint-office 61fecfe (warranty page) + 4868969 (2 layers = 2nd layer $10/sq; Gorilla Guard = $10/sq upgrade over standard; new Roof prices "Holt jobs" block $5/sq per layer past the 2nd, added on Bill Holt with a note). Own jobs: found layers on us.
-- CHECK: if Devon already saved the Roof prices card today, his saved Gorilla Guard is still $20; he must set it to $10.
+- PUSHED 0d8d5b8 (3 underlayment options on every pitch incl. Low) + 13a77ae (Measure: pick shingle systems; "What goes on the estimate" box with plain labels and live A/B/C list of what the customer sees). Verified in a scratch Playwright harness (no local DB): clicks update the list, no errors, no sideways scroll at 390px.
