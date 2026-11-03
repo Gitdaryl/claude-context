@@ -1,21 +1,18 @@
 
-## Session: 2026-11-03 ET
+## Session: 2026-11-03 ET (part 2, stationery)
 **Environment:** Antigravity IDE
 **What was done:**
-- Reverse-engineered trackre.app (client transaction timeline app, $19/mo, iOS/Android) and rebuilt it inside Holly's site instead of a separate app: commit c2127fd on Gitdaryl/Holly main, live on hollygriewahn.vercel.app.
-- Client page /deal/<id>?k=<key>: dated steps from offer to keys, progress bar, "Up next", what each step means and what the client does, add-to-calendar (.ics), "I did this", Ask Holly thread. No login; the texted link is the key.
-- Desk Deals tab: list with past-due and unanswered-question badges, New roadmap (upload the purchase agreement PDF and Claude fills address/price/dates/contingencies; or type two dates), step editor, Text the link, Copy link, reply to questions (also goes out as a text).
-- Michigan step templates (buyer financed, buyer cash, seller, lake-home extras) in src/data/deal-templates.js; steps re-date when the closing date moves.
-- Hourly cron job 4 in api/cron-followup.js: client texts 2 days before each step and morning-of for their own steps; Holly gets one morning summary incl. overdue.
-- Runbook: docs/DEALS.md in the repo.
+- Stationery tab on Holly's desk (commit 2f615fc): 11 branded letters in her voice (offer cover, your offer explained, an offer came in, counter-offer, offer accepted, inspection results/ask, buyer's repair request, closing day details, welcome home, thinking of selling, blank letterhead). Fields prefill from a roadmap ("Write a letter" on a deal). Glossary box explains the words in each letter.
+- One renderer (src/lib/letter-html.js) for preview, Print / Save as PDF and email; brokerage name equal in size to Holly's, signature paired with a logo panel of equal height.
+- Text the short version from the desk number. Email button waits on a sending address (NEWSLETTER_FROM / MAIL_FROM); "Open in your email app" (plain text) until then. Every send/print/copy logged under letters/.
+- docs/ROLEPLAY-TEST.md: the Yeti-as-client test run and gap log.
 
 **What's live / deployed:**
-- All of the above, verified live: /deal shell is noindex, robots disallows /deal, bad key = 404, desk reads need the session.
+- All of it, hollygriewahn.vercel.app, verified headless and live.
 
 **Next up:**
-- Holly makes the first real roadmap from a live purchase agreement; watch the extraction output against the contract.
-- Document uploads on a step (Dotloop/report PDFs) not built; steps take a link only.
-- Lender / title partner access (Trackre's "team collaboration") not built.
+- Role-play test (board row, Today): Holly texts Yeti a roadmap, sends two letters, Yeti plays the client. Gaps become board rows or same-day copy fixes.
+- Email from the desk switches on when Holly finishes the Resend/DNS steps and Yeti sets NEWSLETTER_FROM.
 
 **Notes for other environments:**
-- Treat trackre.app as covered for Holly; do not sign her up. The desk tab is called Deals; the client page is "Your roadmap".
+- Letters are made on the desk only; do not build a second template set elsewhere. Glossary lives in TERMS in src/data/stationery.js.
