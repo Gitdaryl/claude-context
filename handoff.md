@@ -1,1 +1,1 @@
-- PUSHED 0d8d5b8 (3 underlayment options on every pitch incl. Low) + 13a77ae (Measure: pick shingle systems; "What goes on the estimate" box with plain labels and live A/B/C list of what the customer sees). Verified in a scratch Playwright harness (no local DB): clicks update the list, no errors, no sideways scroll at 390px.
+- PUSHED 4th: placeholders instruct (business name was 'Klumm Properties LLC' and looked filled). PWA caches: close/reopen app to see updates.
