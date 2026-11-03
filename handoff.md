@@ -1,1 +1,1 @@
-- PUSHED 4th: placeholders instruct (business name was 'Klumm Properties LLC' and looked filled). PWA caches: close/reopen app to see updates.
+- PUSHED: Measure 'Recommend this one' button per option in live list (measurements.recommend); resets on main roof change.
