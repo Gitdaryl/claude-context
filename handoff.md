@@ -1,18 +1,18 @@
-
-## Session: 2026-11-02 ET
+## Session: 2026-11-02 ET (part 2)
 **Environment:** Antigravity IDE
 **What was done:**
-- Texted Holly instructions for adding Idea Greenhouse to her home screen (iPhone/Android); links opened from Messages need Safari for Add to Home Screen
-- Idea Greenhouse Grow now assumes Irish Hills, MI locality in every mode (was researching Devils Lake, Wisconsin)
-- Incubate Grow reworked into a broad brainstorm: episode ideas, formats incl. Holly + Yeti comedy, script starter, watch-outs
-- Plant gets an optional details box; cards get an edit button for topic + notes; Grow gets today's date
+- Idea Greenhouse: idea-to-script pipeline, run like a TV show producer would
+- Producer notes on any Grow result ("Regrow with notes")
+- Script writer: Holly and the Yeti shooting script from the brainstorm (run of show, scenes, word-for-word hooks and buttons, bullet riffs, facts marked "confirm", shoot notes); notes rounds rewrite the draft, hand edits, versions kept, lock for filming
+- Phone read mode: big type, speaker colors, auto-scroll, screen stays on, tap scenes to mark shot; print view; last board cached for no-signal reading
+- Shoot plan now builds from the script
 
 **What's live / deployed:**
-- idea-greenhouse 332ae49 + 2b6679b on idea-greenhouse-pi.vercel.app, verified with a live Grow on the Devils Lake card
+- idea-greenhouse 9b7f1a7 + 1b858ea; first script "The Off Season Crawl" written on the Devils Lake card, reader verified at phone width with no console errors
 
 **Next up:**
-- Two older Devils Lake cards still in Brainstorm, delete if not wanted
-- Re-grow the Devils Lake card for winter/holiday angles now that the date is passed in
+- Review The Off Season Crawl draft, give notes, lock before shoot day
+- Verify every (confirm) fact in the script before filming
 
 **Notes for other environments:**
-- Greenhouse sign-in uses one shared code for everyone, then pick your name
+- Script lives on the card under the 📜 Script button; Read mode is the on-location view
