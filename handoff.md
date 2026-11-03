@@ -1,1 +1,1 @@
-- PUSHED: Measure 'Recommend this one' button per option in live list (measurements.recommend); resets on main roof change.
+- PUSHED: recommend sticks (draft takes Measure pick + per-card Recommend button; shown estimate shows 'Measure changed' notice + Make a new estimate). Root cause: Save and build shows the existing draft/shown estimate, not a rebuild.
