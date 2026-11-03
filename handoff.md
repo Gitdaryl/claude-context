@@ -1,16 +1,20 @@
 
-## Session: 2026-11-02 ET (end)
+## Session: 2026-11-03 ET
 **Environment:** Antigravity IDE
 **What was done:**
-- Curl variants of the approved Holly look: edit-based curls widened her face; fresh "bouncy curls" made a different young woman (v6 full, in drafts/curl-attempts-FAILED-face-drift). Yeti approved the fresh soft-wave v6 as profile 16.
-- Yeti ended the session (long session, confusing results). Resume fresh tomorrow.
+- OnPoint Office: shingle quotes now give Shingles only, Full Atlas system Pinnacle Pristine (recommended) and StormMaster Shake Class 4 (new price, default $820)
+- Low-slope shingles: underlayment line, standard 2 layers $10/sq each or Gorilla Guard $20/sq, picked on Measure; materials order doubles rolls
+- Second quote on a job emails as "Your updated estimate"; older shown estimate closes as expired once the new one is sent or shown
+- Email totals now come from the screen (fixed a possible stale-totals race)
 
 **What's live / deployed:**
-- Nothing posted. APPROVED at top of ~/AI-Holly/reels/2026-11-02-holly-fall-look/: v3 tweed glasses + no glasses (green eyes, straight hair) and v6 soft wave glasses. Everything in drafts/ is NOT approved.
+- onpoint-office 4c7ffa5 on production (READY)
 
-**Next up (fresh session):**
-- Start from the 3 approved files only. Open questions: green eyes on profile 16, slim level on 16 vs 14, no-glasses soft wave.
-- Read memory holly-real-likeness-refs + SOP first.
+**Next up:**
+- Devon sets the real StormMaster Shake price on the Roof prices card before Bob Klumm's shingle quote goes out
+- Decide whether Pinnacle should match Flintlastic ($820) or stay at $800
+- Confirm Gorilla Guard roll size for the materials order
+- Bob may be a commercial building: Atlas commercial Signature Select is 50 yrs, 15 full; edit warranty text if so
 
 **Notes for other environments:**
-- The "doesn't look like her" image on Nov 2 was v6 full curl from the FAILED drafts folder, not a new problem.
+- Bob Klumm = low-slope roof, wants shingles not metal, warranty is his priority; pitch OnPoint as a contractor that understands commercial work
