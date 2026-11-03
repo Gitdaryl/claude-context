@@ -1,3 +1,2 @@
-- (later) Estimate PDF "Your warranties" page (Bob Klumm): highlighted box, per-option manufacturer warranty + registration, claim steps for Atlas and CertainTeed quoted from their warranty PDFs, metal = ask for D&D written warranty, OnPoint workmanship claim. Uncommitted.
-- FLAG: CertainTeed Flintlastic SA residential warranty covers low-slope roofs UNDER 20 squares only. A 97-sq Flintlastic quote's "12-year warranty" does not apply; PDF now says so on that row. Devon must get the right CertainTeed (commercial) warranty.
-- FLAG: no written D&D Roofing 4G panel/paint warranty on file; ag panel option says "40-year warranty" with no source.
+- PUSHED onpoint-office 61fecfe (warranty page) + 4868969 (2 layers = 2nd layer $10/sq; Gorilla Guard = $10/sq upgrade over standard; new Roof prices "Holt jobs" block $5/sq per layer past the 2nd, added on Bill Holt with a note). Own jobs: found layers on us.
+- CHECK: if Devon already saved the Roof prices card today, his saved Gorilla Guard is still $20; he must set it to $10.
