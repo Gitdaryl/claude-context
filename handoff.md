@@ -1,5 +1,18 @@
 
-### Update 3 (same session): options menu on /why-holly (NOT pushed yet)
-- Replaced the 3-phase plan with "Ways we can sell your home better": 6 included basics + 9 optional extras (photos, video, drone, floor plan, own page, lake/local guide, open house, social launch, first look for lake buyers), toggle cards, "Text Holly my picks" SMS. Local only until Yeti says push.
-- Stats are from NAR 2025 Profile of Home Buyers and Sellers (read from the full PDF, exhibits 3-2, 3-6, 3-8, 7-8; buyers/sellers Jul 2024 to Jun 2025) plus Redfin open-house analysis (2016, updated 2020). Mixed evidence is hedged "Some research suggests". Left out on purpose: Redfin 2013 DSLR "$3,400 to $11,200" (13 years old, Redfin sells photography, no sample size) and vendor-blog stats like "X% more inquiries with video" (could not trace to a primary source).
-- Services still to arrange per listing: video, drone, floor plan, open house, social launch (and the property page has no video slot).
+## Session: 2026-11-02 ET
+**Environment:** Antigravity IDE
+**What was done:**
+- Texted Holly instructions for adding Idea Greenhouse to her home screen (iPhone/Android); links opened from Messages need Safari for Add to Home Screen
+- Idea Greenhouse Grow now assumes Irish Hills, MI locality in every mode (was researching Devils Lake, Wisconsin)
+- Incubate Grow reworked into a broad brainstorm: episode ideas, formats incl. Holly + Yeti comedy, script starter, watch-outs
+- Plant gets an optional details box; cards get an edit button for topic + notes; Grow gets today's date
+
+**What's live / deployed:**
+- idea-greenhouse 332ae49 + 2b6679b on idea-greenhouse-pi.vercel.app, verified with a live Grow on the Devils Lake card
+
+**Next up:**
+- Two older Devils Lake cards still in Brainstorm, delete if not wanted
+- Re-grow the Devils Lake card for winter/holiday angles now that the date is passed in
+
+**Notes for other environments:**
+- Greenhouse sign-in uses one shared code for everyone, then pick your name
