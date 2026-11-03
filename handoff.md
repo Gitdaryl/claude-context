@@ -1,18 +1,19 @@
 
-## Session: Nov 3 2026 ET
+## Session: Nov 3 2026 ET (Holly comms audit)
 **Environment:** Antigravity IDE
 **What was done:**
-- OnPoint Office: audited how job photos work. Gaps: crew cannot see inspection photos or notes, no note prompt for sales, no send to an inspector.
-- Built a building department list: 1,319 Ohio jurisdictions from the state's public map layer, 110 offices, plus 71 Michigan and Indiana contacts.
-- Built locally: Permits tab, building department and permit number on the job's Papers section, migration 20261110000000, loader script, tests.
+- Audited every message in and out of Holly's site before making more training videos
+- Fixed report day wording, seller send link, failed reminder alerts, STOP line, tour coverage, open article jobs
+- Built privacy, terms and optional texting box on a review branch
 
 **What's live / deployed:**
-- Nothing. Code is uncommitted in ~/Projects/onpoint-office. Spreadsheet: ~/Projects/on-point-jd/crm/building-departments-100mi.xlsx (not committed).
+- Commit 67697ab on hollygriewahn.vercel.app
+- Branch holly-privacy-sms-consent (efa8410) pushed, NOT merged, waiting on Holly's review
 
 **Next up:**
-- Yeti's go to ship: exact steps on the Master Task Board row "ship the Permits tab".
-- Devon works the Call list, raised in person.
-- Crew view of inspection photos and notes (Backlog row).
+- Yeti: check Twilio delivery logs for 517-300-8226 (board row)
+- Yeti: one phone call to Holly, five asks (board row)
+- Role-play test, then three new videos, then re-record Roadmaps
 
 **Notes for other environments:**
-- Mac swap was nearly full during this session (18.8 of 19.4 GB). Docker was stopped at the end.
+- Do not put real clients on a roadmap until her texting number has its own registration; it still sits on Manitou's campaign
