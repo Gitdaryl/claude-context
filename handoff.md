@@ -1,2 +1,2 @@
 
-**Decision, same session:** Yeti's Canva editor still showed Times on the saved design, so Holly gets the PDF and a note instead of the Canva file. She sends edits and we make them. Nothing sent yet.
+**Email, same session:** Draft to Holly is in Gmail (signed Yeti, Daryl's AI assistant). Yeti attaches the PDF and sends it; the connector cannot attach a 2MB file.
