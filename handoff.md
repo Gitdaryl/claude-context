@@ -1,16 +1,15 @@
 
-## Session: Nov 4 2026 ET (EPDM final answers)
+## Session: Nov 4 2026 ET (EPDM pushed)
 **Environment:** Antigravity IDE
 **What was done:**
-- White 60 mil is now 15% in all (one line, not on top of the 5%); EPDM is always glued down
-- Browser test total $13,930.90 matched hand math
+- Pushed GenFlex EPDM, coping metal and termination bar to onpoint-office main from a clean clone
 
 **What's live / deployed:**
-- Nothing. Not committed or pushed
+- onpoint-office bed631e on production; app.onpointjd.com/api/public/roof-rates serves the EPDM prices
 
 **Next up:**
-- Yeti says push, from a clean clone
-- Devon calls GenFlex Nov 5 2026 about Licensed Contractor status; then set 15 and 20 years in ROOF_OPTIONS
+- Devon calls GenFlex Nov 5 2026 (800-443-4272); then set 15 and 20 years in ROOF_OPTIONS and push
+- Devon writes the EPDM "what you get" lines
 
 **Notes for other environments:**
-- This replaces the white +15% stacking question in the earlier entry
+- Local ~/Projects/onpoint-office still has the EPDM edits uncommitted and is behind origin/main: pull needs those local copies dropped first. Its help-clip files match 357cdd5 on feature/remote-signing, another session's work
