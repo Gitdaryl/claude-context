@@ -1,15 +1,18 @@
 
-## Session: Nov 4 2026 ET (EPDM pushed)
+## Session: 2026-11-04 ET (photo intake)
 **Environment:** Antigravity IDE
 **What was done:**
-- Pushed GenFlex EPDM, coping metal and termination bar to onpoint-office main from a clean clone
+- Free ads offer agreed: 3 a year, one per format, extra ad $80, tier ladder set
+- Built /ad-photos intake in ~/Projects/Manitou-Beach-intake (branch ad-intake), uncommitted; 183 mock checks pass
+- Boot Jack Postcards added to the pool
 
 **What's live / deployed:**
-- onpoint-office bed631e on production; app.onpointjd.com/api/public/roof-rates serves the EPDM prices
+- Nothing. No commit, push or deploy.
 
 **Next up:**
-- Devon calls GenFlex Nov 5 2026 (800-443-4272); then set 15 and 20 years in ROOF_OPTIONS and push
-- Devon writes the EPDM "what you get" lines
+- Yeti OK to push branch for a Vercel preview and one real upload
+- Attorney reviews Terms draft in ~/Projects/mb-social/mini-ads/offer/DRAFTS.md
+- Announcement only after Terms and form are live
 
 **Notes for other environments:**
-- Local ~/Projects/onpoint-office still has the EPDM edits uncommitted and is behind origin/main: pull needs those local copies dropped first. Its help-clip files match 357cdd5 on feature/remote-signing, another session's work
+- Lake Roots and Bee Mom ads are held. HeyGen wallet at $0.25.
