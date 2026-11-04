@@ -1,17 +1,17 @@
 
-## Session: 2026-11-04 ET
+## Session: Nov 4 2026 ET
 **Environment:** Antigravity IDE
 **What was done:**
-- OnPoint Office: built contract signing by link for Devon (sign, send, customer signs on phone, PDF both ends, deposit receipt, papers under customer name)
-- iPad signing and the Deposit tab now email the copy and receipt by themselves
-- Independent adversarial review: 4 blockers and 8 others fixed or scoped out; 16 signing tests and 18 browser checks pass
+- Explained EPDM for On Point JD, then built it from Devon's answers: GenFlex 45/60 mil roof type, black or white membrane and drip edge, iso board, coping metal, on Measure, Roof prices card, estimate, scope and warranty pages, materials order, English and Spanish
+- $800/sq base, 5% per addition, upgraded iso 10%, coping $30/ft
+- Browser test passed ($14,311.26 matched hand math); applied clean on latest origin/main
 
 **What's live / deployed:**
-- Nothing live. Commit 2235382 on origin branch feature/remote-signing; auto mode blocked the live migration, so the main push was held back
+- Nothing. Not committed or pushed
 
 **Next up:**
-- Yeti, from ~/Projects/onpoint-office-esign: npx supabase db push, then git push origin feature/remote-signing:main
-- One test signing, preview with Devon, ask Jay in person to take JOB-FLOW questions 1 and 14 to the attorney
+- Yeti says push; push from a clean clone (local repo is 2 commits behind, has unfinished help-clip work)
+- Devon confirms coping price basis, upgraded iso 10%, white 45 mil, attachment method, written GenFlex warranty
 
 **Notes for other environments:**
-- Links are not available for $25,000+ contracts, tarps or Holt jobs. Once live, Devon can use it on real customers before the attorney answers
+- Two tests fail with or without this work: people.server PIN change, tradesProd week plan. Worth a separate look
