@@ -1,17 +1,16 @@
 
-## Session: 2026-11-03 ET
+## Session: 2026-11-03 ET (continued)
 **Environment:** Antigravity IDE
 **What was done:**
-- Audited the daily Business Spotlight on Manitou Beach Life: 13s, no audio, near-black frame 0, hyperframes 0.5.6
-- Mocked three mini-ad formats on Lake Roots Salon: ~/Projects/mb-social/mini-ads/concepts/board/concept-board.png
-- Found 5 real photos sitting in logo fields; Rob's Rentals logo is a phone screenshot
+- Yeti chose a mix of A, B, C with Yeti Needs leading; reruns switch format; no owner OK needed
+- Built the first full mini ad: ~/Projects/mb-social/mini-ads/lake-roots-a/out/Yeti Needs - Lake Roots Salon.mp4
 
 **What's live / deployed:**
-- Nothing changed. Daily Spotlight still runs as before.
+- Nothing posted. Daily Spotlight unchanged.
 
 **Next up:**
-- Yeti picks a format, then one full 15s reel on Lake Roots
-- Page token needs insights permission to measure anything
+- Yeti reviews the reel, including the music
+- Then build the format rotation into the spotlight job
 
 **Notes for other environments:**
-- Do not post the concept frames. No business has seen or approved them.
+- Music license for use outside HeyGen is unchecked. Clear it before posting.
