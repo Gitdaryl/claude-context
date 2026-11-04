@@ -1,14 +1,15 @@
 
-## Session: Nov 4 2026 ET (music follow-up)
+## Session: Nov 4 2026 ET (typography + pixel follow-up)
 **Environment:** Antigravity IDE
 **What was done:**
-- Know Your Number: replaced the busy acoustic bed with Yeti's pick, option B (pedal steel, E major). All 12 remixed, video unchanged.
+- Know Your Number: captions and hooks now sized to fill the space and hang from a fixed line above the phone. All 12 re-rendered.
+- Yeti kept the Meta pixel. Found the server-side Conversions API token is set, so leads send hashed contact details to Meta, which contradicts the site's "never sell or share" wording. Board row updated.
 
 **What's live / deployed:**
-- Nothing posted or pushed. Files still uncommitted.
+- Nothing posted or pushed.
 
 **Next up:**
-- Pixel on /estimate, privacy page, $1,000 offer decision, then post in CAMPAIGN.md order.
+- Yeti decides phone-to-Meta and approves privacy wording; decide Black Friday offer window (dates, amount, fixed bonus) with Jay; then post.
 
 **Notes for other environments:**
-- Swap music with `BED=a ./remix.sh` in social/video/know-your-number; no re-render needed.
+- Run `node fit.mjs` before `node build.mjs` after changing any caption.
