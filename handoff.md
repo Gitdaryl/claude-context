@@ -1,17 +1,16 @@
 
-## Session: 2026-11-04 ET (late)
+## Session: 2026-11-04 ET (signing outage)
 **Environment:** Antigravity IDE
 **What was done:**
-- Reviewed On Point NAS footage (100 videos, stills); log at social/video/job-shoots/FOOTAGE.md
-- Measured wind shake: 5 of 7 Myron drone time-lapses steady, 2 lock in software; test renders in job-shoots/2026-10-29/tests and ~/Previews
-- Copied card-only Action cam ridge time-lapse to NAS Myron/Time lapse, verified identical
-- Checked live accounts: last reel Oct 22, 3 reels total, 30 post JSONs unposted
+- Found signing has never worked on OnPoint Office live: 0 signature files, 0 signature rows, 0 contracts signed in the app
+- Commit 8898a9f saves signatures through the server for contracts, change orders, final walk and snow agreements
 
 **What's live / deployed:**
-- Nothing posted or pushed
+- d1285a0 live. 8898a9f needs Yeti's push: git push origin feature/remote-signing:main from ~/Projects/onpoint-office-esign
 
 **Next up:**
-- Yeti to pick posting start; /desk offer off before Know Your Number reels; confirm Myron speaker and consent; decide harness rule with Jay
+- Push, sign test job 1018, run scripts/diag-signing.mjs, expect SIGNED IN THE APP: 1
+- Certificate upload and job photo test: only the documents bucket has files on live, so browser uploads may fail more widely
 
 **Notes for other environments:**
-- Bowling alley footage is a Sunny Skies job, not On Point's
+- Devon stays on paper until the test signing passes
