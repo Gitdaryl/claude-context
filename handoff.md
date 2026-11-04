@@ -1,16 +1,14 @@
 
-## Session: Nov 4 2026 ET
+## Session: Nov 4 2026 ET (music follow-up)
 **Environment:** Antigravity IDE
 **What was done:**
-- On Point "Know Your Number" series: researched homeowner fears about roofers, audited the live /estimate, wrote and rendered 12 reels on the real estimator UI (HyperFrames, Chris VO, new Lyria acoustic bed), 12 post JSONs, CAMPAIGN.md with sources and claims check.
-- Found on the live page: Meta pixel active (so "anonymous" is not literally true), privacy page does not mention it, $1,000 offer + wheel shows after a minute.
-- Held back deposit and insurance reels on purpose (Office default deposit 50%, workers' comp gap).
+- Know Your Number: replaced the busy acoustic bed with Yeti's pick, option B (pedal steel, E major). All 12 remixed, video unchanged.
 
 **What's live / deployed:**
-- Nothing posted, nothing pushed. Files are uncommitted in ~/Projects/on-point-jd/social/video/know-your-number and social/posts/kyn-*.json. Review links in ~/Previews (2026-11-04 Know Your Number *).
+- Nothing posted or pushed. Files still uncommitted.
 
 **Next up:**
-- Yeti reviews the 4-minute back-to-back reel. Decide pixel on /estimate, fix privacy page, decide the offer. Then post in the CAMPAIGN.md order.
+- Pixel on /estimate, privacy page, $1,000 offer decision, then post in CAMPAIGN.md order.
 
 **Notes for other environments:**
-- voice-library voices.json got a rule for know-your-number/vo/lines/, but vlib scan still does not pick those files up; cause not found.
+- Swap music with `BED=a ./remix.sh` in social/video/know-your-number; no re-render needed.
