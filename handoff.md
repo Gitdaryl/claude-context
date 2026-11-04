@@ -1,16 +1,16 @@
 
-## Session: 2026-11-04 ET (signing outage)
+## Session: 2026-11-04 ET (evening)
 **Environment:** Antigravity IDE
 **What was done:**
-- Found signing has never worked on OnPoint Office live: 0 signature files, 0 signature rows, 0 contracts signed in the app
-- Commit 8898a9f saves signatures through the server for contracts, change orders, final walk and snow agreements
+- Built social/video/real-jobs: 9 reels from Myron and Bleeker footage (5 VO, 2 Yeti takes, 2 loops), posts JSON, HOOK-POOL.md, PLAN.md
+- Rewrote content board calendar: 20 posts, every 2 days, Nov 5 to Dec 13
+- Filed task rows; tidied NAS Myron files
 
 **What's live / deployed:**
-- d1285a0 live. 8898a9f needs Yeti's push: git push origin feature/remote-signing:main from ~/Projects/onpoint-office-esign
+- Nothing posted or pushed
 
 **Next up:**
-- Push, sign test job 1018, run scripts/diag-signing.mjs, expect SIGNED IN THE APP: 1
-- Certificate upload and job photo test: only the documents bucket has files on live, so browser uploads may fail more widely
+- Yeti reviews ~/Previews ALL 9; says go for Nov 5 post; /desk offer off; Myron and Tami OKs in person; tell Jay the OSHA window is 6 months
 
 **Notes for other environments:**
-- Devon stays on paper until the test signing passes
+- Sunny Skies has dissolved; hold its jobs until rights are done. Never call Tami Frampton's deck rotted in public: her insurance claim is live.
