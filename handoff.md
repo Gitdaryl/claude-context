@@ -1,20 +1,18 @@
 
-## Session: Nov 4 2026 ET
+## Session: 2026-11-04 ET
 **Environment:** Antigravity IDE
 **What was done:**
-- OnPoint Office: built "Can we show your job?", a signed permission for showing the work in ads, social media and press, and for asking for a testimonial video if the customer is happy
-- Asked after the contract is signed (iPad and link page) and again at the final walk; replaces the unsigned yes/no the rep tapped at the walk
-- Customer can change their mind; Devon records a stop; customer gets an emailed copy of a yes
-- Tests: 28 new unit and server tests, browser flow passes on Chromium and WebKit
+- Tested the Canva connector on the Holly advertorial. Reads, exports and draft edits work; PPTX upload is refused.
+- Found the Times look was not in the file: Canva stored and exported the right 4 fonts with no collisions.
+- Built v2 PPTX fixing the real flaws (paragraph gaps, column width). Not yet through Canva.
+- Updated HANDOFF.md, memory and the board.
 
 **What's live / deployed:**
-- Nothing. Uncommitted in ~/Projects/onpoint-office-showjob, branch feature/show-your-job, based on origin/main 8898a9f
+- Nothing. No Canva design was changed; both test drafts were discarded.
 
 **Next up:**
-- Yeti runs npx supabase db push from the worktree, then says push
-- Attorney reads the words (question 16 in docs/JOB-FLOW.md)
-- Jay OKs the 7-day takedown promise
-- Ask the three before/after customers so /projects can publish
+- Yeti drags ~/Previews/2026-11-04 Holly advertorial for Canva v2.pptx into Canva, then Claude verifies it.
+- Check what the design looks like in a fresh editor window, and in Holly's Canva.
 
 **Notes for other environments:**
-- Do not post a job marked not asked. No discount or gift for a testimonial, ever.
+- Judge Canva by its export, not an editor screenshot. Do not host this ad on a public URL to get around the upload limit.
