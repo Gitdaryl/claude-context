@@ -1,11 +1,17 @@
 
-## Session: 2026-11-04 ET (help clips)
+## Session: 2026-11-04 ET (late)
 **Environment:** Antigravity IDE
 **What was done:**
-- OnPoint Office: permit clip shipped; book-the-inspection and send-estimate re-recorded (live at a23b08f); six job-page clips re-recorded
+- Reviewed On Point NAS footage (100 videos, stills); log at social/video/job-shoots/FOOTAGE.md
+- Measured wind shake: 5 of 7 Myron drone time-lapses steady, 2 lock in software; test renders in job-shoots/2026-10-29/tests and ~/Previews
+- Copied card-only Action cam ridge time-lapse to NAS Myron/Time lapse, verified identical
+- Checked live accounts: last reel Oct 22, 3 reels total, 30 post JSONs unposted
 
 **What's live / deployed:**
-- a23b08f live. The six-clip commit needs Yeti's push: git push origin feature/remote-signing:main from ~/Projects/onpoint-office-esign
+- Nothing posted or pushed
 
 **Next up:**
-- EPDM has no help clip. send-today, roof-day, snow-visit, storm-board and people-and-pay are still from Oct 13 and unchecked
+- Yeti to pick posting start; /desk offer off before Know Your Number reels; confirm Myron speaker and consent; decide harness rule with Jay
+
+**Notes for other environments:**
+- Bowling alley footage is a Sunny Skies job, not On Point's
