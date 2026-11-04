@@ -1,2 +1,2 @@
 
-**Update, same session:** The ad was fixed inside Canva instead of re-importing, so the v2 drag is no longer needed. Saved as "Holly advertorial for Holly" (DAHZ__pj5GY) and verified on Canva's export. Next: Yeti opens it to confirm the fonts on screen, then shares it with Holly with the PDF.
+**Decision, same session:** Yeti's Canva editor still showed Times on the saved design, so Holly gets the PDF and a note instead of the Canva file. She sends edits and we make them. Nothing sent yet.
