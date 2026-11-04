@@ -1,18 +1,11 @@
 
-## Session: 2026-11-04 ET (photo intake)
+## Session: 2026-11-04 ET (help clips)
 **Environment:** Antigravity IDE
 **What was done:**
-- Free ads offer agreed: 3 a year, one per format, extra ad $80, tier ladder set
-- Built /ad-photos intake in ~/Projects/Manitou-Beach-intake (branch ad-intake), uncommitted; 183 mock checks pass
-- Boot Jack Postcards added to the pool
+- OnPoint Office: permit clip shipped; book-the-inspection and send-estimate re-recorded (live at a23b08f); six job-page clips re-recorded
 
 **What's live / deployed:**
-- Nothing. No commit, push or deploy.
+- a23b08f live. The six-clip commit needs Yeti's push: git push origin feature/remote-signing:main from ~/Projects/onpoint-office-esign
 
 **Next up:**
-- Yeti OK to push branch for a Vercel preview and one real upload
-- Attorney reviews Terms draft in ~/Projects/mb-social/mini-ads/offer/DRAFTS.md
-- Announcement only after Terms and form are live
-
-**Notes for other environments:**
-- Lake Roots and Bee Mom ads are held. HeyGen wallet at $0.25.
+- EPDM has no help clip. send-today, roof-day, snow-visit, storm-board and people-and-pay are still from Oct 13 and unchecked
