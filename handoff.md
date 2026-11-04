@@ -1,16 +1,15 @@
 
-## Session: 2026-11-04 ET
+## Session: 2026-11-04 ET (update)
 **Environment:** Antigravity IDE
 **What was done:**
-- Rebuilt Holly's advertorial template as a one-path layout with her real photos, a fixed broker block (MCL 339.2512e) and a QR to hollygriewahn.com
-- Built a Canva-ready PPTX with live text and a spare-photos page; made 2 AI boat stills with the likeness kit (36 Kie credits)
-- Searched NAS Holly folders: no real photo of Holly in a boat
+- Tested the Holly advertorial PPTX in Canva: fonts and spacing broke. PDF is the review copy.
+- Yeti connected Canva on claude.ai; it was not available in this session.
 
 **What's live / deployed:**
-- Nothing live. Files in ~/Clients/holly-griewahn/media/advertorial-layout, links in ~/Previews
+- Nothing live.
 
 **Next up:**
-- Test the PPTX import in Canva; Holly approves boat image, captions, red broker logo, and her logo file; get publication ad specs
+- New session: read ~/Clients/holly-griewahn/media/advertorial-layout/HANDOFF.md and try the Canva connector.
 
 **Notes for other environments:**
-- Boat shot is AI and needs Holly's approval before print
+- Holly's feedback does not depend on Canva; the PDF can go to her now.
