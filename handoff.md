@@ -1,16 +1,11 @@
 
-## Session: 2026-11-04 ET (evening)
+## Session: 2026-11-04 ET (evening, follow-up)
 **Environment:** Antigravity IDE
 **What was done:**
-- Built social/video/real-jobs: 9 reels from Myron and Bleeker footage (5 VO, 2 Yeti takes, 2 loops), posts JSON, HOOK-POOL.md, PLAN.md
-- Rewrote content board calendar: 20 posts, every 2 days, Nov 5 to Dec 13
-- Filed task rows; tidied NAS Myron files
-
+- Yeti off camera: p01, p02 remade as Chris VO over b-roll. Silent loops replaced by story reels: 30 years on the roof, Who nails your roof
 **What's live / deployed:**
 - Nothing posted or pushed
-
 **Next up:**
-- Yeti reviews ~/Previews ALL 9; says go for Nov 5 post; /desk offer off; Myron and Tami OKs in person; tell Jay the OSHA window is 6 months
-
+- Yeti reviews ALL 9 in ~/Previews
 **Notes for other environments:**
-- Sunny Skies has dissolved; hold its jobs until rights are done. Never call Tami Frampton's deck rotted in public: her insurance claim is live.
+- Jay has 30 years on the roof; company dates from 2022. Never say family business for 30 years.
