@@ -1,17 +1,18 @@
 
-## Session: 2026-11-04 ET
+## Session: 2026-11-04 ET (continued)
 **Environment:** Antigravity IDE
 **What was done:**
-- Built ~/MB-Assets: 32 business folders, season B-roll, _INBOX, sync.py; seeded from the live site, 6 of 32 have real photos
-- Added ~/Previews for review renders
-- Confirmed Claude can mount the NAS on request
+- SD-Recovery keepers copied to the NAS: 909 files, 99 GB, sha256 identical
+- Built Postcards (Boathouse Art Gallery) and Holly's Lake Envy (Michigan Bee Mom) reels; both linked in ~/Previews
 
 **What's live / deployed:**
-- Nothing deployed. Nothing deleted.
+- Nothing posted, nothing deleted.
 
 **Next up:**
-- Back up ~/SD-Recovery keepers to the NAS BEFORE any purge: the NAS mirror is empty
-- Decide on rotating Blob tokens printed into the session
+- Yeti reviews three reels; then build format rotation on the Mac runner
+- Yeti's OK on purging SD-Recovery recovered/ and superseded passes
+- Rotate Blob tokens printed into the session
+- osmo.dmg card clone still missing
 
 **Notes for other environments:**
-- Do not delete anything in ~/SD-Recovery yet.
+- HeyGen wallet is at $2.02.
