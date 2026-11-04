@@ -1,21 +1,17 @@
 
-## Session: 2026-11-04 ET (end of day)
+## Session: 2026-11-04 ET
 **Environment:** Antigravity IDE
 **What was done:**
-- Heather chosen for mini ads, keeps Holly's voice with Holly's OK; seasonal looks and real backdrops set up
-- Ad pool built at ~/MB-Assets/_Ad-Pool: 7 ads, 5 slotted Nov 9 to 18, Bellfy and Ang & Co on hold
-- Planner at ~/Projects/mb-social/mini-ads/rotation; seasons.json tracks who is closed
-- Yeti's Suno tracks cut into beds and a sting at ~/MB-Assets/_Music
-- SD-Recovery superseded folders verified on NAS; 104 GB deleted from the Mac
+- OnPoint Office: built contract signing by link for Devon (sign, send, customer signs on phone, PDF both ends, deposit receipt, papers under customer name)
+- iPad signing and the Deposit tab now email the copy and receipt by themselves
+- Independent adversarial review: 4 blockers and 8 others fixed or scoped out; 16 signing tests and 18 browser checks pass
 
 **What's live / deployed:**
-- Nothing posted. Daily Spotlight still running, unchanged.
+- Nothing live. Commit 2235382 on origin branch feature/remote-signing; auto mode blocked the live migration, so the main push was held back
 
 **Next up:**
-- Yeti to run: sudo rm -rf ~/SD-Recovery/recovered
-- Top up the HeyGen wallet ($0.25 left)
-- Yeti's answers: Two Lakes, seasonal list, Michigan Gypsy; strategy goal and share request
-- Rotate Blob tokens and reissue the Topaz login; both were exposed in session logs
+- Yeti, from ~/Projects/onpoint-office-esign: npx supabase db push, then git push origin feature/remote-signing:main
+- One test signing, preview with Devon, ask Jay in person to take JOB-FLOW questions 1 and 14 to the attorney
 
 **Notes for other environments:**
-- Do not post pool ads until Yeti approves and the Boathouse season question is answered.
+- Links are not available for $25,000+ contracts, tarps or Holt jobs. Once live, Devon can use it on real customers before the attorney answers
