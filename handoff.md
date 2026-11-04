@@ -1,18 +1,16 @@
 
-## Session: 2026-11-04 ET (later)
+## Session: Nov 4 2026 ET (EPDM final answers)
 **Environment:** Antigravity IDE
 **What was done:**
-- OnPoint Office: Residential / Commercial button on every job and New job; commercial drops the Ohio home contract rules, so 50% deposit and link signing at any amount; papers and messages follow it
-- Second independent review: 2 blockers and 8 others fixed
-- Help clips: new send-to-sign, re-recorded add-a-lead and present-and-sign; update banner corrected
+- White 60 mil is now 15% in all (one line, not on top of the 5%); EPDM is always glued down
+- Browser test total $13,930.90 matched hand math
 
 **What's live / deployed:**
-- Link signing 2235382 is live. This work is not: commit 23a05d2 on origin branch feature/remote-signing
+- Nothing. Not committed or pushed
 
 **Next up:**
-- Yeti, from ~/Projects/onpoint-office-esign: npx supabase db push, then git push origin feature/remote-signing:main (migration first or new jobs fail)
-- Devon checks the warranty line on Bob's contract after pressing Commercial
-- Ask Jay in person about attorney questions 1, 14, 15
+- Yeti says push, from a clean clone
+- Devon calls GenFlex Nov 5 2026 about Licensed Contractor status; then set 15 and 20 years in ROOF_OPTIONS
 
 **Notes for other environments:**
-- 3-day cancel stays on for commercial until the attorney answers. Group texts keep home wording
+- This replaces the white +15% stacking question in the earlier entry
