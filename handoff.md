@@ -1,15 +1,21 @@
 
-## Session: Nov 4 2026 ET (pixel, privacy, rolling price)
+## Session: 2026-11-04 ET (end of day)
 **Environment:** Antigravity IDE
 **What was done:**
-- Stopped sending phone numbers to Meta and updated the privacy page and "never sell" wording site-wide.
-- Know Your Number: total price now rolls through real estimator outcomes, financing stays blurred. Reel 5 corrected: a second story lowers the price.
+- Heather chosen for mini ads, keeps Holly's voice with Holly's OK; seasonal looks and real backdrops set up
+- Ad pool built at ~/MB-Assets/_Ad-Pool: 7 ads, 5 slotted Nov 9 to 18, Bellfy and Ang & Co on hold
+- Planner at ~/Projects/mb-social/mini-ads/rotation; seasons.json tracks who is closed
+- Yeti's Suno tracks cut into beds and a sting at ~/MB-Assets/_Music
+- SD-Recovery superseded folders verified on NAS; 104 GB deleted from the Mac
 
 **What's live / deployed:**
-- onpointjd.com a722d1d and OnPoint Office 52ce670, verified live. Reels not posted.
+- Nothing posted. Daily Spotlight still running, unchanged.
 
 **Next up:**
-- Yeti: switch off the no-end-date offer at /desk (PIN). Jay: Black Friday amount and bonus. Then post in CAMPAIGN.md order.
+- Yeti to run: sudo rm -rf ~/SD-Recovery/recovered
+- Top up the HeyGen wallet ($0.25 left)
+- Yeti's answers: Two Lakes, seasonal list, Michigan Gypsy; strategy goal and share request
+- Rotate Blob tokens and reissue the Topaz login; both were exposed in session logs
 
 **Notes for other environments:**
-- ~/Projects/on-point-jd and onpoint-office working copies are behind origin and hold uncommitted work. Pushed from clean clones, so pull with care.
+- Do not post pool ads until Yeti approves and the Boathouse season question is answered.
