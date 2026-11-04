@@ -1,2 +1,2 @@
 
-**Update, Nov 4 2026 ET:** "Can we show your job?" is LIVE on app.onpointjd.com at 347b1b9, migration on production. Still open: attorney question 16, Jay's OK on the 7-day takedown, asking the three before/after customers.
+**Update, same session:** The ad was fixed inside Canva instead of re-importing, so the v2 drag is no longer needed. Saved as "Holly advertorial for Holly" (DAHZ__pj5GY) and verified on Canva's export. Next: Yeti opens it to confirm the fonts on screen, then shares it with Holly with the PDF.
