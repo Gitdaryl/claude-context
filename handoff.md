@@ -1,11 +1,16 @@
 
-## Session: 2026-11-04 ET (evening, follow-up)
+## Session: 2026-11-04 ET
 **Environment:** Antigravity IDE
 **What was done:**
-- Yeti off camera: p01, p02 remade as Chris VO over b-roll. Silent loops replaced by story reels: 30 years on the roof, Who nails your roof
+- Rebuilt Holly's advertorial template as a one-path layout with her real photos, a fixed broker block (MCL 339.2512e) and a QR to hollygriewahn.com
+- Built a Canva-ready PPTX with live text and a spare-photos page; made 2 AI boat stills with the likeness kit (36 Kie credits)
+- Searched NAS Holly folders: no real photo of Holly in a boat
+
 **What's live / deployed:**
-- Nothing posted or pushed
+- Nothing live. Files in ~/Clients/holly-griewahn/media/advertorial-layout, links in ~/Previews
+
 **Next up:**
-- Yeti reviews ALL 9 in ~/Previews
+- Test the PPTX import in Canva; Holly approves boat image, captions, red broker logo, and her logo file; get publication ad specs
+
 **Notes for other environments:**
-- Jay has 30 years on the roof; company dates from 2022. Never say family business for 30 years.
+- Boat shot is AI and needs Holly's approval before print
