@@ -1,16 +1,17 @@
 
-## Session: 2026-11-03 ET (continued)
+## Session: 2026-11-04 ET
 **Environment:** Antigravity IDE
 **What was done:**
-- Yeti chose a mix of A, B, C with Yeti Needs leading; reruns switch format; no owner OK needed
-- Built the first full mini ad: ~/Projects/mb-social/mini-ads/lake-roots-a/out/Yeti Needs - Lake Roots Salon.mp4
+- Built ~/MB-Assets: 32 business folders, season B-roll, _INBOX, sync.py; seeded from the live site, 6 of 32 have real photos
+- Added ~/Previews for review renders
+- Confirmed Claude can mount the NAS on request
 
 **What's live / deployed:**
-- Nothing posted. Daily Spotlight unchanged.
+- Nothing deployed. Nothing deleted.
 
 **Next up:**
-- Yeti reviews the reel, including the music
-- Then build the format rotation into the spotlight job
+- Back up ~/SD-Recovery keepers to the NAS BEFORE any purge: the NAS mirror is empty
+- Decide on rotating Blob tokens printed into the session
 
 **Notes for other environments:**
-- Music license for use outside HeyGen is unchecked. Clear it before posting.
+- Do not delete anything in ~/SD-Recovery yet.
