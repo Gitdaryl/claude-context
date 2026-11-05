@@ -1,16 +1,17 @@
-## Session: 2026-11-05 ET (update)
+
+## Session: 2026-11-05 ET
 **Environment:** Antigravity IDE
 **What was done:**
-- Daily Business Spotlight workflow disabled at Yeti's request; post-ad.mjs poster built
-- Built sponsor ads: Water Sports, Faust House, Decker 5 Generations plus furs alt, Gypsy Blue, Holly Griewahn; redid Boot Jack, Boathouse, Bellfy with Holly's voice
-- 19 Notion listings got Facebook and Instagram links; club lines added to captions
+- Posted "Done before the snow" to FB, IG, YT, first reel since Oct 22
+- Counted the reel bank: 39 unposted, 16 clear, 4 need Yeti's review, 12 Know Your Number wait on /desk, 1 Myron, 5 Tami
+- Tarp before/after loop looks like the Bleeker house: moved behind Tami's OK, Milford loop took the Dec 1 slot
 
 **What's live / deployed:**
-- Nothing new posted. Session-only schedule: Water Sports Nov 9, Faust House Nov 11, Blackbird Nov 13 at about 11:17 AM ET, only if this session stays open
+- FB facebook.com/reel/4514539825424825, IG instagram.com/reel/DfX_nWFgQhI, YT youtube.com/shorts/uWrrlAX5-cc
 
 **Next up:**
-- Yeti: Decker Since 1897 and date, Gypsy Blue six minutes and winter hours, Holly broker review
-- Charles Noe's reply on the Terms
+- Yeti: set an end date or switch off the $1,000 offer at /desk (live, no end date); review r02, p01, l01, l02
+- Nov 7 Roof Dating; build seasonal reels from HOOK-POOL.md; Tina B. review card not built
 
 **Notes for other environments:**
-- If the session closed, the scheduled posts did not run: use rotation/post-ad.mjs by hand
+- Tarp pair has been on the site since Oct 11; raise with Tami. Nothing removed.
