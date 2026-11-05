@@ -1,17 +1,16 @@
 
-## Session: 2026-11-05 ET
+## Session: 2026-11-05 ET (later)
 **Environment:** Antigravity IDE
 **What was done:**
-- Posted "Done before the snow" to FB, IG, YT, first reel since Oct 22
-- Counted the reel bank: 39 unposted, 16 clear, 4 need Yeti's review, 12 Know Your Number wait on /desk, 1 Myron, 5 Tami
-- Tarp before/after loop looks like the Bleeker house: moved behind Tami's OK, Milford loop took the Dec 1 slot
+- Tami and Myron gave their OK in person; Yeti approved reels 01, 02, 03, 05, 06, 07, 08, 09; board updated
+- Jay chose $500 off with a countdown to Dec 1; wheel-off wording fixed locally and tested, not committed
 
 **What's live / deployed:**
-- FB facebook.com/reel/4514539825424825, IG instagram.com/reel/DfX_nWFgQhI, YT youtube.com/shorts/uWrrlAX5-cc
+- Nothing new. $1,000 offer with no end date is still live
 
 **Next up:**
-- Yeti: set an end date or switch off the $1,000 offer at /desk (live, no end date); review r02, p01, l01, l02
-- Nov 7 Roof Dating; build seasonal reels from HOOK-POOL.md; Tina B. review card not built
+- Yeti recovers desk PIN from OFFER_DESK_PIN in Vercel; push offer.js fix; then /desk: 500, Dec 1 11:59 PM, bonuses off
+- What Myron paid (reel 01, by Nov 12); Tami's insurance status (reel 04, Nov 23)
 
 **Notes for other environments:**
-- Tarp pair has been on the site since Oct 11; raise with Tami. Nothing removed.
+- Do not hunt for the PIN. Yeti has to get it.
