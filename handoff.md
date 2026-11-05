@@ -1,18 +1,20 @@
-
-## Session: 2026-11-04 ET
+## Session: 2026-11-05 ET
 **Environment:** Antigravity IDE
 **What was done:**
-- Rebuilt tonight's AI Holly weekend reel as the late-fall fire pit edition: Holly in canon Nov 2 hair, lip-synced in 2 angles, silent Yeti s'mores cutaway
-- Regenerated Holly's stills (the Oct 28 ones had retired collarbone honey hair); Yeti's Oct 28 still reused
-- Script changes: Bike Night cut (listing says May to September, 6-10 PM), "free" removed from Cat Canyon (cost blank), Yeti s'mores lines added
+- Built the MB mini ad system: three formats, rotation planner, ad pool, Heather seasonal looks, ~/MB-Assets, ~/Previews
+- Built /ad-photos intake form on branch ad-intake: logo, 10 photos, season answers, socials to tag, setup help lead, optional text alerts, consent boxes
+- Responsive audit passed; 199 local tests pass; one real send on the preview passed end to end, test data cleared
+- Connected private store mb-ad-intake-private; ad links now use AD_INTAKE_SIGNING_SECRET
+- Backed up SD-Recovery to NAS; osmo.dmg confirmed on NAS at Family Stuff 2026/OSMO-recovery-2026-08
 
 **What's live / deployed:**
-- Nothing posted. Holly not texted. Final: ~/AI-Holly/reels/2026-10-28-late-fall-firepit/AI Holly - Fire pit weekend Nov 6-7.mp4
-- Blob overlaid/holly-2026-11-05.mp4 is still the AUTO reel, so the AI Holly Post workflow would post the old version
+- Preview only, branch ad-intake at 4447a65. Nothing on production. Daily Spotlight and weekly AI Holly unchanged
 
 **Next up:**
-- Yeti reviews and posts by hand; do not run AI Holly Post for this week
-- Fix Notion: Bike Night row (pause or update) and Cat Canyon Cost/Location, or both repeat next Wednesday
+- Attorney review of Terms draft (mini-ads/offer/DRAFTS.md section 5), then merge, VITE_AD_INTAKE_OPEN=1, make links, announce
+- Yeti: sudo rm -rf ~/SD-Recovery/recovered (safe, 333 GB)
+- After launch: ad is up text and email, latest reel on profile, tagging test
+- Yeti: club organizer names; reel pack prices
 
 **Notes for other environments:**
-- HeyGen plan premium credits are 0 until Nov 10; API wallet $86.13
+- Do not share /ad-photos until the Terms update is live
