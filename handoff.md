@@ -1,15 +1,16 @@
 
-## Session: 2026-11-05 ET (go-live)
+## Session: 2026-11-05 ET (night)
 **Environment:** Antigravity IDE
 **What was done:**
-- OFFICE_DESK_KEY on both Vercel projects; website c199a2e and Office fe1ccad pushed
-- Temp worktrees removed; Yeti's dirty website checkout left as it was, now 3 behind origin/master
+- $500 offer saved through the Office Website tab; /api/offer confirms live, ends Dec 1 11:59 PM ET, wheel on
+- Built 7 new reels n01-n07 and the Tina B review card; review copies in ~/Previews, nothing posted
 
 **What's live / deployed:**
-- Office Website tab, owners only. $1,000 offer still live until someone saves $500 + Dec 1 there
+- $500 offer to Dec 1. Reels and card not posted
 
 **Next up:**
-- Save the offer in the tab, confirm at /api/offer; shrink the Office main bundle (6 kB under the build limit)
+- Yeti reviews n01-n07 and Tina card, then schedule them; n03 is November only
+- Did Myron pay the normal price? (reel 01, by Nov 12)
 
 **Notes for other environments:**
-- Real Office-to-website link is only proven once an owner opens the tab
+- Renders and post files are uncommitted in on-point-jd social/
