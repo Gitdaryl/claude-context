@@ -1,16 +1,16 @@
 
-## Session: 2026-11-05 ET (night)
+## Session: 2026-11-05 ET (late)
 **Environment:** Antigravity IDE
 **What was done:**
-- $500 offer saved through the Office Website tab; /api/offer confirms live, ends Dec 1 11:59 PM ET, wheel on
-- Built 7 new reels n01-n07 and the Tina B review card; review copies in ~/Previews, nothing posted
+- All real-job reels re-rendered: end card crossfade, no dark dip; CTAs now match each story; ice dam flash removed
+- New review reels Tina B and Dan S, replacing the old Sunny Skies template approach
+- Daily schedule Nov 7 to Dec 21 on the board and in social/SCHEDULE.md, schedule.json
 
 **What's live / deployed:**
-- $500 offer to Dec 1. Reels and card not posted
+- Board republished to Dec 21. No new posts. Renders and schedule uncommitted in on-point-jd social/
 
 **Next up:**
-- Yeti reviews n01-n07 and Tina card, then schedule them; n03 is November only
-- Did Myron pay the normal price? (reel 01, by Nov 12)
+- Yeti reviews the two review reels; "post today's" from Nov 7; Black Friday $500 reel not built
 
 **Notes for other environments:**
-- Renders and post files are uncommitted in on-point-jd social/
+- Sunny Skies VPS crons stay paused. Nothing there was changed.
