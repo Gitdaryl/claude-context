@@ -1,16 +1,15 @@
 
-## Session: 2026-11-05 ET (evening)
+## Session: 2026-11-05 ET (go-live)
 **Environment:** Antigravity IDE
 **What was done:**
-- Built the Office Website tab (offer, wheel, numbers), owners only, so the desk PIN is no longer needed. Tested with mock data, not live
-- Wheel stays; offer plan is $500 to Dec 1
+- OFFICE_DESK_KEY on both Vercel projects; website c199a2e and Office fe1ccad pushed
+- Temp worktrees removed; Yeti's dirty website checkout left as it was, now 3 behind origin/master
 
 **What's live / deployed:**
-- Nothing new. $1,000 offer with no end date is still live
+- Office Website tab, owners only. $1,000 offer still live until someone saves $500 + Dec 1 there
 
 **Next up:**
-- Same new OFFICE_DESK_KEY on both Vercel projects, push website then Office, save $500 + Dec 1 in the tab
-- Step 2 on the board: leads, thank-you email, estimator spread, retire /desk
+- Save the offer in the tab, confirm at /api/offer; shrink the Office main bundle (6 kB under the build limit)
 
 **Notes for other environments:**
-- Work is uncommitted: ~/Projects/onpoint-office-desk and three site files in on-point-jd
+- Real Office-to-website link is only proven once an owner opens the tab
