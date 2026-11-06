@@ -1,19 +1,16 @@
 
-## Session: Nov 6 2026 ET
+## Session: 2026-11-06 ET (flyers and calendar purge)
 **Environment:** Antigravity IDE
 **What was done:**
-- On Point JD winter plan and 12 reels (ice dams, snow, spring leads) in social/video/winter-2026
-- Schedule extended to Feb 22; 9 new reels plus the 3D ice dam reel booked; displaced reels moved to Dec 31 to Jan 28
-- Found and fixed 5 reels speaking the wrong close; all 12 finals checked by whisper against scripts
-- NAS mount-it-yourself SOP added to CLAUDE.md, tested on both shares
+- Paused Bike Night, Happy Hour and Hay Ride in the Events DB; live feed now shows only trivia and karaoke as weekly, so AI Holly no longer reads them
+- Flyer test on 4 events, typography and Kie art with our type, 3 demo reels opening on the flyer; hf.mjs supports `poster`
 
 **What's live / deployed:**
-- Nothing new public yet. First winter post runs Nov 11 at 6 pm ET from the Mac. Not committed to git.
+- Calendar change is live. No reels posted, no code pushed
 
 **Next up:**
-- Yeti watches reels before Nov 11 (~/Previews/2026-11-06 On Point Winter reels)
-- Jim Murphy call: snow, roof ice removal, heat cable. Snow reels w06 to w08 wait on it
-- Ask Jay the 5 winter questions; pick February reels from January views
+- Yeti picks a flyer style, then wire it into events.mjs and rebuild the pilot
+- Bike Night back to Active around May
 
 **Notes for other environments:**
-- Task rows are on the Master Task Board. Do not add snow reels to the schedule until coverage is confirmed.
+- Test files in ~/Previews/2026-11-06 Event flyers test
