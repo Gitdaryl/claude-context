@@ -1,14 +1,16 @@
 
-## Session: Nov 5 2026 ET (CL-18 v4)
+## Session: Nov 5 2026 ET (L-01 v5, bank)
 **Environment:** Antigravity IDE
 **What was done:**
-- CL-18 v4: waist-high Yeti in the opening, For Sale sign, new panel line, button tight after "hour". 38.9s.
+- CL-18 v4 approved by Yeti; bank.json, BANK.md and the CL-18 caption updated, backups at v13
+- L-01 v5: parking lot joke replaced with a plain announcement
 
 **What's live / deployed:**
-- Nothing posted
+- Nothing posted. The published bank page was not republished.
 
 **Next up:**
-- Yeti reviews v4; then update bank.json and BANK.md, which still carry the old lines
+- Yeti reviews L-01 v5; then update its line in the bank
+- Yeti picks Will or Liam for the tours
 
 **Notes for other environments:**
-- v2, v3 and v4 are separate folders under reels/CL-18.
+- L-01 work lives in reels/L-01-tracked, not reels/L-01.
