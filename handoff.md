@@ -1,16 +1,18 @@
 
-## Session: 2026-11-06 ET (no blurs)
+## Session: 2026-11-06 ET
 **Environment:** Antigravity IDE
 **What was done:**
-- Removed blurs from 11 On Point reels (8 Know Your Number, 3 Roof Price): price and Hearth monthly amounts now roll as text, terms and APRs sharp
-- Old renders kept in know-your-number/renders/_old-blur and roof-price/_old-blur
+- Built the site reel bank: 63 Liam UI reels plus the origin story (2 films, Liam and Adam cuts), 67 files, all in full sentences per Yeti's rule, none posted
+- New engine ~/Projects/mb-social/ui-reels/hf.mjs: multi-page reels, HyperFrames overlays, silent beat at each turn; origin.mjs for the paper and feed story
+- Liam never says "bass" now (whisper heard "base"); round-lake reel fixed; rule in bank/_lint.py
 
 **What's live / deployed:**
-- Nothing new posted. Where's the price? is live with the old blur; schedule files updated in place
+- Nothing posted. Review board published as a private artifact. Files in ~/Previews/2026-11-06 MB reel bank
 
 **Next up:**
-- Yeti decides whether to replace the live Where's the price? post; Instagram can only be deleted by hand
-- Attorney glance now covers wheel plus monthly payment amounts; Roof Price statics still blurred
+- Yeti: pick Liam or Adam for origin, post lc-vets by Nov 9
+- Site fixes found: /fishing shows "Local knowledge since [year]"; stale Corks & Kegs May 2026, Happy Hour and Hay Ride "in October", Bike Night listed in November; Tip-Up 70+ vs 73+
+- Web and mouse-tour versions not built for the new pages (tours are hand coded); make a generic tour.mjs
 
 **Notes for other environments:**
-- Rates are Hearth's Oct 2026 figures; rate change means recapture and re-render
+- Bank captions in ~/Projects/mb-social/banks/site/BANK.md. Gag series still separate.
