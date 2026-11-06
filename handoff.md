@@ -1,16 +1,16 @@
 
-## Session: Nov 5 2026 ET (Watch how + report card link)
+## Session: Nov 5 2026 ET (UI reels)
 **Environment:** Antigravity IDE
 **What was done:**
-- Watch how button with the Liam tour added to /my-events
-- Report card texts now carry 30-day signed owner links
+- Built ~/Projects/mb-social/ui-reels: one command makes a Liam page tour from the live site
+- Round Lake fishing pilot rendered, not posted
 
 **What's live / deployed:**
-- Commit 396ad15 on main, deployed. Video plays in production; live API rejects fake links.
+- Nothing new
 
 **Next up:**
-- Yeti's verdict on the Fix Your Event reel
-- Dec 1: check the first report card texts in Vercel logs
+- Yeti reviews the pilot; then batch the page list
+- Yeti decides the current /stays offer; page still says free through July 4th
 
 **Notes for other environments:**
-- A real production-signed link is untested until Dec 1. CRON_SECRET in .env.notion.tmp is stale.
+- Two MB promo tracks now: gag series and UI reels.
