@@ -1,17 +1,16 @@
 
-## Session: Nov 5 2026 ET (Liam, L-01 v5 approved)
+## Session: Nov 5 2026 ET (Watch how + report card link)
 **Environment:** Antigravity IDE
 **What was done:**
-- Liam set as the MB tour voice; final tour re-voiced
-- L-01 v5 approved; bank and captions updated, backups at v14; approved file copied to reels/L-01/out
+- Watch how button with the Liam tour added to /my-events
+- Report card texts now carry 30-day signed owner links
 
 **What's live / deployed:**
-- Nothing posted. Published bank page not republished.
+- Commit 396ad15 on main, deployed. Video plays in production; live API rejects fake links.
 
 **Next up:**
-- Yeti listens to the Liam tour; approve a Watch how button on /my-events
-- Fix the report card link before the Dec 1 send
-- Schedule L-01 v5 and CL-18 v4 in the holiday run
+- Yeti's verdict on the Fix Your Event reel
+- Dec 1: check the first report card texts in Vercel logs
 
 **Notes for other environments:**
-- Approved: L-01 v5, CL-18 v4.
+- A real production-signed link is untested until Dec 1. CRON_SECRET in .env.notion.tmp is stale.
