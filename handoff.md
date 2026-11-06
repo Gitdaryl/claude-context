@@ -1,17 +1,15 @@
-## Session: Nov 6 2026 ET (continued)
+
+## Session: 2026-11-06 ET (flyers live, Veterans reel posted)
 **Environment:** Antigravity IDE
 **What was done:**
-- Added 2 Santa reels to the On Point winter set (w13, w14), checked by whisper against scripts
-- Driveway snow reels w06 and w07 scheduled after Yeti was told Jay is insured for snow
-- Schedule now 65 rows, Mon/Thu through Feb 11, then Feb 22
+- Posted the Veterans Day lunch reel to Manitou Beach Life FB and IG with separate captions, @bootjacktavern on IG
+- AI art flyers: 25 scenes, flyers for 27 events, wordless scene added to 27 event pages
+- 17 pilot event reels rebuilt to open on their flyer, with own FB and IG captions in ui-reels/posts
 
 **What's live / deployed:**
-- Nothing new public yet. First winter post runs Nov 11 at 6 pm ET from the Mac. Not committed to git.
+- FB https://www.facebook.com/reel/1115866014682141/ and IG https://www.instagram.com/reel/DfaUNWLvCNl/
+- Event page images live on 27 events (Notion Image URL, undo list posters/site-log.json). No code pushed
 
 **Next up:**
-- Get the certificate showing snow coverage before anything says insured
-- Lot reel w08 stays held for the non-solicit answer
-- Yeti watches reels before Nov 11 (~/Previews/2026-11-06 On Point Winter reels)
-
-**Notes for other environments:**
-- Task rows are on the Master Task Board.
+- Yeti: OK for Opus to post event reels on their dates; three are due Sat Nov 7
+- OK for the 'has passed' fix on weekly event pages (public repo)
