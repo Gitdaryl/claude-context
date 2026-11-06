@@ -1,16 +1,17 @@
 
-## Session: Nov 5 2026 ET (L-01 v5, bank)
+## Session: Nov 5 2026 ET (Liam, L-01 v5 approved)
 **Environment:** Antigravity IDE
 **What was done:**
-- CL-18 v4 approved by Yeti; bank.json, BANK.md and the CL-18 caption updated, backups at v13
-- L-01 v5: parking lot joke replaced with a plain announcement
+- Liam set as the MB tour voice; final tour re-voiced
+- L-01 v5 approved; bank and captions updated, backups at v14; approved file copied to reels/L-01/out
 
 **What's live / deployed:**
-- Nothing posted. The published bank page was not republished.
+- Nothing posted. Published bank page not republished.
 
 **Next up:**
-- Yeti reviews L-01 v5; then update its line in the bank
-- Yeti picks Will or Liam for the tours
+- Yeti listens to the Liam tour; approve a Watch how button on /my-events
+- Fix the report card link before the Dec 1 send
+- Schedule L-01 v5 and CL-18 v4 in the holiday run
 
 **Notes for other environments:**
-- L-01 work lives in reels/L-01-tracked, not reels/L-01.
+- Approved: L-01 v5, CL-18 v4.
