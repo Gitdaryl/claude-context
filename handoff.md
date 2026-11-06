@@ -1,16 +1,18 @@
-## Session: 2026-11-06 ET
+
+## Session: 2026-11-06 ET (event reels on auto, weekly page fix)
 **Environment:** Antigravity IDE
 **What was done:**
-- Moved all scheduled MB posts and the Nov 20 hero switch off the Claude session onto a Mac launchd job.
-- Dry-ran all 7 rows, ran the job through launchd, sandbox-tested good post, rerun, failure and missed day.
-- Removed the 7 session-only jobs.
+- Fixed weekly event pages: no more 'This event has passed', shows Every Wednesday (c537480, verified live)
+- Built 47 event reels through Dec 26 with AI flyers and own FB and IG captions; all scheduled in mini-ads/rotation/schedule.json on the mb-daily-post job
+- post.mjs re-reads the calendar before each post and refuses changed or cancelled events; refusal tested
 
 **What's live / deployed:**
-- com.yetigroove.mb-daily-post installed. First real post: Faust House, Sun Nov 8, 11:17 AM ET.
+- Commit c537480 on main. First auto posts Sat Nov 7: Cat Canyon 9:07, Eagles 10:07, Dine in the Vines 1:17
 
 **Next up:**
-- Build float reels Nov 19 and Nov 23, then add them to rotation/schedule.json.
-- Read rotation/post-log.json each session. Look at the home page Nov 20.
+- Check rotation/post-log.json after Nov 7 and confirm the first three, including whether the IG @mentions took
+- New events still need a scene and a JOBS line by hand
+- Stale site copy row still open; Tip-Up number needs Yeti
 
 **Notes for other environments:**
-- Claude sessions can close now. The Mac has to stay on. Runbook: rotation/SCHEDULE-JOBS.md.
+- The Mac must be on for scheduled posts. A missed post texts Yeti.
