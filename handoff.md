@@ -1,16 +1,17 @@
-
-## Session: 2026-11-06 ET (flyers and calendar purge)
+## Session: Nov 6 2026 ET (continued)
 **Environment:** Antigravity IDE
 **What was done:**
-- Paused Bike Night, Happy Hour and Hay Ride in the Events DB; live feed now shows only trivia and karaoke as weekly, so AI Holly no longer reads them
-- Flyer test on 4 events, typography and Kie art with our type, 3 demo reels opening on the flyer; hf.mjs supports `poster`
+- Added 2 Santa reels to the On Point winter set (w13, w14), checked by whisper against scripts
+- Driveway snow reels w06 and w07 scheduled after Yeti was told Jay is insured for snow
+- Schedule now 65 rows, Mon/Thu through Feb 11, then Feb 22
 
 **What's live / deployed:**
-- Calendar change is live. No reels posted, no code pushed
+- Nothing new public yet. First winter post runs Nov 11 at 6 pm ET from the Mac. Not committed to git.
 
 **Next up:**
-- Yeti picks a flyer style, then wire it into events.mjs and rebuild the pilot
-- Bike Night back to Active around May
+- Get the certificate showing snow coverage before anything says insured
+- Lot reel w08 stays held for the non-solicit answer
+- Yeti watches reels before Nov 11 (~/Previews/2026-11-06 On Point Winter reels)
 
 **Notes for other environments:**
-- Test files in ~/Previews/2026-11-06 Event flyers test
+- Task rows are on the Master Task Board.
