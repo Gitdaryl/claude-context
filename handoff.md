@@ -1,16 +1,14 @@
 
-## Session: Nov 5 2026 ET (UI reels)
+## Session: Nov 5 2026 ET (mouse tour)
 **Environment:** Antigravity IDE
 **What was done:**
-- Built ~/Projects/mb-social/ui-reels: one command makes a Liam page tour from the live site
-- Round Lake fishing pilot rendered, not posted
+- Mouse tour built: Liam shows two ways to find Round Lake, cursor and zoom on the live site, 34s
 
 **What's live / deployed:**
-- Nothing new
+- Nothing posted
 
 **Next up:**
-- Yeti reviews the pilot; then batch the page list
-- Yeti decides the current /stays offer; page still says free through July 4th
+- Yeti reviews it and the Round Lake fishing pilot, then batch more
 
 **Notes for other environments:**
-- Two MB promo tracks now: gag series and UI reels.
+- Stays and wine pages parked by Yeti.
