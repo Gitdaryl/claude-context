@@ -1,18 +1,16 @@
 
-## Session: 2026-11-07 ET (MB sponsor cards)
+## Session: 2026-11-07 ET (MB addendum)
 **Environment:** Antigravity IDE
 **What was done:**
-- Six event card sponsors now show on the events hero video, using the printed card's headline (be24006)
-- New wine tasting mark, logos balanced by area, Holly's card has her picture, Foundation logo, address and cell
-- Gmail draft to Kathy Decker written, not sent. Filed: Quote and Book only open the visitor's email app; gallery only shows on Front and Center
+- Kathy email sent by Yeti. Holly's ad stamp rebuilt with pink logo and address, scheduled Nov 20
+- Proud sponsor badge made, offer wording in DRAFTS.md section 9
 
 **What's live / deployed:**
-- manitoubeachmichigan.com/events, checked on desktop and phone
+- schedule.json has Holly's row, check passes
 
 **Next up:**
-- Yeti to review and send the Kathy draft
-- Holly's ad is off hold: check the address sits under the logo, then schedule if Yeti wants Nov 20
-- Real Quote and Book form before selling tiers
+- Written voice release from Holly before Boot Jack on Nov 16
+- Offer the badge with the thank you after Charles replies
 
 **Notes for other environments:**
-- Sponsor cards are hardcoded in EVENT_SPONSORS, through Nov 6 2027. Phone numbers on other cards only on request
+- Badge is never a condition of the listing
