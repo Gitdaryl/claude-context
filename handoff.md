@@ -2,18 +2,20 @@
 ## Session: 2026-11-06 ET
 **Environment:** Antigravity IDE
 **What was done:**
-- Worked out the Land and Lake Ladies Club Platinum video ad offer for 2027; Michele loves it
-- Drafted the pitch to Michele and a door script for sponsors
-- Redesigned their sponsor packet as a 6 page Letter PDF: ~/Clients/ladies-club/sponsor-packet-2027
+- Reviewed the MB free ads offer. Charles Noe has not replied (Gmail, spam, trash checked).
+- Yeti kept all 6 scheduled ads, approved the pricing wording, set Mar 31 2027 for previews.
+- Event card sponsors on Showcased through Nov 6 2027. Faust and Water Sports upgraded, Decker listed.
+- Insurance category added in Notion, all 20 existing options kept. Decker moved to it and locked.
+- Reminder texts added to rotation/schedule.json. Sponsor thank you drafted in DRAFTS.md section 8.
 
 **What's live / deployed:**
-- Nothing. Draft only, not sent.
+- Notion listing changes above, confirmed in /api/businesses. No code pushed.
 
 **Next up:**
-- Yeti reviews the draft and sends it to Michele
-- Michele answers the T-shirt question and okays the wording changes
-- Tell Devil's Lake Water Sports their ad is the packet sample
-- Consent box wording waits on Charles Noe
+- Yeti OK to push Insurance code, uncommitted on main in ~/Projects/Manitou-Beach.
+- Pricing wording uncommitted in ~/Projects/Manitou-Beach-intake, ships with the form.
+- Decide what free listings get: their page matches Showcased.
+- Nudge Charles Monday, correct the ad counts. Fix Stripe cancel. Check report card texts.
 
 **Notes for other environments:**
-- The club delivers paper packets in person. Do not push the online form.
+- Do not widen cron-expire-featured. Hold the sponsor thank you until Charles replies.
