@@ -1,18 +1,15 @@
-
-## Session: 2026-11-07 ET
+## Session: 2026-11-07 ET (follow-up)
 **Environment:** Antigravity IDE
 **What was done:**
-- /streamline reworked as "The Lost Customer Check" (three leaks, after-hours test, report preview, fix menu without prices, credit terms, local FAQ, Service + FAQ schema, website field on form + API)
-- New /streamline/sample page: full sample report (made-up Sample Deck Co.)
-- Google autocomplete research on what owners search; plan artifact https://claude.ai/artifact/1fLhdXZs7RBhUV68eAKoDm
-- Private drafts: ~/Clients/yeti-groove/files/AUDIT-OFFER.md (checklist + draft menu prices), LOST-CUSTOMER-CHECK-VIDEO.md (75s script)
+- Pushed The Lost Customer Check rework of /streamline plus the new /streamline/sample report (commit 4fd1abb)
+- Checked live: both pages and the self-hosted fonts return 200, no console errors or sideways scroll on desktop or phone
 
 **What's live / deployed:**
-- Nothing yet. Changes sit uncommitted in ~/Projects/Yeti-Groove, waiting on Yeti's OK to push
+- yetigroove.com/streamline and yetigroove.com/streamline/sample
 
 **Next up:**
-- Yeti: approve menu prices in AUDIT-OFFER.md; OK the push
-- Build 6 answer-first question pages; produce the sales video
+- Yeti: approve the draft menu prices in ~/Clients/yeti-groove/files/AUDIT-OFFER.md; confirm the $1,500 / 60-day credit terms now on the page
+- Build 6 answer-first question pages; produce the sales video from LOST-CUSTOMER-CHECK-VIDEO.md
 
 **Notes for other environments:**
-- "Audit" is retired in client copy: it reads as IRS. Use "The Lost Customer Check"
+- Call it "The Lost Customer Check" in client copy, never "audit"
