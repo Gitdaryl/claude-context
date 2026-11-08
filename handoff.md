@@ -2,16 +2,16 @@
 ## Session: 2026-11-08 ET
 **Environment:** Antigravity IDE
 **What was done:**
-- OnPoint JD comp Highlighted listing on manitoubeachmichigan.com/business/on-point-jd (Notion row, photos in MB Blob, hours, FAQ schema, UTM-tagged website link)
-- MB fix 2abeae3: out-of-state listings no longer published as Michigan (title, location line, schema); website link shows without query string
-- OnPoint 08cfb71 (pushed from a fresh clone; ~/Projects/on-point-jd is 4 commits behind with 65 stale dirty files, untouched): MB profile in sameAs, one contextual link on /service-area
+- New SOP ~/.claude/sop-site-launch.md: launch checklist (sitemap, robots, llms.txt, Place ID + review link + schema hasMap, GSC + Bing, privacy/terms, real 404, OG, analytics, form test) plus the Manitou Beach step for local businesses (MB listing with Place ID, named in MB llms.txt, sameAs, bylined piece; no reciprocal link swaps)
+- Wired into ~/.claude/CLAUDE.md (Build Standard) and sop-site-seo-audit.md (Stage 2 gate)
+- Curl audit of Holly, Joe Profit, Hammill Electric, YetiGroove; status table in the SOP; 4 Backlog rows on the Master Task Board
 
 **What's live / deployed:**
-- Both commits live and verified headless
+- Nothing deployed; docs and board rows only
 
 **Next up:**
-- Paste OnPoint's Google Place ID into the MB row before Dec 1 (else the report-card cron texts OnPoint's lead line)
-- When Jay's MI license issues: flip "We do not work in Michigan" (home FAQ, service area, llms.txt), add Lenawee service areas to the listing
+- Work the 4 gap rows (soft 404s and missing llms.txt/schema are common to 3 of 4 sites)
+- Hammill Place ID waits on GBP verification
 
 **Notes for other environments:**
-- ~/Projects/on-point-jd local checkout is behind origin with uncommitted Oct work; do not push from it blindly
+- Any new site: follow sop-site-launch.md; add newly discovered launch items to it
