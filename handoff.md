@@ -1,15 +1,16 @@
-## Session: 2026-11-07 ET (follow-up)
+## Session: 2026-11-07 ET (question pages)
 **Environment:** Antigravity IDE
 **What was done:**
-- Pushed The Lost Customer Check rework of /streamline plus the new /streamline/sample report (commit 4fd1abb)
-- Checked live: both pages and the self-hosted fonts return 200, no console errors or sideways scroll on desktop or phone
+- Built six answer-first question pages + /questions hub on yetigroove.com, every fact quoted from a primary source (research agent verified quotes word for word)
+- Generator: Yeti-Groove tools/build_questions.py + tools/questions_data.py; linked from /streamline under the FAQ
+- Lost Customer Check menu prices approved by Yeti as starting prices (review after 5 paid checks)
 
 **What's live / deployed:**
-- yetigroove.com/streamline and yetigroove.com/streamline/sample
+- yetigroove.com/questions and its 6 pages (commit dba9bd4), checked live
 
 **Next up:**
-- Yeti: approve the draft menu prices in ~/Clients/yeti-groove/files/AUDIT-OFFER.md; confirm the $1,500 / 60-day credit terms now on the page
-- Build 6 answer-first question pages; produce the sales video from LOST-CUSTOMER-CHECK-VIDEO.md
+- Add sitemap.xml and submit to Google Search Console so the new pages get indexed
+- Produce the sales video from ~/Clients/yeti-groove/files/LOST-CUSTOMER-CHECK-VIDEO.md
 
 **Notes for other environments:**
-- Call it "The Lost Customer Check" in client copy, never "audit"
+- Don't repeat "62% of calls go unanswered" or "ChatGPT uses Bing" in any copy: no original source found
