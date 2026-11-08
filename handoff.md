@@ -1,2 +1,1 @@
-
-**Update (Nov 7 ET, later):** /streamline rebuild pushed as 8aaac86 and live on yetigroove.com. /streamline/thanks and the story-m frames return 200. Test lead YGO-20261108-YIYG sent to the live API: saved, admin email, client email and SMS all reported true.
+**Update 2 (Nov 7 ET):** de315c8 live. Hero scrub was drawing under the poster layer (canvas had no z-index); fixed. Before/After rail and Scroll hint removed per Yeti. Yeti's browser blocks Google Fonts (headline rendered in Times), so Playfair + DM Sans are now self-hosted in /fonts for /streamline and /streamline/thanks. Other pages (index, field-office) still load from Google.
