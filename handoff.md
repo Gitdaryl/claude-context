@@ -1,16 +1,16 @@
 
-## Session (cont. 2): Nov 9 2026 ET
+## Session (cont. 3): Nov 9 2026 ET
 **Environment:** Antigravity IDE
 **What was done:**
-- Notes + lost reasons + Find in Gmail on company pages; Sam and Chateau updated from Gmail
-- YetiGroove Office deployed: Supabase zanybcjfxkmiuxybvakh (locked auth, backlog imported), Vercel yetigroove-office, Account screen for password change
+- Private repo Gitdaryl/yetigroove-office (3 commits)
+- Ask Yeti (Claude Q&A about clients) built, tested on real backlog, deployed; waits on Vercel env vars
 
 **What's live / deployed:**
-- https://yetigroove-office.vercel.app (office.yetigroove.com pending Cloudflare approval)
+- yetigroove-office.vercel.app with Ask Yeti panel (answers once env vars are pasted)
 
 **Next up:**
-- Yeti: approve Domain Connect, run `npm run add-owner:live`
-- "Ask Yeti" Claude box (needs Anthropic API key in Vercel), private GitHub repo
+- Yeti: paste vercel-env-to-paste.txt into Vercel + Anthropic key, redeploy; approve Cloudflare for office.yetigroove.com
+- Then: connect GitHub to Vercel for auto-deploy
 
 **Notes for other environments:**
-- No PIN login by design; password + saved in Keychain
+- Vercel secrets can't be written by Claude in auto mode; Yeti pastes them
