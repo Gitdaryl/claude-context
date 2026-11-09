@@ -1,18 +1,17 @@
 
-## Session: 2026-11-09 ET
+## Session addendum: 2026-11-09 ET
 **Environment:** Antigravity IDE
 **What was done:**
-- Home show research for On Point JD (PRO Home Show Feb 19-21 2027 Glass City Center = pick; Toledo Jan 23-24 Maumee; Fulton Mar 13-14; HBA mid-March; Wood County Apr 30-May 2; Toledo Aug 28-29). No real ROI data exists; break-even framing + stop rule.
-- Built OnPoint Office Marketing tab (owners only): left menu, overview board, budget calculator (% per square), social line-up, live lead-source report, education sections incl. billboards. New lead sources: door-hanger, google, home-show, partner.
+- Kathy Decker's logo (from her email signature) swapped into the Decker 5 Generations ad; re-rendered, preflight OK for Nov 12
+- New "Other Locations" field on MB listings DB; Decker filled with Addison and Somerset Center; profile page, schema and crawler text show every office with its own phone (uncommitted)
+- Charles Noe: still no reply (Nov 5 email, 4 days)
 
 **What's live / deployed:**
-- Nothing. Office changes uncommitted on main in ~/Projects/onpoint-office (tests, build and e2e pass).
+- Decker ad file in the post pool (auto-posts Nov 12). Notion field and data live; site code NOT pushed
 
 **Next up:**
-- Commit + push the Marketing tab (board row filed).
-- Jay yes/no on PRO show by Dec 1; COI naming PRO from Jim Murphy.
-- Jay sets marketing % + real margin; reconcile with ADS-PILOT 10% deal.
-- Website /show tracked short link for the booth.
+- Yeti to say push for the multi-office code, then verify /business/decker-and-sons-insurance live
+- Decide whether the /events sponsor card and listing logo also switch to Kathy's new logo
 
 **Notes for other environments:**
-- Refresh the tab's social line-up with `node scripts/sync-marketing-social.mjs` before Office pushes.
+- Kathy's email kathy@deckerins.com is public on her listing (her request)
