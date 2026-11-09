@@ -1,17 +1,16 @@
 
-## Session (cont.): Nov 9 2026 ET
+## Session (cont. 2): Nov 9 2026 ET
 **Environment:** Antigravity IDE
 **What was done:**
-- Board clean-up: 81 stale Today rows to Backlog, 33 Sunny Skies rows closed (snapshot + log in yetigroove-office/docs)
-- Sender rule set (daryl@ / yeti@ AI / admin@ official); AI persona renamed crAIg -> Yeti
-- YetiGroove Office M1 built and verified locally: Today, Pipeline, People, Company page, drafts, snooze, billing record; 23 unit tests + 22-check browser walk
+- Notes + lost reasons + Find in Gmail on company pages; Sam and Chateau updated from Gmail
+- YetiGroove Office deployed: Supabase zanybcjfxkmiuxybvakh (locked auth, backlog imported), Vercel yetigroove-office, Account screen for password change
 
 **What's live / deployed:**
-- Nothing. Local only, not committed.
+- https://yetigroove-office.vercel.app (office.yetigroove.com pending Cloudflare approval)
 
 **Next up:**
-- Yeti: say go for Claude to create the Supabase project, or create it; then live import, Vercel, office.yetigroove.com, yeti@ alias
-- Rotate exposed API keys row was moved to Backlog by the age rule: re-promote
+- Yeti: approve Domain Connect, run `npm run add-owner:live`
+- "Ask Yeti" Claude box (needs Anthropic API key in Vercel), private GitHub repo
 
 **Notes for other environments:**
-- AI signs as "Yeti · Daryl's AI assistant at YetiGroove", not crAIg
+- No PIN login by design; password + saved in Keychain
