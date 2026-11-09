@@ -1,19 +1,17 @@
 
-## Session: Nov 9 2026 ET
+## Session (cont.): Nov 9 2026 ET
 **Environment:** Antigravity IDE
 **What was done:**
-- Tore down VidLead: HighLevel white-label (page source loads leadconnectorhq.com), nothing proprietary
-- Yeti chose Plan B: YetiGroove Office built from the OnPoint Office core
-- Code reuse map + full lead/open-loop inventory (19 items owed; board 582 open, 92 of 128 Today rows stale)
-- Wrote ~/Projects/yetigroove-office/SPEC.md and BACKLOG-2026-11-09.md; board row filed (In Progress)
+- Board clean-up: 81 stale Today rows to Backlog, 33 Sunny Skies rows closed (snapshot + log in yetigroove-office/docs)
+- Sender rule set (daryl@ / yeti@ AI / admin@ official); AI persona renamed crAIg -> Yeti
+- YetiGroove Office M1 built and verified locally: Today, Pipeline, People, Company page, drafts, snooze, billing record; 23 unit tests + 22-check browser walk
 
 **What's live / deployed:**
-- Nothing deployed
+- Nothing. Local only, not committed.
 
 **Next up:**
-- Yeti answers 3 spec questions; then M1 (repo, Supabase, office.yetigroove.com, Today screen)
-- By hand this week: DLYC Craig email, reply Greg Richard, book Kathy Decker, start Holly $250/mo
+- Yeti: say go for Claude to create the Supabase project, or create it; then live import, Vercel, office.yetigroove.com, yeti@ alias
+- Rotate exposed API keys row was moved to Backlog by the age rule: re-promote
 
 **Notes for other environments:**
-- Board "Today" status is unreliable (mostly stale rows); trust the spec's computed Today once built
-- Charles Noe still no reply as of Nov 9 (MB ads launch waits)
+- AI signs as "Yeti · Daryl's AI assistant at YetiGroove", not crAIg
