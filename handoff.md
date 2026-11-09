@@ -1,20 +1,19 @@
 
-## Session: 2026-11-08 ET (part 2)
+## Session: Nov 9 2026 ET
 **Environment:** Antigravity IDE
 **What was done:**
-- MB commit 17d9f4f: src/utils/outboundLink.js; paid listing tiers, featured food trucks, winery partners, event and Men's Club sponsors now rel=sponsored; free + Listed Comp stay followed; all outbound business links tagged utm_source=manitoubeachmichigan. Verified in live bundle + API.
-- VPS clone was 80 commits behind GitHub; stashed the stale-tree patch (stash "outbound-links patch on stale tree (backup)"), pulled, re-applied
-- New ~/.claude/sop-client-linking.md; checklist steps L-11 to L-19 in ~/Projects/client-ops/MASTER-CHECKLIST.md (115 steps); W-09 points at sop-site-launch.md
-- 45 board rows loaded for Holly, Mitch IHR, On Point, Spotted Owl, Joe, YetiGroove (2 pre-closed for Holly with evidence)
-- client-sweep: new checks 18 (missing checklist steps per client) and 19 (reopen quarterly steps after 90 days); client-onboard: 4b re-sync
+- Tore down VidLead: HighLevel white-label (page source loads leadconnectorhq.com), nothing proprietary
+- Yeti chose Plan B: YetiGroove Office built from the OnPoint Office core
+- Code reuse map + full lead/open-loop inventory (19 items owed; board 582 open, 92 of 128 Today rows stale)
+- Wrote ~/Projects/yetigroove-office/SPEC.md and BACKLOG-2026-11-09.md; board row filed (In Progress)
 
 **What's live / deployed:**
-- manitoubeachmichigan.com with sponsored/utm outbound links (17d9f4f)
+- Nothing deployed
 
 **Next up:**
-- Yeti: Hammill Listed Premium vs Listed Comp decision (board row, Today)
-- Hammill has no Clients row; depends on the open "decide what this is" row
-- 15 Waiting rows need client asks; send one consolidated ask per client
+- Yeti answers 3 spec questions; then M1 (repo, Supabase, office.yetigroove.com, Today screen)
+- By hand this week: DLYC Craig email, reply Greg Richard, book Kathy Decker, start Holly $250/mo
 
 **Notes for other environments:**
-- VPS MB clone can drift far behind GitHub: git fetch + status before editing there
+- Board "Today" status is unreliable (mostly stale rows); trust the spec's computed Today once built
+- Charles Noe still no reply as of Nov 9 (MB ads launch waits)
