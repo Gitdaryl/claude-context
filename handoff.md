@@ -1,17 +1,18 @@
 
-## Session: 2026-11-09 ET
+## Session: 2026-11-10 ET
 **Environment:** Antigravity IDE
 **What was done:**
-- Studied the FB reel "20 video effects in 20 seconds, built by Claude" at 10 fps; catalogued 21 effects with when-to-use guidance
-- Built ~/.claude/tools/fx/: fx_cutout.sh (HyperFrames remove-background on Node 22) and fx_track.py (MediaPipe face/head/hand JSON), both tested on the reel
-- New skill reel-fx (~/.claude/skills/reel-fx/SKILL.md) + memory reel-fx-menu so effects get suggested during reel brainstorming
+- Found 2 unanswered OnPoint Yelp leads (Joan new roof, Teresa snow removal) in admin@yetigroove.com; sent Yelp replies to both via the reply+ address (Linda had already called Joan)
+- Built Yelp lead reader in onpoint-office (src/lib/leads.ts yelpVerdict, wired in api/_lib/email-leads.ts); Yelp mail used to be dropped as a mailing list. Tests added, 38 lead tests pass, typecheck clean
 
 **What's live / deployed:**
-- Nothing deployed; local tools and skill only
+- Nothing deployed. Code is uncommitted on onpoint-office main
 
 **Next up:**
-- Build each effect as a HyperFrames template the first time it is used (none built yet); first proof: Letter dive, Sketch words, Blow away on a real talking clip
+- Push onpoint-office (commit only the 4 Yelp files, not tests-e2e/review-ux-*)
+- Yeti: Gmail forward admin@yetigroove.com from:(messaging.yelp.com) to inbox@onpointjd.com (confirmation code shows in Resend Receiving)
+- Add Linda's cell to LEAD_ALERT_PHONES if she should get lead texts
+- Check that the Joan/Teresa replies show up in Yelp Biz
 
 **Notes for other environments:**
-- HyperFrames needs Node 22; shell default is Node 20 (use fx_cutout.sh or nvm use 22)
-- Shoot tip for any talking head: tripod, no moves, hold 5 s of empty set at end of take
+- Yelp leads only reach admin@yetigroove.com; the crew never sees them until the forward is set up
