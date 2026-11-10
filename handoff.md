@@ -1,18 +1,19 @@
 
-## Session: 2026-11-10 ET
+## Session: 2026-11-10 ET (Yelp watcher, part 2)
 **Environment:** Antigravity IDE
 **What was done:**
-- Found 2 unanswered OnPoint Yelp leads (Joan new roof, Teresa snow removal) in admin@yetigroove.com; sent Yelp replies to both via the reply+ address (Linda had already called Joan)
-- Built Yelp lead reader in onpoint-office (src/lib/leads.ts yelpVerdict, wired in api/_lib/email-leads.ts); Yelp mail used to be dropped as a mailing list. Tests added, 38 lead tests pass, typecheck clean
+- Pushed onpoint-office 909d2c7 (Yelp lead reader), Vercel prod Ready
+- Yeti set Gmail forward + filter from:(messaging.yelp.com) to inbox@onpointjd.com (verified by screenshot)
+- LEAD_ALERT_PHONES on onpoint-office prod = Jay, Devon, Linda (419-917-6833); redeployed
+- Live test from Yeti's Hotmail: 3 lead texts delivered. It attached to the old "Daryl Young" test customer as job 1020; closed as lost TEST CUSTOMER, flag cleared
+- Sent Yelp replies to Joan (roof) and Teresa (snow removal)
 
 **What's live / deployed:**
-- Nothing deployed. Code is uncommitted on onpoint-office main
+- Yelp leads -> Office -> texts Jay/Devon/Linda
 
 **Next up:**
-- Push onpoint-office (commit only the 4 Yelp files, not tests-e2e/review-ux-*)
-- Yeti: Gmail forward admin@yetigroove.com from:(messaging.yelp.com) to inbox@onpointjd.com (confirmation code shows in Resend Receiving)
-- Add Linda's cell to LEAD_ALERT_PHONES if she should get lead texts
-- Check that the Joan/Teresa replies show up in Yelp Biz
+- Watch the first REAL Yelp lead land in Office (untested end to end)
+- Then consider an instant auto-reply on Yelp (untested whether Yelp accepts replies from onpointjd.com)
 
 **Notes for other environments:**
-- Yelp leads only reach admin@yetigroove.com; the crew never sees them until the forward is set up
+- Linda makes the callbacks; Jay and Devon are usually on a roof
