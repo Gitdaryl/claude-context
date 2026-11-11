@@ -1,18 +1,19 @@
 
-## Session: 2026-11-11 ET
-**Environment:** Antigravity IDE
+## Session: 2026-11-11 (ET)
+**Environment:** Claude Code (VS Code)
 **What was done:**
-- Carrie Lynn Wellness ad released from held_ads (her written "Yes, OK to post" Nov 10); posts Nov 14
-- MB ad poster (post-ad.mjs) now sends an Instagram collab invite and a "your ad is live, feel free to share" email (Resend, hello@manitoubeachmichigan.com, reply-to admin@) after every business ad posts; daily-post texts Yeti if the email fails; --email-only resends
-- Holly's ad given email override in ad-log.json
+- Troubleshot Joe Profit "voice only played once": it was the one-shot Site tour clip (meet-joe.mp3), not the ElevenLabs agent. Files/server verified fine; no agent conversation existed for his session.
+- Shipped commit cfe4288 on Joe-Profit: persistent Site tour replay pill, Play again, bubble renamed, voice chat label "Talk to Joe". Verified live (bundle main.3b3baa80.js).
+- Decoded Joe's "G.I. Joe" as "A.I. Joe"; recommended real photo over AI likeness on homepage.
 
 **What's live / deployed:**
-- Local launchd poster on the Mac; first real send is Decker and Sons on Nov 12 (kathy@deckerins.com)
+- joeprofitneverbroken.com replay fix, live Nov 11.
 
 **Next up:**
-- Yeti: check Gmail spam for the Nov 11 test email "Your free ad is live on Manitou Beach Life"
-- Decide whether to email already-posted ads (Faust House, Blackbird, DL Water Sports)
-- Boot Jack + Gypsy Blue still held for owner yes; Boot Jack has no email or invite target besides IG
+- Reply to Joe (drafts in chat): which button/phone vs desktop answered; tell him the replay pill is live and the voice is the gold button, allow the mic.
+- Joe homepage photo: ask whether AI or real, get a real photo from him.
+- Decide scope message: $100/mo covers HeyGen only; batch his tweak requests (Friday list); rename Stripe subscription row "HeyGen and tools, at cost".
+- Not added to Notion board yet.
 
 **Notes for other environments:**
-- Show Charles Noe the thank-you email wording with the ad package review
+- Joe is non-technical: never ask him to clear storage or use private windows.
