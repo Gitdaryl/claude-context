@@ -1,13 +1,16 @@
 
-## Session: Nov 10 2026 ET (continued)
+## Session: 2026-11-11 12:25 ET
 **Environment:** Antigravity IDE
 **What was done:**
-- Never Broken: angle sheets (turnaround + 6 head angles) for all locked looks; joe-18 built from the 1967 yearbook (sheet A + angles); joe-14 A/B built, waiting on a pick (B recommended)
-- 12 empty location plates E1-E12 + E20 street, in Never-Broken-Trailer/environments; PRODUCTION-DESIGN.md lists all environments/props/costumes
-- Joe sent Ethel at 16 (real) and an AI-made street picture; 1955 Ethel rebuilt from the real photo (v3 + angles); home scenes move to a paved bungalow street, wardrobe neat not patched
+- Ladies Club: the crowd photo wall existed as a backend gallery (/gallery/ladies-club) but was never mounted on /ladies-club and had no event tags. Added EventPhotoWall to /ladies-club under the Veterans Day Lunch section, added event tags veterans-day-lunch + summerfest (general bucket "Club Life") in galleries.js and api/lib/photo-slugs.js. Preselects Veterans Day Lunch during November.
+- QR to the upload page: ~/Previews/2026-11-11-ladies-club-photo-upload-qr.png
+
+**What's live / deployed:**
+- Manitou-Beach commit 9ce2e8b pushed to main, Vercel live ~12:21 ET. https://manitoubeachmichigan.com/ladies-club
 
 **Next up:**
-- Pick joe-14 (A or B), then its angles; wardrobe sheets; props; E13-E19
+- Veterans section still labelled "Coming Up"; flip to a recap after the lunch.
+- Moderate any Veterans Day Lunch uploads in the Yeti Desk Photo Mod tab.
 
 **Notes for other environments:**
-- Asks to Joe stay yes/no on finished pictures; he has had a hard few weeks
+- Ladies club photo uploads now work from /ladies-club and /gallery/ladies-club; untagged photos land in "Club Life".
