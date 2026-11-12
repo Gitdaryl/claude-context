@@ -1,19 +1,20 @@
 ## Session: 2026-11-12 ET
 **Environment:** Antigravity IDE
 **What was done:**
-- Researched IDX costs, brokerage vs agent: MLS feed fee (broker holds the agreement) plus vendor fee (~$60 to $150/month). No Michigan MLS fee schedule found.
-- Holly Griewahn IDX decision: reversed earlier advice to wait for her own brokerage. Recommendation is to take the feed now; only the MLS sign-off is redone when she becomes her own broker. Vendor account carrying over is likely, not confirmed with a vendor.
-- Gmail draft created to Holly (cc daryl@), subject "Correction on the listing feed: let's turn it on now", signed as Yeti the AI assistant. NOT sent.
+- Researched IDX costs, brokerage vs agent. Generic finding: MLS feed fee (broker holds the agreement) plus a vendor fee if a third-party IDX vendor is used.
+- Advised Holly should take the IDX feed now instead of waiting for her new brokerage, and drafted an email to her saying the earlier hold advice was wrong.
+- THEN checked the Master Task Board (should have been first). Two existing rows change the picture: X-02 broker consent row (MLS is LCAR, direct RETS feed, Yeti Groove Media is the Vendor, no third-party vendor, LCAR fee questions unanswered) and the Nov 10 row "may leave Foundation for a 50/50 brokerage" (fees not prorated, data destroyed within 5 business days of termination, decision due ~Nov 24, 3 to 4 months to set up).
+- Checked Gmail: no LCAR reply to the Nov 6 questions as of Nov 12.
 
 **What's live / deployed:**
-- Nothing. Draft only, in admin@ Gmail drafts.
+- Nothing. One Gmail DRAFT to Holly exists (subject "Correction on the listing feed: let's turn it on now"). DO NOT SEND AS IS: it assumes a third-party vendor account on her card and $60 to $100 a month, and asks questions already answered on the board.
 
 **Next up:**
-- Yeti reviews and sends the Holly draft.
-- On Holly's reply: confirm which MLS Foundation Realty is on, its IDX fees and broker-change procedure.
-- Confirm with the chosen IDX vendor that the account, leads and saved searches survive a broker change.
-- Vendor account must be in Holly's name and on her card.
+- Yeti decides: replace or delete the stale Holly draft.
+- Chase LCAR (mls@lcarlive.com) for the fee schedule, the Nov 15 term and the Vendor License Agreement. That is what decides whether running IDX under Mark for the 3 to 4 month setup period is worth it.
+- Feed code can be built now regardless; it carries over if the new brokerage is also on LCAR.
+- No new board rows filed: both follow-ups already live in the two existing Holly rows.
 
 **Notes for other environments:**
-- Holly plans to open her own brokerage in a few months. Private: do not copy anyone from Foundation Realty on IDX emails.
-- Session Brain row and Master Task Board rows were not written this session.
+- CONFIDENTIAL: Holly's brokerage plans. Nothing to Foundation, LCAR or the public repo.
+- Lesson: query the board before advising on any client question, even one phrased as generic research.
