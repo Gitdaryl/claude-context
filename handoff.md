@@ -1,17 +1,17 @@
 
-## Session (cont.): Nov 12 2026 ET, Heather reel redo
+## Session: 2026-11-12 ET
 **Environment:** Antigravity IDE
 **What was done:**
-- Christmas music bed: Village Square Waltz auto-selected for weekends whose Thursday is Dec 1 to Dec 25 (bed-schedule.json).
-- Added Devils Lake Inn open house (Sun Nov 15, 1 to 3 PM, free, hosted by Holly) to the Notion events DB. Cherry Creek self-submitted two events (Sat/Sun Bucks' Away).
-- Heather reel rebuilt through v6: six events, Holly-over-the-shoulder line, Cherry Creek logo, "Does" respelled "doze". Final: ~/AI-Holly/reels/2026-11-12-weekend-heather/Heather - Weekend Nov 13-15 v6.mp4 (+ phone copy). NOT posted, Holly not texted.
-- Pipeline fixes: /api/events fetched with cache-bust, work/event-fixes.json (per-event time/venue/title/note), reversed-time guard, --stamp, --gag-line, persona ends on "See you out there.", pronunciation rule for "does will".
-- "Just added" social card (3 events) rendered at ~/Projects/mb-social/reels/2026-11-12-added-events/out/ (also ~/Previews). NOT posted.
-**What's live / deployed:** Notion event row only (open house). No social posts.
+- Gypsy Blue (Kristin) asked for wine in their MB Life ad; named Romani Rouge and Dancing Riesling. Built a wine version of the Postcards ad (glass + red bottle + sparkling bottle on the porch rail, Holly voice "Try a glass of Romani Rouge. Or a Dancing Riesling.", caption in her wording + 21+ line).
+- Swapped the Nov 18 schedule row to the new ad. Hold kept: only Holly's signed voice release is outstanding.
+
+**What's live / deployed:**
+- Nothing posted or pushed.
+
 **Next up:**
-- Yeti QA v6, then post (Holly gets it only by Yeti).
-- Yeti OK to post the added-events card to FB + IG.
-- Fix Cherry Creek Saturday row in Notion (Time End "11:00 PM – 8:00 PM", Location is an address, lineup "Cay Canyon"). Holly confirms open house.
-- thursday-pipeline.js reads dead `Time` field, so roundup posts have no times (one-line fix, awaiting OK).
-- Top up Kie credits, then yeti-bank/make-gags.sh (Nov 18 has no Yeti beat otherwise). Christmas season file around Nov 26.
-**Notes for other environments:** Heather lessons in memory heather-weekly-late-events.md.
+- Holly's "I agree" lands: delete gypsy-blue-vineyards line from rotation/seasons.json held_ads, run daily-post.mjs --check.
+- Ask Kristin for photos of the two bottle labels to replace the generic bottle art (optional).
+- Reply to Kristin with the preview (Yeti sends; ad is at ~/MB-Assets/_Ad-Pool/gypsy-blue-vineyards-postcards-wine/ad.mp4).
+
+**Notes for other environments:**
+- Boot Jack (Nov 16) still held for its own owner yes.
