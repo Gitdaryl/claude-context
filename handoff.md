@@ -1,6 +1,16 @@
-
-### Addendum 2026-11-11 (later): Joe homepage photo
-- Joe chose the series (A.I.) look for the homepage portrait, WITHOUT the ghosted football image. Live: ff51e05 (hero Joe_Joe.webp + joe-chat-avatar.webp), ElevenLabs widget avatar switched to https://www.joeprofitneverbroken.com/images/joe-chat-avatar.webp.
-- Phone hero portrait was hidden on purpose since Mar 14 2026; now shown on phones under 600px (e493f02), verified live at 390/430/1440.
-- Ghost-football version (with notch fix) kept in ~/Clients/joe-profit/files/previews/ in case Joe changes his mind.
-- Open: pre-existing ~10px sideways scroll on phones (not caused by this); Wanda to re-test the silent audio on her phone; $100/mo covers HeyGen only, scope/batch message to Joe not yet sent; not logged to Notion board.
+## Session: 2026-11-12 ET
+**Environment:** Antigravity IDE (Claude Code, VS Code)
+**What was done:**
+- Disabled GitHub workflow "AI Holly Weekly Video" (reversible). Old run for Nov 12 had held back, Holly was not texted.
+- Built the Heather weekly template at ~/AI-Holly/projects/heather-weekly-template (fall season file, persona, build.mjs, weekly.mjs, Yeti bank, README) and a LaunchAgent com.yetigroove.heather-weekly (Wed 5:07/7:07/9:07pm + Thu 8:17am check). Texts Yeti only.
+- Made this week's reel (Nov 13-15) with Heather + Yeti leaf-duty cutaway: ~/AI-Holly/reels/2026-11-12-weekend-heather
+- Tested the full pipeline in a scratch dir (--test) and claude -p under launchd.
+**What's live / deployed:**
+- LaunchAgent loaded; first run Wed Nov 18 5:07pm ET. Nothing pushed to GitHub.
+**Next up:**
+- Yeti QA the Nov 13-15 reel and post it (not sent to Holly).
+- Top up Kie credits, run yeti-bank/make-gags.sh (pumpkin + forecast clips), else Nov 18 has no Yeti beat.
+- Optional: claude setup-token + CLAUDE_CODE_OAUTH_TOKEN in inbox-watch/secrets.env so an IDE sign-out cannot break it.
+- Christmas season file about Nov 26.
+**Notes for other environments:**
+- Old Wednesday GitHub Action is off. Re-enable with: gh workflow enable "AI Holly Weekly Video".
