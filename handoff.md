@@ -1,21 +1,17 @@
-## Session: 2026-11-12 ET
+
+## Session (cont.): Nov 12 2026 ET, Heather reel redo
 **Environment:** Antigravity IDE
 **What was done:**
-- Researched IDX costs, brokerage vs agent. Generic finding: MLS feed fee (broker holds the agreement) plus a vendor fee if a third-party IDX vendor is used.
-- Advised Holly should take the IDX feed now instead of waiting for her new brokerage, and drafted an email to her saying the earlier hold advice was wrong. Yeti SENT that email Nov 12 (thread 1a1d168de9c3b18b, subject "Correction on the listing feed: let's turn it on now").
-- THEN checked the Master Task Board (should have been first). Two existing rows contradict parts of the sent email: X-02 broker consent row (MLS is LCAR, direct RETS feed, Yeti Groove Media is the Vendor, no third-party vendor) and the Nov 10 row "may leave Foundation for a 50/50 brokerage" (fees not prorated, data destroyed within 5 business days of termination, decision due ~Nov 24, 3 to 4 months to set up).
-- Checked Gmail: no LCAR reply to the Nov 6 questions as of Nov 12.
-- Drafted two follow-ups in admin@ Gmail, NOT sent: (1) reply to Holly on the same thread correcting the sent email (ignore the vendor account and $60 to $100 a month; search build moves with her, only LCAR paperwork is redone; keep holding the forms; 3 questions). (2) reply nudging mls@lcarlive.com for the fee schedule and the Nov 15 term.
-
-**What's live / deployed:**
-- The inaccurate Holly email is sent. The two follow-up drafts are waiting for Yeti to review and send.
-
+- Christmas music bed: Village Square Waltz auto-selected for weekends whose Thursday is Dec 1 to Dec 25 (bed-schedule.json).
+- Added Devils Lake Inn open house (Sun Nov 15, 1 to 3 PM, free, hosted by Holly) to the Notion events DB. Cherry Creek self-submitted two events (Sat/Sun Bucks' Away).
+- Heather reel rebuilt through v6: six events, Holly-over-the-shoulder line, Cherry Creek logo, "Does" respelled "doze". Final: ~/AI-Holly/reels/2026-11-12-weekend-heather/Heather - Weekend Nov 13-15 v6.mp4 (+ phone copy). NOT posted, Holly not texted.
+- Pipeline fixes: /api/events fetched with cache-bust, work/event-fixes.json (per-event time/venue/title/note), reversed-time guard, --stamp, --gag-line, persona ends on "See you out there.", pronunciation rule for "does will".
+- "Just added" social card (3 events) rendered at ~/Projects/mb-social/reels/2026-11-12-added-events/out/ (also ~/Previews). NOT posted.
+**What's live / deployed:** Notion event row only (open house). No social posts.
 **Next up:**
-- Yeti: review and send the Holly correction draft and the LCAR nudge draft.
-- On LCAR's reply: recommend whether to run IDX under Mark during the 3 to 4 month setup.
-- Feed code can be built now regardless; it carries over if the new brokerage is also on LCAR (unconfirmed, asked Holly).
-- No new board rows filed: follow-ups live in the two existing Holly rows.
-
-**Notes for other environments:**
-- CONFIDENTIAL: Holly's brokerage plans. Nothing to Foundation, LCAR or the public repo. The LCAR nudge does not mention it.
-- Lesson: query the board before advising on any client question, even one phrased as generic research.
+- Yeti QA v6, then post (Holly gets it only by Yeti).
+- Yeti OK to post the added-events card to FB + IG.
+- Fix Cherry Creek Saturday row in Notion (Time End "11:00 PM – 8:00 PM", Location is an address, lineup "Cay Canyon"). Holly confirms open house.
+- thursday-pipeline.js reads dead `Time` field, so roundup posts have no times (one-line fix, awaiting OK).
+- Top up Kie credits, then yeti-bank/make-gags.sh (Nov 18 has no Yeti beat otherwise). Christmas season file around Nov 26.
+**Notes for other environments:** Heather lessons in memory heather-weekly-late-events.md.
