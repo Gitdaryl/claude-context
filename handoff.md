@@ -1,16 +1,19 @@
 ## Session: 2026-11-12 ET
-**Environment:** Antigravity IDE (Claude Code, VS Code)
+**Environment:** Antigravity IDE
 **What was done:**
-- Disabled GitHub workflow "AI Holly Weekly Video" (reversible). Old run for Nov 12 had held back, Holly was not texted.
-- Built the Heather weekly template at ~/AI-Holly/projects/heather-weekly-template (fall season file, persona, build.mjs, weekly.mjs, Yeti bank, README) and a LaunchAgent com.yetigroove.heather-weekly (Wed 5:07/7:07/9:07pm + Thu 8:17am check). Texts Yeti only.
-- Made this week's reel (Nov 13-15) with Heather + Yeti leaf-duty cutaway: ~/AI-Holly/reels/2026-11-12-weekend-heather
-- Tested the full pipeline in a scratch dir (--test) and claude -p under launchd.
+- Researched IDX costs, brokerage vs agent: MLS feed fee (broker holds the agreement) plus vendor fee (~$60 to $150/month). No Michigan MLS fee schedule found.
+- Holly Griewahn IDX decision: reversed earlier advice to wait for her own brokerage. Recommendation is to take the feed now; only the MLS sign-off is redone when she becomes her own broker. Vendor account carrying over is likely, not confirmed with a vendor.
+- Gmail draft created to Holly (cc daryl@), subject "Correction on the listing feed: let's turn it on now", signed as Yeti the AI assistant. NOT sent.
+
 **What's live / deployed:**
-- LaunchAgent loaded; first run Wed Nov 18 5:07pm ET. Nothing pushed to GitHub.
+- Nothing. Draft only, in admin@ Gmail drafts.
+
 **Next up:**
-- Yeti QA the Nov 13-15 reel and post it (not sent to Holly).
-- Top up Kie credits, run yeti-bank/make-gags.sh (pumpkin + forecast clips), else Nov 18 has no Yeti beat.
-- Optional: claude setup-token + CLAUDE_CODE_OAUTH_TOKEN in inbox-watch/secrets.env so an IDE sign-out cannot break it.
-- Christmas season file about Nov 26.
+- Yeti reviews and sends the Holly draft.
+- On Holly's reply: confirm which MLS Foundation Realty is on, its IDX fees and broker-change procedure.
+- Confirm with the chosen IDX vendor that the account, leads and saved searches survive a broker change.
+- Vendor account must be in Holly's name and on her card.
+
 **Notes for other environments:**
-- Old Wednesday GitHub Action is off. Re-enable with: gh workflow enable "AI Holly Weekly Video".
+- Holly plans to open her own brokerage in a few months. Private: do not copy anyone from Foundation Realty on IDX emails.
+- Session Brain row and Master Task Board rows were not written this session.
