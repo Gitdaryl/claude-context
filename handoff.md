@@ -1,17 +1,2 @@
-
-## Session: 2026-11-13 ET (permit apply shipped)
-**Environment:** Antigravity IDE
-**What was done:**
-- OnPoint Office: apply-for-a-permit feature committed and pushed (8032163). Yeti ran the db push; migration 20261114000000 confirmed on live.
-
-**What's live / deployed:**
-- onpoint-office main 8032163, Vercel deploy success. Permit card on jobs, office replies land on the job, digest nudge.
-
-**Next up:**
-- On live: Business info > "Permits go in under" = Jay.
-- Devon saves how Northwood and Wood County take applications (Permits tab).
-- Ask Jay in person: registered with Northwood zoning / Wood County?
-- Schedule-screen permit warning not yet seen in a browser; check on live.
-
-**Notes for other environments:**
-- Untracked tests-e2e/review-ux-*.mjs in the repo are from another session, left alone.
+- End of day Nov 13: prototype now tells the whole story and Yeti signed off on the look ("that looks great"). Scenes: hallway with the dog getting up and walking out, table, front page, band photo, classifieds, Dispatch spread (real article, Ask Holly with her real headshot, self-filling crossword, Yeti comic strip), food trucks spread with a torn-out coupon, Tip-Up clipping using Yeti's own 2011 footage, the note, and a bookend in the empty hallway. Open ~/Projects/local-paper-hero/prototype/index.html in Chrome. Yeti's Firefox ignores all web fonts (setting "Allow pages to choose their own fonts" is off); that is why sites look like Times there.
+- Next up: Yeti confirms a name, decides when Dennis and Larry see it, then host it somewhere private to show them. Still unbuilt: sound, curtain movement, phone polish, everything after the scroll.
