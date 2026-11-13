@@ -1,14 +1,9 @@
 
-## Session: 2026-11-13 ET (permits sit-down video)
+## Session: 2026-11-13 ET (permit video in the app)
 **Environment:** Antigravity IDE
-**What was done:**
-- Made a 2:16 video for Devon and Jay: tour of the permit screens with four full-screen question cards. Recorder gained `private` tours and `card` steps (help/record.mjs, help/lib/overlay.js, help/tours/permits-sit-down.mjs), uncommitted.
-
 **What's live / deployed:**
-- Nothing new. Video is at ~/Previews/2026-11-13 OnPoint Permits sit-down for Devon and Jay.mp4.
+- onpoint-office a3a4286: the permit tour with questions is under ? on the Permits tab for Jay, Devon and Linda. Served at app.onpointjd.com/help/permits-sit-down.en.mp4 (video/mp4, 200).
 
 **Next up:**
-- Yeti shows the video in person and brings back the answers (questions are on the board row "OnPoint Office permits: finish the live setup").
-
-**Notes for other environments:**
-- None.
+- After Jay and Devon answer: rewrite the clip as a plain tour (email to the office, replies, inspection photos). Board row filed, Waiting.
+- Inspection photos to the inspector is still unbuilt (existing board row).
