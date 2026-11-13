@@ -1,8 +1,14 @@
 
-## Session: 2026-11-13 ET (permit readiness shipped)
+## Session: 2026-11-13 ET (permits sit-down video)
 **Environment:** Antigravity IDE
+**What was done:**
+- Made a 2:16 video for Devon and Jay: tour of the permit screens with four full-screen question cards. Recorder gained `private` tours and `card` steps (help/record.mjs, help/lib/overlay.js, help/tours/permits-sit-down.mjs), uncommitted.
+
 **What's live / deployed:**
-- onpoint-office main b7b6c12, Vercel success: "Ready to apply here?" checklist, Jobs waiting filter. Migration 20261115000000 on prod. Full suite 1,648 pass.
+- Nothing new. Video is at ~/Previews/2026-11-13 OnPoint Permits sit-down for Devon and Jay.mp4.
 
 **Next up:**
-- Live setup only: applicant = Jay in Business info; Devon fills the Northwood and Wood County checklists; ask Jay in person about registration.
+- Yeti shows the video in person and brings back the answers (questions are on the board row "OnPoint Office permits: finish the live setup").
+
+**Notes for other environments:**
+- None.
