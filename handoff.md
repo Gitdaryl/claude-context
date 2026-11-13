@@ -1,15 +1,8 @@
 
-## Session: 2026-11-13 ET (permit readiness checklist)
+## Session: 2026-11-13 ET (permit readiness shipped)
 **Environment:** Antigravity IDE
-**What was done:**
-- OnPoint Office: "Ready to apply here?" checklist on each office card, same list on the job Permit card, "Jobs waiting" filter on the Permits tab. Built and tested locally, not committed.
-
 **What's live / deployed:**
-- Nothing new. Permit apply (8032163) is live from earlier today.
+- onpoint-office main b7b6c12, Vercel success: "Ready to apply here?" checklist, Jobs waiting filter. Migration 20261115000000 on prod. Full suite 1,648 pass.
 
 **Next up:**
-- Yeti: `cd ~/Projects/onpoint-office && npx supabase db push` (one migration, 20261115000000_permit_ready.sql), then say "push".
-- Then the live setup row on the board (applicant = Jay, Devon fills Northwood and Wood County).
-
-**Notes for other environments:**
-- None.
+- Live setup only: applicant = Jay in Business info; Devon fills the Northwood and Wood County checklists; ask Jay in person about registration.
