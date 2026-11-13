@@ -1,19 +1,20 @@
 
-## Session: 2026-11-13 ET
+## Session: 2026-11-13 ET (local paper hero, drafts 2 to 5)
 **Environment:** Antigravity IDE
 **What was done:**
-- On Point JD Office: reviewed the Permits section and the message server for "apply for a permit in the app"
-- Found: Permits only looks up offices and records answers; the app cannot email an office; office replies would go to Jay's .net inbox or become a lead
-- Wrote the build spec: ~/Projects/onpoint-office/docs/PERMIT-APPLY.md (3 phases, untracked)
-- Filed the board row "OnPoint Office: apply for a permit from the job page"
+- Storyboard now draft 5: https://claude.ai/artifact/3wUYvAQNE16bv1EtMYAYTr (files in ~/Projects/local-paper-hero/storyboard)
+- Story added (two unseen people, red and blue pens, note "Gone to the lake. Back after the band.")
+- Page turns replaced by sections landing on a pile (folded quarter, open spread, clipping; never a front page)
+- All pictures inside the paper are black and white halftone
+- Opening shot added: hallway at dog height, door frame and fridge foreground, rack focus dog to table
+- Credit check Nov 13: Higgsfield 348.5 credits (Ultimate), Kie 74 credits ($0.37), ElevenLabs balance unreadable (connector scope)
 
 **What's live / deployed:**
-- Nothing. No code changed.
+- Nothing public. Artifact is private.
 
 **Next up:**
-- Yeti says go on phase 1 (tracking, permit sheet PDF, portal and paper hand-off)
-- Devon's call list: add "how do you take the application" and "must we register first"
-- Decide whose name is on applications: On Point JD or Mike
+- Yeti confirms story and name, then prototype opening shot plus scenes 2, 3, 5, 6
+- Check Kasane pack licence before reusing its code commercially
 
 **Notes for other environments:**
-- Model split for the build: Opus for database and server, Sonnet for screens, Spanish strings and tests
+- Board row "Local paper scroll hero" notes still say "wind page turn"; that is replaced by sections landing.
