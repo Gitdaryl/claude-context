@@ -1,1 +1,1 @@
-- Later the same session: scroll PROTOTYPE built at ~/Projects/local-paper-hero/prototype (open index.html; link in ~/Previews). Plain HTML/CSS/JS, live MB data baked by tools/snapshot.py. Cost one Kling clip (8.75 Higgsfield credits) plus 5 Gemini plates. Board row updated. Not deployed, not shown to Dennis.
+- Devon by text Nov 13: Jay is the applicant for now; Devon may get his license next year; Northwood registration unknown, ask Jay. Northwood is first.
