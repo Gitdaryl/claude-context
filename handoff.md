@@ -1,2 +1,15 @@
-- End of day Nov 13: prototype now tells the whole story and Yeti signed off on the look ("that looks great"). Scenes: hallway with the dog getting up and walking out, table, front page, band photo, classifieds, Dispatch spread (real article, Ask Holly with her real headshot, self-filling crossword, Yeti comic strip), food trucks spread with a torn-out coupon, Tip-Up clipping using Yeti's own 2011 footage, the note, and a bookend in the empty hallway. Open ~/Projects/local-paper-hero/prototype/index.html in Chrome. Yeti's Firefox ignores all web fonts (setting "Allow pages to choose their own fonts" is off); that is why sites look like Times there.
-- Next up: Yeti confirms a name, decides when Dennis and Larry see it, then host it somewhere private to show them. Still unbuilt: sound, curtain movement, phone polish, everything after the scroll.
+
+## Session: 2026-11-13 ET (permit readiness checklist)
+**Environment:** Antigravity IDE
+**What was done:**
+- OnPoint Office: "Ready to apply here?" checklist on each office card, same list on the job Permit card, "Jobs waiting" filter on the Permits tab. Built and tested locally, not committed.
+
+**What's live / deployed:**
+- Nothing new. Permit apply (8032163) is live from earlier today.
+
+**Next up:**
+- Yeti: `cd ~/Projects/onpoint-office && npx supabase db push` (one migration, 20261115000000_permit_ready.sql), then say "push".
+- Then the live setup row on the board (applicant = Jay, Devon fills Northwood and Wood County).
+
+**Notes for other environments:**
+- None.
