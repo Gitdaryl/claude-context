@@ -1,3 +1,2 @@
-
-**Added later the same session:**
-- Built a word game prototype for the local paper's puzzle page: ~/Projects/local-paper-hero/prototype/five.html ("The Daily Five"). For fun only, no prizes, no server. Link in ~/Previews. Not deployed, not yet reviewed by Yeti.
+- LIVE: manitoubeachmichigan.com/puzzles (Manitou-Beach commit 4898869). Three daily puzzles: The Daily Five, Word Search, Sudoku. For fun only. Anonymous play count via api/puzzle-count.js. Linked under Community, in sitemap and llms.txt, privacy page updated.
+- Next up: Yeti plays it and reads the word lists (src/data/puzzleWords.js); then build the campaign around it. Reading the play count needs ADMIN_SECRET (not on the Mac).
