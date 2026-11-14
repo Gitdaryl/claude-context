@@ -1,9 +1,1 @@
-
-## Session: 2026-11-13 ET (permit video in the app)
-**Environment:** Antigravity IDE
-**What's live / deployed:**
-- onpoint-office a3a4286: the permit tour with questions is under ? on the Permits tab for Jay, Devon and Linda. Served at app.onpointjd.com/help/permits-sit-down.en.mp4 (video/mp4, 200).
-
-**Next up:**
-- After Jay and Devon answer: rewrite the clip as a plain tour (email to the office, replies, inspection photos). Board row filed, Waiting.
-- Inspection photos to the inspector is still unbuilt (existing board row).
+- Evening Nov 13: added a town picker (354 real town names, map with school-district areas, index.html?pick=1), an internal expansion-ranking page with a narrated Liam tour (areas.html), and a partner version for Dennis and Larry (areas-partners.html, not shown yet). Agreed in conversation: paper = public face, platform = the business; settle the name and domain before showing the film or map tour; one domain with state/edition folders. Open with Yeti: the name; whether "Lake Access runs a region at 70/30" means lake editions only or every town in those counties.
