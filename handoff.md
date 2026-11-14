@@ -1,3 +1,4 @@
-- (later) Roundups now build the morning they post (Thursday 9:00 rows through Dec 24)
-- Awareness campaign concepts written: ~/Projects/mb-social/awareness/CONCEPTS.md (not produced)
-- Social insights agent built: ~/.claude/tools/social-insights, LaunchAgents loaded, SOP ~/.claude/sop-social-insights.md; needs Yeti's insights token
+- Retired MB Thursday cron-social-post (f2310d7, pushed); new roundup reel replaces it from Nov 19
+- Insights token live (MB_LIFE_INSIGHTS_TOKEN); first real report in social-insights/reports/mb-life
+- Indexed 1,122 Devils Lake NAS clips ($2.81, Sonnet 5.5): ~/MB-Assets/_Lake-Index/contact-sheet.html
+- Proposed (not built, awaiting Yeti): venue clip upload page /send feeding reels + local paper "From the crowd"
