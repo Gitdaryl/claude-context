@@ -1,2 +1,1 @@
-- LIVE: manitoubeachmichigan.com/puzzles (Manitou-Beach commit 4898869). Three daily puzzles: The Daily Five, Word Search, Sudoku. For fun only. Anonymous play count via api/puzzle-count.js. Linked under Community, in sitemap and llms.txt, privacy page updated.
-- Next up: Yeti plays it and reads the word lists (src/data/puzzleWords.js); then build the campaign around it. Reading the play count needs ADMIN_SECRET (not on the Mac).
+- Word search hardened and live (commit a856934): 12 by 12, ten words, all directions, decoys.
