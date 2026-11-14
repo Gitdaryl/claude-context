@@ -1,1 +1,1 @@
-- Word search hardened and live (commit a856934): 12 by 12, ten words, all directions, decoys.
+- LIVE: daily puzzle watch (Manitou-Beach commit 174cf74). Emails and texts Yeti when the numbers justify a sponsor, a puzzle is too hard, or non-finishers stop returning. First scheduled run Nov 14 about 8:20 am ET; check with curl https://manitoubeachmichigan.com/api/puzzle-count?watch=1
