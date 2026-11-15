@@ -1,1 +1,1 @@
-- Scanned all 48 Men's Club sponsor sites; shortlist and screenshots in ~/Clients/yeti-groove/files/sponsor-scan-2026-11-14/. Board row updated with the new shortlist.
+- Nov 15: Darlene (DLVL) site swap planned at $49/mo. Her email is on IONOS; only the website record may change. Sheet + notes in ~/Clients/yeti-groove/files/darlene/. Next: Yeti sees her IONOS bill, asks once before Thanksgiving; run launch checklist + SEO audit before any switch.
