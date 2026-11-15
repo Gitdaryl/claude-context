@@ -1,1 +1,1 @@
-- Yeti ACCEPTED the one-ladder plan. Drafted (not sent) the studio referral sheet for Dennis: ~/Projects/lake-access-pilot/studio-referral/. Board: commission decision in Today, Men's Club sponsors in Backlog, homepage link row W-09 raised to High. Session Brain row added.
+- Scanned all 48 Men's Club sponsor sites; shortlist and screenshots in ~/Clients/yeti-groove/files/sponsor-scan-2026-11-14/. Board row updated with the new shortlist.
