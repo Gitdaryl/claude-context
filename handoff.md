@@ -1,1 +1,1 @@
-- Later same session: researched local AI workshop market; planted "AI magic show workshop for local small businesses" on Idea Greenhouse (card mwhaihmk-te6226, germinate, 3-item checklist). Memory: ai-workshop-magic-show.md
+- Later same session: Yeti asked for a CEO view of YetiGroove. Proposed the one-ladder structure (memory: yetigroove-one-ladder.md), awaiting his decision. Next: draft the Dennis offer or add the Check to the homepage, his pick.
