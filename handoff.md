@@ -1,18 +1,18 @@
 
-## Session: 2026-11-15 ET
+## Session: 2026-11-15 ET (later)
 **Environment:** Antigravity IDE
 **What was done:**
-- Reviewed a reference reel (car-brand table: same video got 5.4x views by showing the empty table first)
-- Heather weekly template: cut the AI pun opener to two sentences (who she is + event count) and added a guard in weekly.mjs that rejects a long opener
-- build.mjs: added a retention board (empty rows on frame 0 that fill as each event is read), detail card moved below the face
-- Rendered a preview from last week's take with the opener spliced out
+- Added Amy Hammill's drum table ($40) to MB Classifieds direct in Notion (no SMS); town Manitou Beach
+- Shipped per-listing share previews for /classifieds/:id (1b6bbfa), verified with the Facebook crawler
+- Removed the 3 dead local Notion MCP servers; claude.ai Notion connector only
+- Built L-01 v6 "One listing. Mine." in reels/L-01-tracked and CL-10 v2 (For Sale relabel)
 
 **What's live / deployed:**
-- Nothing posted. The template change takes effect on the Wed Nov 18 LaunchAgent run.
+- 1b6bbfa MB classifieds share previews; two live listings (balusters, drum table) to Dec 15
 
 **Next up:**
-- Yeti to watch ~/Previews/2026-11-15 Heather board preview.mp4 and approve the board look
-- QA the Nov 18 reel: first one with the new opener and board
+- Yeti reviews L-01 v6 and CL-10 v2 in ~/Previews, then schedule
+- L-02 re-render with a current date; CL-15 at 3+ listings; post both listing links on MB Facebook
 
 **Notes for other environments:**
-- Old opener ran 11.6s before the first event; new one targets about 4s
+- Amy OK'd featuring her table in reels. L-01 work lives in reels/L-01-tracked, not reels/L-01
