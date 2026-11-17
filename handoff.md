@@ -1,18 +1,18 @@
 
-## Session: 2026-11-15 ET (later)
+## Session: 2026-11-16 (evening ET)
 **Environment:** Antigravity IDE
 **What was done:**
-- Added Amy Hammill's drum table ($40) to MB Classifieds direct in Notion (no SMS); town Manitou Beach
-- Shipped per-listing share previews for /classifieds/:id (1b6bbfa), verified with the Facebook crawler
-- Removed the 3 dead local Notion MCP servers; claude.ai Notion connector only
-- Built L-01 v6 "One listing. Mine." in reels/L-01-tracked and CL-10 v2 (For Sale relabel)
+- Devon reported OnPoint Facebook reels show a notification but "This content isn't available"; friends see the same. Diagnosed: Graph API reports all 14 reels published and Public, FB views 0 to 8 per reel over 10 days, anonymous fetch of every OnPoint permalink hidden while the same fetch of Manitou Beach reels renders. Cause: OnPoint Poster Meta app (1609599310715590) still in Development mode, so only Daryl (app role) can see what it posts. Instagram and YouTube unaffected.
+- Nov 16 daily post: FB + YT went out (Shields Up); IG rejected the upload twice with the recurring rupload ProcessingFailedError.
+- Filed two Today rows on the Master Task Board; memory updated (onpoint-posting-tools, new meta-dev-mode-hides-page-posts).
 
 **What's live / deployed:**
-- 1b6bbfa MB classifieds share previews; two live listings (balusters, drum table) to Dec 15
+- Nothing deployed. No code changed.
 
 **Next up:**
-- Yeti reviews L-01 v6 and CL-10 v2 in ~/Previews, then schedule
-- L-02 re-render with a current date; CL-15 at 3+ listings; post both listing links on MB Facebook
+- Yeti: developers.facebook.com > OnPoint Poster > App settings > Basic > Privacy Policy URL https://onpointjd.com/privacy > Save, then flip App Mode to Live. Before 6 pm ET Nov 17 so the daily post is the test.
+- Yeti: `cd ~/Projects/on-point-jd && node tools/meta-post.mjs social/posts/shields-up.json ig`
+- Claude after the flip: anonymous curl of facebook.com/reel/1700412288386467 must show og:title; check whether old reels became visible or need re-publishing; read the Nov 17 post log at 6:05 pm.
 
 **Notes for other environments:**
-- Amy OK'd featuring her table in reels. L-01 work lives in reels/L-01-tracked, not reels/L-01
+- Do not tell Devon the reels are fine; they are not visible to anyone but Daryl until the app goes Live. Add "switch app to Live + anonymous curl with control" to every Meta posting setup.
