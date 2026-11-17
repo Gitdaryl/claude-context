@@ -1,14 +1,17 @@
-## Session: Nov 16 2026, ~10:30 pm ET
+
+## Session: 2026-11-17 ET
 **Environment:** Antigravity IDE
 **What was done:**
-- OnPoint Office release: Anderson Roofing / Sunny Skies / Joe as sub companies; Add receipt (AI reads the photo, Sonnet) vs Add a cost; crew add + see their own receipts; Fill New Job from a work order PDF; change a sent material order; money split (Devon price + materials, Kyle materials only, Jay/Linda/Daryl everything).
+- Pulled live FB view counts for all 16 OnPoint reels: Shields Up 355 (posted after the Live flip), the other 15 at 0 to 20 (Development-mode era). No comments on any; at most 1 like each.
+- Built tools/fb-redo.mjs + social/fb-redo.json: reposts those 15 to Facebook only, one a day at noon ET, Nov 18 to Dec 1, and deletes each old reel only after the new one returns a live link. The Nov 12/13 double post gets one repost and both old copies deleted.
+- Installed launchd com.yetigroove.onpoint-fb-redo (12 to 5 pm hourly). Daily 6 pm post unchanged.
 
 **What's live / deployed:**
-- SHIPPED: onpoint-office main dde1ed6 + all 5 migrations (20261116000000..400000) applied on live, verified with supabase migration list.
+- fb-redo launchd job on the Mac Studio (not committed to git yet)
 
 **Next up:**
-- Nov 17 morning: Linda adds the Menards receipt on Bob's job (Job cost > Add receipt) = first live AI read + live storage write. Devon uploads a work order from his phone. Jay turns on Kyle "Can see job costs".
-- Thursday: Teams A/B/C after Yeti's change.
+- Check social/fb-redo-log.json after Nov 18 noon run: new link + old reel deleted
+- Unload com.yetigroove.onpoint-fb-redo after Dec 1
 
 **Notes for other environments:**
-- Board row "ship the Nov 16 release" is In Progress until the live tests pass.
+- OnPoint FB will show 2 reels/day (noon redo + 6 pm daily) until Dec 1. Instagram and YouTube not touched.
