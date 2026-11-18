@@ -1,18 +1,8 @@
 
-## Session: 2026-11-17 ET
-**Environment:** Antigravity IDE
+## Session (cont.): 2026-11-17 ET, Holly birthday REEL
 **What was done:**
-- Holly's birthday card, Yeti style: real-Holly likeness (SOP kit, not Heather) + locked v3 Yeti, pink office party scene, Kie Nano Banana Pro
-- Route that worked: Holly solo still from the real refs, then ONE edit pass adding only the Yeti (she held exactly, he landed at belt height). Two fresh two-shots failed (Yeti too tall, wrong glasses / grey hair)
-- Headline overlaid with ImageMagick (Montserrat): "Have a HOLLY JOLLY birthday" (final) and "Another year CLOSED." (alt)
-- Post copy with Yeti humor written (listing pun, "I'd have baked. But I shed.", corner-piece button)
-
-**What's live / deployed:**
-- Nothing posted. Files: ~/AI-Holly/reels/2026-11-17-holly-birthday/ (final at top, alt + rejects + QA in drafts/)
-
-**Next up:**
-- Yeti picks headline v1 or v2 and posts / texts Holly
-- Optional: tiny edit pass to seat the party hat on top of the Yeti's cap (it sits behind it)
-
-**Notes for other environments:**
-- Two-character stills with real Holly: generate her solo first, then edit the Yeti in. Fresh two-shots drift him tall and her glasses/hair wrong (2 of 2 today)
+- 38s reel built: Heather (HeyGen Avatar IV, fall gate still, HEATHER tag, hook "HOLLY'S DAY OFF") says Holly has the day off; cut to the party still: Yeti/Holly dialogue incl. the "nobody would believe you're 68" bit; end card.
+- Holly + Heather takes: HeyGen Avatar IV (plan credits). Yeti: HeyGen refuses non-human faces, so Seedance 2.0 on Higgsfield with start_image + audio_references (~115 credits total). Seedance RE-SPEAKS the line (own timing, once changed "shed" to "failed"), so the clean clone wav was phrase-fitted to each clip (tools/warp.py) instead of using Seedance's audio.
+- ffmpeg assembly (tools/assemble.py): overlays, bed at ~12 dB under voice, -14 LUFS.
+**What's live:** nothing posted. Final: ~/AI-Holly/reels/2026-11-17-holly-birthday/"Happy Birthday Holly - reel.mp4" + caption in post copy.txt.
+**Next up:** Yeti listens (voice drawl on two stretched phrases, Yeti mouth overrun covered by cuts) and posts/sends to Holly.
