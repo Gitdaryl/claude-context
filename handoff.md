@@ -2,19 +2,17 @@
 ## Session: 2026-11-17 ET
 **Environment:** Antigravity IDE
 **What was done:**
-- Answered Unreal/UEFN connector question: UEFN is Windows-only, no official Claude connector; chose browser prototype first
-- Built Dakota's game "The Monster Lighthouse" in ~/Dakota-Game from her map + character designs (~/Documents/Dakota game designs)
-- Characters cut out of her renders locally with macOS Vision; 9 rooms from her map; NPCs Witsy + Rosie, 9 monsters, 6 robots incl. boss
-- Items: Light Blaster, wrench, flashlight, key, plank, bulb, orbs, cupcakes; obstacles: gate, broken bridge, poison pools, cobwebs, hide barrels
-- Atmosphere: green poison fog + bubbles, rain, lightning/thunder, torches, sea, lighthouse beam ending; all SFX synthesized (Web Audio)
-- Full scripted playthrough verified start to win, no console errors
+- Holly's birthday card, Yeti style: real-Holly likeness (SOP kit, not Heather) + locked v3 Yeti, pink office party scene, Kie Nano Banana Pro
+- Route that worked: Holly solo still from the real refs, then ONE edit pass adding only the Yeti (she held exactly, he landed at belt height). Two fresh two-shots failed (Yeti too tall, wrong glasses / grey hair)
+- Headline overlaid with ImageMagick (Montserrat): "Have a HOLLY JOLLY birthday" (final) and "Another year CLOSED." (alt)
+- Post copy with Yeti humor written (listing pun, "I'd have baked. But I shed.", corner-piece button)
 
 **What's live / deployed:**
-- Nothing deployed. Runs locally: double-click ~/Dakota-Game/play.command
+- Nothing posted. Files: ~/AI-Holly/reels/2026-11-17-holly-birthday/ (final at top, alt + rejects + QA in drafts/)
 
 **Next up:**
-- Dakota playtests and gives notes (names for Rosie + game title are placeholders)
-- Optional: publish a shareable link, touch controls for iPad, more of her monster lands as levels
+- Yeti picks headline v1 or v2 and posts / texts Holly
+- Optional: tiny edit pass to seat the party hat on top of the Yeti's cap (it sits behind it)
 
 **Notes for other environments:**
-- Game lives on the Mac only; no repo yet
+- Two-character stills with real Holly: generate her solo first, then edit the Yeti in. Fresh two-shots drift him tall and her glasses/hair wrong (2 of 2 today)
