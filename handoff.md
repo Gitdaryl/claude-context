@@ -1,1 +1,1 @@
-**Update 2026-11-18 ~9:30pm ET:** WENT LIVE. Migrations pushed first (verified), app main 27507e3 live (health), website e331180 READY. Live teams: A "The A Team" (lead Kyle), B "Elmer's crew" (es), C "Lester's crew" (es). Next: add crew in Team tab (Elmer + Lester as Crew lead, not Sub), set B/C leads, first real job text answer test.
+**Update 2026-11-18 ~11pm ET:** job_teams fix live (e1d75fc + migration 20261119000000): team button on a job stays lit, anyone on a team (Jay, Devon, Kyle) can go on the job.
