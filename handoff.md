@@ -1,19 +1,18 @@
 
-## Session: 2026-11-18/19 ET
+## Session: 2026-11-19 ET
 **Environment:** Antigravity IDE
 **What was done:**
-- OnPoint Office: built roof sections (shingle + EPDM, barns, separate buildings summed on one quote, owner-supplies-dumpster), Edit on draft change orders
-- release-nov18: merged Nov 4 version chip + help dots, re-recorded all 23 help clips, phone versions, new receipt/change-order/work-order clips
-- Built "Ask for a change" (helper -> GitHub issue -> Claude PR -> Vercel preview -> Yeti merges), branch app-requests
-- Bob Klumm: one change order for fascia + dumpster wording (owner pays haul/dump fees)
+- Posted Joe Profit's attorney-approved Privacy Policy + Terms and Conditions (Multimedia Communications Group, LLC, effective Nov 18 2026) on joeprofitneverbroken.com. Repo Gitdaryl/Joe-Profit, commit 6deb9eb.
+- Added nofollow "Website designed by yetigroove.com" credit to the sitewide footer and the legal-page footer, as Joe asked.
+- Verified live: /privacy and /terms return 200, new text renders, credit shows, no page errors.
 
 **What's live / deployed:**
-- app.onpointjd.com at b2126a3 (release-nov18 + roof-sections). No migrations.
+- joeprofitneverbroken.com legal pages + footer credit (Vercel auto-deploy, checked headless).
 
 **Next up:**
-- Bob signs the fascia + dumpster change order before the final invoice (today)
-- Devon follow-ups on roof sections (board row), then record Measure help clip
-- app-requests setup: GitHub secrets, label, Actions PR permission, PAT on Vercel, preview Supabase project, db push 20261119200000, then push
+- "18 chapters" to "19 chapters" on the Digital Bundle: that text is NOT on the site (site already says 19). Most likely the Stripe product description on the bundle; fix in the Stripe dashboard.
+- Reply to Joe: the voice-recording line he worried about is in his lawyer's clean copy and is accurate (ElevenLabs stores Talk to Joe recordings). If he wants it gone, turn off audio retention in the ElevenLabs agent first, then revise the policy.
+- Confirm info@joeprofitspeaks.com is a monitored inbox (the new policies point there).
 
 **Notes for other environments:**
-- Devon's app will show the "Update app" button; tap it to get the new version
+- Legal text on that site is Joe's business's responsibility; post verbatim, don't reword.
