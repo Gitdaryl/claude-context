@@ -1,7 +1,19 @@
 
-## Session (cont.): 2026-11-18 ET
+## Session: 2026-11-18 ET
+**Environment:** Antigravity IDE
 **What was done:**
-- Holly birthday poster final: original party still, Holly's head edited to look at camera (crop-edit-paste on Higgsfield NB Pro), text "HAPPY BIRTHDAY HOLLY". Holly Jolly saved for December puns.
-- Heather weekly (Nov 19-22): 5:07 run failed the layout check (long titles overflowed board rows). Patched build.mjs + weekly.mjs; 7:07 retry rendered clean.
-**What's live:** nothing posted. Reel: ~/AI-Holly/reels/2026-11-18-weekend-heather/
-**Next up:** Yeti answers VERIFY items (Mom's apostrophe, Billy Joe Hunt location field in Notion, Chateau in scope), posts. Top up Kie for Yeti gags. Boot Jack: still no reply.
+- OnPoint Office audit: teams, job replies did not exist; welcome text + crew receipts already live
+- Built on branch crew-teams (4d4a22a): teams A/B/C + Add a team, team on a job in one tap, Text a group by any mix of teams; crew job answers (1 there, 2 can't, 3 late, 4 ride) by text or app buttons, no/late/ride alert Jay with his number in the reply; phone welcome page with home screen steps (PIN once)
+- Website on-point-jd: crew answers not forwarded (commit 03ac5c0, local master)
+- Tests: tsc clean, 1823 pass, 4 fail (all fail on live code too)
+
+**What's live / deployed:**
+- Nothing. Branch + 2 migrations local only.
+
+**Next up:**
+- Yeti: merge crew-teams to main + push, supabase db push, check migration list, then on-point-jd pull --rebase + push
+- On live: create teams A (Kyle), B (Elmer, Spanish), C (Lester, Spanish); Elmer + Lester role Crew lead (not sub)
+- Re-record stale help clips (22 already stale before this work)
+
+**Notes for other environments:**
+- Local DB for onpoint-office is container supabase_db_onpoint-office
