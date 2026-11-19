@@ -2,15 +2,17 @@
 ## Session: 2026-11-19 ET
 **Environment:** Antigravity IDE
 **What was done:**
-- Built ~/Projects/christmas-photobook: scans Christmas 2025 family video (NAS) with Apple Vision, picks varied candid moments, exports 4K stills
-- Scanned 1,416 clips / 17.6 h (Podcast skipped); exported 2,640 stills to ~/Pictures/Christmas 2025 Photobook (by day + Top 300 ranked)
+- Read Dennis Babjack's Nov 19 Lake Access 2027 email (RFP: My Lake site, BFL directory, CRM, Laker TV, digital Laker Savings Card, subscription print), his 3 Drive docs and the draft 2027 media kit PDF
+- Confirmed the Nov 13 pilot video has 1 YouTube view; his reply ignores the pilot and the 4 questions
+- Wrote a CEO analysis (overlaps, pushback, product, pricing, scaling, traps), then rebuilt it as a 6:49 narrated pitch video for Yeti: ~/Projects/lake-access-pilot/ceo-pitch/out/lake-access-ceo-pitch.mp4
 
 **What's live / deployed:**
-- Nothing deployed; local folder only
+- Nothing. Video is local only.
 
 **Next up:**
-- Yeti shortlists from Top 300; then AI cleanup (upscale/denoise) on keepers; then photobook layout
-- Optional: include the ~490 existing photos (JPG/CR3/DNG) and the Podcast footage
+- Yeti decides: vendor + licence vs rev share only; park local paper for 2027; ad design terms; meeting date with Dennis + Larry before his December surgery
+- Then write the actual proposal to Dennis answering his 4 sections; secure lake-access.com domain/DNS/email access before his web partner leaves
+- Board: old pilot rows (price list, second lake-town scope, free-listing video) likely superseded by the RFP
 
 **Notes for other environments:**
-- Photobook is a Christmas 2026 gift for the kids (Utah + Australia)
+- Pitch video is for Yeti only, not Dennis. Dennis's April 1 2027 ad deadline drives the build timeline.
