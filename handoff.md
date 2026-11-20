@@ -1,20 +1,17 @@
-## Session: 2026-11-20 ET (part 4)
+## Session: 2026-11-20 ET (part 5)
 **Environment:** Antigravity IDE
 **What was done:**
-- On Point JD: Yeti said go on the schedule. The six Budget Dumpsters reels are in `~/Projects/on-point-jd/social/schedule.json`, SCHEDULE.md and the content board: k01 Sun Nov 22, k02 Tue Nov 24, k03 Thu Nov 26 (Thanksgiving), k06 Wed Dec 2, k04 Fri Dec 4, k05 Sun Dec 6.
-- Two fall-only reels moved one day each (Fall or spring price to Nov 25, Two neighbors to Dec 5). Six evergreen reels moved to Dec 29, 30, Jan 1, 2, 3, 5. Undo file: `social/video/klumm/schedule-before-klumm.json`.
-- `daily-post --check`: 71 rows, 0 missing, 0 on hold. Tests pass. Frankenstein reel re-encoded from 179 MB to 64 MB for upload.
-- Jay: 13 character-sheet photos copied to `social/video/_kit/cast/jay/sheet/`; a 3.5 minute Jay-only voice sample cut to `_kit/cast/jay/voice/`. Nothing cloned or uploaded.
-- Seven more reel ideas from the same takes added to HOOK-POOL.md.
+- Watched `~/Downloads/google hack.MP4` (37s). Its method is real: Search Console, Performance, query filter, custom regex for questions. It only shows searches that already reach the site, so onpointjd.com (7 weeks old) will show little yet. No Search Console API access on the Mac, so Yeti runs it in the browser.
+- Pulled Google autocomplete for 25 roofing questions matched to the Budget Dumpsters footage. Table added to `~/Projects/on-point-jd/social/video/real-jobs/HOOK-POOL.md`.
+- Captions for scheduled reels k01 (Nov 22) and k02 (Nov 24) now open with the searched question; k02's YouTube title is "Can you put a new roof over old shingles?". Schedule check still passes (71 rows, 0 missing).
 
 **What's live / deployed:**
-- Nothing posted yet. First of the six auto-posts Sun Nov 22 at 6 pm ET. Nothing committed.
+- Nothing posted yet. First Budget Dumpsters reel auto-posts Sun Nov 22, 6 pm ET.
 
 **Next up:**
-- Yeti watches reels 3, 5 and 6 before Nov 26, Dec 6 and Dec 2 (board row, Today).
-- After k06 posts Dec 2: tag Budget Dumpsters of Toledo by hand.
-- Jay voice clone: his OK on file plus a clean read, then a test (board row, Backlog).
-- Cut the next 7 talking reels from the existing takes (board row, Backlog).
+- Yeti: run the Search Console question filter and send the list (or a screenshot).
+- Next reels chosen by question: do roofers replace plywood, does a new roof come with a warranty, can you replace a roof in winter.
+- Ask Jay and Devon on camera: should I shovel snow off my roof, and the "why do roofers..." set.
 
 **Notes for other environments:**
-- Holt Roofing's sign never shows in On Point content (Yeti, Nov 20).
+- Question regex for Search Console: ^(who|what|when|where|why|how|can|could|do|does|is|are|should|will|which)\b
