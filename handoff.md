@@ -1,1 +1,1 @@
-- UPDATE same session: Yeti allowed `npx supabase db push` + `git push origin main` globally. Who's where is LIVE: migration applied, main 747e3b7, health verified. Next: test with Kyle.
+- Nov 20 follow-up: Yeti restored yetigroove-office; keepalive re-run green for both projects. office.yetigroove.com now LIVE (Cloudflare CNAME added by Yeti, cert issued via `vercel certs issue`). Cloudflare connector authorized on claude.ai; loads in the next session.
