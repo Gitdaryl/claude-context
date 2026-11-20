@@ -1,17 +1,21 @@
-## Session: 2026-11-20 ET (follow-up to the DigitalOcean alerts review)
+## Session: 2026-11-20 ET
 **Environment:** Antigravity IDE
 **What was done:**
-- Rebooted yeti-vps with Yeti's OK to load the pending kernel and libc6 updates.
-- Verified from inside and outside after boot.
+- Sam Quisenberry (State Farm): transcribed all 11 archived reels and checked frames. Transcripts in ~/Archive/Clients/Sam-Insurance/transcripts/
+- Wrote the compliance read and posting plan: ~/Archive/Clients/Sam-Insurance/compliance-review-2026-11-20.md
+- Finding: only 4 reels can run now (Intro smart casual, Brand Awareness, Auto and Bundling, Life). Six are spring or summer dated and hold to March-June. The red hoodie Intro is retired (Red Wings logo). The earlier "9 ready" count was wrong.
+- Finding: no file has captions, end card, AI label or disclosure. The On Point posting tool does not set Instagram's is_ai_generated flag.
+- Master Task Board: 1 Done row and 5 new Sam rows filed.
 
 **What's live / deployed:**
-- yeti-vps booted Nov 20 18:10 UTC on kernel 6.8.0-149 (was 6.8.0-124, up since Jun 14). reboot-required cleared, 0 failed units.
-- nginx, n8n, cloudflared, yeti-mcp, pm2-root, cron and ssh all active. Node 22.23.5. n8n on 127.0.0.1:5678, port 5678 closed from outside, https://n8n.yetigroove.com/healthz returns 200, all 6 workflows re-activated.
+- Nothing posted or sent. No files changed except new ones in Sam's archive folder.
 
 **Next up:**
-- Add NodeSource to unattended-upgrades so Node patches itself. Backlog row on the Master Task Board.
-- Turn on ufw (allow 22, 80, 443), needs Yeti's OK. Backlog row on the Master Task Board.
+- Daryl: send Sam the 4 questions (claim line, booking link, State Farm footer, start year) and ask him to forward the script pack to State Farm for a written yes. Does not need Meta access.
+- On Yeti's go: cut the investment sentence from Intro and the price sentence from Life (edit only), build one text end card.
+- Auto and Bundling needs a HeyGen re-render; the API key has been revoked since Oct 6.
+- Write winter scripts (Michigan no-fault FAQ, deer, frozen pipes) so the calendar does not run dry before Christmas.
 
 **Notes for other environments:**
-- Anything that used to call n8n at http://143.198.171.9:5678 directly must now use https://n8n.yetigroove.com.
-- Node on the VPS comes from NodeSource and does not auto-update. Ubuntu packages (nginx etc.) do.
+- State Farm's agent ad rules are not public. The review is a risk read, not an approval. Sam still has not shown anything in writing from State Farm.
+- AutoOwnersLogo2015Pad.jpg sits in Sam's folder; it is Decker's carrier logo and should move to Decker-Insurance.
