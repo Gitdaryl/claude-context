@@ -1,19 +1,16 @@
-## Session: 2026-11-19 ET
+
+## Session: 2026-11-20 ET
 **Environment:** Antigravity IDE
 **What was done:**
-- Studied Riley Brown's ManyChat reel "games as lead magnets" (transcript + frames from ~/Downloads copy)
-- Decided: gameplay doesn't sell, the reward/CTA does; games fit restaurants/bars and community pages, not roofing
-- Quick MI legal check: skill + free entry + no purchase = clean; no alcohol prizes (notes, not legal advice)
-- Brainstormed 7 thumb-controlled winter games for Devils Lake; lead pick is an Outhouse Race game modeled on the real Men's Club race (reviewed 36 NAS clips via the Tip-Up index)
-- Adopted Yeti's weekly business-team leaderboard (team score = sum of its top 5 players)
-- Saved all of it to memory: tipup-outhouse-game.md
+- Reviewed Supabase emails: yetigroove-office paused for 7 days idle (free plan); grants change (Oct 30) already handled in Office migrations; newsletter ignored.
+- Confirmed OnPoint project ACTIVE_HEALTHY and unaffected (same org, separate project).
+- Built private repo Gitdaryl/supabase-keepalive: daily GitHub Actions ping of both projects, emails on failure. Tested locally and on GitHub.
 
 **What's live / deployed:**
-- Nothing built or deployed. Task Board row filed (Backlog): Outhouse Race prototype
+- Gitdaryl/supabase-keepalive (private), daily 13:17 UTC. OnPoint check passes.
 
 **Next up:**
-- Outhouse Race prototype (build screen, team picker, 3-race bracket, fake weekly board) to show the Men's Club; build in Dec for a mid-Jan launch
-- Get race rules and past winning times from the club, and each business's OK to use its outhouse
+- Yeti: click Restore on yetigroove-office (https://supabase.com/dashboard/project/zanybcjfxkmiuxybvakh), then re-run the workflow (`gh workflow run keepalive.yml` in ~/Projects/supabase-keepalive) to confirm green.
 
 **Notes for other environments:**
-- Snow may be light this season; game clips can carry Tip-Up promo if real ice footage is thin
+- Free Supabase projects pause after 7 idle days; the keepalive repo covers both. Add new projects there.
