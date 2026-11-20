@@ -1,20 +1,15 @@
-## Session: 2026-11-20 ET (part 2)
+## Session: 2026-11-20 ET (part 3)
 **Environment:** Antigravity IDE
 **What was done:**
-- On Point JD talking reels (kit: `~/Projects/on-point-jd/social/video/klumm/`), after Yeti watched the first four and liked them.
-- Yeti's answers: Kyle is Jay's son-in-law and Devon's brother-in-law, Devon calls him his brother, use him. Budget Dumpsters of Toledo gave their OK in person. Devon's marketer story is real.
-- k03 "Call us. You get my wife." now has Jay's Kyle line with Kyle's portrait as a photo card (31s).
-- Two new reels: k05 "He wanted us to charge more." (marketer story plus Jay's "skip those guys", 25s) and k06 "Our dumpster guys needed a roof." (Devon's thank-you to Budget Dumpsters, 31s).
-- Found the Kling snow b-roll Yeti could not locate: `social/video/winter-2026/clips/` (34 clips, sheet at `winter-2026/keys/_sheet.jpg`).
-- FOOTAGE.md, HOOK-POOL.md, memory and the task board updated with all of the above.
+- On Point JD: Yeti answered the Holt question: the Holt Roofing trailer sign never shows on camera. Board row closed; the six klumm reels already blur it.
+- Wrote post files for the six Budget Dumpsters reels: `~/Projects/on-point-jd/social/posts/klumm-*.json` (generator: `social/video/klumm/posts.mjs`).
 
 **What's live / deployed:**
-- Nothing posted, nothing committed. Six reels in ~/Previews ("2026-11-20 OnPoint Klumm 1" to "6").
+- Nothing posted. The six reels are NOT on `social/schedule.json`, so the 6 pm auto-post will not pick them up.
 
 **Next up:**
-- Yeti watches reels 3, 5 and 6 and picks which of the six go on the schedule (board row, Today). No post JSON written yet.
-- Ask Jay in person whether the Holt Roofing trailer should ever show on camera (board row, Backlog). The reels blur it.
-- Jay's snow take is not cut: it sells commercial lots, the same hold as winter reel w08.
+- Yeti's yes on dates. Proposed swaps: k01 Sun Nov 22, k02 Tue Nov 24, k03 Thu Nov 26 (Thanksgiving), k06 Wed Dec 2, k04 Fri Dec 4, k05 Sun Dec 6; the six displaced reels move to the open days from Dec 29.
+- He has not yet watched reel 3 (updated with Kyle), 5 or 6.
 
 **Notes for other environments:**
-- Budget Dumpsters' OK was verbal, in person. Logging it in Office as a signed "Can we show your job" would put it on file.
+- To schedule one: add a row to schedule.json with `"post": "posts/klumm-<slug>.json"` and mirror it on the content board slot.
