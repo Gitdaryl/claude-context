@@ -1,17 +1,19 @@
-
-## Session: 2026-11-19 ET (evening, Lake Access cont.)
+## Session: 2026-11-19 ET
 **Environment:** Antigravity IDE
 **What was done:**
-- Edition count answered: ~15 lake communities (Tier A 7, Tier B 8), every lake can get a page; "Which lake is yours?" sign-up as the observation tool
-- 4-region concurrent launch: yes on the business side, content staged (one flagship lake per region)
-- Built reply video for Dennis + Larry (3:09, Yeti clone voice, his four real 2026 covers): ~/Projects/lake-access-pilot/reply-video/out/lake-access-reply-v1.mp4
+- Studied Riley Brown's ManyChat reel "games as lead magnets" (transcript + frames from ~/Downloads copy)
+- Decided: gameplay doesn't sell, the reward/CTA does; games fit restaurants/bars and community pages, not roofing
+- Quick MI legal check: skill + free entry + no purchase = clean; no alcohol prizes (notes, not legal advice)
+- Brainstormed 7 thumb-controlled winter games for Devils Lake; lead pick is an Outhouse Race game modeled on the real Men's Club race (reviewed 36 NAS clips via the Tip-Up index)
+- Adopted Yeti's weekly business-team leaderboard (team score = sum of its top 5 players)
+- Saved all of it to memory: tipup-outhouse-game.md
 
 **What's live / deployed:**
-- Nothing sent. Video link in ~/Previews dated 2026-11-19 "Lake Access reply to Dennis and Larry v1"
+- Nothing built or deployed. Task Board row filed (Backlog): Outhouse Race prototype
 
 **Next up:**
-- Yeti reviews reply video, then uploads unlisted and emails Dennis + Larry with a meeting ask before December
-- Write the one-page pricing sheet for the table
+- Outhouse Race prototype (build screen, team picker, 3-race bracket, fake weekly board) to show the Men's Club; build in Dec for a mid-Jan launch
+- Get race rules and past winning times from the club, and each business's OK to use its outhouse
 
 **Notes for other environments:**
-- Dennis has rotator cuff surgery in December; offer a video call if travel is hard
+- Snow may be light this season; game clips can carry Tip-Up promo if real ice footage is thin
