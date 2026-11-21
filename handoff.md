@@ -1,20 +1,20 @@
-
-## Session: 2026-11-21 ET (Ladies Club Angel Tree)
+## Session: 2026-11-21 ET
 **Environment:** Antigravity IDE
 **What was done:**
-- Michele Henson texted asking for the club's Angel Tree SignUpGenius link on the site. Read the sheet in a headless browser: 117 online wishes, 10 drop-off businesses, gifts due Fri Dec 4.
-- Built an Angel Tree section on /ladies-club (her wording, the link, drop-off steps, business list). Angel Tree leads the page hero while open. Both switch off by date after Dec 4. Removed the "details coming soon" teaser.
-- Built reel lc-angel-tree (23s, Liam, Village Square Waltz, drawn cover) with FB and IG captions. Dry run passed. Not posted.
-- Board: 4 rows filed, Veterans Lunch recap row closed with evidence. Session Brain row added.
+- Reviewed the reel Yeti saved ("paint me a picture with words", 52 s, mattress example). Transcribed with whisper, frame sheet pulled.
+- Wrote the Scene First script SOP at `~/.claude/sop-scene-first.md`: write the moment sentence first, source the moment from real reviews, paint one scene, then brand, then at most two proof facts; four tests; where it applies, adapts and does not apply.
+- Added "Script Standard: Scene First" to `~/.claude/CLAUDE.md` so every session reads the SOP before writing selling copy.
+- Memory `scene-first-scripts` added and indexed.
+- Checked the reel's "brains remember stories longer than facts" claim: backed by a 2021 meta-analysis (Mar et al.); the "22 times more memorable" stat is unsourced and is banned in the SOP.
+- Reel and frame sheet kept at `~/Clients/yeti-groove/files/scene-first-reel-2026-11-21/`.
 
 **What's live / deployed:**
-- manitoubeachmichigan.com/ladies-club#angel-tree (Manitou-Beach commit c818d87, verified live on desktop and phone)
+- Nothing deployed. Config and SOP files only.
 
 **Next up:**
-- Yeti watches ~/Previews/2026-11-21 Angel Tree reel (Ladies Club).mp4, then says post
-- Yeti replies to Michele that the link is up
-- Summer Fest 2027 details are coming from Michele
-- Kie image credits are at zero (top up before the next flyer batch)
+- Yeti to read the SOP and say whether the exception list and the "before scene" option match what he meant (both are Claude's additions).
+- Scene-first pass over script banks that are written but not built (On Point Direct series bullets first). On the board as Backlog.
+- Sam Quisenberry: decide whether his scripts get a scene-first pass before the pack goes to State Farm, since a rewrite after approval means a second approval.
 
 **Notes for other environments:**
-- Advice given: keep the club's SignUpGenius sheet this year, pitch our own sign-up for 2027 in September (board row filed)
+- Cowork and Mobile: the same rule applies to any script or sales copy. The SOP file is `~/.claude/sop-scene-first.md`; the short version is "paint the moment the customer pays for before any feature".
