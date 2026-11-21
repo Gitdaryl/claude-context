@@ -1,21 +1,21 @@
 ## Session: 2026-11-20 ET (late evening)
 **Environment:** Antigravity IDE
 **What was done:**
-- Sam Quisenberry portal (https://samquisenberry.vercel.app, code ~/Projects/sam-portal): new looks are now a billed item. Yeti's decision: a style pack costs 50 HeyGen credits, more than a reel, so it must be billable so it is not abused.
-- Prices in data/look-pricing.json: style pack (5 looks) $40, hand-made look $25 as the usual figure. These are Claude's recommended numbers, built in as the default; Yeti asked what a real price should be and has not confirmed them yet.
-- Style pack: Sam sees "5 new looks in this style: $40" and the button "Order for $40". The server refuses an order that does not carry the current price and stores price + time agreed.
-- Made-to-order look: Yeti sets a price under Admin on the request, Sam taps "OK, make it for $X" (or Yeti taps "Sam said OK"). Re-pricing cancels an earlier OK.
+- Sam Quisenberry portal (https://samquisenberry.vercel.app, code ~/Projects/sam-portal): new looks are now a billed item. Yeti's decision: a style pack costs 50 HeyGen credits, more than a reel, so it must be billable.
+- Yeti set the price: $24 for a set of 5 looks in a style, and $24 for one custom look. Prices live in data/look-pricing.json.
+- Sam sees the price and taps "Order for $24" for either kind. The server refuses an order that does not carry the current price and stores price + time agreed.
+- The dialog now says the AI picks the outfits, so every set differs. On a style order the text box is "Note for Yeti" (HeyGen never sees it).
 - Admin page: "To invoice: $X for N look orders" line and a Billed tick per request.
-- Watcher texts now say whether it is a paid style order or a look that needs a price, and text again when Sam agrees to a quote. It will not auto-start a pack without a price agreement.
+- Watcher texts say what was ordered and for how much. It will not auto-start a pack without a price agreement. autoPacks is still off.
 
 **What's live / deployed:**
-- samquisenberry.vercel.app redeployed with pricing (verified: both keys return the prices, an unpriced style order is refused, Sam still sees 10 looks, 11 draft rows, 0 requests).
+- samquisenberry.vercel.app redeployed at $24 (verified: Sam's view returns 24/24, an order at the old $40 is refused, Sam still sees 10 looks, 11 draft rows, 0 requests).
 - Nothing sent to Sam. Nothing posted to Meta.
 
 **Next up:**
-- Yeti: confirm or change $40 / $25 before texting Sam his link.
-- Yeti: Show to Sam or Skip on the five winter-sweater looks (trial, not billed), read the 11 scripts, then text Sam his link.
-- Tell Sam new looks are a paid add-on (not in the Nov 13 terms email).
+- Yeti: decide the voice for a short "how new looks work" tutorial clip (recommended: ElevenLabs Chris, same as the On Point help clips), then Claude builds it.
+- Yeti: Show to Sam or Skip on the five winter-sweater looks (trial, not billed), read the 11 scripts, then text Sam his link and tell him new looks are $24.
+- Measure what one hand-made look costs in HeyGen credits on the first real custom order.
 - Stage 2 not started: subtitles, b-roll, Sam previewing the finished video, Meta posting.
 
 **Notes for other environments:**
