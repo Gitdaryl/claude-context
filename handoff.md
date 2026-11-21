@@ -1,20 +1,17 @@
-## Session: 2026-11-21 ET
+
+## Session: 2026-11-21 ET (Angel Tree reels, later)
 **Environment:** Antigravity IDE
 **What was done:**
-- Reviewed the reel Yeti saved ("paint me a picture with words", 52 s, mattress example). Transcribed with whisper, frame sheet pulled.
-- Wrote the Scene First script SOP at `~/.claude/sop-scene-first.md`: write the moment sentence first, source the moment from real reviews, paint one scene, then brand, then at most two proof facts; four tests; where it applies, adapts and does not apply.
-- Added "Script Standard: Scene First" to `~/.claude/CLAUDE.md` so every session reads the SOP before writing selling copy.
-- Memory `scene-first-scripts` added and indexed.
-- Checked the reel's "brains remember stories longer than facts" claim: backed by a 2021 meta-analysis (Mar et al.); the "22 times more memorable" stat is unsourced and is banned in the SOP.
-- Reel and frame sheet kept at `~/Clients/yeti-groove/files/scene-first-reel-2026-11-21/`.
+- Angel Tree reel cut 2 (quieter music, sign-up sheet walkthrough) posted to Manitou Beach Life FB + IG on Yeti's say-so; IG tags Blackbird and Boot Jack
+- Second reel written to the new scene-first SOP: Christmas-morning scene over painted stills, two voice versions (Liam soft, Lauren)
+- Reel tools extended: other-site segments, tap step, per-reel music level, absolute footage paths, voiceSettings; gem.py for Gemini stills
 
 **What's live / deployed:**
-- Nothing deployed. Config and SOP files only.
+- https://www.facebook.com/reel/1051779917927008/ and https://www.instagram.com/reel/DgBMt8vT61x/
 
 **Next up:**
-- Yeti to read the SOP and say whether the exception list and the "before scene" option match what he meant (both are Claude's additions).
-- Scene-first pass over script banks that are written but not built (On Point Direct series bullets first). On the board as Backlog.
-- Sam Quisenberry: decide whether his scripts get a scene-first pass before the pack goes to State Farm, since a rewrite after approval means a second approval.
+- Yeti picks scene reel A or B in ~/Previews and says post
+- Tag businesses on the Facebook reel by hand, share to the Ladies Club group, last call around Dec 1
 
 **Notes for other environments:**
-- Cowork and Mobile: the same rule applies to any script or sales copy. The SOP file is `~/.claude/sop-scene-first.md`; the short version is "paint the moment the customer pays for before any feature".
+- nano-banana-pro skill has no script on this Mac; Kie credits are at zero
