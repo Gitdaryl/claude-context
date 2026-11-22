@@ -1,17 +1,19 @@
-
-## Session: Nov 22 2026 ET (part 3)
+## Session: 2026-11-22 ET (part 4, Never Broken mood plates)
 **Environment:** Antigravity IDE
 **What was done:**
-- Joe answered through Yeti: Joe at 14 is option A; Ethel 1967 version C is a yes with darker brown eyes.
-- Built on Higgsfield (7 images): Joe at 14 at a true 14 in clean pressed clothes, plus turnaround and head angles; Ethel 1967 with dark brown eyes, plus turnaround and head angles (head angles needed one redo).
-- Board: `~/Previews/2026-11-22 Never Broken joe-14 and Ethel 1967 locked sheets.jpg`. Details in `Never-Broken-Trailer/cast/README.md`.
+- Yeti asked to lock scene atmosphere before any start frames: tracks at dusk, barn at night, derelict, old hay, lantern as the only light.
+- Built 7 mood plates (no cast) on Higgsfield from the existing E01, E05, E06 plates: T1 to T3 tracks at dusk, B1 to B4 barn at night.
+- Files, job IDs and known issues: `Never-Broken-Trailer/environments/mood-2026-11-22/README.md`.
+- Board: `~/Previews/2026-11-22 Never Broken mood plates tracks dusk barn night.jpg`.
+- Joe's own account (session 1) backs the night and the lantern as the only light.
 
 **What's live / deployed:**
-- Nothing. Local files only.
+- Nothing deployed.
 
 **Next up:**
-- Yeti: go or change on `TRAILER-3-STAY-DOWN.md`.
-- Then the sound-first animatic. Every family face Trailer 3 needs is now built; invented cast, sets and inserts are still to make.
+- Yeti picks or corrects the mood plates. Then build start frames from them with the locked joe-14 sheet.
+- Trailer 3 script still says sundown through the barn gaps (shots 1, 8, 9); change to night once approved.
+- Still open: Yeti's go on the Trailer 3 script, then the sound-first animatic.
 
 **Notes for other environments:**
-- Ethel's eyes are dark brown at every age from now on. The 1955 sheet still has the old lighter eyes.
+- Higgsfield balance about 152 after this (7 images, about 2 credits each).
