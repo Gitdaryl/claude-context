@@ -1,20 +1,19 @@
-## Session: Nov 22 2026 ET
+## Session: Nov 22 2026 ET (part 2)
 **Environment:** Antigravity IDE
 **What was done:**
-- Never Broken trailer status audit (Joe Profit). Last trailer work was Nov 10; nothing is animated.
-- Wrote `~/Documents/Claude Code/Never-Broken-Trailer/SHOT-BREAKDOWN.md`: Trailer 2 "The Doors" as a shot list (40 picture shots, 6 cards + title), cast, sets, sound, pace, order of work.
-- Built `storyboard-coverage-2026-11-22.jpg` in the same folder, linked at `~/Previews/2026-11-22 Never Broken storyboard coverage.jpg`. 1 shot ready to animate, 24 have an empty plate, 15 have nothing.
-- Found the three interview recordings in `~/Archive/Media-Library/Music/` (`3936 Blustery Way NE 16.m4a` = session 1, `Film Structure Recording Part 2.m4a` and `Part 3.m4a` = sessions 2 and 3). Every tape line in the trailer checked against the transcripts.
-- Session Brain row added. Task board: character sheets row updated, two Backlog rows added (cut tape lines, build animatic).
+- Yeti redirected the Never Broken trailer: Trailer 2 read like a summary of the film in order. He wants fast, out of order, sound-led, every shot 1 to 2 seconds, nothing explained.
+- Wrote `~/Documents/Claude Code/Never-Broken-Trailer/TRAILER-3-STAY-DOWN.md`: 53 shots, about 1:20, seven sections (hook, hunted, gavel, no, down, up, slam), a sound map, and the new asset list.
+- Built `storyboard-coverage-trailer3-2026-11-22.jpg`, linked at `~/Previews/2026-11-22 Never Broken Trailer 3 Stay Down coverage.jpg`. 10 shots already have a frame or clip, 20 have a set, 23 are new.
+- Trailer 2 and SHOT-BREAKDOWN.md carry a superseded banner. Session Brain row and three task board rows updated.
 
 **What's live / deployed:**
 - Nothing. Local files only.
 
 **Next up:**
-- Yeti: pick joe-14 A or B (`~/Previews/2026-11-07 Never Broken Joe age line 6-14-18.jpg`). Unlocks 10 shots.
-- Cut the tape lines, then the animatic, before any video credits.
-- Decide: 30 s teaser first; does the run montage go in beat 6.
-- Check home plates E07 to E09 against Joe's Nov 10 bungalow street reference.
+- Yeti reads Trailer 3 and says go or change.
+- Joe: two yes or no answers now block. Joe at 14, A or B. Ethel 1967 version C (her face is on screen in Trailer 3).
+- Then a sound-first animatic before any video credits.
 
 **Notes for other environments:**
-- From Joe, only the joe-14 pick blocks the trailer. Ethel is a silhouette in Trailer 2, so her 1967 yes is not blocking. Keep asks to Joe as yes or no on finished pictures.
+- Trailer 3 is the main trailer. Do not build from Trailer 2's shot list.
+- The interview recordings are in `~/Archive/Media-Library/Music/`: `3936 Blustery Way NE 16.m4a` is session 1, `Film Structure Recording Part 2.m4a` and `Part 3.m4a` are sessions 2 and 3.
