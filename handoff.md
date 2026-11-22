@@ -1,15 +1,15 @@
-## Session: 2026-11-21 ET
+## Session: 2026-11-21 ET (follow-up)
 **Environment:** Antigravity IDE
 **What was done:**
-- Analysed `~/Downloads/what is this song.mp4` (IG download, 2:58, AI fashion visuals) to write a Suno style prompt. Song not identified by name; no recognition service was used.
-- Measured locally (librosa, demucs stems, CLAP tagger via `uv run`): 112 BPM, D minor with harmonic-minor colour, straight four-on-the-floor kick, sub-heavy synth bass on D / G / B flat, female talk-rap around D4, beatless spoken intro for the first 30 s, chorus at 1:24.
-- Suno style prompt (short): Midtempo runway house, 112 BPM, D harmonic minor, four-on-the-floor kick, rubbery sub synth bass, sparse dark beat, sassy female talk-rap, sultry, glamorous, vintage reed hook, clean modern mix
+- Follow-up on the Suno style prompt for `~/Downloads/what is this song.mp4`. Yeti heard a sound like a rubber paddle hitting the end of a PVC tube. Stem check found it: a short, hollow, tuned percussive riff at about 100 to 155 Hz, roughly 6 notes a second, on D / B flat / G / A, sitting above the sub bass.
+- Closest names for Suno: donk, boomwhackers or slap tubes, log drum. This replaces the earlier "vintage reed hook" guess, which was wrong.
+- Suno style prompt (short, v2): Midtempo runway house, 112 BPM, D minor, four-on-the-floor kick, sub synth bass, hollow rubbery donk riff like slapped PVC pipes, sparse dark beat, sassy female talk-rap, sultry, clean modern mix
 
 **What's live / deployed:**
 - Nothing.
 
 **Next up:**
-- None owed. Yeti to try the prompt in Suno; the "vintage reed hook" phrase is the least certain part and the first thing to drop or swap.
+- None owed. If "donk" does not land in Suno, swap in "boomwhackers" or "tuned tube percussion".
 
 **Notes for other environments:**
-- Local audio analysis works on this Mac with no installs: `uv run --python 3.11 --with librosa` for tempo/key, `--with torch==2.5.1 --with torchaudio==2.5.1 --with demucs` for stems, `--with transformers==4.44.2` plus `laion/larger_clap_music_and_speech` for zero-shot tagging, `--with faster-whisper` for lyrics.
+- The v2 prompt above supersedes the one in the earlier handoff from tonight.
