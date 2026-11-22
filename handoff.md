@@ -1,25 +1,15 @@
-## Session: 2026-11-21 (evening) ET
+## Session: 2026-11-21 ET
 **Environment:** Antigravity IDE
 **What was done:**
-- Sam Quisenberry portal (~/Projects/sam-portal): built posters. A poster is a fixed HTML template with real type (three styles: Photo, Checklist, Big words), so making one costs nothing.
-- Found Yeti's real Feb 2026 portraits of Sam and his team on the NAS (personal_folder/Yeti Groove/Clients/Sam -State Farm/FEB photoshoot/Lightroom export) and used four suit portraits plus one team shot.
-- Wrote 11 ready poster ideas from the reel scripts (data/poster-ideas.json). Nobody has read the wording yet.
-- Portal: Reels / Posters tabs, a menu of live-drawn posters, a builder with live preview, "Order for $20", "Take it back". Watcher draws the 2160x2700 PNG and texts Yeti.
-- Tests: 85 local page and API checks, 9 watcher checks, 24 live checks on production.
-- Earlier the same day: email to Sam turned on; end card filled from his public State Farm page; advice given to keep the end card navy.
+- Analysed `~/Downloads/what is this song.mp4` (IG download, 2:58, AI fashion visuals) to write a Suno style prompt. Song not identified by name; no recognition service was used.
+- Measured locally (librosa, demucs stems, CLAP tagger via `uv run`): 112 BPM, D minor with harmonic-minor colour, straight four-on-the-floor kick, sub-heavy synth bass on D / G / B flat, female talk-rap around D4, beatless spoken intro for the first 30 s, chorus at 1:24.
+- Suno style prompt (short): Midtempo runway house, 112 BPM, D harmonic minor, four-on-the-floor kick, rubbery sub synth bass, sparse dark beat, sassy female talk-rap, sultry, glamorous, vintage reed hook, clean modern mix
 
 **What's live / deployed:**
-- https://samquisenberry.vercel.app redeployed with posters built in but switched OFF for Sam (showToSam false in data/poster.json). Yeti's admin link shows the Posters tab.
-- Nothing sent to Sam, nothing posted, no credits spent. Not committed to git.
+- Nothing.
 
 **Next up:**
-- Yeti: look at ~/Previews/2026-11-21 Sam posters (three styles, all 11 ideas, the builder).
-- Yeti: set the poster price ($20 is Claude's suggestion) and read the poster wording.
-- Yeti: when ready for Sam, set showToSam true in data/poster.json, then `cd ~/Projects/sam-portal && vercel deploy --prod --yes`.
-- Ask Sam whether his three staff are OK appearing in ads (team photo).
-- Not built: scene pictures in the Sunny Skies style, carousels, schedule menu, b-roll, Meta posting.
-- Still owed from earlier: watch the finished video sample, Sam's yes on end card details and footer line, help clip by ear, five winter looks, read the 11 scripts, send Sam his link, tell him looks are $24.
+- None owed. Yeti to try the prompt in Suno; the "vintage reed hook" phrase is the least certain part and the first thing to drop or swap.
 
 **Notes for other environments:**
-- Board row "Sam Quisenberry posters: look at the samples, set the price, say when Sam gets the tab" is in Today.
-- Real photos of Sam live on the NAS path above; use them before any AI look.
+- Local audio analysis works on this Mac with no installs: `uv run --python 3.11 --with librosa` for tempo/key, `--with torch==2.5.1 --with torchaudio==2.5.1 --with demucs` for stems, `--with transformers==4.44.2` plus `laion/larger_clap_music_and_speech` for zero-shot tagging, `--with faster-whisper` for lyrics.
