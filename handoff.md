@@ -1,12 +1,19 @@
-
-## Session: 2026-11-23 ET (Thanksgiving pies reel)
+## Session: 2026-11-23 ET
 **Environment:** Antigravity IDE
 **What was done:**
-- Rebuilt Holly's Thanksgiving pies reel (last year's FB video, 360p) at 1080x1920: Holly from the 4K HLG original IMG_1647 (tone-mapped + graded to last year's look, frame-exact to the FB cut), all 7 Yeti shots swapped to the v3 Yeti with Wan animate-replace (acting and mouth timing unchanged), high-res Giving Thanks end card, FB audio normalized to -14 LUFS. No hook, no date in the reel.
-- Kie spend ~230 credits (~$1.15); balance 8,737.
+- Lake Access: Dennis picked Tuesday Nov 24 by SMS and is coming to Yeti alone. Larry took another job (still helping), Travis reduced his role.
+- Prepared Yeti for a possible partnership offer: what Dennis might say, what to ask, what not to agree to.
+- Memory file dennis-babjack-lake-access.md and the MB hub pointer updated.
+- Board: "Dennis to reply with a meeting date" marked Done; new Today row for the Nov 24 sit-down and the write-up after.
 
 **What's live / deployed:**
-- Nothing posted. ~/Clients/holly-griewahn/media/reels/2026-11-23-thanksgiving-pies/Thanksgiving Pies - Holly and the Yeti v1.mp4 (+ thumbnail.jpg, post copy.txt)
+- Nothing new. Reply video https://youtu.be/G75KosDpmcE shows 1 view on Nov 23.
 
 **Next up:**
-- Yeti to review; post before Thanksgiving Thu Nov 26.
+- Yeti texts Dennis a time for Tuesday.
+- After the meeting: tell Claude what Dennis said, then write it up and send within a few days (covers his four RFP points).
+- Older lead-catcher auto-draft in Dennis's Gmail thread still needs discarding.
+
+**Notes for other environments:**
+- Do not send Dennis prices or any partnership terms before the Nov 24 meeting.
+- The 70/30 plan assumed Larry sells. That is now in doubt; ask who sells before quoting any share.
