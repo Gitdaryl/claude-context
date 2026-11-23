@@ -1,1 +1,1 @@
-- Shot 30 rebuilt at true scale: Blender layouts now carry seated human-scale figures; 29 used as look reference so 28/29/30 read as one stadium.
+- Research (ULM archive photos) found that Brown Stadium's home side was a large concrete grandstand, so my small-bleacher rebuild was wrong; facts and photos in Never-Broken-Trailer/research/. Audit agent failed 10 of 13 earlier plates; 4 fixes rendered (jail wide, lock, B3, B1) before Higgsfield ran out of credits. Waiting on Yeti for credits; SFA stadium research still running.
