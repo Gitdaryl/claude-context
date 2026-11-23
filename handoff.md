@@ -1,20 +1,17 @@
 ## Session: 2026-11-23 ET
 **Environment:** Antigravity IDE
 **What was done:**
-- Checked a "$250/month website" feature chart against what YetiGroove sells: five of seven features exist but as separate fix-menu items; booking and lead follow-up are not on the menu.
-- Organised the offerings into one ladder: MB Free, $9, $25, $49, Website $49, Front Door $249, Never Miss One, Field Office.
-- Yeti DECIDED: Front Door plan $249/mo (website + Front Door care); setup $2,200 included with a 12-month plan; Manitou Beach locals get Front and Center included.
-- Wrote the plan into ~/Clients/yeti-groove/files/AUDIT-OFFER.md section 4 and into memory (front-door-249-plan).
-- Gave advice for the Nov 24 Dennis meeting on how Front Door fits Lake Access (appended to the Dennis memory).
+- Holly Griewahn: Yeti supplied the Michigan LARA record for Holly Griewahn Realty, LLC (state ID 802532824, Active, good standing, filed 10/07/2020; registered office 2162 Christopher St, Adrian MI 49221; mailing PO Box 295, Manitou Beach MI 49253). Screenshot filed at ~/Archive/Clients/Holly-Foundation-Realty/business-records/.
+- The record confirms the address already in /root/holly-a2p/register.py on the VPS. Script patched: address note updated, and it now refuses 802532824 at the EIN prompt (the state ID is 9 digits and looks like an EIN but is not one). Backup: register.py.bak-nov23.
+- Read-only Twilio check: no Holly profile or brand exists yet; 517-300-8226 is still on Manitou's service MG286.
+- Board row "Holly: move 517-300-8226 off Manitou's A2P campaign" updated and set to Today. Session Brain row written.
 
 **What's live / deployed:**
-- Nothing pushed or deployed.
+- Nothing submitted to Twilio. No site changes.
 
 **Next up:**
-- Yeti to decide: sell three Front Door clients before building the shared kit and site template (Claude's recommendation).
-- One-page "what $249 covers" sheet and Charles's wording for the 12-month term.
-- Dennis sit-down Tue Nov 24, 11am.
+- Yeti: `ssh root@143.198.171.9`, `cd /root/holly-a2p && python3 register.py brand`, type the federal EIN at the hidden prompt (brand fee applies), then `python3 register.py status` about ten minutes later.
+- Campaign step stays blocked on Holly reviewing the privacy/terms branch (holly-privacy-sms-consent, efa8410) and on her brokerage decision due about Nov 24: campaign.py names Foundation Realty in the description, two sample texts and the HELP reply.
 
 **Notes for other environments:**
-- Quote Front Door from AUDIT-OFFER.md. Never cut the $249; the only give is setup against a 12-month term.
-- Lead texting, missed-call text-back and review asks only run inside OnPoint Office today; no standalone version yet.
+- The EIN is not stored anywhere by design. Twilio matches the name against the IRS CP 575; if identity comes back unverified, the appeal needs the federal letter from her accountant, a state document will not do.
