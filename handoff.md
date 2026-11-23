@@ -1,17 +1,16 @@
 ## Session: 2026-11-23 ET
 **Environment:** Antigravity IDE
 **What was done:**
-- Rebuilt Holly's Small Business Saturday reel (last year's FB video) with the locked v3 Yeti. Four Yeti shots re-skinned with Kie Wan 2.2 Animate Replace (lip sync preserved); the "Gross" shot rebuilt from Daryl's acted take with Kling 3.0 motion control.
-- Date fixed: Holly's line now says "November 28th" (HeyGen clone a7d9bb2b, one word spliced) under a neon "SATURDAY • NOV 28" cutaway. SBS 2026 = Sat Nov 28.
-- Added a 1.7 s cold-open hook (burp + paper mid-air, "Gross.", text "A YETI HIJACKED HER AD").
-- Kie spend: ~351 credits (~$1.75) of the $50 top-up; balance 9651.
+- Rebuilt Holly's Small Business Saturday reel (last year's FB video) with the locked v3 Yeti. McBlackbird, "What?" and chewing shots re-skinned with Kie Wan 2.2 Animate Replace (lip sync preserved).
+- v2 per Yeti's notes: hook removed; date cut from Holly's real audio ("This Saturday is Small Business Saturday"), jump hidden with a punch-in; burp shot rebuilt with Kling first/last frame so the blast twists his glasses off (eyes wide, fur blown); "Gross" shot rebuilt from that last frame with glasses still hanging, mouth aligned to Daryl's real "Ugh, gross" by cross-correlation.
+- Kie spend: ~728 credits (~$3.64) of the $50 top-up; balance 9274.
 
 **What's live / deployed:**
-- Nothing posted. Final: ~/Clients/holly-griewahn/media/reels/2026-11-23-small-business-saturday/Small Business Saturday - Holly and the Yeti (Nov 28).mp4, plus thumbnail.jpg and post copy.txt
+- Nothing posted. Final: ~/Clients/holly-griewahn/media/reels/2026-11-23-small-business-saturday/Small Business Saturday - Holly and the Yeti v2.mp4 (+ thumbnail.jpg = glasses-twist frame, post copy.txt). v1 in drafts/.
 
 **Next up:**
-- Yeti to review the reel, then post before Sat Nov 28 (tag Blackbird).
-- Optional: redo "Gross" shot if the milder expression doesn't land; copy final to NAS Holly small business folder.
+- Yeti to review v2, then post before Sat Nov 28 (tag Blackbird).
+- Optional: copy final to NAS "Holly small business" folder.
 
 **Notes for other environments:**
-- New recipe in memory: wan-character-swap-keeps-lipsync (re-skin old AI clips without losing sync).
+- New memories: wan-character-swap-keeps-lipsync (incl. gags get lost), clone-word-splice-mismatch.
