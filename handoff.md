@@ -1,1 +1,1 @@
-- Pies v4: both Yeti "What"s now look toward Holly (up-left, 10 o'clock) instead of the camera. Final: .../2026-11-23-thanksgiving-pies/Thanksgiving Pies - Holly and the Yeti v4.mp4. Kie balance ~7,159.
+- Pies v5: removed a head the avatar model drew in the top-left of the "WHAAT?" shot (patched every frame with clean wall from the same clip; no re-render). Final: .../2026-11-23-thanksgiving-pies/Thanksgiving Pies - Holly and the Yeti v5.mp4.
