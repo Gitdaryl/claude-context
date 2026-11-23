@@ -1,1 +1,1 @@
-- Pies v3: "put these back" re-swapped from a reference with a real fork + bite of pie; happy shot rebuilt with Kling first/last frame (grin -> forkful into mouth) because the Wan swap left the fork at his chest. Final: .../2026-11-23-thanksgiving-pies/Thanksgiving Pies - Holly and the Yeti v3.mp4.
+- Pies v4: both Yeti "What"s now look toward Holly (up-left, 10 o'clock) instead of the camera. Final: .../2026-11-23-thanksgiving-pies/Thanksgiving Pies - Holly and the Yeti v4.mp4. Kie balance ~7,159.
