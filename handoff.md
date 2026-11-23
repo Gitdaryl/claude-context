@@ -1,15 +1,12 @@
-## Session: 2026-11-23 ET (continued)
+
+## Session: 2026-11-23 ET (Thanksgiving pies reel)
 **Environment:** Antigravity IDE
 **What was done:**
-- Holly Small Business Saturday reel v4: end card is now Holly & the Yeti dancing (Kling i2v from the poster with the title removed) under a neon SMALL BUSINESS SATURDAY / NOV 28 overlay that flickers on like the opening sign. Everything else as v3 (neon sign open, date cut, glasses-twist burp, deadpan "Gross"). Holly frame-exact throughout, -14.8 LUFS.
-- Kie spend for the whole reel: ~1,034 credits (~$5.17); balance 8,968.
+- Rebuilt Holly's Thanksgiving pies reel (last year's FB video, 360p) at 1080x1920: Holly from the 4K HLG original IMG_1647 (tone-mapped + graded to last year's look, frame-exact to the FB cut), all 7 Yeti shots swapped to the v3 Yeti with Wan animate-replace (acting and mouth timing unchanged), high-res Giving Thanks end card, FB audio normalized to -14 LUFS. No hook, no date in the reel.
+- Kie spend ~230 credits (~$1.15); balance 8,737.
 
 **What's live / deployed:**
-- Nothing posted. Final: ~/Clients/holly-griewahn/media/reels/2026-11-23-small-business-saturday/Small Business Saturday - Holly and the Yeti v4.mp4 (+ thumbnail.jpg, post copy.txt). v1-v3 in drafts/.
+- Nothing posted. ~/Clients/holly-griewahn/media/reels/2026-11-23-thanksgiving-pies/Thanksgiving Pies - Holly and the Yeti v1.mp4 (+ thumbnail.jpg, post copy.txt)
 
 **Next up:**
-- Yeti to review v4, then post before Sat Nov 28 (tag Blackbird).
-- Optional: copy final to NAS "Holly small business" folder.
-
-**Notes for other environments:**
-- Clean title-free "Holly & the Yeti" poster frame now exists: work/frames/poster_clean.png in that reel folder (reusable end card base).
+- Yeti to review; post before Thanksgiving Thu Nov 26.
