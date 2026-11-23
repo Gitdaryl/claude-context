@@ -1,15 +1,16 @@
-## Session: 2026-11-23 ET (update)
+
+## Session: 2026-11-23 ET
 **Environment:** Antigravity IDE
 **What was done:**
-- Lake Access: meeting time set, 11am Tue Nov 24 at Yeti's. Dennis comes alone. Yeti texts him to confirm.
-- Board row for the sit-down and memory file updated with the time.
+- Leon (caricature artist friend) concept reel: his drawing starts talking the moment the lips are drawn (3.0 s), using Holly's Small Business Saturday lines.
+- Tracked and stabilized his handheld phone clip onto the paper, pushed in on the face, pulled back to the full caricature while she talks.
+- OmniHuman 1.5 (Kie) made the talking lips (441 credits); only the lips are composited onto Leon's real footage, so his real hand and strokes stay. Kling AI Avatar Pro failed twice (500) on line art, no charge.
 
 **What's live / deployed:**
-- Nothing new.
+- Nothing posted. File: ~/Projects/leon-caricature-reel/Leon caricature reel - talking concept v1.mp4 (+ thumbnail.jpg); link in ~/Previews.
 
 **Next up:**
-- After the meeting: tell Claude what Dennis said, then write it up and send within a few days (covers his four RFP points).
-- Older lead-catcher auto-draft in Dennis's Gmail thread still needs discarding.
+- Yeti reviews v1. For a real version, ask Leon for the original full-res clip (his was 368x640) or a locked-off overhead shot, and use the business owner's own voice.
 
 **Notes for other environments:**
-- Do not send Dennis prices or partnership terms before the meeting. Ask who is selling this winter before quoting any share.
+- Uses the real Holly's voice: private sample for Leon only, not for posting.
