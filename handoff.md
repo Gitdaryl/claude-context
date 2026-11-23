@@ -1,4 +1,1 @@
-
-**Added later the same session:**
-- Gmail draft for Holly created (not sent), subject "Holly, 3 quick questions about your texting number", to her Gmail, cc daryl@. Asks: privacy page OK, Mark / Marcia / undecided, and rough timing if Marcia.
-- Found: on Nov 17 Holly replied "Can you change the email address to my email? Hollygriewahn@gmail.com". Likely a privacy page edit (its Contact line shows the Foundation office email). Never acted on. Noted on the board row for /privacy and /terms.
+- Yeti approved the email swap. Contact line now shows hollygriewahn@gmail.com next to Holly's name (office phone kept) on the review page (main ac33445, LIVE, verified) and on branch holly-privacy-sms-consent (5e53564, build passed, not merged). Pushed from a clean clone; ~/Documents/Claude Code/Holly/Holly-main still has 36 uncommitted files from an earlier session and is 1 commit behind main. Gmail draft updated to match, still unsent.
