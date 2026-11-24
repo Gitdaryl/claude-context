@@ -1,21 +1,16 @@
 
 ## Session: 2026-11-24 ET
-**Environment:** Antigravity IDE (Claude Code, VS Code)
+**Environment:** Antigravity IDE (Claude Code, VS Code extension)
 **What was done:**
-- OnPoint Office offline v1 for Devon's wifi-only iPad: measure, quote, present, customer picks, all with no signal; sends by itself later. Branch offline-measure-quote in ~/Projects/onpoint-office, NOT committed or pushed. No db migration.
-- Opening cold offline fixed (expired sign-in no longer lands on login), prefetch of pre-sale jobs, "prices as of" note, refused work flagged with a way to throw it away.
-- Tests: 22 unit (tests/offline_jobwork.test.ts), browser flow tests-e2e/offline-quote-flow.mjs passes on chromium and webkit.
-- Raised PWA precache limit to 4 MiB in vite.config.ts (build failed at 2 MiB).
-- Offline signing parked: attorney question at ~/Clients/onpoint/files/attorney-packet-2026-11-06/ADD-TO-PACKET-offline-signing.md.
-
+- Read Holly's email: she typed-signed the attorney voice agreement (dated Nov 17, sent Nov 24) and OK'd the Gypsy Blue wine ad; answered "haven't decided, months away" on Mark vs Marcia. Privacy-page OK came by SMS to Yeti's phone (YES).
+- Drafted Yeti's counter-signature as a Gmail draft on the voice-agreement thread (NOT sent; agreement is effective on the last signature).
+- Built and shipped (commit bc8da29, origin/main, live): real /privacy and /terms, unticked optional text-consent box on all forms, consent record on leads, textLead fails closed for auto texts without consent, STOP/HELP footers, footer links. Verified live: raw HTML pages, box unticked and not required, GET smoke tests on the API.
+- Wrote ~/Clients/holly-griewahn/A2P-REGISTRATION.md (noob steps, mirrors the OnPoint path).
 **What's live / deployed:**
-- Nothing. Not pushed.
-
+- hollygriewahn.vercel.app /privacy, /terms, consent boxes (bc8da29).
 **Next up:**
-- Daryl: commit, merge to main, git push origin main; Devon taps Update now once on wifi, opens Office from the Home Screen icon (board row filed, Today).
-- Ask Jay in person about sending the attorney packet plus the offline signing question (board row filed, Backlog).
-- Re-record the Measure/Estimate help clips if the change to the screens (banners) matters; WHATS_NEW line updated.
-- tests-e2e/jobs-flow.mjs expects 2 options (app builds 3); snow-flow needs db:reset.
-
+- Yeti: send the countersign email draft; run `python3 register.py brand` on the VPS (EIN hidden prompt; name/address must match the IRS letter); decide the campaign-step number-move gap; ask Holly if the Privacy page may name Holly Griewahn Realty LLC; test with own phone (box ticked/unticked, HELP, STOP).
+- Not tested: a real ticked-box submit end to end, the box on /cma step 2 and the contact modal in a browser.
+- Decision: leads from before Nov 24 get no automatic check-ins/nurture (no consent record).
 **Notes for other environments:**
-- Devon should ask the customer for wifi for one minute at the signing step; PDF, email, contract signing, financing link and new jobs still need signal.
+- Local repo ~/Documents/Claude Code/Holly/Holly-main is dirty (~36 files) and 2 commits behind origin; it will conflict in App.jsx, CMAPage, PropertyPage, LakeWaitlist, api/cma|showing|waitlist|admin|cron-followup. Work was done from a fresh clone.
