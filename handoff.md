@@ -1,16 +1,16 @@
 
-## Session: 2026-11-24 ET (night)
-**Environment:** Antigravity IDE
+## Session: 2026-11-24 ET (late)
+**Environment:** Antigravity IDE (VS Code extension)
 **What was done:**
-- Read Twilio rejection email for Holly's A2P campaign (error 30979, spoken sign-up needs exact words in message flow)
-- Found cause in campaign.py on VPS (transaction-client verbal opt-in sentence); drafted fix wording and a plain-language email to Holly
+- OnPoint: audited for storm reels (none existed), brainstormed hooks, built 9 date-free storm reels (s01-s09, neighbor voice) in social/video/storm-2026
+- Built tools/storm-reels.mjs (severity routing, rotation, gated auto-post) with tests, hooked into the storm watcher, documented in social/STORM-TRIGGER.md
 
 **What's live / deployed:**
-- Nothing changed on VPS or Twilio
+- Watcher edit is live via launchd (queues reels, runs the due step). Nothing posts until reels are approved. Nothing committed.
 
 **Next up:**
-- Yeti emails Holly tonight; on her yes, update campaign.py MessageFlow + Twilio Console, resubmit
-- Verify CM176dd4d... vs state.json QE2c6890... are the same campaign
+- Yeti reviews ~/Previews "OnPoint storm reel sNN", then node tools/storm-reels.mjs --approve ...
+- Decide: generic contact in the storm watcher request header; ice/rain/thaw trigger; spring: more hail reels
 
 **Notes for other environments:**
-- Holly answers SMS faster than email
+- Ads still gated on 20 Google reviews; storm reels are organic only
