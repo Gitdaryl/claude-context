@@ -1,4 +1,3 @@
 
-### Addendum 2026-11-26 (evening)
-- Ink Letter commercial: Yeti reviewed the 45+ frame visual board; fixes applied (Michigan = one winter farmhouse, family-accurate call screen, happy Papa, 20 years later). Script now has 12 chapters incl. the two-paths explanation (Kiani frame vs tablet for everything), about 8 min. Voice: narrator + Papa only for first letter/sign-off. Logo = cursive wordmark (assets/). Script is fully decided: nothing open.
-- Files: ~/Projects/ink-letter-commercial/storyboard/{board,index}.html (also in ~/Previews). Next: environments, HyperFrames UI renders, voices, Suno jingle + audition Kiani tracks, ~20 Kling clips, assemble. Before Christmas: Messenger short addresses + first letter from the control room. YouTube: Unlisted.
+### Addendum 2026-11-26 (night)
+- Ink Letter commercial: environments DONE (18 empty clay plates + bible page ~/Previews/2026-11-26 Ink Letter environments). Production order per Yeti: environments, start frames (plate + characters), Kling only for moving characters (~20), HyperFrames UI/text/camera moves, EDIT, then music bed + SFX to support the edit (audition the Kiani Suno tracks then). App splash idea queued on the board (Backlog, after Christmas).
