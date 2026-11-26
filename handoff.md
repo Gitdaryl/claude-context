@@ -1,3 +1,3 @@
 
-### Addendum 2026-11-26 (night)
-- Ink Letter commercial: environments DONE (18 empty clay plates + bible page ~/Previews/2026-11-26 Ink Letter environments). Production order per Yeti: environments, start frames (plate + characters), Kling only for moving characters (~20), HyperFrames UI/text/camera moves, EDIT, then music bed + SFX to support the edit (audition the Kiani Suno tracks then). App splash idea queued on the board (Backlog, after Christmas).
+### Addendum 2026-11-26 (after power cut)
+- Ink Letter Act 1 draft fixed: removed the whole-frame shake; stop-motion is now frame rate only (tools/render_act1.sh). Waiting on Yeti to watch it, then Act 2 start frames + clips.
