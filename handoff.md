@@ -1,22 +1,20 @@
-## Session: Nov 25 2026 ET
+## Session: Nov 25 2026 ET (part 2)
 **Environment:** Antigravity IDE
 **What was done:**
-- Planned the single "person" record for Holly's desk. Plan file: ~/Clients/holly-griewahn/PERSON-RECORD-PLAN.md (10 decisions, data model, import spec, 8 build chunks with a checkable output each). No code changed.
-- Decisions: lives in Holly's own desk (not Office); one person with many buy/sell episodes; new private Blob store with append-only change files; leads, texts, roadmaps and newsletter status attach at read time by phone then email; permission hangs on the phone number or email address; one importer for the Mailchimp zip and the past-sales CSV, run as a desk screen (dry run, then commit of exactly that plan).
-- Holly's pending answers became settings with safe defaults. Only the real import run waits on her.
-- Board: design row closed with the plan as evidence, Mailchimp import row updated (one importer feeds the Letter tab and the cards), five rows filed.
+- Yeti confirmed hollygriewahnrealtor.com is the final site address. Fixed the newsletter send gate, which still looked for hollygriewahn.com and could never pass.
+- Made a clean clone of the Holly site at ~/Projects/holly-desk (main tracks origin/main). Build there from now on; the old Holly-main folder is stale and dirty, but it is still the folder linked to Vercel.
+- Found why the roadmap texting patch exists: the texting campaign was rejected, then resubmitted describing a "client replies YES" flow. The patch is what makes the site match the filing. It applies cleanly and builds on branch roadmap-text-consent in the clean clone. Not pushed.
+- Checked the Vercel project: Twilio, Holly's phone, Resend and the newsletter secret are Production only, so previews cannot text or email. Only the public Blob store is shared.
+- Updated ~/Clients/holly-griewahn/PERSON-RECORD-PLAN.md (store commands in 8.1, patch context, Nov 17 spec reconciled). Copied OFFICE-NEWSLETTER-SPEC.md into the client folder; it was untracked in the dirty checkout.
 
 **What's live / deployed:**
-- Nothing. Planning only.
+- Gitdaryl/Holly main, commit c301923: newsletter send gate checks hollygriewahnrealtor.com. Verified live: health check safeToSend went from false to true. Sending still waits on a sending address.
 
 **Next up:**
-- Yeti (Today): create the private Blob store holly-people, isolate the Preview environment (test stores, no Twilio), optional sample Mailchimp export for real headers.
-- Yeti (Today): say whether hollygriewahnrealtor.com is the final site address. The newsletter send gate still looks for hollygriewahn.com, so sending cannot switch on as things stand.
-- Yeti (Today): land or drop the roadmap texting patch (~/Clients/holly-griewahn/deal-text-consent.patch) before the People tab is built.
-- Sonnet: build chunks 0 to 5 from a clean worktree off origin/main.
-- Backlog: the local Holly-main checkout is 7 commits behind with 36 uncommitted files; rescue or drop in its own session.
+- Yeti: say "create the stores" in a Claude session, or paste the seven commands in plan section 8.1 (private stores holly-people and holly-people-test).
+- Yeti: say go to land the roadmap texting patch, and confirm the routine with Holly.
+- Yeti: decide whether Mailchimp subscribers come in confirmed or get a "still want this?" email.
+- Sonnet: person record build, chunks 0 to 5, in ~/Projects/holly-desk.
 
 **Notes for other environments:**
-- Line references in the plan are against origin/main at 04b0ffe, not the local checkout.
-- The Holly site repo is public: her contact files never go in the repo folder; fixtures are synthetic only.
-- The brief's "do first" fixes (search, filters, lead cap, lead to roadmap link) shipped Nov 25 in 04b0ffe.
+- Claude was blocked from creating the Vercel stores because Yeti had asked for instructions, not for it to be done. An explicit ask clears that.
