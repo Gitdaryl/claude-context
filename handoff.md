@@ -1,22 +1,20 @@
 
-## Session: Nov 26 2026 ET
-**Environment:** Antigravity IDE (Sonnet 5.5, advisor-checked)
+## Session: Nov 26 2026 (later, ET): decision tour video for Holly's person record
+**Environment:** Antigravity IDE
 **What was done:**
-- Holly desk person record, plan chunks 0c, 0d and 1, in ~/Projects/holly-desk on branch people-record (nothing committed or pushed).
-- 0c: api/lib/people-store.js probe() ran all five steps green against the TEST private store (Development token, run locally); view ?view=people-health added to api/admin.js.
-- 0d: npm test runs every test file via scripts/run-tests.mjs; .gitignore covers import-data/, *.zip, *members_export*; test/blob-mock.mjs gained get().
-- 1: api/lib/people-core.js (pure) with 56 checks (test/people-core-test.mjs); 15 mutation checks all fail a test; 1,000 people build in about 50 ms.
-- Advisor caught two real bugs (stage ownership across card, Inbox and roadmap; roadmap YES re-dated by edits) and one gap (display-only names auto-merging). Fixed with tests first.
-- Plan chunk table, Task Board and Session Brain updated.
+- Built a Liam-narrated explainer for Yeti: every call that needs his answer, each as a fork with roads, "my pick", built-vs-open tag, plus Holly's nine items (3 files, 4 lettered questions, 2 small checks) and an answer sheet. 774 s, 7 chapters, 1920x1080, -16 LUFS.
+- Project: ~/Clients/holly-griewahn/decision-tour (content.mjs is the script, build.mjs the generator, README has rebuild steps). Final: renders/2026-11-26 Holly person record decision tour.mp4, linked in ~/Previews.
+- Filed two Task Board Backlog rows: calls 6 to 10, and asking Holly (about Nov 28 to 30). Memory: decision-tour-videos.md.
+- Checked Twilio's Advanced Opt-Out doc: a STOP number is blocked (error 21610) until it sends START or UNSTOP, so "newest tick beats STOP" is not a real option for sends.
 
 **What's live / deployed:**
-- Nothing.
+- Nothing. No push, no commit, nothing sent to Holly. Code work from the earlier session is still uncommitted on branch people-record.
 
 **Next up:**
-- Yeti: say "push people-record and run the probe" so ?view=people-health runs on a preview, then on production after merge.
-- Yeti: confirm or overturn the three textState choices (Task Board decision row).
-- Chunk 2: people-store.js reader, ?view=people, measured load time on the test store. First add createdAt, textConsent.yesAt, note times and dueToday to deals.summary().
+- Yeti watches the tour and answers: "go with your picks" or by number (e.g. "7 B"). Call 9 needs one fact: does anything in Cowork read the Notion Holly Leads list.
+- Yeti says "push people-record and run the probe" (0c second half).
+- Ask Holly around Nov 28 to 30 (files and four lettered questions; wording in COLLECT-FROM-HOLLY.md and the tour).
+- Chunk 2 after that.
 
 **Notes for other environments:**
-- Repo is PUBLIC; fixtures are synthetic only. Real Holly files stay in ~/Clients/holly-griewahn/import/.
-- The pulled Development env file was deleted after the probe run.
+- Cowork/Mobile: the tour is a local file. If Yeti wants it elsewhere, copy it from ~/Previews. Re-cut after any rule change in people-core.js.
