@@ -1,16 +1,12 @@
 
-## Session: 2026-11-24 ET (late)
-**Environment:** Antigravity IDE (VS Code extension)
+## Session: 2026-11-25 ET
+**Environment:** Antigravity IDE
 **What was done:**
-- OnPoint: audited for storm reels (none existed), brainstormed hooks, built 9 date-free storm reels (s01-s09, neighbor voice) in social/video/storm-2026
-- Built tools/storm-reels.mjs (severity routing, rotation, gated auto-post) with tests, hooked into the storm watcher, documented in social/STORM-TRIGGER.md
-
+- Heather weekly reel for Thanksgiving weekend (Nov 26-29): Wednesday auto run failed at HeyGen timeout; rewrote script with Thanksgiving greeting + "Bohemian Gravy-sody" pun tied to Queen tribute, re-voiced, rendered
+- Patched render_heather.py to resume/poll a stuck HeyGen job; added event-fixes for Cherry Creek venue
 **What's live / deployed:**
-- Watcher edit is live via launchd (queues reels, runs the due step). Nothing posts until reels are approved. Nothing committed.
-
+- Nothing posted. Reel is at ~/AI-Holly/reels/2026-11-25-weekend-heather (Yeti QAs, posts Thursday)
 **Next up:**
-- Yeti reviews ~/Previews "OnPoint storm reel sNN", then node tools/storm-reels.mjs --approve ...
-- Decide: generic contact in the storm watcher request header; ice/rain/thaw trigger; spring: more hail reels
-
+- Yeti posts the reel; Yeti bank still empty (Kie credits) so no Yeti cutaway; Christmas season swap due
 **Notes for other environments:**
-- Ads still gated on 20 Google reviews; storm reels are organic only
+- Notion Session Brain / Task Board not updated this session (Notion MCP not used)
