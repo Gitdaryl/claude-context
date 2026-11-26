@@ -1,20 +1,22 @@
-## Session: Nov 25 2026 ET (part 3)
-**Environment:** Antigravity IDE
+
+## Session: Nov 26 2026 ET
+**Environment:** Antigravity IDE (Sonnet 5.5, advisor-checked)
 **What was done:**
-- Created the two private Blob stores for Holly's person record: holly-people (Production) and holly-people-test (Preview, Development). Variable name is PEOPLE_READ_WRITE_TOKEN. The live storage key was not touched.
-- Landed the roadmap texting permission change: roadmap clients are texted only after a recorded YES to Holly's permission message. This matches the approved texting campaign. Rebuilt the missing test helper; 15 checks pass with `npm test`.
-- Updated the Gmail draft to Holly ("Your desk: texting is live, and 3 things I need from you"): added the Texting permission card to what's done, added question 8 (does the YES routine work for her), and attached the past-clients spreadsheet, which the draft mentioned but did not have.
-- Plan file, board rows and memory updated.
+- Holly desk person record, plan chunks 0c, 0d and 1, in ~/Projects/holly-desk on branch people-record (nothing committed or pushed).
+- 0c: api/lib/people-store.js probe() ran all five steps green against the TEST private store (Development token, run locally); view ?view=people-health added to api/admin.js.
+- 0d: npm test runs every test file via scripts/run-tests.mjs; .gitignore covers import-data/, *.zip, *members_export*; test/blob-mock.mjs gained get().
+- 1: api/lib/people-core.js (pure) with 56 checks (test/people-core-test.mjs); 15 mutation checks all fail a test; 1,000 people build in about 50 ms.
+- Advisor caught two real bugs (stage ownership across card, Inbox and roadmap; roadmap YES re-dated by edits) and one gap (display-only names auto-merging). Fixed with tests first.
+- Plan chunk table, Task Board and Session Brain updated.
 
 **What's live / deployed:**
-- Gitdaryl/Holly main: 17bba92 (roadmap texting permission) and 77a1ecd (tests). Verified: deployment Ready, the desk bundle contains the Texting permission card, storage and site respond.
-- Earlier today: c301923 (newsletter send gate checks hollygriewahnrealtor.com).
+- Nothing.
 
 **Next up:**
-- Yeti: read and send the Gmail draft to Holly.
-- Yeti: decide whether Mailchimp subscribers come in confirmed or get a "still want this?" email.
-- Sonnet, new session: person record build, chunks 0c to 5, in ~/Projects/holly-desk. Plan: ~/Clients/holly-griewahn/PERSON-RECORD-PLAN.md section 8.
-- Strongest model again for the review just before the real import.
+- Yeti: say "push people-record and run the probe" so ?view=people-health runs on a preview, then on production after merge.
+- Yeti: confirm or overturn the three textState choices (Task Board decision row).
+- Chunk 2: people-store.js reader, ?view=people, measured load time on the test store. First add createdAt, textConsent.yesAt, note times and dueToday to deals.summary().
 
 **Notes for other environments:**
-- Build the Holly site only in ~/Projects/holly-desk. The old Holly-main folder is stale and dirty, but it is the one linked to Vercel, so `vercel` commands run from there.
+- Repo is PUBLIC; fixtures are synthetic only. Real Holly files stay in ~/Clients/holly-griewahn/import/.
+- The pulled Development env file was deleted after the probe run.
