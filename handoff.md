@@ -1,5 +1,4 @@
 
-### Addendum 2026-11-26 (later, same session)
-- Ink Letter commercial: elf ears (everyone pointed; women's and Cassidy's made smaller, v11), Kiani cuter (lashes), Mimi back to original design.
-- Script + storyboard v1 written: ~/Projects/ink-letter-commercial/storyboard/index.html (also linked in ~/Previews) and script/script-v1.md. 5 open calls for Yeti (which homes get Android tablets, how each house gets its link, announcer vs Papa, chapter cards, Grammy glasses).
-- Next: Yeti's answers, then environments, real screen captures from a test mailbox (needs OK to use the family key on the VPS), voices (announcer + Papa clone ddfbbb70 on ORCA), Suno jingle, animation. Deadline Dec 25.
+### Addendum 2026-11-26 (evening)
+- Ink Letter commercial: Yeti reviewed the 45+ frame visual board; fixes applied (Michigan = one winter farmhouse, family-accurate call screen, happy Papa, 20 years later). Script now has 12 chapters incl. the two-paths explanation (Kiani frame vs tablet for everything), about 8 min. Voice: narrator + Papa only for first letter/sign-off. Logo = cursive wordmark (assets/). Script is fully decided: nothing open.
+- Files: ~/Projects/ink-letter-commercial/storyboard/{board,index}.html (also in ~/Previews). Next: environments, HyperFrames UI renders, voices, Suno jingle + audition Kiani tracks, ~20 Kling clips, assemble. Before Christmas: Messenger short addresses + first letter from the control room. YouTube: Unlisted.
