@@ -1,12 +1,22 @@
-
-## Session: 2026-11-25 ET
+## Session: Nov 25 2026 ET
 **Environment:** Antigravity IDE
 **What was done:**
-- Heather weekly reel for Thanksgiving weekend (Nov 26-29): Wednesday auto run failed at HeyGen timeout; rewrote script with Thanksgiving greeting + "Bohemian Gravy-sody" pun tied to Queen tribute, re-voiced, rendered
-- Patched render_heather.py to resume/poll a stuck HeyGen job; added event-fixes for Cherry Creek venue
+- Planned the single "person" record for Holly's desk. Plan file: ~/Clients/holly-griewahn/PERSON-RECORD-PLAN.md (10 decisions, data model, import spec, 8 build chunks with a checkable output each). No code changed.
+- Decisions: lives in Holly's own desk (not Office); one person with many buy/sell episodes; new private Blob store with append-only change files; leads, texts, roadmaps and newsletter status attach at read time by phone then email; permission hangs on the phone number or email address; one importer for the Mailchimp zip and the past-sales CSV, run as a desk screen (dry run, then commit of exactly that plan).
+- Holly's pending answers became settings with safe defaults. Only the real import run waits on her.
+- Board: design row closed with the plan as evidence, Mailchimp import row updated (one importer feeds the Letter tab and the cards), five rows filed.
+
 **What's live / deployed:**
-- Nothing posted. Reel is at ~/AI-Holly/reels/2026-11-25-weekend-heather (Yeti QAs, posts Thursday)
+- Nothing. Planning only.
+
 **Next up:**
-- Yeti posts the reel; Yeti bank still empty (Kie credits) so no Yeti cutaway; Christmas season swap due
+- Yeti (Today): create the private Blob store holly-people, isolate the Preview environment (test stores, no Twilio), optional sample Mailchimp export for real headers.
+- Yeti (Today): say whether hollygriewahnrealtor.com is the final site address. The newsletter send gate still looks for hollygriewahn.com, so sending cannot switch on as things stand.
+- Yeti (Today): land or drop the roadmap texting patch (~/Clients/holly-griewahn/deal-text-consent.patch) before the People tab is built.
+- Sonnet: build chunks 0 to 5 from a clean worktree off origin/main.
+- Backlog: the local Holly-main checkout is 7 commits behind with 36 uncommitted files; rescue or drop in its own session.
+
 **Notes for other environments:**
-- Notion Session Brain / Task Board not updated this session (Notion MCP not used)
+- Line references in the plan are against origin/main at 04b0ffe, not the local checkout.
+- The Holly site repo is public: her contact files never go in the repo folder; fixtures are synthetic only.
+- The brief's "do first" fixes (search, filters, lead cap, lead to roadmap link) shipped Nov 25 in 04b0ffe.
