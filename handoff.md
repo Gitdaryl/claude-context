@@ -1,20 +1,16 @@
 
-## Session: Nov 26 2026 (later, ET): decision tour video for Holly's person record
-**Environment:** Antigravity IDE
+## Session: 2026-11-26 ET
+**Environment:** Antigravity IDE (VS Code extension)
 **What was done:**
-- Built a Liam-narrated explainer for Yeti: every call that needs his answer, each as a fork with roads, "my pick", built-vs-open tag, plus Holly's nine items (3 files, 4 lettered questions, 2 small checks) and an answer sheet. 774 s, 7 chapters, 1920x1080, -16 LUFS.
-- Project: ~/Clients/holly-griewahn/decision-tour (content.mjs is the script, build.mjs the generator, README has rebuild steps). Final: renders/2026-11-26 Holly person record decision tour.mp4, linked in ~/Previews.
-- Filed two Task Board Backlog rows: calls 6 to 10, and asking Holly (about Nov 28 to 30). Memory: decision-tour-videos.md.
-- Checked Twilio's Advanced Opt-Out doc: a STOP number is blocked (error 21610) until it sends START or UNSTOP, so "newest tick beats STOP" is not a real option for sends.
+- Saved Ink Letter to memory (ink-letter-project.md) after finding none; project lives at /root/ink-letter on the VPS
+- Started the Ink Letter Christmas commercial (family-only, 90s TV style, doubles as the app tutorial)
+- Built 13 clay-elf character sheets (Gemini 3 Pro Image) in ~/Projects/ink-letter-commercial/characters/: Piper + Brie brown hair, Brie pregnant, Kiani toddler, Cassidy 23, Dakota taller, Grammy (Laura) new
 
 **What's live / deployed:**
-- Nothing. No push, no commit, nothing sent to Holly. Code work from the earlier session is still uncommitted on branch people-record.
+- Nothing deployed. Previews linked in ~/Previews (2026-11-26 Ink Letter elves ...)
 
 **Next up:**
-- Yeti watches the tour and answers: "go with your picks" or by number (e.g. "7 B"). Call 9 needs one fact: does anything in Cowork read the Notion Holly Leads list.
-- Yeti says "push people-record and run the probe" (0c second half).
-- Ask Holly around Nov 28 to 30 (files and four lettered questions; wording in COLLECT-FROM-HOLLY.md and the tour).
-- Chunk 2 after that.
+- Yeti's notes on sheets, confirm Laura = left woman in the photo; then script (story first), 4 environments, storyboard, render before Dec 25
 
 **Notes for other environments:**
-- Cowork/Mobile: the tour is a local file. If Yeti wants it elsewhere, copy it from ~/Previews. Re-cut after any rule change in people-core.js.
+- Notion Board rows + Session Brain row added. Project README has pipeline and costume colors.
