@@ -1,31 +1,17 @@
-## Session: 2026-11-27 ET (Ink Letter commercial, rounds 3 and 4)
+## Session: 2026-11-27 ET (YetiGroove Google profile)
 **Environment:** Antigravity IDE
 **What was done:**
-- Tightened pacing, jingle, Cassidy tag, TV voice back after the pause, Papa lip-synced
-- Round 4: TV section rewritten to Yeti's own script, with 7 new clay b-roll shots and the real fairy and footsteps letter arrivals. Film 8:53
+- Submitted the Google Business Profile API access application (Yeti did the form). Case ID 3-7411000041605.
+- Created Cloud project "YetiGroove GBP", number 550956064343, under yetigroove.com.
+- Advised removing "United States" and "Michigan" from the profile service area (possible cause of the ocean map pin, not proven; change not yet confirmed).
 
 **What's live / deployed:**
-- Nothing. Local renders only. Live app unchanged.
+- Nothing deployed. Application is with Google.
 
 **Next up:**
-- Review of the 8:53 cut (nobody has listened to this mix); Kiani name by ear; "Marauder's Map" said twice; captions keep or drop
-- App safety net: deploy or skip before links go out
-- Real Android run of chapters 1 to 4; then music and sound effects; place "What a Good Day"
-- Papa's first letter: held, send by Dec 23 with Yeti's OK
+- Wait for Google, about Dec 8 to 11. Do not submit a second request.
+- Check the map pin 48 hours after the service area change.
+- Check that the m.me/yetigroove chat link on the profile is ours.
 
 **Notes for other environments:**
-- Project: ~/Projects/ink-letter-commercial (see README). Deadline Dec 25. Family surprise: nothing goes to family before the video.
-
-
-## Session: 2026-11-27 ET (YetiGroove, review wall and booking)
-**Environment:** Antigravity IDE
-**What was done:**
-- Published the new homepage review wall (commit 154546d)
-- Checked Google booking limits; looked at the calendar; no booking page exists yet
-
-**What's live / deployed:**
-- yetigroove.com: review wall, shared nav bar, jump link fix
-
-**Next up:**
-- /book page and calendar setup: waiting on Yeti's hours, call settings and service list
-- Do not hand out a /book link until it exists
+- Do not register an agency organization account with admin@ (it manages profiles).
