@@ -1,20 +1,17 @@
-## Session: 2026-11-26 ET
+## Session: 2026-11-27 ET
 **Environment:** Antigravity IDE
 **What was done:**
-- Ink Letter family Christmas film, full draft v2: 10:49, picture only (captions stand in for voices)
-- Added the pause-and-open-your-present moment, watch-to-the-end line, and a closing "Go back to Chapter 1" card
-- Added Tyler beside Piper in the four Brisbane shots
-- Re-filmed every app screen with the baby due April 14
+- Ink Letter family Christmas film: narration recorded (Liam as announcer and narrator, 3 lines in Yeti's cloned voice) and the film retimed to it
+- Full draft with voice is 10:06, setup starts at 2:14; captions still on, no music or SFX yet
+- Made a voice sample of under two minutes and added the takes to the voice library
 
 **What's live / deployed:**
-- Live mailbox: the two old test letters cleared (private backup on the VPS in /root/ink-letter-ops); baby due date changed April 3 to April 14
-- No app code deployed
+- Nothing new. No app code deployed. (Earlier on Nov 26: 2 test letters cleared, baby date April 14.)
 
 **Next up:**
-- Yeti reviews ~/Previews "2026-11-26 Ink Letter FULL draft.mp4" and may reorder chapters
-- Yes or no on deploying the Messenger safety net (built and tested, local branch only)
-- Send Papa's first letter with the final film wording, no later than Dec 23
-- Narrator + Papa voice, Suno jingle, music and SFX. Deadline Dec 25.
+- Yeti notes: how Kiani is said, Melbourne, pace, captions, Papa's letter pacing
+- Then Suno jingle, music and SFX. Deadline Dec 25.
+- Open: Messenger safety net yes/no, Papa's first letter by Dec 23
 
 **Notes for other environments:**
 - Family-only project: no family data or keys in the repo, never show a real family link.
