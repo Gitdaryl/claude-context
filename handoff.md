@@ -1,17 +1,17 @@
 ## Session: 2026-11-27 ET
 **Environment:** Antigravity IDE
 **What was done:**
-- Ink Letter family Christmas film: narration recorded (Liam as announcer and narrator, 3 lines in Yeti's cloned voice) and the film retimed to it
-- Full draft with voice is 10:06, setup starts at 2:14; captions still on, no music or SFX yet
-- Made a voice sample of under two minutes and added the takes to the voice library
+- Ink Letter film voice draft (10:06) approved as good, with two fixes: Kiani's name and a more animated TV ad voice
+- Found/saved the spelling for AI voices and Suno: Kiahni (spoken or sung text only)
+- Made two test clips: five announcer voices (A to E) and three name versions (1 to 3)
 
 **What's live / deployed:**
-- Nothing new. No app code deployed. (Earlier on Nov 26: 2 test letters cleared, baby date April 14.)
+- Nothing new.
 
 **Next up:**
-- Yeti notes: how Kiani is said, Melbourne, pace, captions, Papa's letter pacing
+- Yeti picks a letter and a number, then re-voice and retime the film
 - Then Suno jingle, music and SFX. Deadline Dec 25.
 - Open: Messenger safety net yes/no, Papa's first letter by Dec 23
 
 **Notes for other environments:**
-- Family-only project: no family data or keys in the repo, never show a real family link.
+- When Suno or any AI voice has to say Kiani, spell it Kiahni.
