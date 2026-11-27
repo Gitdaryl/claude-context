@@ -1,16 +1,15 @@
-## Session: 2026-11-27 ET
+
+## Session: 2026-11-27 ET (YetiGroove shared nav bar)
 **Environment:** Antigravity IDE
 **What was done:**
-- Ink Letter film: record scratch into the pause (Liam from there to the end), clean smooth picture after the pause, TV ad tightened by 12 s; now 9:56
-- Closing narration now says Papa has sent links to their phones
+- One shared nav bar on 18 yetigroove.com studio pages: site-nav.css, site-nav.js, tools/site_nav.py (--check finds drift; question pages come from tools/build_questions.py)
+- Fixed /#proof links landing low (reel video had no reserved height) and Field Office #demo double offset
 
 **What's live / deployed:**
-- Nothing new.
+- Nothing new. Uncommitted in ~/Projects/Yeti-Groove, tested locally
 
 **Next up:**
-- Yeti reviews the scratch/pause clip and the full draft
-- Suno jingle, music and SFX (opening gaps wait on this). Deadline Dec 25.
-- Open: Messenger safety net deploy/skip (links will be sent mid-film), Papa's first letter by Dec 23
+- Yeti says push: commit (include the 3 new files, not .DS_Store or .impeccable/), field-office sync first, then verify /site-nav.css and /site-nav.js live and rerun checks; pull ~/Yeti-Groove
 
 **Notes for other environments:**
-- When Suno or any AI voice has to say Kiani, spell it Kiahni.
+- Edit the menu only in tools/site_nav.py, never in individual pages
