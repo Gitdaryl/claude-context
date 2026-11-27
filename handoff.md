@@ -1,18 +1,20 @@
-## Session: Nov 27 2026 ET
+## Session: 2026-11-27 ET (Ink Letter commercial, round 3)
 **Environment:** Antigravity IDE
 **What was done:**
-- YetiGroove homepage: menu for stray pages, Google review carousel with live score, Lost Customer Check teaser
-- One shared nav bar on 18 studio pages (site-nav.css, site-nav.js; menu is edited in tools/site_nav.py, then run it and tools/build_questions.py)
-- Live testing found jump links from other pages stopping short (scroll sections grow after the first image loads); fixed in site-nav.js
+- Tightened the whole film: 9:56 to 8:40, even with new content added (opening 66 s to 40 s, silent clay cutaways cut to about 1.6 s)
+- After the pause the TV voice comes back: reveal plus a short "what Ink Letter is" summary, then Papa talks to camera and hands to the narrator
+- Papa lip-synced (OmniHuman 1.5 on Kie) in the new handoff and the chapter 7 lead-in
+- Ad now uses the Suno "Ink Letter" hook with "Buoyant Bounce" under the announcer
+- "Cassidy" name tag on the sleeping elf in the video-call gag
 
 **What's live / deployed:**
-- yetigroove.com: 155a707, 8b0020c, ab9b7de (all verified live; 48/48 jump link loads, 18 pages pass)
+- Nothing. Local renders only. Live app unchanged.
 
 **Next up:**
-- Board W-09 stays open for canonical/OG tags
-- Homepage contact form instead of mailto
-- Yeti to check the spiro.media link and "Closes 5 AM" hours on the Google profile
-- Yeti to paste full text of 4 cut-off Google reviews for more cards
+- Review of the 8:40 cut (nobody has listened to this mix); captions keep or drop; where "What a Good Day" goes
+- App safety net: deploy or skip before links go out
+- Real Android (ideally Samsung) run of chapters 1 to 4; then music and sound effects
+- Papa's first letter: held, send by Dec 23 with Yeti's OK
 
 **Notes for other environments:**
-- Local web tests that serve images instantly hide load-timing bugs. Delay images when testing jump links.
+- Project: ~/Projects/ink-letter-commercial (see README). Deadline Dec 25. Family surprise: nothing goes to family before the video.
