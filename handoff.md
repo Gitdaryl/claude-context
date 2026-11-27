@@ -1,3 +1,3 @@
 
-### Addendum 2026-11-26 (Act 2)
-- Ink Letter Act 2 draft rendered (53 s, the 90s ad with VHS peel) and joined with Act 1: ~/Previews "Ink Letter Acts 1 and 2 draft" (1:59). No voice/music yet. Next: Acts 3-5 tutorial in HyperFrames.
+### Addendum (Act 3)
+- Ink Letter Act 3 draft (setup tutorial, 3:22) rendered; Acts 1-3 joined in ~/Previews. Found likely app bug: Android in-app browsers (Messenger) get the kiosk "one switch" page (app.html ~2837). Board row filed Today/High; live app untouched, needs Yeti's OK. Next: Acts 4-5, voice, music/SFX.
