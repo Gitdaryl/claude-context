@@ -1,17 +1,16 @@
 
-## Session: 2026-11-27 ET (YetiGroove homepage)
+## Session: 2026-11-27 ET (YetiGroove homepage, shipped)
 **Environment:** Antigravity IDE
 **What was done:**
-- yetigroove.com homepage: menu now links Lost Customer Check, Field Office, Questions (new phone menu); review carousel; Lost Customer Check teaser with Field Office link
-- New api/reviews.js: live Google score and count via the Manitou Beach google-places endpoint (5.0, 14 reviews)
-- Browser-tested at 1440, 1024, 961, 390, with the review feed down, and with JavaScript off
+- Pushed yetigroove.com homepage update (155a707); this replaces the earlier "not deployed" note
+- Field Office page: expired old "New" badges
 
 **What's live / deployed:**
-- Nothing. Changes are uncommitted in ~/Projects/Yeti-Groove (index.html, api/reviews.js)
+- Menu (Lost Customer Check, Field Office, Questions, phone menu), review carousel with live Google score (5.0, 14), Check teaser. Verified on www.yetigroove.com
 
 **Next up:**
-- Yeti says push: commit-push (only those two files), field-office sync first, verify live /api/reviews returns success:true, pull ~/Yeti-Groove
-- Check Google profile: spiro.media link and hours showing "Closes 5 AM"
+- Check Google profile: spiro.media link, hours showing "Closes 5 AM"
+- Homepage contact form instead of mailto; full text for 4 cut-off reviews
 
 **Notes for other environments:**
-- Preview image: ~/Previews/2026-11-27 YetiGroove homepage menu reviews teaser.png
+- Live review score depends on the manitoubeachmichigan.com/api/google-places endpoint
