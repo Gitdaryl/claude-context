@@ -1,20 +1,31 @@
-## Session: Nov 27 2026 ET (part 3)
+## Session: 2026-11-27 ET (Ink Letter commercial, rounds 3 and 4)
 **Environment:** Antigravity IDE
 **What was done:**
-- Finished the new YetiGroove homepage review wall (13 reviews: 12 Google + 1 Facebook)
-- In the new wall, /api/reviews updates the score and count only; new review cards are added to index.html by hand
-- Fixed tablet card spacing; rechecked layouts, contrast, jump links and all pages (Chrome only)
-- Build script and its starting file: ~/Clients/yeti-groove/files/homepage-2026-11-27/ (rebuild through it, or edit index.html and retire it)
+- Tightened pacing, jingle, Cassidy tag, TV voice back after the pause, Papa lip-synced
+- Round 4: TV section rewritten to Yeti's own script, with 7 new clay b-roll shots and the real fairy and footsteps letter arrivals. Film 8:53
 
 **What's live / deployed:**
-- Live: 155a707, 8b0020c, ab9b7de
-- NOT live: review wall (~/Projects/Yeti-Groove/index.html, uncommitted). Needs Yeti to say push. Previews in ~/Previews ("2026-11-27 YetiGroove review wall...")
+- Nothing. Local renders only. Live app unchanged.
 
 **Next up:**
-- Push the review wall when Yeti says so (also fixes a live misquote: Michele Henson wrote "you're")
-- Adam Young review left off: Yeti to say whether there is any family or business tie
-- /book page: Yeti picks request form or live calendar
-- Yeti is removing the Spiro link from the Google profile; hours fix already shows signed out
+- Review of the 8:53 cut (nobody has listened to this mix); Kiani name by ear; "Marauder's Map" said twice; captions keep or drop
+- App safety net: deploy or skip before links go out
+- Real Android run of chapters 1 to 4; then music and sound effects; place "What a Good Day"
+- Papa's first letter: held, send by Dec 23 with Yeti's OK
 
 **Notes for other environments:**
-- No booking page exists on yetigroove.com yet. Do not hand out a /book link.
+- Project: ~/Projects/ink-letter-commercial (see README). Deadline Dec 25. Family surprise: nothing goes to family before the video.
+
+
+## Session: 2026-11-27 ET (YetiGroove, review wall and booking)
+**Environment:** Antigravity IDE
+**What was done:**
+- Published the new homepage review wall (commit 154546d)
+- Checked Google booking limits; looked at the calendar; no booking page exists yet
+
+**What's live / deployed:**
+- yetigroove.com: review wall, shared nav bar, jump link fix
+
+**Next up:**
+- /book page and calendar setup: waiting on Yeti's hours, call settings and service list
+- Do not hand out a /book link until it exists
