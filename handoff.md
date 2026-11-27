@@ -1,16 +1,16 @@
-
-## Session: 2026-11-27 ET (YetiGroove homepage, shipped)
+## Session: 2026-11-27 ET
 **Environment:** Antigravity IDE
 **What was done:**
-- Pushed yetigroove.com homepage update (155a707); this replaces the earlier "not deployed" note
-- Field Office page: expired old "New" badges
+- Ink Letter film: record scratch into the pause (Liam from there to the end), clean smooth picture after the pause, TV ad tightened by 12 s; now 9:56
+- Closing narration now says Papa has sent links to their phones
 
 **What's live / deployed:**
-- Menu (Lost Customer Check, Field Office, Questions, phone menu), review carousel with live Google score (5.0, 14), Check teaser. Verified on www.yetigroove.com
+- Nothing new.
 
 **Next up:**
-- Check Google profile: spiro.media link, hours showing "Closes 5 AM"
-- Homepage contact form instead of mailto; full text for 4 cut-off reviews
+- Yeti reviews the scratch/pause clip and the full draft
+- Suno jingle, music and SFX (opening gaps wait on this). Deadline Dec 25.
+- Open: Messenger safety net deploy/skip (links will be sent mid-film), Papa's first letter by Dec 23
 
 **Notes for other environments:**
-- Live review score depends on the manitoubeachmichigan.com/api/google-places endpoint
+- When Suno or any AI voice has to say Kiani, spell it Kiahni.
