@@ -1,16 +1,17 @@
-## Session: 2026-11-27 ET (Ink Letter commercial, rounds 3 to 5)
+## Session: 2026-11-27 ET
 **Environment:** Antigravity IDE
 **What was done:**
-- Tightened pacing, jingle, TV voice back after the pause with Yeti's own script and new b-roll, Papa lip-synced
-- Round 5: BRUH zoom on Cassidy, no gap into "Introducing Ink Letter". Film 8:50. Yeti: otherwise perfect
+- Researched AI plus glasses tools for beginner hands-on help
+- Designed "Repair Coach" V1 (working name): phone web app, frame capture, one spoken step at a time
+- Recommended Black Friday glasses for a prototype: one Ray-Ban Meta Gen 2; Mentra Live as the open alternative
+- Filed a Backlog row on the Task Board and saved project memory
 
 **What's live / deployed:**
-- Nothing. Local renders only. Live app unchanged.
+- Nothing. Design only.
 
 **Next up:**
-- Music and sound effects pass, including elf-sounding voices and cheers
-- App safety net: deploy or skip before links go out; captions keep or drop; real Android run of chapters 1 to 4
-- Papa's first letter: held, send by Dec 23 with Yeti's OK
+- Yeti decides on glasses and whether to do a native iPhone build
+- Trigger test (camera, voice "check", hold-still capture, big button) on iPhone and Android
 
 **Notes for other environments:**
-- Project: ~/Projects/ink-letter-commercial (see README). Deadline Dec 25. Family surprise: nothing goes to family before the video.
+- Personal tool for Yeti and a family member. First use case: garage door opener install.
