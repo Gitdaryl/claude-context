@@ -1,17 +1,16 @@
-## Session: 2026-11-27 ET (YetiGroove Google profile)
+## Session: 2026-11-27 ET (Ink Letter commercial, rounds 3 to 5)
 **Environment:** Antigravity IDE
 **What was done:**
-- Submitted the Google Business Profile API access application (Yeti did the form). Case ID 3-7411000041605.
-- Created Cloud project "YetiGroove GBP", number 550956064343, under yetigroove.com.
-- Advised removing "United States" and "Michigan" from the profile service area (possible cause of the ocean map pin, not proven; change not yet confirmed).
+- Tightened pacing, jingle, TV voice back after the pause with Yeti's own script and new b-roll, Papa lip-synced
+- Round 5: BRUH zoom on Cassidy, no gap into "Introducing Ink Letter". Film 8:50. Yeti: otherwise perfect
 
 **What's live / deployed:**
-- Nothing deployed. Application is with Google.
+- Nothing. Local renders only. Live app unchanged.
 
 **Next up:**
-- Wait for Google, about Dec 8 to 11. Do not submit a second request.
-- Check the map pin 48 hours after the service area change.
-- Check that the m.me/yetigroove chat link on the profile is ours.
+- Music and sound effects pass, including elf-sounding voices and cheers
+- App safety net: deploy or skip before links go out; captions keep or drop; real Android run of chapters 1 to 4
+- Papa's first letter: held, send by Dec 23 with Yeti's OK
 
 **Notes for other environments:**
-- Do not register an agency organization account with admin@ (it manages profiles).
+- Project: ~/Projects/ink-letter-commercial (see README). Deadline Dec 25. Family surprise: nothing goes to family before the video.
