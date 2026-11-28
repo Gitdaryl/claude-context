@@ -1,17 +1,18 @@
-## Session: 2026-11-27 ET
+## Session: 2026-11-27 ET (Ink Letter commercial and app)
 **Environment:** Antigravity IDE
 **What was done:**
-- Researched AI plus glasses tools for beginner hands-on help
-- Designed "Repair Coach" V1 (working name): phone web app, frame capture, one spoken step at a time
-- Recommended Black Friday glasses for a prototype: one Ray-Ban Meta Gen 2; Mentra Live as the open alternative
-- Filed a Backlog row on the Task Board and saved project memory
+- Commercial taken to 8:50 (Yeti: love it)
+- App safety net deployed (links opened inside chat apps now say "Open this in your browser")
+- Writer's arrival choice (fairy or footsteps) built and uploaded as a preview only
 
 **What's live / deployed:**
-- Nothing. Design only.
+- ink.yetigroove.com build 20261127-2328 (safety net). Rollback: ./deploy.sh --promote 20261124-0338
+- Preview only, not live: 20261127-2335 (branch arrival-choice)
 
 **Next up:**
-- Yeti decides on glasses and whether to do a native iPhone build
-- Trigger test (camera, voice "check", hold-still capture, big button) on iPhone and Android
+- Yeti: two-screen test of the preview, then say "live"
+- One pass of tour additions (phone, sounds and knock, handwriting and arrival choice, naps, bugs to Papa), then music and SFX
+- Papa's first letter: held, send by Dec 23 with Yeti's OK
 
 **Notes for other environments:**
-- Personal tool for Yeti and a family member. First use case: garage door opener install.
+- Project: ~/Projects/ink-letter-commercial (see README). Deadline Dec 25. Family surprise.
